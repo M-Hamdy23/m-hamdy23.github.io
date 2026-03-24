@@ -330,8 +330,6 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 .modal-side-cta.modal-actions{margin:8px 0 10px;gap:0}
 .modal-side-cta .btn-primary{display:inline-flex;width:100%;justify-content:center}
 .modal-side-row{display:flex;gap:6px;flex-wrap:wrap}
-.modal-side-stats{display:flex;gap:6px;flex-wrap:wrap}
-.modal-side-stat{font-family:'Share Tech Mono',monospace;font-size:.56rem;color:var(--text);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:4px 8px;letter-spacing:.08em;text-transform:uppercase}
 .modal-side-nav{display:flex;flex-direction:column;gap:7px;margin-top:14px}
 .modal-side-link{background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--muted);text-align:left;
   font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 10px;cursor:pointer;transition:all .25s}
@@ -654,25 +652,23 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
         <aside class="modal-sidebar">
           <div class="modal-side-image"><img id="m-side-image" src="" alt="Project cover" loading="lazy"></div>
           <div class="modal-side-meta">
-            <div class="modal-side-title">Overview</div>
             <div class="modal-side-cta modal-actions" id="m-actions"></div>
+            <div class="modal-side-title">Platforms</div>
             <div class="modal-side-row" id="m-side-platforms"></div>
           </div>
           <div class="modal-side-meta">
             <div class="modal-side-row" id="m-side-tags"></div>
-          </div>
-          <div class="modal-side-meta">
-            <div class="modal-side-stats" id="m-side-stats"></div>
           </div>
           <div class="modal-side-meta" id="m-tech-sec">
             <div class="modal-side-title">Tech Stack</div>
             <div class="exp-techs" id="m-tech"></div>
           </div>
           <div class="modal-side-meta" id="m-feat-wrap" style="display:none">
-            <div class="modal-side-title">Features</div>
+            <div class="modal-side-title">Key Features</div>
             <ul class="exp-bullets" id="m-feat"></ul>
           </div>
           <div class="modal-side-nav">
+            <div class="modal-side-title">CONTENTS</div>
             <button type="button" class="modal-side-link" id="jump-about" onclick="scrollModalToSection('m-about-sec')">About</button>
             <button type="button" class="modal-side-link" id="jump-media" onclick="scrollModalToSection('m-media-sec')">Media</button>
           </div>
@@ -930,12 +926,6 @@ function openModal(id){
   document.getElementById('m-side-image').src = p.cover || '';
   document.getElementById('m-side-image').alt = p.name + ' cover image';
   document.getElementById('m-side-platforms').innerHTML = p.platforms.map(badgeHTML).join('');
-  document.getElementById('m-side-tags').innerHTML = p.tags.map(tag=>`<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
-  document.getElementById('m-side-stats').innerHTML = [
-    `${p.techs.length} Tech`,
-    `${p.features ? p.features.length : 0} Feature`,
-    hasLink ? 'External Link' : 'No External Link'
-  ].map(s=>`<span class="modal-side-stat">${s}</span>`).join('');
   document.getElementById('m-about').textContent = p.desc;
   const mediaEl = document.getElementById('m-media');
   const videos = normalizeProjectVideos(p);
