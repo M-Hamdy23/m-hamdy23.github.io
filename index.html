@@ -325,6 +325,8 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
   background:rgba(0,245,196,.08);border:1px solid rgba(0,245,196,.18);padding:3px 8px;
   letter-spacing:.08em;text-transform:uppercase}
 .modal-head-desc{font-size:.89rem;color:var(--muted);line-height:1.7;margin-top:12px;max-width:54ch;transition:color .5s}
+.modal-about{margin-bottom:20px}
+.modal-about-desc{font-size:.89rem;color:var(--muted);line-height:1.7;transition:color .5s}
 .modal-stitle{font-family:'Rajdhani',sans-serif;font-size:.86rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
 .modal-actions{display:flex;gap:11px;margin-top:22px;flex-wrap:wrap}
 .modal-video{width:100%;background:var(--bg3);border:1px solid var(--border);margin-bottom:18px;overflow:hidden;position:relative;padding:10px}
@@ -582,6 +584,7 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
     </div>
     <div class="modal-body">
       <div class="modal-video" id="m-video"></div>
+      <div class="modal-about"><div class="modal-stitle">About</div><p class="modal-about-desc" id="m-about"></p></div>
       <div id="m-feat-wrap" style="display:none"><div class="modal-stitle">Key Features</div><ul class="exp-bullets" id="m-feat"></ul></div>
       <div><div class="modal-stitle" style="margin-top:16px">Tech Stack</div><div class="exp-techs" id="m-tech"></div></div>
       <div class="modal-actions" id="m-actions"></div>
@@ -749,6 +752,7 @@ function openModal(id){
   document.getElementById('m-badges').innerHTML  = p.platforms.map(badgeHTML).join('');
   document.getElementById('m-tags').innerHTML    = p.tags.map(tag=>`<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
   document.getElementById('m-head-desc').textContent = p.shortDesc || p.desc;
+  document.getElementById('m-about').textContent = p.desc;
   const vEl = document.getElementById('m-video');
   const videos = Array.isArray(p.videos) ? p.videos.filter(Boolean) : [];
   if(videos.length){
