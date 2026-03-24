@@ -6,7 +6,6 @@
 <title>Mohamed Hamdy — Game Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
 /* ─── THEME TOKENS ──────────────────────────────────── */
 [data-theme="dark"] {
@@ -30,9 +29,6 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;overflow-x:hidden;transition:background .5s,color .5s}
-
-/* ─── THREE.JS CANVAS ──────────────────────────────── */
-#three-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
 
 /* ─── SCANLINE ─────────────────────────────────────── */
 body::after{content:'';position:fixed;inset:0;
@@ -446,7 +442,6 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 
 <div class="cursor-dot" id="cursor-dot"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
-<canvas id="three-canvas"></canvas>
 
 <!-- ═══ NAV ══════════════════════════════════════════ -->
 <nav>
@@ -986,57 +981,12 @@ document.addEventListener('keydown',e=>{
   closeModal();
 });
 
-/* ── THREE.JS ───────────────────────────────────────── */
-(function(){
-  const canvas=document.getElementById('three-canvas');
-  const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});
-  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-  renderer.setSize(innerWidth,innerHeight);
-  const scene=new THREE.Scene();
-  const cam=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,0.1,1000);
-  cam.position.z=5;
-  const geos=[
-    new THREE.OctahedronGeometry(.28,0),
-    new THREE.TetrahedronGeometry(.28,0),
-    new THREE.BoxGeometry(.26,.26,.26),
-    new THREE.IcosahedronGeometry(.24,0)
-  ];
-  const DARK_COLS=[0x00f5c4,0x7b5ea7,0xff4f5e];
-  const LITE_COLS=[0x008f72,0x5a3e8a,0xd63244];
-  const meshes=[];
-  for(let i=0;i<28;i++){
-    const m=new THREE.Mesh(
-      geos[i%geos.length],
-      new THREE.MeshBasicMaterial({color:DARK_COLS[i%3],wireframe:true,transparent:true,opacity:.1+Math.random()*.12})
-    );
-    m.position.set((Math.random()-.5)*18,(Math.random()-.5)*11,(Math.random()-.5)*8);
-    m.rotation.set(Math.random()*Math.PI,Math.random()*Math.PI,0);
-    m.userData={ry:(Math.random()-.5)*.008,rx:(Math.random()-.5)*.005,fa:.003+Math.random()*.005,fs:.4+Math.random()*.6,fo:Math.random()*Math.PI*2};
-    scene.add(m); meshes.push(m);
-  }
-  let mx=0,my=0,t=0;
-  document.addEventListener('mousemove',e=>{mx=(e.clientX/innerWidth-.5)*.6;my=(e.clientY/innerHeight-.5)*.4;});
-  function tick(){requestAnimationFrame(tick);t+=.016;
-    meshes.forEach(m=>{m.rotation.y+=m.userData.ry;m.rotation.x+=m.userData.rx;
-      m.position.y+=Math.sin(t*m.userData.fs+m.userData.fo)*m.userData.fa;});
-    cam.position.x+=(mx-cam.position.x)*.04;
-    cam.position.y+=(-my-cam.position.y)*.04;
-    renderer.render(scene,cam);}
-  tick();
-  window.addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
-  window._mesh=meshes; window._DARK=DARK_COLS; window._LITE=LITE_COLS;
-})();
-
 /* ── THEME ──────────────────────────────────────────── */
 let dark=true;
 function toggleTheme(){
   dark=!dark;
   document.documentElement.setAttribute('data-theme',dark?'dark':'light');
   document.getElementById('theme-track').classList.toggle('lit',!dark);
-  if(window._mesh){
-    const cols=dark?window._DARK:window._LITE;
-    window._mesh.forEach((m,i)=>{m.material.color.setHex(cols[i%3]);m.material.opacity=dark?.1+Math.random()*.12:.06+Math.random()*.08;});
-  }
 }
 
 /* ── TYPEWRITER ─────────────────────────────────────── */
