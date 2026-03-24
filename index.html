@@ -313,13 +313,18 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 .modal-header{padding:26px 26px 18px;border-bottom:1px solid var(--border);position:sticky;top:0;
   background:var(--bg2);z-index:1;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;
   transition:background .5s,border-color .5s}
+.modal-header-copy{flex:1;min-width:0}
 .modal-close{background:none;border:1px solid var(--border);color:var(--muted);cursor:pointer;
   width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all .3s;flex-shrink:0}
 .modal-close:hover{color:var(--accent);border-color:var(--accent)}
 .modal-body{padding:22px 26px 28px}
 .modal-title{font-family:'Rajdhani',sans-serif;font-size:1.65rem;font-weight:700;color:var(--text);transition:color .5s}
 .modal-badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
-.modal-desc{font-size:.89rem;color:var(--muted);line-height:1.7;margin-bottom:20px;transition:color .5s}
+.modal-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.modal-tag{font-family:'Share Tech Mono',monospace;font-size:.58rem;color:var(--accent);
+  background:rgba(0,245,196,.08);border:1px solid rgba(0,245,196,.18);padding:3px 8px;
+  letter-spacing:.08em;text-transform:uppercase}
+.modal-head-desc{font-size:.89rem;color:var(--muted);line-height:1.7;margin-top:12px;max-width:54ch;transition:color .5s}
 .modal-stitle{font-family:'Rajdhani',sans-serif;font-size:.86rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
 .modal-actions{display:flex;gap:11px;margin-top:22px;flex-wrap:wrap}
 .modal-video{width:100%;background:var(--bg3);border:1px solid var(--border);margin-bottom:18px;overflow:hidden;position:relative;padding:10px}
@@ -366,6 +371,7 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
   .projects-grid{grid-template-columns:1fr}
   footer{padding:18px;flex-direction:column;text-align:center}
   .cursor-dot,.cursor-ring{display:none}
+  .modal-head-desc{max-width:none}
 }
 </style>
 </head>
@@ -566,12 +572,16 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 <div class="modal-overlay" id="modal-overlay" onclick="closeOverlay(event)">
   <div class="modal">
     <div class="modal-header">
-      <div><div class="modal-title" id="m-title"></div><div class="modal-badges" id="m-badges"></div></div>
+      <div class="modal-header-copy">
+        <div class="modal-title" id="m-title"></div>
+        <div class="modal-badges" id="m-badges"></div>
+        <div class="modal-tags" id="m-tags"></div>
+        <p class="modal-head-desc" id="m-head-desc"></p>
+      </div>
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
     <div class="modal-body">
       <div class="modal-video" id="m-video"></div>
-      <p class="modal-desc" id="m-desc"></p>
       <div id="m-feat-wrap" style="display:none"><div class="modal-stitle">Key Features</div><ul class="exp-bullets" id="m-feat"></ul></div>
       <div><div class="modal-stitle" style="margin-top:16px">Tech Stack</div><div class="exp-techs" id="m-tech"></div></div>
       <div class="modal-actions" id="m-actions"></div>
@@ -678,6 +688,19 @@ function badgeHTML(pl){
   return `<span class="platform-badge ${cls}">${pl}</span>`;
 }
 
+function formatProjectTag(tag){
+  const labels = {
+    pc:'PC',
+    vr:'VR / AR',
+    ar:'AR',
+    web:'Web',
+    mobile:'Mobile',
+    multiplayer:'Multiplayer',
+    unity:'Unity'
+  };
+  return labels[tag] || tag.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+}
+
 function renderProjects(filter){
   const grid = document.getElementById('projects-grid');
   const list = filter==='all' ? PROJECTS : PROJECTS.filter(p=>p.tags.includes(filter));
@@ -711,8 +734,9 @@ function filterProjects(f,btn){
 function openModal(id){
   const p = PROJECTS.find(x=>x.id===id); if(!p)return;
   document.getElementById('m-title').textContent = p.name;
-  document.getElementById('m-desc').textContent  = p.desc;
   document.getElementById('m-badges').innerHTML  = p.platforms.map(badgeHTML).join('');
+  document.getElementById('m-tags').innerHTML    = p.tags.map(tag=>`<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
+  document.getElementById('m-head-desc').textContent = p.shortDesc || p.desc;
   const vEl = document.getElementById('m-video');
   const videos = Array.isArray(p.videos) ? p.videos.filter(Boolean) : [];
   if(videos.length){
