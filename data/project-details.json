@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "title": "Highstreet World",
+    "tags": ["VR", "Multiplayer", "Co-op", "Web"],
+    "description": "Commerce-focused metaverse where players co-op through combat zones, social hubs, and brand worlds.",
+    "about": "Highstreet World combines social exploration, co-op dungeon loops, and commerce-driven progression. I focused on scalable gameplay systems that support real-time multiplayer while keeping iteration speed high for live content drops.",
+    "cta": {
+      "label": "Visit Highstreet",
+      "url": "https://highstreet.market"
+    },
+    "technologies": ["Unity", "DOTS", "Netcode", "WebGL", "Addressables"],
+    "features": [
+      "Class-based combat and role synergies",
+      "Co-op multiplayer sessions",
+      "Cross-surface play between web and VR",
+      "Live content updates with data-driven tuning"
+    ],
+    "media": {
+      "videos": [
+        {
+          "type": "trailer",
+          "url": "https://www.youtube.com/embed/652a-CFEBiU"
+        }
+      ],
+      "images": [
+        "img/Highstreet-cover.png",
+        "img/Highstreet.png"
+      ]
+    },
+    "myWork": [
+      {
+        "title": "Gameplay Systems Architecture",
+        "description": "Designed modular gameplay flow for quests, encounters, and progression loops with clear ownership boundaries.",
+        "images": ["img/Highstreet-cover.png"]
+      },
+      {
+        "title": "Multiplayer Feature Delivery",
+        "description": "Implemented real-time synced gameplay features and optimized state updates for stability under network variance.",
+        "images": ["img/Highstreet.png"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "10 Tawla",
+    "tags": ["Mobile", "Multiplayer", "iOS", "Android"],
+    "description": "Competitive backgammon with ranked matchmaking and social sessions.",
+    "about": "10 Tawla modernizes classic backgammon with competitive matchmaking, social lobbies, and ranked progression tuned for session-based mobile play.",
+    "cta": {
+      "label": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla"
+    },
+    "technologies": ["Unity", "C#", "Nakama", "Firebase"],
+    "features": [
+      "Ranked ELO matchmaking",
+      "Friend lobbies and private matches",
+      "Adaptive AI opponents",
+      "Multiple rule variants"
+    ],
+    "media": {
+      "videos": [
+        {
+          "type": "gameplay",
+          "url": "https://www.youtube.com/embed/XcUdxVhAFaA"
+        }
+      ],
+      "images": ["img/10Tawla-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "Realtime Match Flow",
+        "description": "Built turn sync, reconnect behavior, and match lifecycle events for robust online sessions.",
+        "images": ["img/10Tawla-cover.png"]
+      },
+      {
+        "title": "Progression and Ranking",
+        "description": "Implemented rating changes, leaderboard updates, and anti-abuse checks.",
+        "images": ["img/10Tawla-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Sky Striders",
+    "tags": ["PC", "Multiplayer", "Action"],
+    "description": "Movement-first multiplayer game with ground and air traversal mastery.",
+    "about": "Sky Striders emphasizes expressive movement and player skill expression with fast vertical traversal and dynamic mode objectives.",
+    "cta": {
+      "label": "Play on itch.io",
+      "url": "https://raskulls.itch.io/sky-striders"
+    },
+    "technologies": ["Unity", "C#", "Multiplayer"],
+    "features": [
+      "Movement-driven combat loop",
+      "Multiple game modes",
+      "Character stat differentiation",
+      "Session-based matchmaking"
+    ],
+    "media": {
+      "videos": [
+        {
+          "type": "gameplay",
+          "url": "https://www.youtube.com/embed/Kqmn4qk3hSE"
+        },
+        {
+          "type": "multiplayer",
+          "url": "https://www.youtube.com/embed/0Nb84N4M3ps"
+        }
+      ],
+      "images": ["img/SkyStrider-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "Core Movement Mechanics",
+        "description": "Implemented acceleration, aerial control, and responsiveness tuning for high-skill traversal.",
+        "images": ["img/SkyStrider-cover.png"]
+      },
+      {
+        "title": "Online Gameplay Loop",
+        "description": "Developed multiplayer gameplay rules and replication strategy for smooth competitive sessions.",
+        "images": ["img/SkyStrider-cover.png"]
+      }
+    ]
+  }
+]
+
