@@ -2763,7 +2763,7 @@
         <div class="modal-body" id="modal-body">
             <div class="modal-layout">
                 <aside class="modal-sidebar">
-                    <div class="modal-side-image"><img id="m-side-image" src="" alt="Project cover" loading="lazy">
+                    <div class="modal-side-image" id="m-side-image-wrap"><img id="m-side-image" src="" alt="Project cover" loading="lazy">
                     </div>
                     <div class="modal-side-meta">
                         <div class="modal-side-cta modal-actions" id="m-actions"></div>
@@ -2825,12 +2825,10 @@
             id: 1, name: "Highstreet World", icon: "🌐",
             shortDesc: "A metaverse shopping experience blending VR, web gameplay, and real-time multiplayer systems.",
             desc: "Highstreet World is a commerce-driven metaverse where players step into a vibrant online universe that blends social exploration, fashion, and gameplay into one connected experience. Set inside a stylized MMORPG world, the core loop revolves around discovering branded content, customizing your avatar with digital cosmetics inspired by real-world products, and engaging with shared activities across both VR and web platforms. Behind the scenes, the project combines real-time multiplayer systems, scalable Unity architecture, and cross-platform world building to support immersive social play, persistent progression, and a seamless bridge between gaming identity and digital commerce.",
-            media: {
-                screenshots: [
-                    {src: "img/Highstreet-cover.png", alt: "Highstreet World storefront and social hub preview"},
-                    {src: "img/Highstreet.png", alt: "Highstreet World in-game environment screenshot"}
-                ]
-            },
+            media: [
+                {src: "img/Highstreet-cover.png", alt: "Highstreet World storefront and social hub preview"},
+                {src: "img/Highstreet.png", alt: "Highstreet World in-game environment screenshot"}
+            ],
             tags: ["web", "vr", "multiplayer", "unity"], platforms: ["WEB", "VR"],
             cover: "img/Highstreet-cover.png",
             videos: ["https://www.youtube.com/embed/652a-CFEBiU"],
@@ -2850,7 +2848,7 @@
                     description: "Designed and implemented the blockchain-integrated character customization system, enabling players to own and trade digital cosmetics. Created the UI framework for cosmetic preview, inventory management, and blockchain transaction workflows."
                 },
             ],
-            link: null
+            link: "https://www.highstreet.market/metaverse"
         },
         {
             id: 2,
@@ -3032,11 +3030,9 @@
     }
 
     function normalizeProjectScreenshots(project) {
-        const source = Array.isArray(project.media?.screenshots) && project.media.screenshots.length
-            ? project.media.screenshots
-            : project.cover
-                ? [project.cover]
-                : [];
+        const source = Array.isArray(project.media) && project.media.length
+            ? project.media
+            : [];
 
         return source.map((entry, index) => {
             if (typeof entry === 'string') {
@@ -3076,10 +3072,13 @@
     function renderProjects(filter) {
         const grid = document.getElementById('projects-grid');
         const list = filter === 'all' ? PROJECTS : PROJECTS.filter(p => p.tags.includes(filter));
-        grid.innerHTML = list.map(p => `
+        grid.innerHTML = list.map(p => {
+            const coverSrc = p.cover || '';
+            const coverAlt = `${p.name} cover`;
+            return `
     <div class="project-card reveal-scale" onclick="openModal(${p.id})">
       <div class="project-thumb">
-        ${p.cover ? `<img class="project-thumb-media" src="${p.cover}" alt="${p.name} cover" loading="lazy">` : `<div class="project-thumb-icon">${p.icon}</div>`}
+        ${coverSrc ? `<img class="project-thumb-media" src="${coverSrc}" alt="${coverAlt}" loading="lazy">` : `<div class="project-thumb-icon">${p.icon}</div>`}
         <div class="project-thumb-overlay"></div>
         <div class="project-thumb-mark">${p.icon}</div>
         <div class="project-platform-badges">${p.platforms.map(badgeHTML).join('')}</div>
@@ -3093,7 +3092,8 @@
         <div class="project-techs">${p.techs.map(t => `<span class="project-tech">${t}</span>`).join(' · ')}</div>
         <div class="project-arrow">→</div>
       </div>
-    </div>`).join('');
+    </div>`;
+        }).join('');
         grid.querySelectorAll('.reveal-scale').forEach(el => RO.observe(el));
     }
 
@@ -3108,17 +3108,28 @@
         if (!p) return;
         const hasFeatures = !!(p.features && p.features.length);
         const hasLink = !!p.link;
+        const screenshots = normalizeProjectScreenshots(p);
+        const coverSrc = p.cover || '';
+        const coverAlt = `${p.name} cover`;
+        const sideImageWrap = document.getElementById('m-side-image-wrap');
+        const sideImage = document.getElementById('m-side-image');
         document.getElementById('m-title').textContent = p.name;
         document.getElementById('m-badges').innerHTML = p.platforms.map(badgeHTML).join('');
         document.getElementById('m-tags').innerHTML = p.tags.map(tag => `<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
         document.getElementById('m-head-desc').textContent = p.shortDesc || p.desc;
-        document.getElementById('m-side-image').src = p.cover || '';
-        document.getElementById('m-side-image').alt = p.name + ' cover image';
+        if (coverSrc) {
+            sideImageWrap.style.display = '';
+            sideImage.src = coverSrc;
+            sideImage.alt = coverAlt;
+        } else {
+            sideImageWrap.style.display = 'none';
+            sideImage.src = '';
+            sideImage.alt = 'Project screenshot';
+        }
         document.getElementById('m-side-platforms').innerHTML = p.platforms.map(badgeHTML).join('');
         document.getElementById('m-about').textContent = p.desc;
         const mediaEl = document.getElementById('m-media');
         const videos = normalizeProjectVideos(p);
-        const screenshots = normalizeProjectScreenshots(p);
         const videoHTML = videos.map((video, idx) => `
     <div class="modal-media-block modal-video-card">
       <div class="modal-media-head">
