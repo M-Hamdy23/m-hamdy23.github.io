@@ -2,80 +2,184 @@
   {
     "id": 1,
     "title": "Highstreet World",
-    "tags": ["VR", "Multiplayer", "Co-op", "Web"],
-    "description": "Commerce-focused metaverse where players co-op through combat zones, social hubs, and brand worlds.",
-    "about": "Highstreet World combines social exploration, co-op dungeon loops, and commerce-driven progression. I focused on scalable gameplay systems that support real-time multiplayer while keeping iteration speed high for live content drops.",
-    "cta": {
-      "label": "Visit Highstreet",
-      "url": "https://highstreet.market"
-    },
-    "technologies": ["Unity", "DOTS", "Netcode", "WebGL", "Addressables"],
+    "tags": ["VR", "Multiplayer", "Co-op", "Metaverse", "Web"],
+    "description": "A commerce-centered metaverse blending MMO gameplay, NFT fashion, and real-world brand integrations.",
+    "about": "Highstreet World is a phygital metaverse where fashion brands, gameplay, and e-commerce converge. Players explore brand worlds, earn and craft NFT cosmetics, and engage in an MMORPG backbone that gives real utility to in-game assets.\n\nThe platform runs cross-surface across web and VR, with a persistent multiplayer world that grows through brand land sales and live content drops. My role covered core gameplay systems, real-time multiplayer features, and tooling to support rapid content iteration from the live-ops team.",
+    "cta": { "label": "Visit Highstreet", "url": "https://highstreet.market" },
+    "technologies": ["Unity", "DOTS", "Netcode for GameObjects", "WebGL", "Addressables", "C#"],
     "features": [
-      "Class-based combat and role synergies",
-      "Co-op multiplayer sessions",
-      "Cross-surface play between web and VR",
-      "Live content updates with data-driven tuning"
+      "Cross-surface play — web and VR in the same world",
+      "MMORPG backbone with quest and encounter systems",
+      "NFT-linked cosmetic crafting and progression",
+      "Real-time co-op sessions with role synergies",
+      "Live content updates via Addressables",
+      "Brand world integration with e-commerce storefronts"
     ],
     "media": {
       "videos": [
-        {
-          "type": "trailer",
-          "url": "https://www.youtube.com/embed/652a-CFEBiU"
-        }
+        { "type": "Trailer", "url": "https://www.youtube.com/embed/652a-CFEBiU" }
       ],
-      "images": [
-        "img/Highstreet-cover.png",
-        "img/Highstreet.png"
-      ]
+      "images": ["img/Highstreet-cover.png", "img/Highstreet.png"]
     },
     "myWork": [
       {
         "title": "Gameplay Systems Architecture",
-        "description": "Designed modular gameplay flow for quests, encounters, and progression loops with clear ownership boundaries.",
+        "description": "Designed the modular quest, encounter, and progression loop architecture. Established clear ownership boundaries between systems so live-ops could push content without engineering bottlenecks.",
         "images": ["img/Highstreet-cover.png"]
       },
       {
-        "title": "Multiplayer Feature Delivery",
-        "description": "Implemented real-time synced gameplay features and optimized state updates for stability under network variance.",
+        "title": "Real-Time Multiplayer Features",
+        "description": "Implemented networked gameplay features using Netcode for GameObjects — synced state, predictive movement, and graceful handling of network variance to keep sessions stable.",
         "images": ["img/Highstreet.png"]
+      },
+      {
+        "title": "Live Content Pipeline",
+        "description": "Built Addressables-based content streaming so brand world updates and seasonal drops could ship without full game builds, cutting release turnaround significantly.",
+        "images": ["img/Highstreet-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Nutrien HGV Driver Training",
+    "tags": ["PC", "Simulation", "Training", "LMS"],
+    "description": "7 bespoke interactive scenarios training Nutrien's HGV drivers on rare but deadly accident situations.",
+    "about": "Nutrien's experienced heavy-goods and hazardous-materials drivers faced uncommon accidents with no existing training content. We built a tailored PC simulation with 7 scenarios — each recreating a specific accident type identified by Nutrien's safety team.\n\nEvery scenario ships three modes: an instructional phase with guided hints, a free-practice phase, and a scored assessment mode that integrates directly with Nutrien's existing LMS. The result is a measurable, repeatable training tool that fits their existing compliance infrastructure.",
+    "cta": null,
+    "technologies": ["Unity", "C#", "SCORM / LMS Integration", "Vuforia", "PC"],
+    "features": [
+      "7 unique accident simulation scenarios",
+      "Train → Practice → Assess mode pipeline",
+      "Seamless SCORM / LMS score submission",
+      "Instructional overlays with contextual hints",
+      "Realistic HGV cab and site environments",
+      "Assessment analytics per module"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Gameplay", "url": "https://player.vimeo.com/video/899866858?h=64437a6e2a&badge=0&autopause=0&player_id=0&app_id=58479" }
+      ],
+      "images": ["img/DriverTraining-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "Scenario System Architecture",
+        "description": "Designed a data-driven scenario framework so all 7 accident types could share one runtime while keeping scenario content independently authored and swappable.",
+        "images": ["img/DriverTraining-cover.png"]
+      },
+      {
+        "title": "LMS Integration",
+        "description": "Implemented SCORM communication layer bridging Unity assessment scores to Nutrien's LMS, including completion state, pass/fail thresholds, and per-question breakdowns.",
+        "images": ["img/DriverTraining-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Autoliv Explore 3D",
+    "tags": ["AR", "iOS", "Sales Tool", "Enterprise"],
+    "description": "An AR app that lets Autoliv's global sales teams demo life-saving automotive safety products in 3D on any surface.",
+    "about": "Autoliv manufactures airbags, seatbelts, and active safety systems used across the automotive industry. Their sales and marketing teams needed a way to demo physical products interactively — without shipping hardware to every meeting.\n\nExplore 3D uses AR marker and surface detection to place photo-real 3D product models anywhere. Reps can explode components, highlight mechanisms, and walk customers through safety certification data — all from an iPad. The app also serves as a training tool for plant operators learning product internals.",
+    "cta": null,
+    "technologies": ["Unity", "C#", "AR Foundation", "Vuforia", "iOS", "3D Modeling pipeline"],
+    "features": [
+      "Marker-based and surface AR placement",
+      "Interactive component explode view",
+      "Safety certification data overlay",
+      "Sales presentation mode with guided flow",
+      "Cross-device support (iPhone + iPad)",
+      "Offline-capable content bundles"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Demo", "url": "https://www.youtube.com/embed/OtewjIJFGIU" }
+      ],
+      "images": ["img/Autoliv-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "AR Interaction System",
+        "description": "Built the AR placement, anchoring, and surface-tracking pipeline. Handled edge cases for poor lighting, marker occlusion, and device capability differences across iPhone and iPad targets.",
+        "images": ["img/Autoliv-cover.png"]
+      },
+      {
+        "title": "Explode & Annotation Features",
+        "description": "Implemented the animated component explode system and the data overlay layer, both driven from a structured product JSON so content authors could update without code changes.",
+        "images": ["img/Autoliv-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Scriptable System",
+    "tags": ["Unity", "Editor Tool", "Asset Store"],
+    "description": "A Unity Editor extension that makes managing ScriptableObject variables and events fast and organized.",
+    "about": "Scriptable System was born from frustration with the boilerplate required every time you want a typed ScriptableObject variable or event in Unity. The package eliminates that friction — you name a type and the tool generates the full class, registers it, and wires up listeners in one click.\n\nShipped to the Unity Asset Store, it targets any Unity developer who uses the ScriptableObject event architecture pattern and wants to spend time on gameplay, not glue code.",
+    "cta": { "label": "Asset Store", "url": "https://assetstore.unity.com/packages/slug/191378" },
+    "technologies": ["Unity", "C#", "Unity Editor API", "ScriptableObjects", "Reflection"],
+    "features": [
+      "Generate typed ScriptableVariable classes in seconds",
+      "Generate typed ScriptableEvent classes in seconds",
+      "One-click event listener wiring in MonoBehaviours",
+      "Pre/post response hooks on raised events",
+      "Quick-find where each asset is referenced",
+      "Configurable output path and naming conventions"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Tutorial", "url": "https://www.youtube.com/embed/_xeZ2ujhtYs" }
+      ],
+      "images": ["img/ScriptableSystem-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "Code Generation Engine",
+        "description": "Built the reflection-based code generator that produces correctly typed ScriptableVariable and ScriptableEvent classes with proper Unity serialization attributes and editor drawers.",
+        "images": ["img/ScriptableSystem-cover.png"]
+      },
+      {
+        "title": "Editor UX & Workflow",
+        "description": "Designed the Editor window flow, quick-find reference scanner, and auto-wiring system so the entire workflow from idea to working event listener takes under 30 seconds.",
+        "images": ["img/ScriptableSystem-cover.png"]
       }
     ]
   },
   {
     "id": 5,
     "title": "10 Tawla",
-    "tags": ["Mobile", "Multiplayer", "iOS", "Android"],
-    "description": "Competitive backgammon with ranked matchmaking and social sessions.",
-    "about": "10 Tawla modernizes classic backgammon with competitive matchmaking, social lobbies, and ranked progression tuned for session-based mobile play.",
-    "cta": {
-      "label": "Google Play",
-      "url": "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla"
-    },
-    "technologies": ["Unity", "C#", "Nakama", "Firebase"],
+    "tags": ["Mobile", "Multiplayer", "iOS", "Android", "Board Game"],
+    "description": "Competitive online Backgammon with ranked matchmaking, social lobbies, and smart AI — built for iOS and Android.",
+    "about": "10 Tawla modernizes the classic Arabic board game Backgammon (Tawla) for mobile. It supports two rule variants — Moultezim (Tawla 31) and Mahbuse (Plakoto) — with real-time online play, ELO-based ranking, and social features.\n\nThe multiplayer backend runs on Nakama Server with Firebase for auth and analytics. Matches are tight-loop turn-based with real-time state sync, reconnect handling, and anti-cheat checks. The AI opponent is tuned per difficulty to match the player's rank rather than play optimally, keeping casual sessions fun.",
+    "cta": { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla" },
+    "technologies": ["Unity", "C#", "Nakama Server", "Firebase", "iOS", "Android"],
     "features": [
-      "Ranked ELO matchmaking",
-      "Friend lobbies and private matches",
-      "Adaptive AI opponents",
-      "Multiple rule variants"
+      "Ranked ELO matchmaking with skill-based pairing",
+      "Host and join private matches with friends",
+      "Smart AI difficulty matched to your ELO",
+      "7 life-like board and piece aesthetic sets",
+      "Moultezim and Mahbuse game modes",
+      "Taunts, emotes, and social reactions"
     ],
     "media": {
       "videos": [
-        {
-          "type": "gameplay",
-          "url": "https://www.youtube.com/embed/XcUdxVhAFaA"
-        }
+        { "type": "Gameplay", "url": "https://www.youtube.com/embed/XcUdxVhAFaA" }
       ],
       "images": ["img/10Tawla-cover.png"]
     },
     "myWork": [
       {
-        "title": "Realtime Match Flow",
-        "description": "Built turn sync, reconnect behavior, and match lifecycle events for robust online sessions.",
+        "title": "Real-Time Match Flow",
+        "description": "Built the full turn lifecycle — dice roll sync, move validation, reconnect recovery, and timeout handling — on top of Nakama's match handler with Lua server logic.",
         "images": ["img/10Tawla-cover.png"]
       },
       {
-        "title": "Progression and Ranking",
-        "description": "Implemented rating changes, leaderboard updates, and anti-abuse checks.",
+        "title": "Ranking & Progression System",
+        "description": "Implemented ELO calculation, leaderboard writes, and anti-abuse checks on the server side, with client-side optimistic updates for snappy UX.",
+        "images": ["img/10Tawla-cover.png"]
+      },
+      {
+        "title": "AI Opponent",
+        "description": "Tuned the AI decision heuristics to different difficulty bands. The hardest mode plays strong but makes occasional mistakes, keeping the game fun rather than frustrating.",
         "images": ["img/10Tawla-cover.png"]
       }
     ]
@@ -83,45 +187,243 @@
   {
     "id": 6,
     "title": "Sky Striders",
-    "tags": ["PC", "Multiplayer", "Action"],
-    "description": "Movement-first multiplayer game with ground and air traversal mastery.",
-    "about": "Sky Striders emphasizes expressive movement and player skill expression with fast vertical traversal and dynamic mode objectives.",
-    "cta": {
-      "label": "Play on itch.io",
-      "url": "https://raskulls.itch.io/sky-striders"
-    },
-    "technologies": ["Unity", "C#", "Multiplayer"],
+    "tags": ["PC", "Multiplayer", "Action", "Movement"],
+    "description": "A movement-first online multiplayer game where mastering aerial traversal is the core skill expression.",
+    "about": "Sky Striders is built around the idea that movement itself should be the primary gameplay loop. Players zip, glide, and vault across vertical arenas — each character class has different movement stats that change how you approach every encounter and mode.\n\nThe game features several modes that challenge players to express that movement skill under pressure: objective races, elimination, and zone control. Multiplayer runs on a custom relay setup, with server-authoritative hit detection and client-side prediction to keep the game responsive at speed.",
+    "cta": { "label": "Play on itch.io", "url": "https://raskulls.itch.io/sky-striders" },
+    "technologies": ["Unity", "C#", "Mirror Networking", "Custom Physics", "Multiplayer"],
     "features": [
-      "Movement-driven combat loop",
-      "Multiple game modes",
-      "Character stat differentiation",
-      "Session-based matchmaking"
+      "Fluid ground and aerial movement mechanics",
+      "Character classes with unique movement profiles",
+      "Multiple competitive game modes",
+      "Server-authoritative hit detection",
+      "Client-side prediction for low-latency feel",
+      "Session-based online matchmaking"
     ],
     "media": {
       "videos": [
-        {
-          "type": "gameplay",
-          "url": "https://www.youtube.com/embed/Kqmn4qk3hSE"
-        },
-        {
-          "type": "multiplayer",
-          "url": "https://www.youtube.com/embed/0Nb84N4M3ps"
-        }
+        { "type": "Gameplay", "url": "https://www.youtube.com/embed/Kqmn4qk3hSE" },
+        { "type": "Multiplayer", "url": "https://www.youtube.com/embed/0Nb84N4M3ps" }
       ],
       "images": ["img/SkyStrider-cover.png"]
     },
     "myWork": [
       {
-        "title": "Core Movement Mechanics",
-        "description": "Implemented acceleration, aerial control, and responsiveness tuning for high-skill traversal.",
+        "title": "Core Movement System",
+        "description": "Implemented the full movement controller — acceleration curves, air control, wall interaction, and momentum preservation — with extensive tuning to achieve a snappy but readable feel.",
         "images": ["img/SkyStrider-cover.png"]
       },
       {
-        "title": "Online Gameplay Loop",
-        "description": "Developed multiplayer gameplay rules and replication strategy for smooth competitive sessions.",
+        "title": "Multiplayer Architecture",
+        "description": "Set up Mirror-based server-authoritative networking with client-side prediction and reconciliation, ensuring the movement system felt responsive even at 150ms+ latency.",
         "images": ["img/SkyStrider-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "That Just Happened",
+    "tags": ["VR", "PC", "Serious Game", "Safety Training"],
+    "description": "A serious VR game where players prevent deadly blue-collar workplace accidents by giving co-workers the right safety gear.",
+    "about": "That Just Happened puts you inside common industrial accident scenarios — a co-worker is about to make a fatal mistake and you have seconds to grab the right safety equipment and intervene.\n\nBuilt in Unreal Engine for PC VR, the game uses physical VR interactions: you reach, grab, and hand equipment to workers in real time. The scenarios are drawn from real workplace accident data, making this both engaging and genuinely educational for safety training programs.",
+    "cta": null,
+    "technologies": ["Unreal Engine", "C++", "VR (SteamVR)", "Blueprints", "Physical Interaction"],
+    "features": [
+      "Immersive first-person VR perspective",
+      "Physical grab and hand-off interactions",
+      "Scenarios based on real accident data",
+      "Time-pressure decision making",
+      "Safety equipment recognition challenge",
+      "Designed for enterprise safety training"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Gameplay", "url": "https://www.youtube.com/embed/w0o9qF5tkCM" }
+      ],
+      "images": ["img/ThatJustHappend-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "VR Interaction Framework",
+        "description": "Built the physical grab, carry, and hand-off system with haptic feedback, ensuring interactions felt natural across different hand sizes and controllers.",
+        "images": ["img/ThatJustHappend-cover.png"]
+      },
+      {
+        "title": "Scenario & Trigger System",
+        "description": "Designed the timed scenario state machine — worker behaviour, accident trigger windows, correct equipment validation, and outcome branching — using Unreal Blueprints.",
+        "images": ["img/ThatJustHappend-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Steam Blast",
+    "tags": ["VR", "PC", "Multiplayer", "Fighting", "ITI Capstone"],
+    "description": "A multiplayer VR fighting game where players fly, attack, and capture city devices — built as an ITI graduation project.",
+    "about": "Steam Blast is a competitive multiplayer VR game set in a steampunk city. Players fly freely through the arena, exchange ranged and melee attacks, and race to capture control points that determine the city's fate.\n\nBuilt in Unreal Engine as the capstone project for the ITI Game Development diploma. The project covered full VR physics flight, networked multiplayer, and a capture-the-objective game mode from scratch — a significant technical scope for a student project.",
+    "cta": null,
+    "technologies": ["Unreal Engine", "C++", "Blueprints", "VR (SteamVR)", "Photon PUN"],
+    "features": [
+      "Full 3D physics-based flight in VR",
+      "Real-time competitive multiplayer",
+      "Melee and ranged combat in zero-G",
+      "Device-capture objective mode",
+      "Steampunk city environment",
+      "Custom VR locomotion with no motion sickness design"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Gameplay", "url": "https://www.youtube.com/embed/lT1YQY3lizY" }
+      ],
+      "images": ["img/SteamBlast-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "VR Flight Mechanics",
+        "description": "Designed and implemented the 3D flight system with momentum, drag, and comfort-mode options. Iterated extensively to minimize discomfort while preserving the sense of speed.",
+        "images": ["img/SteamBlast-cover.png"]
+      },
+      {
+        "title": "Multiplayer Combat Loop",
+        "description": "Built the networked combat — projectile replication, hit detection, respawn flow, and objective score tracking — over Photon PUN.",
+        "images": ["img/SteamBlast-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Killing Beat",
+    "tags": ["Mobile", "Rhythm", "Hyper-Casual"],
+    "description": "A rhythm mobile game where you dodge obstacles perfectly in sync with the beat.",
+    "about": "Killing Beat is a hyper-casual rhythm game designed around one tight loop: obstacles come at you timed to the music, and your job is to dodge them by reading the beat before the visual cue arrives.\n\nThe game's design challenge was making the music-obstacle sync feel fair and satisfying — not punishing. Custom audio analysis tools were built to map beat events to obstacle spawn timings, allowing designers to author levels without manual frame-counting.",
+    "cta": null,
+    "technologies": ["Unity", "C#", "Audio DSP", "Mobile (iOS / Android)"],
+    "features": [
+      "Music-synchronized obstacle generation",
+      "Beat-prediction gameplay (audio before visual)",
+      "Progressive difficulty per track",
+      "Hyper-casual one-session loop design",
+      "Custom beat-mapping authoring tool"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Gameplay", "url": "https://www.youtube.com/embed/Z08ugcA71dU?end=134" }
+      ],
+      "images": ["img/KillingBeat-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "Audio-to-Obstacle Sync System",
+        "description": "Built a custom DSP pipeline that analyses audio frequency peaks and emits timed gameplay events, driving obstacle spawns without manual timeline authoring.",
+        "images": ["img/KillingBeat-cover.png"]
+      },
+      {
+        "title": "Difficulty Progression",
+        "description": "Designed the difficulty scaling system that increases obstacle density, speed, and pattern complexity based on session performance to maintain flow state.",
+        "images": ["img/KillingBeat-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "SymSam",
+    "tags": ["Mobile", "Hyper-Casual", "Puzzle"],
+    "description": "Play as a samurai slicing geometric shapes into perfect halves — precision is everything.",
+    "about": "SymSam is a hyper-casual mobile game built around a single satisfying mechanic: drawing a symmetrical cut through increasingly complex shapes. The samurai character gives the cutting gesture personality, and the geometric shapes escalate in complexity as the player progresses.\n\nThe core engineering challenge was a robust real-time polygon slicing system that could handle arbitrary convex and concave shapes, compute symmetry error, and provide snappy visual feedback on each cut.",
+    "cta": null,
+    "technologies": ["Unity", "C#", "Computational Geometry", "Mobile (iOS / Android)"],
+    "features": [
+      "Real-time freehand polygon cutting",
+      "Symmetry accuracy scoring per cut",
+      "Shape complexity progression",
+      "Satisfying slice VFX and audio",
+      "Hyper-casual session design"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Gameplay", "url": "https://www.youtube.com/embed/Z08ugcA71dU?start=134&end=168" }
+      ],
+      "images": ["img/SymSam-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "Polygon Slice Engine",
+        "description": "Implemented the real-time polygon slicing system using computational geometry — handling convex/concave shape decomposition, UV remapping on cut faces, and physics re-initialisation of resulting pieces.",
+        "images": ["img/SymSam-cover.png"]
+      },
+      {
+        "title": "Symmetry Scoring",
+        "description": "Built the symmetry measurement algorithm that computes the axis of the player's cut and scores deviation from perfect bilateral symmetry, with tiered feedback (Perfect / Good / Miss).",
+        "images": ["img/SymSam-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Bomb Party",
+    "tags": ["PC", "Local Multiplayer", "Party", "Game Jam"],
+    "description": "4-player PVP where you throw bombs directly or through portals until one player survives — built in 48 hours for Global Game Jam 2018.",
+    "about": "Bomb Party was built for Global Game Jam 2018 on the theme of Transmission. Four players compete on a shared screen, throwing bombs that bounce off walls or travel through portals to reach opponents.\n\nThe game jam constraint forced rapid prototyping: portal mechanics, physics-based bomb trajectories, and local split-input were all built and iterated within 48 hours. The result is a chaotic party game that's immediately readable and genuinely fun.",
+    "cta": { "label": "Global Game Jam", "url": "https://globalgamejam.org/2018/games/bombparty" },
+    "technologies": ["Unity", "C#", "Local Multiplayer", "Physics2D"],
+    "features": [
+      "4-player local PVP on one screen",
+      "Portal-based bomb redirection",
+      "Physics-bounce bomb trajectories",
+      "Last-player-standing win condition",
+      "Built in 48 hours — Global Game Jam 2018"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Gameplay", "url": "https://www.youtube.com/embed/clx0vbIevjU" }
+      ],
+      "images": ["img/BoombPart-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "Portal & Bomb Mechanics",
+        "description": "Designed and built the portal entry/exit system and bomb physics in Unity 2D — including trajectory prediction, wall bounce, portal direction mapping, and explosion radius.",
+        "images": ["img/BoombPart-cover.png"]
+      },
+      {
+        "title": "Local Multiplayer Input",
+        "description": "Set up the split-controller input layer supporting up to 4 simultaneous gamepads with correct input isolation and player assignment.",
+        "images": ["img/BoombPart-cover.png"]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Skull Switch",
+    "tags": ["Mobile", "Hyper-Casual", "Reflex"],
+    "description": "Protect your skulls by toggling their lane visibility before incoming obstacles destroy them.",
+    "about": "Skull Switch is a reflex-driven hyper-casual game with a simple but escalating challenge: skulls appear in lanes, obstacles race toward them, and you tap to toggle a skull's visibility — making it pass through obstacles harmlessly. Miss the window and the skull is gone.\n\nThe game layers complexity by increasing lane count, obstacle speed, and simultaneous threat count, while keeping the core gesture (tap to toggle) constant. The main design challenge was calibrating the timing windows to feel fair at high difficulty.",
+    "cta": null,
+    "technologies": ["Unity", "C#", "Mobile (iOS / Android)", "Hyper-Casual design"],
+    "features": [
+      "Tap-to-toggle lane visibility mechanic",
+      "Multi-lane threat escalation",
+      "Obstacle speed and density progression",
+      "Visual clarity design for split-second reads",
+      "Endless run with high-score loop"
+    ],
+    "media": {
+      "videos": [
+        { "type": "Gameplay", "url": "https://www.youtube.com/embed/9B_GFFyyyNY" }
+      ],
+      "images": ["img/SkullSwitch-cover.png"]
+    },
+    "myWork": [
+      {
+        "title": "Lane & Visibility System",
+        "description": "Built the lane management and visibility toggle system with correct collision masking so toggled skulls are truly transparent to obstacles without physics edge cases.",
+        "images": ["img/SkullSwitch-cover.png"]
+      },
+      {
+        "title": "Difficulty Curve Tuning",
+        "description": "Designed the parameterised difficulty ramp — obstacle speed, simultaneous lane threat count, and timing windows — iterating on playtests to land the difficulty curve in the flow-state sweet spot.",
+        "images": ["img/SkullSwitch-cover.png"]
       }
     ]
   }
 ]
-
