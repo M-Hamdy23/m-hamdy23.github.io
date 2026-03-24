@@ -322,6 +322,19 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 .modal-body::-webkit-scrollbar{width:10px}
 .modal-body::-webkit-scrollbar-track{background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:999px}
 .modal-body::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--accent2),var(--accent));border-radius:999px}
+.modal-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:18px;align-items:start}
+.modal-sidebar{position:sticky;top:0;background:var(--bg3);border:1px solid var(--border);padding:12px}
+.modal-side-title{font-family:'Rajdhani',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.modal-side-meta + .modal-side-meta{margin-top:12px}
+.modal-side-row{display:flex;gap:6px;flex-wrap:wrap}
+.modal-side-stats{display:flex;gap:6px;flex-wrap:wrap}
+.modal-side-stat{font-family:'Share Tech Mono',monospace;font-size:.56rem;color:var(--text);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:4px 8px;letter-spacing:.08em;text-transform:uppercase}
+.modal-side-nav{display:flex;flex-direction:column;gap:7px;margin-top:14px}
+.modal-side-link{background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--muted);text-align:left;
+  font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 10px;cursor:pointer;transition:all .25s}
+.modal-side-link:hover{color:var(--accent);border-color:var(--accent);transform:translateX(2px)}
+.modal-main{min-width:0}
+.modal-main > div + div{margin-top:20px}
 .modal-title{font-family:'Rajdhani',sans-serif;font-size:1.65rem;font-weight:700;color:var(--text);transition:color .5s}
 .modal-badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .modal-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
@@ -409,6 +422,10 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
   footer{padding:18px;flex-direction:column;text-align:center}
   .cursor-dot,.cursor-ring{display:none}
   .modal-head-desc{max-width:none}
+  .modal-layout{grid-template-columns:1fr;gap:14px}
+  .modal-sidebar{position:static}
+  .modal-side-nav{flex-direction:row;overflow-x:auto;padding-bottom:4px}
+  .modal-side-link{white-space:nowrap}
   .modal-media-block{min-width:min(320px,82vw);width:min(320px,82vw)}
   .media-lightbox{padding:16px}
   .media-lightbox-image{max-height:calc(88vh - 72px)}
@@ -620,12 +637,35 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
       </div>
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
-    <div class="modal-body">
-      <div class="modal-about"><div class="modal-stitle">About</div><p class="modal-about-desc" id="m-about"></p></div>
-      <div class="modal-media-section"><div class="modal-stitle">Media</div><div class="modal-media-stack" id="m-media"></div></div>
-      <div id="m-feat-wrap" style="display:none"><div class="modal-stitle">Key Features</div><ul class="exp-bullets" id="m-feat"></ul></div>
-      <div><div class="modal-stitle" style="margin-top:16px">Tech Stack</div><div class="exp-techs" id="m-tech"></div></div>
-      <div class="modal-actions" id="m-actions"></div>
+    <div class="modal-body" id="modal-body">
+      <div class="modal-layout">
+        <aside class="modal-sidebar">
+          <div class="modal-side-meta">
+            <div class="modal-side-title">Overview</div>
+            <div class="modal-side-row" id="m-side-platforms"></div>
+          </div>
+          <div class="modal-side-meta">
+            <div class="modal-side-row" id="m-side-tags"></div>
+          </div>
+          <div class="modal-side-meta">
+            <div class="modal-side-stats" id="m-side-stats"></div>
+          </div>
+          <div class="modal-side-nav">
+            <button type="button" class="modal-side-link" id="jump-about" onclick="scrollModalToSection('m-about-sec')">About</button>
+            <button type="button" class="modal-side-link" id="jump-media" onclick="scrollModalToSection('m-media-sec')">Media</button>
+            <button type="button" class="modal-side-link" id="jump-features" onclick="scrollModalToSection('m-feat-wrap')">Features</button>
+            <button type="button" class="modal-side-link" id="jump-tech" onclick="scrollModalToSection('m-tech-sec')">Tech</button>
+            <button type="button" class="modal-side-link" id="jump-actions" onclick="scrollModalToSection('m-actions-sec')">Links</button>
+          </div>
+        </aside>
+        <div class="modal-main">
+          <div class="modal-about" id="m-about-sec"><div class="modal-stitle">About</div><p class="modal-about-desc" id="m-about"></p></div>
+          <div class="modal-media-section" id="m-media-sec"><div class="modal-stitle">Media</div><div class="modal-media-stack" id="m-media"></div></div>
+          <div id="m-feat-wrap" style="display:none"><div class="modal-stitle">Key Features</div><ul class="exp-bullets" id="m-feat"></ul></div>
+          <div id="m-tech-sec"><div class="modal-stitle">Tech Stack</div><div class="exp-techs" id="m-tech"></div></div>
+          <div id="m-actions-sec"><div class="modal-actions" id="m-actions"></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -826,6 +866,13 @@ function closeMediaLightbox(e){
   document.getElementById('media-lightbox-caption').textContent = '';
 }
 
+function scrollModalToSection(sectionId){
+  const body = document.getElementById('modal-body');
+  const target = document.getElementById(sectionId);
+  if(!body || !target) return;
+  body.scrollTo({ top: target.offsetTop - 8, behavior: 'smooth' });
+}
+
 function renderProjects(filter){
   const grid = document.getElementById('projects-grid');
   const list = filter==='all' ? PROJECTS : PROJECTS.filter(p=>p.tags.includes(filter));
@@ -858,10 +905,19 @@ function filterProjects(f,btn){
 
 function openModal(id){
   const p = PROJECTS.find(x=>x.id===id); if(!p)return;
+  const hasFeatures = !!(p.features && p.features.length);
+  const hasLink = !!p.link;
   document.getElementById('m-title').textContent = p.name;
   document.getElementById('m-badges').innerHTML  = p.platforms.map(badgeHTML).join('');
   document.getElementById('m-tags').innerHTML    = p.tags.map(tag=>`<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
   document.getElementById('m-head-desc').textContent = p.shortDesc || p.desc;
+  document.getElementById('m-side-platforms').innerHTML = p.platforms.map(badgeHTML).join('');
+  document.getElementById('m-side-tags').innerHTML = p.tags.map(tag=>`<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
+  document.getElementById('m-side-stats').innerHTML = [
+    `${p.techs.length} Tech`,
+    `${p.features ? p.features.length : 0} Feature`,
+    hasLink ? 'External Link' : 'No External Link'
+  ].map(s=>`<span class="modal-side-stat">${s}</span>`).join('');
   document.getElementById('m-about').textContent = p.desc;
   const mediaEl = document.getElementById('m-media');
   const videos = normalizeProjectVideos(p);
@@ -895,12 +951,16 @@ function openModal(id){
     btn.addEventListener('click',()=>openMediaLightbox(btn.dataset.src, btn.dataset.alt));
   });
   const fw=document.getElementById('m-feat-wrap');
-  if(p.features&&p.features.length){
+  if(hasFeatures){
     fw.style.display='block';
     document.getElementById('m-feat').innerHTML=p.features.map(f=>`<li>${f}</li>`).join('');
   }else fw.style.display='none';
   document.getElementById('m-tech').innerHTML=p.techs.map(t=>`<span class="tech-pill">${t}</span>`).join('');
-  document.getElementById('m-actions').innerHTML=p.link?`<a href="${p.link}" target="_blank" class="btn-primary">View / Download →</a>`:'';
+  document.getElementById('m-actions').innerHTML=hasLink?`<a href="${p.link}" target="_blank" class="btn-primary">View / Download →</a>`:'';
+  document.getElementById('m-actions-sec').style.display = hasLink ? 'block' : 'none';
+  document.getElementById('jump-features').style.display = hasFeatures ? 'block' : 'none';
+  document.getElementById('jump-actions').style.display = hasLink ? 'block' : 'none';
+  document.getElementById('modal-body').scrollTop = 0;
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
 }
@@ -909,6 +969,7 @@ function closeModal(){
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow='';
   document.getElementById('m-media').innerHTML='';
+  document.getElementById('modal-body').scrollTop = 0;
 }
 function closeOverlay(e){if(e.target===document.getElementById('modal-overlay'))closeModal();}
 document.addEventListener('keydown',e=>{
