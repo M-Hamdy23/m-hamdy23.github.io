@@ -219,11 +219,15 @@ section{position:relative;z-index:1;padding:100px 48px}
 .project-thumb{width:100%;height:176px;background:linear-gradient(135deg,var(--bg3),#12122a);
   display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 [data-theme="light"] .project-thumb{background:linear-gradient(135deg,#c9d6e8,#b6c4dc)}
+.project-thumb-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .45s ease,filter .45s ease}
+.project-card:hover .project-thumb-media{transform:scale(1.06);filter:saturate(1.12)}
 .project-thumb-icon{font-size:3.5rem;opacity:.28;transition:all .4s;position:relative;z-index:1}
 .project-card:hover .project-thumb-icon{opacity:.5;transform:scale(1.1)}
 .project-thumb-overlay{position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 50%,rgba(14,14,26,.85) 100%);transition:background .5s}
+  background:linear-gradient(180deg,rgba(0,0,0,.05) 35%,rgba(14,14,26,.9) 100%);transition:background .5s;z-index:2}
 [data-theme="light"] .project-thumb-overlay{background:linear-gradient(180deg,transparent 50%,rgba(220,232,244,.7) 100%)}
+.project-thumb-mark{position:absolute;left:10px;bottom:10px;z-index:3;font-size:1.1rem;opacity:.88;
+  background:rgba(5,5,8,.6);border:1px solid rgba(0,245,196,.2);padding:3px 7px;line-height:1}
 /* video-style hover */
 .proj-hover-overlay{position:absolute;inset:0;opacity:0;transition:opacity .4s;z-index:2;
   display:flex;align-items:center;justify-content:center;background:rgba(5,5,8,.6)}
@@ -318,11 +322,13 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 .modal-desc{font-size:.89rem;color:var(--muted);line-height:1.7;margin-bottom:20px;transition:color .5s}
 .modal-stitle{font-family:'Rajdhani',sans-serif;font-size:.86rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
 .modal-actions{display:flex;gap:11px;margin-top:22px;flex-wrap:wrap}
-.modal-video{width:100%;aspect-ratio:16/9;background:var(--bg3);border:1px solid var(--border);
-  margin-bottom:18px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.modal-video{width:100%;background:var(--bg3);border:1px solid var(--border);margin-bottom:18px;overflow:hidden;position:relative;padding:10px}
+.modal-video-frame{width:100%;aspect-ratio:16/9;background:rgba(0,0,0,.22);overflow:hidden}
+.modal-video-frame + .modal-video-frame{margin-top:10px}
 .modal-video iframe{width:100%;height:100%;border:none}
+.modal-media-image{width:100%;height:100%;object-fit:cover;display:block}
 .modal-video-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
-  color:var(--muted);font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em}
+  color:var(--muted);font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;aspect-ratio:16/9}
 .modal-video-ph .vi{font-size:2.8rem;opacity:.25}
 
 /* ─── CURSOR ───────────────────────────────────────── */
@@ -580,65 +586,89 @@ const PROJECTS = [
   {id:1,name:"Highstreet World",icon:"🌐",
    desc:"A commerce-centered metaverse integrating shopping with gaming. Brands supply endless cosmetics bridging character customization with real-world fashion, backed by an MMORPG framework allowing players to craft unique NFTs.",
    tags:["web","vr","multiplayer","unity"],platforms:["WEB","VR"],
+   cover:"img/Highstreet-cover.png",
+   videos:["https://www.youtube.com/embed/652a-CFEBiU"],
    techs:["C#","Unity","Unity DOTS","Multiplayer"],
    features:["MMORPG backbone with NFT character customization","Real-world fashion brand integrations","VR and Web cross-platform gameplay","Real-time multiplayer networking"],link:null},
   {id:2,name:"Nutrien HGV Driver Training",icon:"🚛",
    desc:"7 bespoke interactive scenarios addressing specific workplace accidents for Nutrien. Each features instructional, practice, and LMS-integrated assessment modes.",
    tags:["pc","unity"],platforms:["PC"],
+   cover:"img/DriverTraining-cover.png",
+   videos:["https://player.vimeo.com/video/899866858?h=64437a6e2a&badge=0&autopause=0&player_id=0&app_id=58479"],
    techs:["C#","Unity","LMS Integration"],
    features:["7 unique accident simulations","Train, Practice & Assessment modes","Seamless LMS integration","Instructional + free-play hybrid"],link:null},
   {id:3,name:"Autoliv Explore 3D",icon:"🦺",
    desc:"An AR sales tool empowering Autoliv's global teams to showcase life-saving automotive safety products interactively, improving customer understanding and presentations.",
    tags:["vr","unity"],platforms:["AR","IOS"],
+   cover:"img/Autoliv-cover.png",
+   videos:["https://www.youtube.com/embed/OtewjIJFGIU"],
    techs:["C#","Unity","AR","Vuforia"],
    features:["Interactive 3D product visualization","AR marker-based overlay","Sales presentation mode","Cross-device compatibility"],link:null},
   {id:4,name:"Scriptable System",icon:"🛠️",
    desc:"A Unity Editor extension that makes managing and creating scriptable variables and events a streamlined, organized process — shipped to the Unity Asset Store.",
    tags:["unity"],platforms:["ASSET"],
+   cover:"img/ScriptableSystem-cover.png",
+   videos:["https://www.youtube.com/embed/_xeZ2ujhtYs"],
    techs:["C#","Unity","Editor Extension"],
    features:["Create Scriptable Variable & Event classes instantly","One-click event listener setup","Quick-find where each asset is used","Configurable naming conventions"],
    link:"https://assetstore.unity.com/packages/slug/191378"},
   {id:5,name:"10 Tawla",icon:"🎲",
    desc:"Authentic online Backgammon for iOS and Android featuring real-time multiplayer with ELO ranking, 7 life-like board designs, AI opponents, and social features.",
    tags:["mobile","multiplayer","unity"],platforms:["MOBILE","IOS"],
+   cover:"img/10Tawla-cover.png",
+   videos:["https://www.youtube.com/embed/XcUdxVhAFaA"],
    techs:["C#","Unity","Nakama","Firebase"],
    features:["Online multiplayer with ELO ranking","Host/join matches with friends","Smart AI matching your skill level","7 life-like board aesthetics","Moultezim and Mahbuse game modes"],
    link:"https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla"},
   {id:6,name:"Sky Striders",icon:"🦅",
    desc:"An online multiplayer PC game centered on fluid movement mechanics both on the ground and in the air, with multiple modes that challenge players to master dynamic abilities.",
    tags:["pc","multiplayer","unity"],platforms:["PC"],
+   cover:"img/SkyStrider-cover.png",
+   videos:["https://www.youtube.com/embed/Kqmn4qk3hSE","https://www.youtube.com/embed/0Nb84N4M3ps"],
    techs:["C#","Unity","Multiplayer"],
    features:["Advanced ground & aerial movement","Multiple character classes","Online multiplayer game modes","Dynamic ability-driven gameplay"],
    link:"https://raskulls.itch.io/sky-striders"},
   {id:7,name:"That Just Happened",icon:"⚠️",
    desc:"A serious VR game about blue-collar workplace safety. Players save co-workers from deadly accidents by providing proper safety equipment, built in Unreal Engine.",
    tags:["pc","vr"],platforms:["VR","PC"],
+   cover:"img/ThatJustHappend-cover.png",
+   videos:["https://www.youtube.com/embed/w0o9qF5tkCM"],
    techs:["Unreal Engine","VR"],
    features:["Immersive VR safety simulation","Real-world accident recreation","Interactive safety equipment mechanics","Educational training framework"],link:null},
   {id:8,name:"Steam Blast",icon:"🥊",
    desc:"A multiplayer VR fighting game where players fly, attack opponents, and race to capture devices to control a futuristic city — ITI graduation project.",
    tags:["pc","vr","multiplayer"],platforms:["VR","PC"],
+   cover:"img/SteamBlast-cover.png",
+   videos:["https://www.youtube.com/embed/lT1YQY3lizY"],
    techs:["Unreal Engine","VR","Multiplayer"],
    features:["Full 3D flight mechanics in VR","Real-time competitive multiplayer","Device-capture objective gameplay","Physics-based combat"],link:null},
   {id:9,name:"Killing Beat",icon:"🎵",
    desc:"A rhythm mobile game where players dodge incoming obstacles while vibing to the beat — tight timing mechanics synchronized to music tracks.",
    tags:["mobile","unity"],platforms:["MOBILE"],
+   cover:"img/KillingBeat-cover.png",
+   videos:["https://www.youtube.com/embed/Z08ugcA71dU?end=134"],
    techs:["C#","Unity"],
    features:["Music-synchronized obstacles","Progressive difficulty","Hyper-casual loop design"],link:null},
   {id:10,name:"SymSam",icon:"⚔️",
    desc:"A hyper-casual mobile game where you play as a samurai on a quest for perfect symmetry, slicing shapes into equal halves with satisfying precision.",
    tags:["mobile","unity"],platforms:["MOBILE"],
+   cover:"img/SymSam-cover.png",
+   videos:["https://www.youtube.com/embed/Z08ugcA71dU?start=134&end=168"],
    techs:["C#","Unity"],
    features:["Precision cutting mechanics","Shape symmetry detection","Progressive puzzle design"],link:null},
   {id:11,name:"Bomb Party",icon:"💣",
    desc:"A 4-player PVP PC game where players throw bombs at each other directly or through portals — built for Global Game Jam 2018.",
    tags:["pc","multiplayer","unity"],platforms:["PC"],
+   cover:"img/BoombPart-cover.png",
+   videos:["https://www.youtube.com/embed/clx0vbIevjU"],
    techs:["C#","Unity","Local Multiplayer"],
    features:["4-player local PVP","Portal-based bomb physics","Global Game Jam 2018 entry"],
    link:"https://globalgamejam.org/2018/games/bombparty"},
   {id:12,name:"Skull Switch",icon:"💀",
    desc:"A hyper-casual mobile game where you protect skulls from incoming danger by switching lane visibility before obstacles can strike.",
    tags:["mobile","unity"],platforms:["MOBILE"],
+   cover:"img/SkullSwitch-cover.png",
+   videos:["https://www.youtube.com/embed/9B_GFFyyyNY"],
    techs:["C#","Unity"],
    features:["Reflex-based lane switching","Escalating obstacle patterns","Hyper-casual design"],link:null}
 ];
@@ -654,8 +684,9 @@ function renderProjects(filter){
   grid.innerHTML = list.map(p=>`
     <div class="project-card reveal-scale" onclick="openModal(${p.id})">
       <div class="project-thumb">
-        <div class="project-thumb-icon">${p.icon}</div>
+        ${p.cover ? `<img class="project-thumb-media" src="${p.cover}" alt="${p.name} cover" loading="lazy">` : `<div class="project-thumb-icon">${p.icon}</div>`}
         <div class="project-thumb-overlay"></div>
+        <div class="project-thumb-mark">${p.icon}</div>
         <div class="project-platform-badges">${p.platforms.map(badgeHTML).join('')}</div>
         <div class="proj-hover-overlay"><div class="play-ring">▶</div></div>
       </div>
@@ -683,8 +714,16 @@ function openModal(id){
   document.getElementById('m-desc').textContent  = p.desc;
   document.getElementById('m-badges').innerHTML  = p.platforms.map(badgeHTML).join('');
   const vEl = document.getElementById('m-video');
-  vEl.style.display='flex';
-  vEl.innerHTML=`<div class="modal-video-ph"><div class="vi">${p.icon}</div><span>CLICK TO PLAY DEMO</span></div>`;
+  const videos = Array.isArray(p.videos) ? p.videos.filter(Boolean) : [];
+  if(videos.length){
+    vEl.innerHTML = videos.map((videoUrl, idx)=>
+      `<div class="modal-video-frame"><iframe src="${videoUrl}" title="${p.name} video ${idx+1}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+    ).join('');
+  } else if (p.cover) {
+    vEl.innerHTML = `<div class="modal-video-frame"><img class="modal-media-image" src="${p.cover}" alt="${p.name} preview"></div>`;
+  } else {
+    vEl.innerHTML=`<div class="modal-video-ph"><div class="vi">${p.icon}</div><span>Media coming soon</span></div>`;
+  }
   const fw=document.getElementById('m-feat-wrap');
   if(p.features&&p.features.length){
     fw.style.display='block';
