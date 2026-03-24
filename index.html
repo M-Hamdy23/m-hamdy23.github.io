@@ -326,6 +326,9 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 .modal-sidebar{position:sticky;top:0;background:var(--bg3);border:1px solid var(--border);padding:12px}
 .modal-side-title{font-family:'Rajdhani',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
 .modal-side-meta + .modal-side-meta{margin-top:12px}
+.modal-side-cta{margin:8px 0 10px}
+.modal-side-cta.modal-actions{margin:8px 0 10px;gap:0}
+.modal-side-cta .btn-primary{display:inline-flex;width:100%;justify-content:center}
 .modal-side-row{display:flex;gap:6px;flex-wrap:wrap}
 .modal-side-stats{display:flex;gap:6px;flex-wrap:wrap}
 .modal-side-stat{font-family:'Share Tech Mono',monospace;font-size:.56rem;color:var(--text);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:4px 8px;letter-spacing:.08em;text-transform:uppercase}
@@ -652,6 +655,7 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
           <div class="modal-side-image"><img id="m-side-image" src="" alt="Project cover" loading="lazy"></div>
           <div class="modal-side-meta">
             <div class="modal-side-title">Overview</div>
+            <div class="modal-side-cta modal-actions" id="m-actions"></div>
             <div class="modal-side-row" id="m-side-platforms"></div>
           </div>
           <div class="modal-side-meta">
@@ -671,13 +675,11 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
           <div class="modal-side-nav">
             <button type="button" class="modal-side-link" id="jump-about" onclick="scrollModalToSection('m-about-sec')">About</button>
             <button type="button" class="modal-side-link" id="jump-media" onclick="scrollModalToSection('m-media-sec')">Media</button>
-            <button type="button" class="modal-side-link" id="jump-actions" onclick="scrollModalToSection('m-actions-sec')">Links</button>
           </div>
         </aside>
         <div class="modal-main">
           <div class="modal-about" id="m-about-sec"><div class="modal-stitle">About</div><p class="modal-about-desc" id="m-about"></p></div>
           <div class="modal-media-section" id="m-media-sec"><div class="modal-stitle">Media</div><div class="modal-media-stack" id="m-media"></div></div>
-          <div id="m-actions-sec"><div class="modal-actions" id="m-actions"></div></div>
         </div>
       </div>
     </div>
@@ -973,8 +975,6 @@ function openModal(id){
   }else fw.style.display='none';
   document.getElementById('m-tech').innerHTML=p.techs.map(t=>`<span class="tech-pill">${t}</span>`).join('');
   document.getElementById('m-actions').innerHTML=hasLink?`<a href="${p.link}" target="_blank" class="btn-primary">View / Download →</a>`:'';
-  document.getElementById('m-actions-sec').style.display = hasLink ? 'block' : 'none';
-  document.getElementById('jump-actions').style.display = hasLink ? 'block' : 'none';
   document.getElementById('modal-body').scrollTop = 0;
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
