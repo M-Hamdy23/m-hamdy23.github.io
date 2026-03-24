@@ -335,6 +335,13 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 .modal-side-link:hover{color:var(--accent);border-color:var(--accent);transform:translateX(2px)}
 .modal-main{min-width:0}
 .modal-main > div + div{margin-top:20px}
+.modal-sidebar .exp-techs{display:flex;gap:6px;flex-wrap:wrap}
+.modal-sidebar .tech-pill{font-family:'Share Tech Mono',monospace;font-size:.5rem;color:var(--text);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:4px 8px;letter-spacing:.08em;text-transform:uppercase;transition:all .25s}
+.modal-sidebar .tech-pill:hover{color:var(--accent);border-color:var(--accent);background:rgba(0,245,196,.08)}
+.modal-sidebar .exp-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.modal-sidebar .exp-bullets li{font-family:'Share Tech Mono',monospace;font-size:.56rem;color:var(--muted);letter-spacing:.06em;line-height:1.4;padding-left:12px;position:relative;transition:color .25s}
+.modal-sidebar .exp-bullets li:before{content:'▸';position:absolute;left:0;color:var(--accent)}
+.modal-sidebar .exp-bullets li:hover{color:var(--text)}
 .modal-title{font-family:'Rajdhani',sans-serif;font-size:1.65rem;font-weight:700;color:var(--text);transition:color .5s}
 .modal-badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .modal-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
@@ -650,19 +657,23 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
           <div class="modal-side-meta">
             <div class="modal-side-stats" id="m-side-stats"></div>
           </div>
+          <div class="modal-side-meta" id="m-tech-sec">
+            <div class="modal-side-title">Tech Stack</div>
+            <div class="exp-techs" id="m-tech"></div>
+          </div>
+          <div class="modal-side-meta" id="m-feat-wrap" style="display:none">
+            <div class="modal-side-title">Features</div>
+            <ul class="exp-bullets" id="m-feat"></ul>
+          </div>
           <div class="modal-side-nav">
             <button type="button" class="modal-side-link" id="jump-about" onclick="scrollModalToSection('m-about-sec')">About</button>
             <button type="button" class="modal-side-link" id="jump-media" onclick="scrollModalToSection('m-media-sec')">Media</button>
-            <button type="button" class="modal-side-link" id="jump-features" onclick="scrollModalToSection('m-feat-wrap')">Features</button>
-            <button type="button" class="modal-side-link" id="jump-tech" onclick="scrollModalToSection('m-tech-sec')">Tech</button>
             <button type="button" class="modal-side-link" id="jump-actions" onclick="scrollModalToSection('m-actions-sec')">Links</button>
           </div>
         </aside>
         <div class="modal-main">
           <div class="modal-about" id="m-about-sec"><div class="modal-stitle">About</div><p class="modal-about-desc" id="m-about"></p></div>
           <div class="modal-media-section" id="m-media-sec"><div class="modal-stitle">Media</div><div class="modal-media-stack" id="m-media"></div></div>
-          <div id="m-feat-wrap" style="display:none"><div class="modal-stitle">Key Features</div><ul class="exp-bullets" id="m-feat"></ul></div>
-          <div id="m-tech-sec"><div class="modal-stitle">Tech Stack</div><div class="exp-techs" id="m-tech"></div></div>
           <div id="m-actions-sec"><div class="modal-actions" id="m-actions"></div></div>
         </div>
       </div>
@@ -958,7 +969,6 @@ function openModal(id){
   document.getElementById('m-tech').innerHTML=p.techs.map(t=>`<span class="tech-pill">${t}</span>`).join('');
   document.getElementById('m-actions').innerHTML=hasLink?`<a href="${p.link}" target="_blank" class="btn-primary">View / Download →</a>`:'';
   document.getElementById('m-actions-sec').style.display = hasLink ? 'block' : 'none';
-  document.getElementById('jump-features').style.display = hasFeatures ? 'block' : 'none';
   document.getElementById('jump-actions').style.display = hasLink ? 'block' : 'none';
   document.getElementById('modal-body').scrollTop = 0;
   document.getElementById('modal-overlay').classList.add('open');
