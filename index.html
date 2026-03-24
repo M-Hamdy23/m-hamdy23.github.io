@@ -327,16 +327,47 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
 .modal-head-desc{font-size:.89rem;color:var(--muted);line-height:1.7;margin-top:12px;max-width:54ch;transition:color .5s}
 .modal-about{margin-bottom:20px}
 .modal-about-desc{font-size:.89rem;color:var(--muted);line-height:1.7;transition:color .5s}
+.modal-media-section{margin-bottom:20px}
+.modal-media-stack{display:flex;gap:14px;align-items:stretch;overflow-x:auto;padding:2px 2px 12px;
+  scrollbar-width:thin;scrollbar-color:rgba(0,245,196,.45) rgba(255,255,255,.06);scroll-snap-type:x proximity}
+.modal-media-stack::-webkit-scrollbar{height:10px}
+.modal-media-stack::-webkit-scrollbar-track{background:rgba(255,255,255,.06);border-radius:999px}
+.modal-media-stack::-webkit-scrollbar-thumb{background:rgba(0,245,196,.4);border-radius:999px}
+.modal-media-block{background:var(--bg3);border:1px solid var(--border);padding:10px;min-width:min(440px,78vw);width:min(440px,78vw);
+  display:flex;flex-direction:column;gap:10px;flex-shrink:0;scroll-snap-align:start;transition:background .5s,border-color .3s,transform .3s}
+.modal-media-block:hover{border-color:var(--accent)}
+.modal-media-head{display:flex;flex-direction:column;gap:4px}
+.modal-media-label{font-family:'Share Tech Mono',monospace;font-size:.66rem;color:var(--accent);
+  letter-spacing:.18em;text-transform:uppercase;opacity:.9}
+.modal-video-card .modal-video{background:transparent;border:none;padding:0}
+.modal-video-title{font-family:'Rajdhani',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;color:var(--text);margin-bottom:8px;transition:color .5s}
 .modal-stitle{font-family:'Rajdhani',sans-serif;font-size:.86rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
 .modal-actions{display:flex;gap:11px;margin-top:22px;flex-wrap:wrap}
-.modal-video{width:100%;background:var(--bg3);border:1px solid var(--border);margin-bottom:18px;overflow:hidden;position:relative;padding:10px}
+.modal-video{width:100%;background:var(--bg3);border:1px solid var(--border);overflow:hidden;position:relative;padding:10px}
 .modal-video-frame{width:100%;aspect-ratio:16/9;background:rgba(0,0,0,.22);overflow:hidden}
 .modal-video-frame + .modal-video-frame{margin-top:10px}
 .modal-video iframe{width:100%;height:100%;border:none}
-.modal-media-image{width:100%;height:100%;object-fit:cover;display:block}
 .modal-video-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
   color:var(--muted);font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;aspect-ratio:16/9}
 .modal-video-ph .vi{font-size:2.8rem;opacity:.25}
+.modal-screenshot-btn{appearance:none;text-align:left;color:inherit;font:inherit;cursor:pointer}
+.modal-screenshot-btn:hover{transform:translateY(-3px);border-color:var(--accent)}
+.modal-screenshot-frame{position:relative;aspect-ratio:16/9;overflow:hidden;background:rgba(0,0,0,.22)}
+.modal-screenshot-btn img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.modal-screenshot-btn:hover img{transform:scale(1.04)}
+.modal-screenshot-overlay{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;
+  background:linear-gradient(180deg,transparent,rgba(5,5,8,.92));display:flex;align-items:center;justify-content:space-between;gap:12px}
+.modal-screenshot-caption{font-family:'Rajdhani',sans-serif;font-size:.8rem;font-weight:600;color:#fff;letter-spacing:.04em;text-align:left}
+.modal-screenshot-expand{font-family:'Share Tech Mono',monospace;font-size:.56rem;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.media-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:2400;padding:28px;
+  display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
+.media-lightbox.open{opacity:1;pointer-events:all}
+.media-lightbox-inner{max-width:min(1100px,92vw);max-height:88vh;display:flex;flex-direction:column;gap:12px;align-items:center}
+.media-lightbox-image{max-width:100%;max-height:calc(88vh - 64px);display:block;object-fit:contain;border:1px solid var(--border);background:var(--bg3)}
+.media-lightbox-caption{font-family:'Rajdhani',sans-serif;font-size:.95rem;font-weight:600;color:var(--text);letter-spacing:.04em;text-align:center;transition:color .5s}
+.media-lightbox-close{position:absolute;top:18px;right:18px;background:none;border:1px solid var(--border);color:var(--muted);
+  width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;transition:all .3s}
+.media-lightbox-close:hover{color:var(--accent);border-color:var(--accent)}
 
 /* ─── CURSOR ───────────────────────────────────────── */
 .cursor-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;
@@ -374,6 +405,9 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
   footer{padding:18px;flex-direction:column;text-align:center}
   .cursor-dot,.cursor-ring{display:none}
   .modal-head-desc{max-width:none}
+  .modal-media-block{min-width:min(320px,82vw);width:min(320px,82vw)}
+  .media-lightbox{padding:16px}
+  .media-lightbox-image{max-height:calc(88vh - 72px)}
 }
 </style>
 </head>
@@ -583,12 +617,20 @@ footer{position:relative;z-index:1;padding:26px 48px;border-top:1px solid var(--
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
     <div class="modal-body">
-      <div class="modal-video" id="m-video"></div>
       <div class="modal-about"><div class="modal-stitle">About</div><p class="modal-about-desc" id="m-about"></p></div>
+      <div class="modal-media-section"><div class="modal-stitle">Media</div><div class="modal-media-stack" id="m-media"></div></div>
       <div id="m-feat-wrap" style="display:none"><div class="modal-stitle">Key Features</div><ul class="exp-bullets" id="m-feat"></ul></div>
       <div><div class="modal-stitle" style="margin-top:16px">Tech Stack</div><div class="exp-techs" id="m-tech"></div></div>
       <div class="modal-actions" id="m-actions"></div>
     </div>
+  </div>
+</div>
+
+<div class="media-lightbox" id="media-lightbox" onclick="closeMediaLightbox(event)">
+  <button class="media-lightbox-close" onclick="closeMediaLightbox()">✕</button>
+  <div class="media-lightbox-inner">
+    <img class="media-lightbox-image" id="media-lightbox-image" src="about:blank" alt="Expanded project screenshot">
+    <div class="media-lightbox-caption" id="media-lightbox-caption"></div>
   </div>
 </div>
 
@@ -599,6 +641,10 @@ const PROJECTS = [
   {id:1,name:"Highstreet World",icon:"🌐",
    shortDesc:"A metaverse shopping experience blending VR, web gameplay, and real-time multiplayer systems.",
    desc:"Highstreet World is a commerce-driven metaverse where players step into a vibrant online universe that blends social exploration, fashion, and gameplay into one connected experience. Set inside a stylized MMORPG world, the core loop revolves around discovering branded content, customizing your avatar with digital cosmetics inspired by real-world products, and engaging with shared activities across both VR and web platforms. Behind the scenes, the project combines real-time multiplayer systems, scalable Unity architecture, and cross-platform world building to support immersive social play, persistent progression, and a seamless bridge between gaming identity and digital commerce.",
+   media:{screenshots:[
+    {src:"img/Highstreet-cover.png",alt:"Highstreet World storefront and social hub preview"},
+    {src:"img/Highstreet.png",alt:"Highstreet World in-game environment screenshot"}
+   ]},
    tags:["web","vr","multiplayer","unity"],platforms:["WEB","VR"],
    cover:"img/Highstreet-cover.png",
    videos:["https://www.youtube.com/embed/652a-CFEBiU"],
@@ -716,6 +762,66 @@ function formatProjectTag(tag){
   return labels[tag] || tag.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
 }
 
+function defaultVideoLabel(index,total){
+  if(total===1) return 'Trailer Video';
+  if(index===0) return 'Trailer Video';
+  if(index===1) return 'Gameplay Video';
+  return `Video ${index+1}`;
+}
+
+function normalizeProjectVideos(project){
+  const source = Array.isArray(project.media?.videos) && project.media.videos.length
+    ? project.media.videos
+    : Array.isArray(project.videos)
+      ? project.videos.filter(Boolean)
+      : [];
+
+  return source.map((entry,index,array)=>{
+    if(typeof entry === 'string'){
+      return { label: defaultVideoLabel(index,array.length), url: entry };
+    }
+    return {
+      label: entry.label || defaultVideoLabel(index,array.length),
+      url: entry.url
+    };
+  }).filter(video=>video.url);
+}
+
+function normalizeProjectScreenshots(project){
+  const source = Array.isArray(project.media?.screenshots) && project.media.screenshots.length
+    ? project.media.screenshots
+    : project.cover
+      ? [project.cover]
+      : [];
+
+  return source.map((entry,index)=>{
+    if(typeof entry === 'string'){
+      return { src: entry, alt: `${project.name} screenshot ${index+1}` };
+    }
+    return {
+      src: entry.src,
+      alt: entry.alt || `${project.name} screenshot ${index+1}`
+    };
+  }).filter(item=>item.src);
+}
+
+function openMediaLightbox(src,alt){
+  const overlay = document.getElementById('media-lightbox');
+  document.getElementById('media-lightbox-image').src = src;
+  document.getElementById('media-lightbox-image').alt = alt || 'Expanded project screenshot';
+  document.getElementById('media-lightbox-caption').textContent = alt || '';
+  overlay.classList.add('open');
+}
+
+function closeMediaLightbox(e){
+  const overlay = document.getElementById('media-lightbox');
+  if(e && e.target !== overlay) return;
+  overlay.classList.remove('open');
+  document.getElementById('media-lightbox-image').src = '';
+  document.getElementById('media-lightbox-image').alt = 'Expanded project screenshot';
+  document.getElementById('media-lightbox-caption').textContent = '';
+}
+
 function renderProjects(filter){
   const grid = document.getElementById('projects-grid');
   const list = filter==='all' ? PROJECTS : PROJECTS.filter(p=>p.tags.includes(filter));
@@ -753,17 +859,37 @@ function openModal(id){
   document.getElementById('m-tags').innerHTML    = p.tags.map(tag=>`<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
   document.getElementById('m-head-desc').textContent = p.shortDesc || p.desc;
   document.getElementById('m-about').textContent = p.desc;
-  const vEl = document.getElementById('m-video');
-  const videos = Array.isArray(p.videos) ? p.videos.filter(Boolean) : [];
-  if(videos.length){
-    vEl.innerHTML = videos.map((videoUrl, idx)=>
-      `<div class="modal-video-frame"><iframe src="${videoUrl}" title="${p.name} video ${idx+1}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
-    ).join('');
-  } else if (p.cover) {
-    vEl.innerHTML = `<div class="modal-video-frame"><img class="modal-media-image" src="${p.cover}" alt="${p.name} preview"></div>`;
-  } else {
-    vEl.innerHTML=`<div class="modal-video-ph"><div class="vi">${p.icon}</div><span>Media coming soon</span></div>`;
-  }
+  const mediaEl = document.getElementById('m-media');
+  const videos = normalizeProjectVideos(p);
+  const screenshots = normalizeProjectScreenshots(p);
+  const videoHTML = videos.map((video, idx)=>`
+    <div class="modal-media-block modal-video-card">
+      <div class="modal-media-head">
+        <div class="modal-media-label">🎥 Video</div>
+        <div class="modal-video-title">${video.label}</div>
+      </div>
+      <div class="modal-video"><div class="modal-video-frame"><iframe src="${video.url}" title="${p.name} video ${idx+1}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+    </div>`).join('');
+  const screenshotsHTML = screenshots.map((shot, idx)=>`
+    <button type="button" class="modal-media-block modal-screenshot-btn" data-src="${shot.src}" data-alt="${shot.alt}">
+      <span class="modal-media-head">
+        <span class="modal-media-label">🖼 Screenshot</span>
+        <span class="modal-video-title">Shot ${idx+1}</span>
+      </span>
+      <span class="modal-screenshot-frame">
+        <img src="${shot.src}" alt="${shot.alt}" loading="lazy">
+        <span class="modal-screenshot-overlay">
+          <span class="modal-screenshot-caption">${shot.alt}</span>
+          <span class="modal-screenshot-expand">Click to Expand</span>
+        </span>
+      </span>
+    </button>`).join('');
+  mediaEl.innerHTML = videoHTML || screenshotsHTML
+    ? `${videoHTML}${screenshotsHTML}`
+    : `<div class="modal-media-block"><div class="modal-media-head"><div class="modal-media-label">🎞 Media</div><div class="modal-video-title">Coming Soon</div></div><div class="modal-video-ph"><div class="vi">${p.icon}</div><span>Media coming soon</span></div></div>`;
+  mediaEl.querySelectorAll('.modal-screenshot-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>openMediaLightbox(btn.dataset.src, btn.dataset.alt));
+  });
   const fw=document.getElementById('m-feat-wrap');
   if(p.features&&p.features.length){
     fw.style.display='block';
@@ -775,12 +901,20 @@ function openModal(id){
   document.body.style.overflow='hidden';
 }
 function closeModal(){
+  closeMediaLightbox();
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow='';
-  document.getElementById('m-video').innerHTML='';
+  document.getElementById('m-media').innerHTML='';
 }
 function closeOverlay(e){if(e.target===document.getElementById('modal-overlay'))closeModal();}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape') return;
+  if(document.getElementById('media-lightbox').classList.contains('open')){
+    closeMediaLightbox();
+    return;
+  }
+  closeModal();
+});
 
 /* ── THREE.JS ───────────────────────────────────────── */
 (function(){
