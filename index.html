@@ -2616,8 +2616,8 @@
             ],
             stats: [
                 {value: "10", suffix: "+", label: "Years Exp."},
-                {value: "12", suffix: "+", label: "Projects"},
-                {value: "6", label: "Companies"}
+                {value: "", suffix: "+", label: "Projects"},
+                {value: "",suffix: " " ,label: "Companies"}
             ]
         },
 
@@ -3496,6 +3496,27 @@
         }
     }
 
+    function syncHeroStatsFromPortfolioData(data) {
+        if (!data || !data.HERO_DATA) return;
+        const heroStats = Array.isArray(data.HERO_DATA.stats) ? data.HERO_DATA.stats : [];
+
+        const projectsCount = Array.isArray(data.PROJECTS) ? data.PROJECTS.length : 0;
+        const companiesCount = Array.isArray(data.EXPERIENCE_DATA)
+            ? new Set(
+                data.EXPERIENCE_DATA
+                    .map(item => String(item && item.company ? item.company : '').trim().toLowerCase())
+                    .filter(Boolean)
+            ).size
+            : 0;
+
+        const projectsStat = heroStats.find(item => String(item && item.label ? item.label : '').trim().toLowerCase() === 'projects');
+        const companiesStat = heroStats.find(item => String(item && item.label ? item.label : '').trim().toLowerCase() === 'companies');
+
+        if (projectsStat) projectsStat.value = String(projectsCount);
+        if (companiesStat) companiesStat.value = String(companiesCount);
+    }
+
+    syncHeroStatsFromPortfolioData(PORTOFOLIO_DATA);
     renderHero(PORTOFOLIO_DATA.HERO_DATA);
     renderSkills(PORTOFOLIO_DATA.SKILLS_DATA);
     renderExperience(PORTOFOLIO_DATA.EXPERIENCE_DATA);
