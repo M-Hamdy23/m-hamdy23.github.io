@@ -59,7 +59,7 @@
       },
       {
         "icon": "💻",
-        "name": "Programming",
+        "name": "Languages",
         "tags": [
           "C#",
           "C++",
@@ -72,6 +72,9 @@
         "icon": "🌐",
         "name": "Networking",
         "tags": [
+          "Unity Netcode",
+          "Multiplayer Architecture",
+          "Matchmaking Systems",
           "Nakama Server",
           "Photon PUN",
           "Photon Bolt",
@@ -126,10 +129,6 @@
         "pct": 85
       },
       {
-        "name": "AR Development",
-        "pct": 78
-      },
-      {
         "name": "Mobile (iOS / Android)",
         "pct": 82
       }
@@ -141,16 +140,25 @@
       "role": "Senior Game Developer · Architect",
       "period": "JULY 2023 — PRESENT",
       "bullets": [
-        "Acting as system architect for a commerce-centered metaverse platform",
-        "Core game, network, and tools developer for VR and Web experiences",
-        "Implementing MMORPG backbone with NFT-based character customization"
+        "Acting as a System Architect for a commerce-driven metaverse platform, shaping scalable and modular architecture",
+        "Designed and developed cross-platform Web and VR experiences for a large-scale multiverse MMO",
+        "Contributed as a core member of the metaverse architecture team, defining long-term technical direction",
+        "Architected and implemented high-performance systems using Unity DOTS, optimized for large-scale multiplayer environments",
+        "Built scalable networking and backend systems to support MMO-level concurrency and real-time interactions",
+        "Led development across core gameplay, networking, and internal tools for both VR and Web platforms",
+        "Designed and implemented matchmaking, lobby, and real-time multiplayer systems",
+        "Developed foundational systems for an MMORPG backend, including NFT-based character customization and ownership"
       ],
       "techs": [
         "C#",
         "Unity",
         "Unity DOTS",
         "VR",
-        "Web Games"
+        "WebGL",
+        "Multiplayer",
+        "Architecture",
+        "Netcode",
+        "Backend"
       ]
     },
     {
@@ -158,16 +166,19 @@
       "role": "Senior Game Developer · Team Lead",
       "period": "NOV 2021 — NOV 2023",
       "bullets": [
-        "Led game development team across Mobile, VR, and Web projects",
-        "Game, network, and tools developer driving technical direction"
+        "Led a game development team delivering serious games focused on cybersecurity awareness and training",
+        "Architected and developed multi-platform Unity solutions across Web, VR, and Mobile",
+        "Mentored junior developers, improving code quality, performance, and team velocity",
+        "Delivered enterprise training products for major clients"
       ],
       "techs": [
         "C#",
-        "Lua",
         "Unity",
         "JavaScript",
-        "Nakama",
-        "Firebase"
+        "Firebase",
+        "VR",
+        "WebGL",
+        "Mobile"
       ]
     },
     {
