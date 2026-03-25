@@ -2776,9 +2776,9 @@
         <div class="modal-header">
             <div class="modal-header-copy">
                 <div class="modal-title" id="m-title"></div>
-                <div class="modal-badges" id="m-badges"></div>
                 <div class="modal-tags" id="m-tags"></div>
                 <p class="modal-head-desc" id="m-head-desc"></p>
+                <div class="modal-badges" id="m-badges"></div>
             </div>
             <button class="modal-close" onclick="closeModal()">✕</button>
         </div>
@@ -3139,7 +3139,7 @@
         const sideImageWrap = document.getElementById('m-side-image-wrap');
         const sideImage = document.getElementById('m-side-image');
         document.getElementById('m-title').textContent = p.name;
-        document.getElementById('m-badges').innerHTML = p.platforms.map(badgeHTML).join('');
+       // document.getElementById('m-badges').innerHTML = p.platforms.map(badgeHTML).join('');
         document.getElementById('m-tags').innerHTML = p.tags.map(tag => `<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
         document.getElementById('m-head-desc').textContent = p.shortDesc || p.desc;
         if (coverSrc) {
