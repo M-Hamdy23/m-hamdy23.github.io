@@ -1657,7 +1657,7 @@
 
         .modal-sidebar .tech-pill {
             font-family: 'Share Tech Mono', monospace;
-            font-size: .5rem;
+            font-size: .78rem;
             color: var(--text);
             background: rgba(255, 255, 255, .04);
             border: 1px solid var(--border);
@@ -3136,16 +3136,14 @@
         const videoHTML = videos.map((video, idx) => `
     <div class="modal-media-block modal-video-card">
       <div class="modal-media-head">
-        <div class="modal-media-label">🎥 Video</div>
-        <div class="modal-video-title">${video.label}</div>
+        <div class="modal-video-title">🎥 ${video.label}</div>
       </div>
       <div class="modal-video"><div class="modal-video-frame"><iframe src="${video.url}" title="${p.name} video ${idx + 1}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
     </div>`).join('');
         const screenshotsHTML = screenshots.map((shot, idx) => `
     <button type="button" class="modal-media-block modal-screenshot-btn" data-src="${shot.src}" data-alt="${shot.alt}">
       <span class="modal-media-head">
-        <span class="modal-media-label">🖼 Screenshot</span>
-        <span class="modal-video-title">Shot ${idx + 1}</span>
+        <span class="modal-video-title">🖼 Screenshot ${idx + 1}</span>
       </span>
       <span class="modal-screenshot-frame">
         <img src="${shot.src}" alt="${shot.alt}" loading="lazy">
