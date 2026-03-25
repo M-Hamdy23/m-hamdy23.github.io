@@ -259,7 +259,7 @@
         "degree": "9-Month Game Dev Diploma",
         "school": "Information Technology Institute (ITI)",
         "period": "2017 — 2018",
-        "detail": "Track: Game Development. Capstone: Steam Blast — a multiplayer VR fighting game in Unreal Engine."
+        "detail": "9-month intensive game development program with focus on game programming, VR development, Unity3D, design patterns, and game optimization."
       },
       {
         "id": 2,
@@ -267,7 +267,7 @@
         "degree": "BSc Computer Science",
         "school": "Benha University",
         "period": "2013 — 2017",
-        "detail": "Grade: Very Good. Graduation Project: Land of Puzzle — an interactive puzzle experience."
+        "detail": "Grade: Very Good.Graduation Project: Land of Puzzle — an interactive puzzle experience."
       }
     ],
     "certifications": [
