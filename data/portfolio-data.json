@@ -140,14 +140,10 @@
       "role": "Senior Game Developer · Architect",
       "period": "JULY 2023 — PRESENT",
       "bullets": [
-        "Acting as a System Architect for a commerce-driven metaverse platform, shaping scalable and modular architecture",
+        "Acted as System Architect for a commerce-driven metaverse, defining scalable and modular architecture",
         "Designed and developed cross-platform Web and VR experiences for a large-scale multiverse MMO",
-        "Contributed as a core member of the metaverse architecture team, defining long-term technical direction",
-        "Architected and implemented high-performance systems using Unity DOTS, optimized for large-scale multiplayer environments",
-        "Built scalable networking and backend systems to support MMO-level concurrency and real-time interactions",
-        "Led development across core gameplay, networking, and internal tools for both VR and Web platforms",
-        "Designed and implemented matchmaking, lobby, and real-time multiplayer systems",
-        "Developed foundational systems for an MMORPG backend, including NFT-based character customization and ownership"
+        "Architected high-performance Unity DOTS systems for large-scale multiplayer gameplay",
+        "Built scalable networking and backend systems, including matchmaking, lobbies, and real-time multiplayer"
       ],
       "techs": [
         "C#",
@@ -166,9 +162,9 @@
       "role": "Senior Game Developer · Team Lead",
       "period": "NOV 2021 — NOV 2023",
       "bullets": [
-        "Led a game development team delivering serious games focused on cybersecurity awareness and training",
+        "Led a game development team delivering serious games for cybersecurity awareness and enterprise training",
         "Architected and developed multi-platform Unity solutions across Web, VR, and Mobile",
-        "Mentored junior developers, improving code quality, performance, and team velocity",
+        "Mentored junior developers, improving code quality and team performance",
         "Delivered enterprise training products for major clients"
       ],
       "techs": [
@@ -186,13 +182,15 @@
       "role": "Senior Game Developer · Contract",
       "period": "6-MONTH CONTRACT · HOUSTON, TX",
       "bullets": [
-        "Built a PC HGV driver training simulator for Nutrien with 7 bespoke accident scenarios",
-        "Train, Practice, and Assessment modes with full LMS integration"
+        "Developed a PC HGV driver training simulator for Nutrien, featuring 7 custom accident scenarios",
+        "Implemented Train, Practice, and Assessment modes with full LMS integration for enterprise training",
+        "Delivered a realistic, interactive simulation that enhanced driver safety and learning outcomes"
       ],
       "techs": [
         "C#",
         "Unity",
-        "PC Simulation"
+        "PC",
+        "Simulation"
       ]
     },
     {
@@ -200,14 +198,17 @@
       "role": "Senior Game Developer",
       "period": "DEC 2020 — NOV 2021",
       "bullets": [
-        "Game, network, and tools developer for mobile titles",
-        "Real-time multiplayer with Nakama Server and Firebase backend"
+        "Developed 10 Tawla, a mobile backgammon game with real-time multiplayer, ELO ranking, friend system, taunting system, quick chat, and adaptive AI",
+        "Built Base for Domino Game, a real-time multiplayer mobile game with custom matchmaking, friend system, and taunting features",
+        "Implemented matchmaking, friend invites, and backend systems using Nakama Server",
+        "Shipped Tawla game on iOS and Android and maintained post-launch, adding features and improving performance"
       ],
       "techs": [
         "C#",
         "Lua",
         "Unity",
         "Nakama",
+        "Node js",
         "Firebase"
       ]
     },
@@ -216,14 +217,16 @@
       "role": "Game Developer · Co-Founder",
       "period": "JULY 2018 — DEC 2020",
       "bullets": [
-        "Co-founded and led technical development at indie studio",
-        "Shipped PC, Mobile, and VR titles with multiplayer architecture"
+        "Co-founded the studio and led technical development across PC, Mobile, and VR projects",
+        "Designed and implemented networked multiplayer architecture and synchronized gameplay systems for Sky Striders, a competitive PC game focused on movement and aerial combat",
+        "Developed That Just Happened, a VR safety training game recreating real workplace accidents",
       ],
       "techs": [
         "C#",
         "Unity",
         "Unreal",
         "Photon PUN",
+        "Photon Bolt",
         "Mirror"
       ]
     },
@@ -232,7 +235,8 @@
       "role": "Software Developer · Co-Founder",
       "period": "JAN 2014 — JULY 2017",
       "bullets": [
-        "Desktop solutions development and Augmented Reality applications"
+        "Developed desktop solutions for clients in Egypt, including a restaurant management system",
+        "Designed and implemented AR applications for restaurant menus using Unity and Vuforia, enabling customers to visualize menu items in 3D"
       ],
       "techs": [
         "Java",
