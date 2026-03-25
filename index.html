@@ -1527,40 +1527,43 @@
 
         .modal-body {
             padding: 22px 26px 28px;
-            overflow-y: auto;
+            flex: 1;
             min-height: 0;
-            scrollbar-width: thin;
-            scrollbar-color: rgba(0, 245, 196, .55) rgba(255, 255, 255, .05)
-        }
-
-        .modal-body::-webkit-scrollbar {
-            width: 10px
-        }
-
-        .modal-body::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, .05);
-            border: 1px solid var(--border);
-            border-radius: 999px
-        }
-
-        .modal-body::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--accent2), var(--accent));
-            border-radius: 999px
+            display: grid
         }
 
         .modal-layout {
             display: grid;
             grid-template-columns:300px minmax(0, 1fr);
             gap: 18px;
-            align-items: start
+            align-items: stretch;
+            min-height: 0
         }
 
         .modal-sidebar {
-            position: sticky;
-            top: 0;
+            position: relative;
             background: var(--bg3);
             border: 1px solid var(--border);
-            padding: 12px
+            padding: 12px;
+            overflow-y: auto;
+            min-height: 0;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 245, 196, .55) rgba(255, 255, 255, .05)
+        }
+
+        .modal-sidebar::-webkit-scrollbar {
+            width: 10px
+        }
+
+        .modal-sidebar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid var(--border);
+            border-radius: 999px
+        }
+
+        .modal-sidebar::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--accent2), var(--accent));
+            border-radius: 999px
         }
 
         .modal-side-title {
@@ -1626,7 +1629,26 @@
         }
 
         .modal-main {
-            min-width: 0
+            min-width: 0;
+            min-height: 0;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 245, 196, .55) rgba(255, 255, 255, .05)
+        }
+
+        .modal-main::-webkit-scrollbar {
+            width: 10px
+        }
+
+        .modal-main::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid var(--border);
+            border-radius: 999px
+        }
+
+        .modal-main::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--accent2), var(--accent));
+            border-radius: 999px
         }
 
         .modal-main > div + div {
@@ -2762,7 +2784,7 @@
         </div>
         <div class="modal-body" id="modal-body">
             <div class="modal-layout">
-                <aside class="modal-sidebar">
+                <aside class="modal-sidebar" id="modal-sidebar">
                     <div class="modal-side-image" id="m-side-image-wrap"><img id="m-side-image" src="" alt="Project cover" loading="lazy">
                     </div>
                     <div class="modal-side-meta">
@@ -2794,7 +2816,7 @@
                         </button>
                     </div>
                 </aside>
-                <div class="modal-main">
+                <div class="modal-main" id="modal-main">
                     <div class="modal-about" id="m-about-sec">
                         <div class="modal-stitle">About</div>
                         <p class="modal-about-desc" id="m-about"></p></div>
@@ -3066,10 +3088,10 @@
     }
 
     function scrollModalToSection(sectionId) {
-        const body = document.getElementById('modal-body');
+        const main = document.getElementById('modal-main');
         const target = document.getElementById(sectionId);
-        if (!body || !target) return;
-        body.scrollTo({top: target.offsetTop - 8, behavior: 'smooth'});
+        if (!main || !target) return;
+        main.scrollTo({top: target.offsetTop - 8, behavior: 'smooth'});
     }
 
     function renderProjects(filter) {
@@ -3190,7 +3212,8 @@
         } else fw.style.display = 'none';
         document.getElementById('m-tech').innerHTML = p.techs.map(t => `<span class="tech-pill">${t}</span>`).join('');
         document.getElementById('m-actions').innerHTML = hasLink ? `<a href="${p.link}" target="_blank" class="btn-primary">View / Download →</a>` : '';
-        document.getElementById('modal-body').scrollTop = 0;
+        document.getElementById('modal-main').scrollTop = 0;
+        document.getElementById('modal-sidebar').scrollTop = 0;
         document.getElementById('modal-overlay').classList.add('open');
         document.body.style.overflow = 'hidden';
     }
@@ -3200,7 +3223,8 @@
         document.getElementById('modal-overlay').classList.remove('open');
         document.body.style.overflow = '';
         document.getElementById('m-media').innerHTML = '';
-        document.getElementById('modal-body').scrollTop = 0;
+        document.getElementById('modal-main').scrollTop = 0;
+        document.getElementById('modal-sidebar').scrollTop = 0;
     }
 
     function closeOverlay(e) {
