@@ -2501,42 +2501,8 @@
             <h2 class="section-title">Education & <em>Certs</em></h2>
             <div class="section-line"></div>
         </div>
-        <div class="edu-grid">
-            <div class="edu-card reveal-left d1"><span class="edu-icon">🎮</span>
-                <div class="edu-degree">9-Month Game Dev Diploma</div>
-                <div class="edu-school">Information Technology Institute (ITI)</div>
-                <div class="edu-period">2017 — 2018</div>
-                <div class="edu-detail">Track: Game Development. Capstone: Steam Blast — a multiplayer VR fighting game
-                    in Unreal Engine.
-                </div>
-            </div>
-            <div class="edu-card reveal-right d2"><span class="edu-icon">🎓</span>
-                <div class="edu-degree">BSc Computer Science</div>
-                <div class="edu-school">Benha University</div>
-                <div class="edu-period">2013 — 2017</div>
-                <div class="edu-detail">Grade: Very Good. Graduation Project: Land of Puzzle — an interactive puzzle
-                    experience.
-                </div>
-            </div>
-        </div>
-        <div class="cert-list">
-            <div class="cert-item reveal d1">
-                <div class="cert-icon">🏆</div>
-                <div class="cert-text">Won GIZ Virtual Reality Hackathon</div>
-            </div>
-            <div class="cert-item reveal d2">
-                <div class="cert-icon">🥽</div>
-                <div class="cert-text">GIZ Training — Virtual Reality</div>
-            </div>
-            <div class="cert-item reveal d3">
-                <div class="cert-icon">☁️</div>
-                <div class="cert-text">Dell EMC² — Cloud Infrastructure & Services</div>
-            </div>
-            <div class="cert-item reveal d4">
-                <div class="cert-icon">💾</div>
-                <div class="cert-text">Dell EMC² — Information Storage & Management</div>
-            </div>
-        </div>
+        <div class="edu-grid" id="edu-grid-container"></div>
+        <div class="cert-list" id="cert-list-container"></div>
     </div>
 </section>
 
@@ -2549,59 +2515,18 @@
         </div>
         <div class="contact-grid">
             <div class="reveal-left">
-                <h3 class="contact-headline">Open to New<em>Opportunities</em></h3>
-                <p class="contact-desc">Available for full-time roles and contracts. Whether you're building the next
-                    multiplayer game, a VR experience, or a mobile title — let's create something great together.</p>
-                <div class="contact-links">
-                    <a href="mailto:mohamedhamdy231995@gmail.com" class="contact-link">
-                        <div class="contact-link-icon">✉️</div>
-                        <div>
-                            <div class="cl-label">Email</div>
-                            <div class="cl-value">mohamedhamdy231995@gmail.com</div>
-                        </div>
-                        <div class="cl-arrow">→</div>
-                    </a>
-                    <a href="https://github.com/M-Hamdy23" target="_blank" class="contact-link">
-                        <div class="contact-link-icon">⌨️</div>
-                        <div>
-                            <div class="cl-label">GitHub</div>
-                            <div class="cl-value">github.com/M-Hamdy23</div>
-                        </div>
-                        <div class="cl-arrow">→</div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mo-hamdy" target="_blank" class="contact-link">
-                        <div class="contact-link-icon">💼</div>
-                        <div>
-                            <div class="cl-label">LinkedIn</div>
-                            <div class="cl-value">linkedin.com/in/mo-hamdy</div>
-                        </div>
-                        <div class="cl-arrow">→</div>
-                    </a>
-                    <a href="tel:+201066191846" class="contact-link">
-                        <div class="contact-link-icon">📱</div>
-                        <div>
-                            <div class="cl-label">Phone</div>
-                            <div class="cl-value">+20 106 619 1846</div>
-                        </div>
-                        <div class="cl-arrow">→</div>
-                    </a>
-                </div>
+                <h3 class="contact-headline" id="contact-headline"></h3>
+                <p class="contact-desc" id="contact-description"></p>
+                <div class="contact-links" id="contact-links-container"></div>
             </div>
-            <div class="reveal-right">
-                <div class="resume-cta">
-                    <div class="resume-cta-title">Download Resume</div>
-                    <div class="resume-cta-desc">Full work history, skills, and certificates in one document.</div>
-                    <a href="docs/resume.pdf" target="_blank" class="btn-primary" style="display:inline-flex">Download
-                        PDF ↓</a>
-                </div>
-            </div>
+            <div class="reveal-right" id="contact-resume-container"></div>
         </div>
     </div>
 </section>
 
 <footer>
-    <div class="footer-brand">MH<span>.dev</span> — Mohamed Hamdy</div>
-    <div class="footer-copy">© 2024 · Game Developer · Cairo, Egypt</div>
+    <div class="footer-brand" id="footer-brand"></div>
+    <div class="footer-copy" id="footer-copy"></div>
 </footer>
 
 <!-- ═══ MODAL ═════════════════════════════════════════ -->
@@ -2774,6 +2699,64 @@
             techs: ["Java", "SQL", "Unity", "Vuforia"]
         }
     ];
+
+    const EDUCATION_DATA = {
+        degrees: [
+            {
+                id: 1,
+                icon: "🎮",
+                degree: "9-Month Game Dev Diploma",
+                school: "Information Technology Institute (ITI)",
+                period: "2017 — 2018",
+                detail: "Track: Game Development. Capstone: Steam Blast — a multiplayer VR fighting game in Unreal Engine."
+            },
+            {
+                id: 2,
+                icon: "🎓",
+                degree: "BSc Computer Science",
+                school: "Benha University",
+                period: "2013 — 2017",
+                detail: "Grade: Very Good. Graduation Project: Land of Puzzle — an interactive puzzle experience."
+            }
+        ],
+        certifications: [
+            {icon: "🏆", text: "Won GIZ Virtual Reality Hackathon"},
+            {icon: "🥽", text: "GIZ Training — Virtual Reality"},
+            {icon: "☁️", text: "Dell EMC² — Cloud Infrastructure & Services"},
+            {icon: "💾", text: "Dell EMC² — Information Storage & Management"}
+        ]
+    };
+
+    const CONTACT_DATA = {
+        headline: "Open to New",
+        headlineEmphasis: "Opportunities",
+        description: "Available for full-time roles and contracts. Whether you're building the next multiplayer game, a VR experience, or a mobile title — let's create something great together.",
+        links: [
+            {icon: "✉️", label: "Email", value: "mohamedhamdy231995@gmail.com", href: "mailto:mohamedhamdy231995@gmail.com", target: ""},
+            {icon: "⌨️", label: "GitHub", value: "github.com/M-Hamdy23", href: "https://github.com/M-Hamdy23", target: "_blank"},
+            {icon: "💼", label: "LinkedIn", value: "linkedin.com/in/mo-hamdy", href: "https://www.linkedin.com/in/mo-hamdy", target: "_blank"},
+            {icon: "📱", label: "Phone", value: "+20 106 619 1846", href: "tel:+201066191846", target: ""}
+        ],
+        resume: {
+            title: "Download Resume",
+            description: "Full work history, skills, and certificates in one document.",
+            buttonText: "Download PDF ↓",
+            href: "docs/resume.pdf"
+        }
+    };
+
+    const FOOTER_DATA = {
+        brand: {
+            name: "MH",
+            accent: ".dev",
+            subtitle: "Mohamed Hamdy"
+        },
+        copy: {
+            year: "2024",
+            role: "Game Developer",
+            location: "Cairo, Egypt"
+        }
+    };
 
     /* ── PROJECTS DATA ──────────────────────────────────── */
     const PROJECTS = [
@@ -3123,6 +3106,102 @@
         }).join('');
     }
 
+    function renderEducation(data) {
+        if (!data) return;
+        const eduGridEl = document.getElementById('edu-grid-container');
+        const certListEl = document.getElementById('cert-list-container');
+
+        if (eduGridEl) {
+            const degrees = Array.isArray(data.degrees) ? data.degrees : [];
+            eduGridEl.innerHTML = degrees.map((item, index) => {
+                const delayClass = index < 2 ? (index === 0 ? 'd1' : 'd2') : '';
+                const side = index === 0 ? 'reveal-left' : 'reveal-right';
+                return `<div class="edu-card ${side} ${delayClass}">
+                    <span class="edu-icon">${escapeHtml(item.icon || '')}</span>
+                    <div class="edu-degree">${escapeHtml(item.degree || '')}</div>
+                    <div class="edu-school">${escapeHtml(item.school || '')}</div>
+                    <div class="edu-period">${escapeHtml(item.period || '')}</div>
+                    <div class="edu-detail">${escapeHtml(item.detail || '')}</div>
+                </div>`;
+            }).join('');
+        }
+
+        if (certListEl) {
+            const certs = Array.isArray(data.certifications) ? data.certifications : [];
+            certListEl.innerHTML = certs.map((item, index) => {
+                const delayClass = index < 4 ? `d${index + 1}` : '';
+                return `<div class="cert-item reveal ${delayClass}">
+                    <div class="cert-icon">${escapeHtml(item.icon || '')}</div>
+                    <div class="cert-text">${escapeHtml(item.text || '')}</div>
+                </div>`;
+            }).join('');
+        }
+    }
+
+    function renderContact(data) {
+        if (!data) return;
+        
+        // Render headline
+        const headlineEl = document.getElementById('contact-headline');
+        if (headlineEl) {
+            headlineEl.innerHTML = `${escapeHtml(data.headline || '')}${data.headlineEmphasis ? `<em>${escapeHtml(data.headlineEmphasis)}</em>` : ''}`;
+        }
+
+        // Render description
+        const descEl = document.getElementById('contact-description');
+        if (descEl) {
+            descEl.textContent = data.description || '';
+        }
+
+        const linksEl = document.getElementById('contact-links-container');
+        if (linksEl) {
+            const links = Array.isArray(data.links) ? data.links : [];
+            linksEl.innerHTML = links.map(link => {
+                const targetAttr = link.target ? ` target="${escapeHtml(link.target)}"` : '';
+                const relAttr = link.target === '_blank' ? ' rel="noopener noreferrer"' : '';
+                return `<a href="${escapeHtml(link.href)}"${targetAttr}${relAttr} class="contact-link">
+                    <div class="contact-link-icon">${escapeHtml(link.icon || '')}</div>
+                    <div>
+                        <div class="cl-label">${escapeHtml(link.label || '')}</div>
+                        <div class="cl-value">${escapeHtml(link.value || '')}</div>
+                    </div>
+                    <div class="cl-arrow">→</div>
+                </a>`;
+            }).join('');
+        }
+
+        const resumeEl = document.getElementById('contact-resume-container');
+        if (resumeEl && data.resume) {
+            const resume = data.resume;
+            resumeEl.innerHTML = `<div class="resume-cta">
+                <div class="resume-cta-title">${escapeHtml(resume.title || '')}</div>
+                <div class="resume-cta-desc">${escapeHtml(resume.description || '')}</div>
+                <a href="${escapeHtml(resume.href || '')}" target="_blank" class="btn-primary" style="display:inline-flex">${escapeHtml(resume.buttonText || '')}</a>
+            </div>`;
+        }
+    }
+
+    function renderFooter(data) {
+        if (!data) return;
+
+        const brandEl = document.getElementById('footer-brand');
+        if (brandEl) {
+            const brand = data.brand || {};
+            const brandName = escapeHtml(brand.name || '');
+            const brandAccent = escapeHtml(brand.accent || '');
+            const subtitle = escapeHtml(brand.subtitle || '');
+            brandEl.innerHTML = `${brandName}<span>${brandAccent}</span>${subtitle ? ` — ${subtitle}` : ''}`;
+        }
+
+        const copyEl = document.getElementById('footer-copy');
+        if (copyEl) {
+            const copy = data.copy || {};
+            const parts = [copy.year ? `© ${escapeHtml(copy.year)}` : '', escapeHtml(copy.role || ''), escapeHtml(copy.location || '')]
+                .filter(Boolean);
+            copyEl.textContent = parts.join(' · ');
+        }
+    }
+
     function normalizeProjectVideos(project) {
         const source = Array.isArray(project.media?.videos) && project.media.videos.length
             ? project.media.videos
@@ -3374,6 +3453,9 @@
     renderHero(HERO_DATA);
     renderSkills(SKILLS_DATA);
     renderExperience(EXPERIENCE_DATA);
+    renderEducation(EDUCATION_DATA);
+    renderContact(CONTACT_DATA);
+    renderFooter(FOOTER_DATA);
     setTimeout(twStep, 1100);
 
     /* ── SCROLL REVEAL ──────────────────────────────────── */
