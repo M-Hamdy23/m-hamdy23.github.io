@@ -1,0 +1,808 @@
+{
+  "HERO_DATA": {
+    "eyebrow": "Senior Game Developer · Cairo, Egypt",
+    "name": {
+      "first": "Mohamed",
+      "last": "Hamdy"
+    },
+    "typewriterPrefix": "Expert in",
+    "typewriterWords": [
+      "Unity3D",
+      "VR / XR",
+      "Multiplayer",
+      "C#",
+      "Unreal Engine",
+      "Mobile Games",
+      "Game Architecture"
+    ],
+    "description": "A technically sharp game developer building immersive, feature-rich games across PC, Mobile, VR, and Web — passionate about elegant systems and real-time multiplayer architecture.",
+    "actions": [
+      {
+        "text": "View Projects →",
+        "href": "#projects",
+        "variant": "primary"
+      },
+      {
+        "text": "Get In Touch",
+        "href": "#contact",
+        "variant": "secondary"
+      }
+    ],
+    "stats": [
+      {
+        "value": "10",
+        "suffix": "+",
+        "label": "Years Exp."
+      },
+      {
+        "value": "",
+        "suffix": "+",
+        "label": "Projects"
+      },
+      {
+        "value": "",
+        "suffix": " ",
+        "label": "Companies"
+      }
+    ]
+  },
+  "SKILLS_DATA": {
+    "categories": [
+      {
+        "icon": "⚙️",
+        "name": "Game Engines",
+        "tags": [
+          "Unity3D",
+          "Unity DOTS",
+          "Unreal Engine"
+        ]
+      },
+      {
+        "icon": "💻",
+        "name": "Programming",
+        "tags": [
+          "C#",
+          "C++",
+          "Java",
+          "JavaScript",
+          "Lua"
+        ]
+      },
+      {
+        "icon": "🌐",
+        "name": "Networking",
+        "tags": [
+          "Nakama Server",
+          "Photon PUN",
+          "Photon Bolt",
+          "Mirror",
+          "Firebase"
+        ]
+      },
+      {
+        "icon": "🥽",
+        "name": "XR Development",
+        "tags": [
+          "Virtual Reality",
+          "Augmented Reality",
+          "Mixed Reality",
+          "Vuforia"
+        ]
+      },
+      {
+        "icon": "🏗️",
+        "name": "Software Design",
+        "tags": [
+          "OOP",
+          "Design Patterns",
+          "Data Structures",
+          "Algorithms"
+        ]
+      }
+    ],
+    "bars": [
+      {
+        "name": "Unity / C#",
+        "pct": 96
+      },
+      {
+        "name": "Multiplayer / Networking",
+        "pct": 90
+      },
+      {
+        "name": "VR / XR Development",
+        "pct": 88
+      },
+      {
+        "name": "Game Architecture",
+        "pct": 92
+      },
+      {
+        "name": "Unreal Engine",
+        "pct": 72
+      },
+      {
+        "name": "Tools / Editor Extensions",
+        "pct": 85
+      },
+      {
+        "name": "AR Development",
+        "pct": 78
+      },
+      {
+        "name": "Mobile (iOS / Android)",
+        "pct": 82
+      }
+    ]
+  },
+  "EXPERIENCE_DATA": [
+    {
+      "company": "Highstreet",
+      "role": "Senior Game Developer · Architect",
+      "period": "JULY 2023 — PRESENT",
+      "bullets": [
+        "Acting as system architect for a commerce-centered metaverse platform",
+        "Core game, network, and tools developer for VR and Web experiences",
+        "Implementing MMORPG backbone with NFT-based character customization"
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Unity DOTS",
+        "VR",
+        "Web Games"
+      ]
+    },
+    {
+      "company": "ZINAD IT",
+      "role": "Senior Game Developer · Team Lead",
+      "period": "NOV 2021 — NOV 2023",
+      "bullets": [
+        "Led game development team across Mobile, VR, and Web projects",
+        "Game, network, and tools developer driving technical direction"
+      ],
+      "techs": [
+        "C#",
+        "Lua",
+        "Unity",
+        "JavaScript",
+        "Nakama",
+        "Firebase"
+      ]
+    },
+    {
+      "company": "Myriad Global Media",
+      "role": "Senior Game Developer · Contract",
+      "period": "6-MONTH CONTRACT · HOUSTON, TX",
+      "bullets": [
+        "Built a PC HGV driver training simulator for Nutrien with 7 bespoke accident scenarios",
+        "Train, Practice, and Assessment modes with full LMS integration"
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "PC Simulation"
+      ]
+    },
+    {
+      "company": "Egypt Games 2022",
+      "role": "Senior Game Developer",
+      "period": "DEC 2020 — NOV 2021",
+      "bullets": [
+        "Game, network, and tools developer for mobile titles",
+        "Real-time multiplayer with Nakama Server and Firebase backend"
+      ],
+      "techs": [
+        "C#",
+        "Lua",
+        "Unity",
+        "Nakama",
+        "Firebase"
+      ]
+    },
+    {
+      "company": "Raskulls Game Studio",
+      "role": "Game Developer · Co-Founder",
+      "period": "JULY 2018 — DEC 2020",
+      "bullets": [
+        "Co-founded and led technical development at indie studio",
+        "Shipped PC, Mobile, and VR titles with multiplayer architecture"
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Unreal",
+        "Photon PUN",
+        "Mirror"
+      ]
+    },
+    {
+      "company": "D-INNOVA",
+      "role": "Software Developer · Co-Founder",
+      "period": "JAN 2014 — JULY 2017",
+      "bullets": [
+        "Desktop solutions development and Augmented Reality applications"
+      ],
+      "techs": [
+        "Java",
+        "SQL",
+        "Unity",
+        "Vuforia"
+      ]
+    }
+  ],
+  "EDUCATION_DATA": {
+    "degrees": [
+      {
+        "id": 1,
+        "icon": "🎮",
+        "degree": "9-Month Game Dev Diploma",
+        "school": "Information Technology Institute (ITI)",
+        "period": "2017 — 2018",
+        "detail": "Track: Game Development. Capstone: Steam Blast — a multiplayer VR fighting game in Unreal Engine."
+      },
+      {
+        "id": 2,
+        "icon": "🎓",
+        "degree": "BSc Computer Science",
+        "school": "Benha University",
+        "period": "2013 — 2017",
+        "detail": "Grade: Very Good. Graduation Project: Land of Puzzle — an interactive puzzle experience."
+      }
+    ],
+    "certifications": [
+      {
+        "icon": "🏆",
+        "text": "Won GIZ Virtual Reality Hackathon"
+      },
+      {
+        "icon": "🥽",
+        "text": "GIZ Training — Virtual Reality"
+      },
+      {
+        "icon": "☁️",
+        "text": "Dell EMC² — Cloud Infrastructure & Services"
+      },
+      {
+        "icon": "💾",
+        "text": "Dell EMC² — Information Storage & Management"
+      }
+    ]
+  },
+  "CONTACT_DATA": {
+    "headline": "Open to New",
+    "headlineEmphasis": "Opportunities",
+    "description": "Available for full-time roles and contracts. Whether you're building the next multiplayer game, a VR experience, or a mobile title — let's create something great together.",
+    "links": [
+      {
+        "icon": "✉️",
+        "label": "Email",
+        "value": "mohamedhamdy231995@gmail.com",
+        "href": "mailto:mohamedhamdy231995@gmail.com",
+        "target": ""
+      },
+      {
+        "icon": "⌨️",
+        "label": "GitHub",
+        "value": "github.com/M-Hamdy23",
+        "href": "https://github.com/M-Hamdy23",
+        "target": "_blank"
+      },
+      {
+        "icon": "💼",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/mo-hamdy",
+        "href": "https://www.linkedin.com/in/mo-hamdy",
+        "target": "_blank"
+      },
+      {
+        "icon": "📱",
+        "label": "Phone",
+        "value": "+20 106 619 1846",
+        "href": "tel:+201066191846",
+        "target": ""
+      }
+    ],
+    "resume": {
+      "title": "Download Resume",
+      "description": "Full work history, skills, and certificates in one document.",
+      "buttonText": "Download PDF ↓",
+      "href": "docs/resume.pdf"
+    }
+  },
+  "FOOTER_DATA": {
+    "brand": {
+      "name": "MH",
+      "accent": ".dev",
+      "subtitle": "Mohamed Hamdy"
+    },
+    "copy": {
+      "year": "2024",
+      "role": "Game Developer",
+      "location": "Cairo, Egypt"
+    }
+  },
+  "PROJECTS": [
+    {
+      "id": 1,
+      "name": "Highstreet World",
+      "icon": "🌐",
+      "shortDesc": "A metaverse shopping experience blending VR, web gameplay, and real-time multiplayer systems.",
+      "desc": "Highstreet World is a commerce-driven metaverse where players step into a vibrant online universe that blends social exploration, fashion, and gameplay into one connected experience. Set inside a stylized MMORPG world, the core loop revolves around discovering branded content, customizing your avatar with digital cosmetics inspired by real-world products, and engaging with shared activities across both VR and web platforms. Behind the scenes, the project combines real-time multiplayer systems, scalable Unity architecture, and cross-platform world building to support immersive social play, persistent progression, and a seamless bridge between gaming identity and digital commerce.",
+      "media": [
+        {
+          "src": "img/Highstreet-cover.png",
+          "alt": "Highstreet World storefront and social hub preview"
+        },
+        {
+          "src": "img/Highstreet.png",
+          "alt": "Highstreet World in-game environment screenshot"
+        }
+      ],
+      "tags": [
+        "web",
+        "vr",
+        "multiplayer",
+        "unity"
+      ],
+      "platforms": [
+        "WEB",
+        "VR"
+      ],
+      "cover": "img/Highstreet-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://www.youtube.com/embed/652a-CFEBiU"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Unity DOTS",
+        "Multiplayer"
+      ],
+      "features": [
+        "MMORPG backbone with NFT character customization",
+        "Real-world fashion brand integrations",
+        "VR and Web cross-platform gameplay",
+        "Real-time multiplayer networking"
+      ],
+      "myWork": [
+        {
+          "title": "Full Project Architecture Leadership",
+          "description": "Architected and led the design of the entire MMORPG multiplayer backbone, including entity management, networking protocols, and cross-platform synchronization between VR and web clients. Implemented scalable DOTS-based systems to handle concurrent player sessions.",
+          "media": [
+            {
+              "src": "img/Highstreet-cover.png",
+              "alt": "Highstreet World storefront and social hub preview"
+            },
+            {
+              "src": "img/Highstreet.png",
+              "alt": "Highstreet World in-game environment screenshot"
+            }
+          ]
+        },
+        {
+          "title": "NFT Character Customization System",
+          "description": "Designed and implemented the blockchain-integrated character customization system, enabling players to own and trade digital cosmetics. Created the UI framework for cosmetic preview, inventory management, and blockchain transaction workflows."
+        }
+      ],
+      "link": [
+        {
+          "text": "Play Now",
+          "url": "https://www.highstreet.market/metaverse",
+          "type": "website"
+        },
+        {
+          "text": "Play Now",
+          "url": "https://www.highstreet.market/metaverse",
+          "type": "website"
+        },
+        {
+          "text": "Play Now",
+          "url": "https://www.highstreet.market/metaverse",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nutrien HGV Driver Training",
+      "icon": "🚛",
+      "shortDesc": "A PC training simulator with bespoke accident scenarios, guided practice, and LMS-ready assessments.",
+      "desc": "Nutrien HGV Driver Training is a serious simulation experience designed to prepare drivers for high-risk workplace situations before they happen in the real world. Across seven bespoke scenarios based on actual accident patterns, trainees are placed in authentic industrial settings where they learn procedures, identify hazards, and respond to critical moments through a structured loop of instruction, guided practice, and formal assessment. The project focuses on clarity, realism, and measurable outcomes, combining interactive simulation design with PC-based training workflows and LMS integration so teams can track progress, reinforce safe habits, and turn complex operational lessons into repeatable hands-on learning.",
+      "tags": [
+        "pc",
+        "unity"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "cover": "img/DriverTraining-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://player.vimeo.com/video/899866858?h=64437a6e2a&badge=0&autopause=0&player_id=0&app_id=58479"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "LMS Integration"
+      ],
+      "features": [
+        "7 unique accident simulations",
+        "Train, Practice & Assessment modes",
+        "Seamless LMS integration",
+        "Instructional + free-play hybrid"
+      ],
+      "link": null
+    },
+    {
+      "id": 3,
+      "name": "Autoliv Explore 3D",
+      "icon": "🦺",
+      "shortDesc": "An AR sales tool that showcases automotive safety products through interactive 3D presentations.",
+      "desc": "Autoliv Explore 3D is an augmented reality product showcase built to help sales teams present complex automotive safety systems in a far more engaging and understandable way. Instead of relying on static slides or physical prototypes, users can place and inspect life-saving components in 3D, explore how they fit into vehicle environments, and walk customers through their design and purpose with interactive visual clarity. The experience is built around smooth mobile presentation flow, clear product storytelling, and dependable AR interaction, combining Unity and Vuforia to turn technical safety hardware into an accessible, hands-on demonstration tool for global sales and marketing teams.",
+      "tags": [
+        "vr",
+        "unity"
+      ],
+      "platforms": [
+        "AR",
+        "IOS"
+      ],
+      "cover": "img/Autoliv-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://www.youtube.com/embed/OtewjIJFGIU"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "AR",
+        "Vuforia"
+      ],
+      "features": [
+        "Interactive 3D product visualization",
+        "AR marker-based overlay",
+        "Sales presentation mode",
+        "Cross-device compatibility"
+      ],
+      "link": null
+    },
+    {
+      "id": 4,
+      "name": "Scriptable System",
+      "icon": "🛠️",
+      "shortDesc": "A Unity editor extension for faster creation and management of scriptable variables and events.",
+      "desc": "Scriptable System is a productivity-focused Unity editor extension created to streamline one of the most repetitive parts of scalable game architecture: building, organizing, and reusing scriptable variables and events. Designed for developers who lean on data-driven workflows, the tool simplifies the creation pipeline, reduces boilerplate, and makes it easier to track how shared data assets are connected across a project. Its core loop is all about faster setup and safer iteration, with utilities for asset generation, listener wiring, and usage discovery that help teams move from idea to implementation with less friction, cleaner structure, and more confidence in large Unity codebases.",
+      "tags": [
+        "unity"
+      ],
+      "platforms": [
+        "ASSET"
+      ],
+      "cover": "img/ScriptableSystem-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://www.youtube.com/embed/_xeZ2ujhtYs"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Editor Extension"
+      ],
+      "features": [
+        "Create Scriptable Variable & Event classes instantly",
+        "One-click event listener setup",
+        "Quick-find where each asset is used",
+        "Configurable naming conventions"
+      ],
+      "link": [
+        {
+          "text": "View / Buy",
+          "url": "https://assetstore.unity.com/packages/slug/191378",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "10 Tawla",
+      "icon": "🎲",
+      "shortDesc": "An online backgammon game with ranked multiplayer, AI opponents, and polished mobile presentation.",
+      "desc": "10 Tawla brings the classic strategy and tension of backgammon to mobile with a polished online experience built for both competitive and casual players. Players can jump into ranked real-time matches, challenge friends, or practice against adaptive AI while enjoying a presentation that captures the feel of a real board through multiple detailed themes and refined interaction. The gameplay loop centers on reading the board, making smart positional choices, and responding to momentum shifts under pressure, while the technical foundation supports matchmaking, ELO progression, social play, and live multiplayer systems that keep every session responsive, fair, and rewarding across iOS and Android.",
+      "tags": [
+        "mobile",
+        "multiplayer",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE",
+        "IOS"
+      ],
+      "cover": "img/10Tawla-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://www.youtube.com/embed/XcUdxVhAFaA"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Nakama",
+        "Firebase"
+      ],
+      "features": [
+        "Online multiplayer with ELO ranking",
+        "Host/join matches with friends",
+        "Smart AI matching your skill level",
+        "7 life-like board aesthetics",
+        "Moultezim and Mahbuse game modes"
+      ],
+      "link": [
+        {
+          "text": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla",
+          "type": "website"
+        },
+        {
+          "text": "App store",
+          "url": "https://apps.apple.com/eg/app/10-tawla/id1569696163",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Sky Striders",
+      "icon": "🦅",
+      "shortDesc": "A fast-paced multiplayer PC game focused on fluid movement, aerial control, and competitive modes.",
+      "desc": "Sky Striders is a competitive multiplayer action game built around the thrill of movement mastery, letting players chain together grounded momentum, aerial mobility, and character abilities in fast-paced online matches. Set in a stylized combat arena space where mobility is just as important as attack timing, the experience encourages players to learn traversal, outmaneuver opponents, and exploit verticality to control the flow of each encounter. At its core, the gameplay loop rewards skillful motion, quick decision-making, and coordinated ability use, while the underlying multiplayer architecture and movement systems work together to deliver responsive combat, varied modes, and a strong sense of speed and freedom.",
+      "tags": [
+        "pc",
+        "multiplayer",
+        "unity"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "cover": "img/SkyStrider-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/Kqmn4qk3hSE"
+        },
+        {
+          "title": "Multiplayer Video",
+          "url": "https://www.youtube.com/embed/0Nb84N4M3ps"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Multiplayer"
+      ],
+      "features": [
+        "Advanced ground & aerial movement",
+        "Multiple character classes",
+        "Online multiplayer game modes",
+        "Dynamic ability-driven gameplay"
+      ],
+      "link": [
+        {
+          "text": "View / Download",
+          "url": "https://raskulls.itch.io/sky-striders",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "That Just Happened",
+      "icon": "⚠️",
+      "shortDesc": "A VR safety training game where players prevent workplace accidents using the right equipment.",
+      "desc": "That Just Happened is an immersive VR safety experience that places players inside hazardous blue-collar work scenarios where fast thinking and proper preparation can mean the difference between a near miss and a fatal accident. Set in realistic industrial environments, the game asks players to assess unfolding danger, identify what equipment or response is needed, and intervene before co-workers are harmed. The moment-to-moment gameplay is built around presence, urgency, and physical interaction, using VR to make workplace safety lessons more memorable, emotional, and practical while Unreal Engine powers the atmosphere, interaction fidelity, and embodied learning that define the experience.",
+      "tags": [
+        "pc",
+        "vr"
+      ],
+      "platforms": [
+        "VR",
+        "PC"
+      ],
+      "cover": "img/ThatJustHappend-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/w0o9qF5tkCM"
+        }
+      ],
+      "techs": [
+        "Unreal Engine",
+        "VR"
+      ],
+      "features": [
+        "Immersive VR safety simulation",
+        "Real-world accident recreation",
+        "Interactive safety equipment mechanics",
+        "Educational training framework"
+      ],
+      "link": null
+    },
+    {
+      "id": 8,
+      "name": "Steam Blast",
+      "icon": "🥊",
+      "shortDesc": "A competitive multiplayer VR fighting game built around flight, combat, and objective control.",
+      "desc": "Steam Blast is a futuristic VR multiplayer brawler where players soar through the air, clash in close-range combat, and compete to seize control of key devices spread across the city. The setting combines high-speed vertical movement with an arena-like objective structure, creating a gameplay loop that constantly shifts between flight, pursuit, combat, and territorial control. Designed as an ITI graduation project, the experience highlights the challenge of translating fast competitive action into VR, pairing immersive movement mechanics with multiplayer game rules and objective-driven pacing to create a match flow that feels physical, intense, and strategically dynamic.",
+      "tags": [
+        "pc",
+        "vr",
+        "multiplayer"
+      ],
+      "platforms": [
+        "VR",
+        "PC"
+      ],
+      "cover": "img/SteamBlast-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/lT1YQY3lizY"
+        }
+      ],
+      "techs": [
+        "Unreal Engine",
+        "VR",
+        "Multiplayer"
+      ],
+      "features": [
+        "Full 3D flight mechanics in VR",
+        "Real-time competitive multiplayer",
+        "Device-capture objective gameplay",
+        "Physics-based combat"
+      ],
+      "link": null
+    },
+    {
+      "id": 9,
+      "name": "Killing Beat",
+      "icon": "🎵",
+      "shortDesc": "A rhythm-driven mobile game where players dodge obstacles in sync with the music.",
+      "desc": "Killing Beat is a music-driven mobile experience built around timing, reflexes, and the satisfaction of moving perfectly with the soundtrack. Players weave through incoming obstacles in a continuous rhythm-based loop where every dodge is tied to tempo, turning survival into a performance of timing and flow. The setting is abstract and energetic, letting the audio-visual feedback take center stage while the core mechanics focus on readable challenge, escalating pace, and musical synchronization. The result is a compact but expressive gameplay experience where strong beat mapping and responsive controls make every run feel like a playable song.",
+      "tags": [
+        "mobile",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE"
+      ],
+      "cover": "img/KillingBeat-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/Z08ugcA71dU?end=134"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity"
+      ],
+      "features": [
+        "Music-synchronized obstacles",
+        "Progressive difficulty",
+        "Hyper-casual loop design"
+      ],
+      "link": null
+    },
+    {
+      "id": 10,
+      "name": "SymSam",
+      "icon": "⚔️",
+      "shortDesc": "A hyper-casual mobile game about slicing shapes into perfectly balanced halves.",
+      "desc": "SymSam is a hyper-casual precision game that turns the simple act of cutting shapes into a clean, satisfying test of timing and control. Framed around a samurai-inspired theme of balance and mastery, players slice incoming forms into symmetrical halves, chasing perfect cuts through a quick gameplay loop that is easy to understand but increasingly difficult to execute well. The core appeal comes from immediate tactile feedback, escalating geometric challenge, and the constant pursuit of accuracy, creating a polished mobile experience that feels approachable at first touch while still rewarding focus, consistency, and finesse.",
+      "tags": [
+        "mobile",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE"
+      ],
+      "cover": "img/SymSam-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/Z08ugcA71dU?start=134&end=168"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity"
+      ],
+      "features": [
+        "Precision cutting mechanics",
+        "Shape symmetry detection",
+        "Progressive puzzle design"
+      ],
+      "link": null
+    },
+    {
+      "id": 11,
+      "name": "Bomb Party",
+      "icon": "💣",
+      "shortDesc": "A local multiplayer PC party game built around bombs, portals, and fast PVP rounds.",
+      "desc": "Bomb Party is a chaotic local multiplayer party game where up to four players battle in compact arenas using bombs, movement, and clever portal plays to outlast one another. Built for Global Game Jam 2018, the game leans into immediate readability and fast round-based action, letting players quickly understand the rules while discovering the deeper fun of ricochets, traps, and unpredictable counterplays. The gameplay loop is simple but explosive: dodge danger, create openings, use the environment creatively, and turn every bomb toss into either a direct attack or a surprising portal-powered setup that keeps matches loud, funny, and intensely competitive.",
+      "tags": [
+        "pc",
+        "multiplayer",
+        "unity"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "cover": "img/BoombPart-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/clx0vbIevjU"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Local Multiplayer"
+      ],
+      "features": [
+        "4-player local PVP",
+        "Portal-based bomb physics",
+        "Global Game Jam 2018 entry"
+      ],
+      "link": [
+        {
+          "text": "View / Download",
+          "url": "https://globalgamejam.org/2018/games/bombparty",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Skull Switch",
+      "icon": "💀",
+      "shortDesc": "A quick-reflex mobile game about switching lanes to keep skulls safe from incoming threats.",
+      "desc": "Skull Switch is a fast-reaction hyper-casual game built around quick reads, lane switching, and constant pressure. Players must protect vulnerable skulls from incoming threats by changing visibility or position at exactly the right moment, creating a tight loop of anticipation, reaction, and recovery that ramps up as patterns become faster and more demanding. The game is designed for mobile-friendly immediacy, with simple controls, sharp visual communication, and a challenge curve focused on reflex mastery. Its appeal comes from how quickly players can understand the mechanic and how hard it becomes to maintain perfect control once the pace intensifies.",
+      "tags": [
+        "mobile",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE"
+      ],
+      "cover": "img/SkullSwitch-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/9B_GFFyyyNY"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity"
+      ],
+      "features": [
+        "Reflex-based lane switching",
+        "Escalating obstacle patterns",
+        "Hyper-casual design"
+      ],
+      "link": null
+    }
+  ]
+}
