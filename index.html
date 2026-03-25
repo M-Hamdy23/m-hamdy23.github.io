@@ -1152,14 +1152,35 @@
         .project-techs {
             display: flex;
             gap: 5px;
-            flex-wrap: wrap
+            flex-wrap: wrap;
+            align-items: center
         }
 
         .project-tech {
             font-family: 'Share Tech Mono', monospace;
-            font-size: .57rem;
-            color: var(--muted);
-            transition: color .5s
+            font-size: .65rem;
+            color: var(--text);
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            transition: all .25s;
+            white-space: nowrap
+        }
+
+        .project-tech:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(0, 245, 196, .08)
+        }
+
+        .project-tech-more {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: .65rem;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: .08em
         }
 
         .project-arrow {
@@ -3114,7 +3135,7 @@
         <p class="project-desc">${p.shortDesc || p.desc}</p>
       </div>
       <div class="project-footer">
-        <div class="project-techs">${p.techs.map(t => `<span class="project-tech">${t}</span>`).join(' · ')}</div>
+        <div class="project-techs">${p.techs.slice(0, 4).map(t => `<span class="project-tech">${t}</span>`).join('')}${p.techs.length > 4 ? `<span class="project-tech-more">+${p.techs.length - 4}</span>` : ''}</div>
         <div class="project-arrow">→</div>
       </div>
     </div>`;
