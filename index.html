@@ -359,6 +359,10 @@
             transform: translateY(-2px)
         }
 
+        .btn-primary.btn-rect {
+            clip-path: none
+        }
+
         .btn-secondary {
             font-family: 'Rajdhani', sans-serif;
             font-size: .84rem;
@@ -1632,7 +1636,9 @@
 
         .modal-side-cta.modal-actions {
             margin: 8px 0 10px;
-            gap: 0
+            display: flex;
+            flex-direction: column;
+            gap: 8px
         }
 
         .modal-side-cta .btn-primary {
@@ -2837,42 +2843,42 @@
                 </ul>
             </nav>
             <div class="modal-nav-inner">
-            <div class="modal-layout">
-                <aside class="modal-sidebar" id="modal-sidebar">
-                    <div class="modal-side-image" id="m-side-image-wrap"><img id="m-side-image" src=""
-                                                                              alt="Project cover" loading="lazy">
-                    </div>
-                    <div class="modal-side-meta">
-                        <div class="modal-side-cta modal-actions" id="m-actions"></div>
-                        <div class="modal-side-title">Platforms</div>
-                        <div class="modal-side-row" id="m-side-platforms"></div>
-                    </div>
-                    <div class="modal-side-meta">
-                        <div class="modal-side-row" id="m-side-tags"></div>
-                    </div>
-                    <div class="modal-side-meta" id="m-tech-sec">
-                        <div class="modal-side-title">Tech Stack</div>
-                        <div class="exp-techs" id="m-tech"></div>
-                    </div>
-                    <div class="modal-side-meta" id="m-feat-wrap" style="display:none">
-                        <div class="modal-side-title">Key Features</div>
-                        <ul class="exp-bullets" id="m-feat"></ul>
-                    </div>
-                </aside>
-                <div class="modal-main" id="modal-main">
-                    <div class="modal-about" id="m-about-sec">
-                        <div class="modal-stitle">About</div>
-                        <p class="modal-about-desc" id="m-about"></p></div>
-                    <div class="modal-media-section" id="m-media-sec">
-                        <div class="modal-stitle">Media</div>
-                        <div class="modal-media-stack" id="m-media"></div>
-                    </div>
-                    <div id="m-work-sec" style="display:none">
-                        <div class="modal-stitle">My Work on This Project</div>
-                        <div id="m-work-items"></div>
+                <div class="modal-layout">
+                    <aside class="modal-sidebar" id="modal-sidebar">
+                        <div class="modal-side-image" id="m-side-image-wrap"><img id="m-side-image" src=""
+                                                                                  alt="Project cover" loading="lazy">
+                        </div>
+                        <div class="modal-side-meta">
+                            <div class="modal-side-cta modal-actions" id="m-actions"></div>
+                            <div class="modal-side-title">Platforms</div>
+                            <div class="modal-side-row" id="m-side-platforms"></div>
+                        </div>
+                        <div class="modal-side-meta">
+                            <div class="modal-side-row" id="m-side-tags"></div>
+                        </div>
+                        <div class="modal-side-meta" id="m-tech-sec">
+                            <div class="modal-side-title">Tech Stack</div>
+                            <div class="exp-techs" id="m-tech"></div>
+                        </div>
+                        <div class="modal-side-meta" id="m-feat-wrap" style="display:none">
+                            <div class="modal-side-title">Key Features</div>
+                            <ul class="exp-bullets" id="m-feat"></ul>
+                        </div>
+                    </aside>
+                    <div class="modal-main" id="modal-main">
+                        <div class="modal-about" id="m-about-sec">
+                            <div class="modal-stitle">About</div>
+                            <p class="modal-about-desc" id="m-about"></p></div>
+                        <div class="modal-media-section" id="m-media-sec">
+                            <div class="modal-stitle">Media</div>
+                            <div class="modal-media-stack" id="m-media"></div>
+                        </div>
+                        <div id="m-work-sec" style="display:none">
+                            <div class="modal-stitle">My Work on This Project</div>
+                            <div id="m-work-items"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div><!-- /modal-nav-inner -->
         </div>
     </div>
@@ -2917,7 +2923,23 @@
                     description: "Designed and implemented the blockchain-integrated character customization system, enabling players to own and trade digital cosmetics. Created the UI framework for cosmetic preview, inventory management, and blockchain transaction workflows."
                 },
             ],
-            link: "https://www.highstreet.market/metaverse"
+            link: [
+                {
+                    text: "Play Now",
+                    url: "https://www.highstreet.market/metaverse",
+                    type: "website"
+                },
+                {
+                    text: "Play Now",
+                    url: "https://www.highstreet.market/metaverse",
+                    type: "website"
+                },
+                {
+                    text: "Play Now",
+                    url: "https://www.highstreet.market/metaverse",
+                    type: "website"
+                }
+            ]
         },
         {
             id: 2,
@@ -2956,7 +2978,13 @@
             videos: ["https://www.youtube.com/embed/_xeZ2ujhtYs"],
             techs: ["C#", "Unity", "Editor Extension"],
             features: ["Create Scriptable Variable & Event classes instantly", "One-click event listener setup", "Quick-find where each asset is used", "Configurable naming conventions"],
-            link: "https://assetstore.unity.com/packages/slug/191378"
+            link: [
+                {
+                    text: "View / Buy",
+                    url: "https://assetstore.unity.com/packages/slug/191378",
+                    type: "website"
+                }
+            ]
         },
         {
             id: 5, name: "10 Tawla", icon: "🎲",
@@ -2967,7 +2995,18 @@
             videos: ["https://www.youtube.com/embed/XcUdxVhAFaA"],
             techs: ["C#", "Unity", "Nakama", "Firebase"],
             features: ["Online multiplayer with ELO ranking", "Host/join matches with friends", "Smart AI matching your skill level", "7 life-like board aesthetics", "Moultezim and Mahbuse game modes"],
-            link: "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla"
+            link: [
+                {
+                    text: "Google Play",
+                    url: "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla",
+                    type: "website"
+                },
+                {
+                    text: "App store",
+                    url: "https://apps.apple.com/eg/app/10-tawla/id1569696163",
+                    type: "website"
+                }
+            ]
         },
         {
             id: 6, name: "Sky Striders", icon: "🦅",
@@ -2978,7 +3017,13 @@
             videos: ["https://www.youtube.com/embed/Kqmn4qk3hSE", "https://www.youtube.com/embed/0Nb84N4M3ps"],
             techs: ["C#", "Unity", "Multiplayer"],
             features: ["Advanced ground & aerial movement", "Multiple character classes", "Online multiplayer game modes", "Dynamic ability-driven gameplay"],
-            link: "https://raskulls.itch.io/sky-striders"
+            link: [
+                {
+                    text: "View / Download",
+                    url: "https://raskulls.itch.io/sky-striders",
+                    type: "website"
+                }
+            ]
         },
         {
             id: 7,
@@ -3041,7 +3086,13 @@
             videos: ["https://www.youtube.com/embed/clx0vbIevjU"],
             techs: ["C#", "Unity", "Local Multiplayer"],
             features: ["4-player local PVP", "Portal-based bomb physics", "Global Game Jam 2018 entry"],
-            link: "https://globalgamejam.org/2018/games/bombparty"
+            link: [
+                {
+                    text: "View / Download",
+                    url: "https://globalgamejam.org/2018/games/bombparty",
+                    type: "website"
+                }
+            ]
         },
         {
             id: 12, name: "Skull Switch", icon: "💀",
@@ -3169,7 +3220,7 @@
         const p = PROJECTS.find(x => x.id === id);
         if (!p) return;
         const hasFeatures = !!(p.features && p.features.length);
-        const hasLink = !!p.link;
+        const hasLink = Array.isArray(p.link) && p.link.length > 0;
         const screenshots = normalizeProjectScreenshots(p);
         const coverSrc = p.cover || '';
         const coverAlt = `${p.name} cover`;
@@ -3248,7 +3299,9 @@
             document.getElementById('m-feat').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
         } else fw.style.display = 'none';
         document.getElementById('m-tech').innerHTML = p.techs.map(t => `<span class="tech-pill">${t}</span>`).join('');
-        document.getElementById('m-actions').innerHTML = hasLink ? `<a href="${p.link}" target="_blank" class="btn-primary">View / Download →</a>` : '';
+        document.getElementById('m-actions').innerHTML = hasLink
+            ? p.link.map(l => `<a href="${l.url}" target="_blank" class="btn-primary btn-rect">${l.text} →</a>`).join('')
+            : '';
         document.getElementById('modal-main').scrollTop = 0;
         document.getElementById('modal-sidebar').scrollTop = 0;
         document.getElementById('modal-overlay').classList.add('open');
