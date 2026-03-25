@@ -1547,6 +1547,31 @@
         }
 
         .modal-body {
+            padding: 0;
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden
+        }
+
+        /* ─── MODAL NAV ─────────────────────────────────── */
+        .modal-nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 12px 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--nav-bg);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: background .5s, border-color .5s;
+            flex-shrink: 0
+        }
+
+        .modal-nav-inner {
             padding: 22px 26px 28px;
             flex: 1;
             min-height: 0;
@@ -2804,9 +2829,18 @@
             <button class="modal-close" onclick="closeModal()">✕</button>
         </div>
         <div class="modal-body" id="modal-body">
+            <nav class="modal-nav">
+                <ul class="nav-links">
+                    <li><a href="#m-about-sec">About</a></li>
+                    <li><a href="#m-media-sec">Media</a></li>
+                    <li><a href="#m-work-sec">MY Work</a></li>
+                </ul>
+            </nav>
+            <div class="modal-nav-inner">
             <div class="modal-layout">
                 <aside class="modal-sidebar" id="modal-sidebar">
-                    <div class="modal-side-image" id="m-side-image-wrap"><img id="m-side-image" src="" alt="Project cover" loading="lazy">
+                    <div class="modal-side-image" id="m-side-image-wrap"><img id="m-side-image" src=""
+                                                                              alt="Project cover" loading="lazy">
                     </div>
                     <div class="modal-side-meta">
                         <div class="modal-side-cta modal-actions" id="m-actions"></div>
@@ -2824,18 +2858,6 @@
                         <div class="modal-side-title">Key Features</div>
                         <ul class="exp-bullets" id="m-feat"></ul>
                     </div>
-                    <div class="modal-side-nav">
-                        <div class="modal-side-title">CONTENTS</div>
-                        <button type="button" class="modal-side-link" id="jump-about"
-                                onclick="scrollModalToSection('m-about-sec')">About
-                        </button>
-                        <button type="button" class="modal-side-link" id="jump-media"
-                                onclick="scrollModalToSection('m-media-sec')">Media
-                        </button>
-                        <button type="button" class="modal-side-link" id="jump-mywork"
-                                onclick="scrollModalToSection('m-work-sec')">My Work
-                        </button>
-                    </div>
                 </aside>
                 <div class="modal-main" id="modal-main">
                     <div class="modal-about" id="m-about-sec">
@@ -2851,6 +2873,7 @@
                     </div>
                 </div>
             </div>
+            </div><!-- /modal-nav-inner -->
         </div>
     </div>
 </div>
@@ -3108,13 +3131,6 @@
         document.getElementById('media-lightbox-caption').textContent = '';
     }
 
-    function scrollModalToSection(sectionId) {
-        const main = document.getElementById('modal-main');
-        const target = document.getElementById(sectionId);
-        if (!main || !target) return;
-        main.scrollTo({top: target.offsetTop - 8, behavior: 'smooth'});
-    }
-
     function renderProjects(filter) {
         const grid = document.getElementById('projects-grid');
         const list = filter === 'all' ? PROJECTS : PROJECTS.filter(p => p.tags.includes(filter));
@@ -3160,7 +3176,7 @@
         const sideImageWrap = document.getElementById('m-side-image-wrap');
         const sideImage = document.getElementById('m-side-image');
         document.getElementById('m-title').textContent = p.name;
-       // document.getElementById('m-badges').innerHTML = p.platforms.map(badgeHTML).join('');
+        // document.getElementById('m-badges').innerHTML = p.platforms.map(badgeHTML).join('');
         document.getElementById('m-tags').innerHTML = p.tags.map(tag => `<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
         document.getElementById('m-head-desc').textContent = p.shortDesc || p.desc;
         if (coverSrc) {
@@ -3259,6 +3275,18 @@
             return;
         }
         closeModal();
+    });
+
+    /* ── MODAL NAV SCROLL ──────────────────────────────── */
+    document.querySelector('.modal-nav').addEventListener('click', function (e) {
+        const link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const modalMain = document.getElementById('modal-main');
+        const offset = target.offsetTop - modalMain.offsetTop;
+        modalMain.scrollTo({top: offset, behavior: 'smooth'});
     });
 
     /* ── THEME ──────────────────────────────────────────── */

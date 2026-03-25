@@ -11,11 +11,12 @@
   - Project filtering via `filterDiv` class tags + button text matching (`filterSelection("All")` bootstraps initial state).
   - Optional per-modal Flickity carousel initialization when `#{target}-carousel` exists (`openModal` in `index.js`).
 - Legacy styling flow is source `styles.scss` -> bundled `css/main.bundle.css`; legacy JS flow is `index.js` -> bundled `js/bundle.js`.
-- Current redesign page (`index.html`, with the same pattern also present in `index_New.html`) is self-contained (inline `<style>` + `<script>`) and data-driven:
+- Current redesign page (`index.html`) is self-contained (inline `<style>` + `<script>`) and data-driven:
   - `PROJECTS` array is the single source of truth for project cards, filters, and modal content.
   - `renderProjects()` + `filterProjects()` regenerate project cards in `#projects-grid`.
   - `openModal()` fills the shared `#modal-overlay` from the selected `PROJECTS` entry instead of using per-project modal markup.
-  - Effects include Three.js background, typewriter text, reveal observers, and custom cursor.
+  - `index.html` modal flow also includes project screenshots/video rendering and the separate `#media-lightbox` overlay.
+- `index_New.html` keeps a similar redesign structure, but with a simpler modal implementation and an animated Three.js canvas background (`#three-canvas`).
 
 ## Developer workflow (discoverable)
 - No `package.json`, lockfile, or build config is committed; bundling tooling is implied by `require(...)` in `index.js` and minified outputs in `js/` + `css/`, while `index.html` and `index_New.html` are self-contained.
@@ -33,10 +34,12 @@
 - If a modal uses carousel content, keep the ID contract `project-X-modal-carousel` so lazy initialization still works.
 - In redesign pages (`index.html`, `index_New.html`), add/edit project data only through `PROJECTS` objects; avoid hardcoding project cards in markup.
 - In redesign pages, keep filter button arguments like `filterProjects('pc', this)` aligned with lowercase values in `PROJECTS[].tags`.
+- In `index.html`, keep `PROJECTS[].id` unique numeric values because card clicks call `openModal(id)` directly.
+- In `index.html`, `openModal()` normalizes media from `videos` and `media` fields (`normalizeProjectVideos`, `normalizeProjectScreenshots`), so preserve these keys when adding richer media content.
 
 ## External dependencies and integrations
 - Legacy external libs/CDNs: Font Awesome kit in `index_legacy.html`; Flickity + imagesLoaded via bundled JS.
-- Redesign external libs/CDNs: Google Fonts and Three.js CDN in `index.html` and `index_New.html`.
+- Redesign external libs/CDNs: Google Fonts in `index.html` and `index_New.html`; Three.js CDN is currently used by `index_New.html` only.
 - External integration points are outbound links/embeds only (YouTube/Vimeo iframes, GitHub/LinkedIn, Google Play, Asset Store, itch.io, Global Game Jam, resume PDF).
 
 ## Agent notes
