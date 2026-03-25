@@ -344,7 +344,7 @@
   },
   "PROJECTS": [
     {
-      "id": 1,
+      "id": "Highstreet-World",
       "name": "Highstreet World",
       "icon": "🌐",
       "shortDesc": "A metaverse shopping experience blending VR, web gameplay, and real-time multiplayer systems.",
@@ -427,7 +427,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "Nutrien-HGV-Driver-Training",
       "name": "Nutrien HGV Driver Training",
       "icon": "🚛",
       "shortDesc": "A PC training simulator with bespoke accident scenarios, guided practice, and LMS-ready assessments.",
@@ -460,7 +460,7 @@
       "link": null
     },
     {
-      "id": 3,
+      "id": "Autoliv-Explore-3D",
       "name": "Autoliv Explore 3D",
       "icon": "🦺",
       "shortDesc": "An AR sales tool that showcases automotive safety products through interactive 3D presentations.",
@@ -495,7 +495,7 @@
       "link": null
     },
     {
-      "id": 4,
+      "id": "Scriptable-System",
       "name": "Scriptable System",
       "icon": "🛠️",
       "shortDesc": "A Unity editor extension for faster creation and management of scriptable variables and events.",
@@ -533,7 +533,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "10-Tawla",
       "name": "10 Tawla",
       "icon": "🎲",
       "shortDesc": "An online backgammon game with ranked multiplayer, AI opponents, and polished mobile presentation.",
@@ -581,7 +581,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "Sky-Striders",
       "name": "Sky Striders",
       "icon": "🦅",
       "shortDesc": "A fast-paced multiplayer PC game focused on fluid movement, aerial control, and competitive modes.",
@@ -625,7 +625,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "That-Just-Happened",
       "name": "That Just Happened",
       "icon": "⚠️",
       "shortDesc": "A VR safety training game where players prevent workplace accidents using the right equipment.",
@@ -658,7 +658,7 @@
       "link": null
     },
     {
-      "id": 8,
+      "id": "Steam-Blast",
       "name": "Steam Blast",
       "icon": "🥊",
       "shortDesc": "A competitive multiplayer VR fighting game built around flight, combat, and objective control.",
@@ -693,7 +693,7 @@
       "link": null
     },
     {
-      "id": 9,
+      "id": "Killing-Beat",
       "name": "Killing Beat",
       "icon": "🎵",
       "shortDesc": "A rhythm-driven mobile game where players dodge obstacles in sync with the music.",
@@ -724,7 +724,7 @@
       "link": null
     },
     {
-      "id": 10,
+      "id": "SymSam",
       "name": "SymSam",
       "icon": "⚔️",
       "shortDesc": "A hyper-casual mobile game about slicing shapes into perfectly balanced halves.",
@@ -755,7 +755,7 @@
       "link": null
     },
     {
-      "id": 11,
+      "id": "Bomb-Party",
       "name": "Bomb Party",
       "icon": "💣",
       "shortDesc": "A local multiplayer PC party game built around bombs, portals, and fast PVP rounds.",
@@ -794,7 +794,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "Skull-Switch",
       "name": "Skull Switch",
       "icon": "💀",
       "shortDesc": "A quick-reflex mobile game about switching lanes to keep skulls safe from incoming threats.",

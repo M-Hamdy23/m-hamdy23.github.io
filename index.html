@@ -3065,7 +3065,7 @@
             const coverSrc = p.cover || '';
             const coverAlt = `${p.name} cover`;
             return `
-    <div class="project-card reveal-scale" onclick="openModal(${p.id})">
+    <div class="project-card reveal-scale" onclick="openModal('${p.id}')">
       <div class="project-thumb">
         ${coverSrc ? `<img class="project-thumb-media" src="${coverSrc}" alt="${coverAlt}" loading="lazy">` : `<div class="project-thumb-icon">${p.icon}</div>`}
         <div class="project-thumb-overlay"></div>
