@@ -220,6 +220,7 @@
         "Co-founded the studio and led technical development across PC, Mobile, and VR projects",
         "Designed and implemented networked multiplayer architecture and synchronized gameplay systems for Sky Striders, a competitive PC game focused on movement and aerial combat",
         "Developed That Just Happened, a VR safety training game recreating real workplace accidents",
+        "Delivered a freelance 3D / AR mobile project for Autoliv, creating a 3D product showcase to support automotive safety sales demonstrations"
       ],
       "techs": [
         "C#",
@@ -227,7 +228,11 @@
         "Unreal",
         "Photon PUN",
         "Photon Bolt",
-        "Mirror"
+        "Mirror",
+        "VR",
+        "AR",
+        "Mobile",
+        "IOS"
       ]
     },
     {
