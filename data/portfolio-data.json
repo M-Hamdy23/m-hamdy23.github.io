@@ -344,6 +344,155 @@
   },
   "PROJECTS": [
     {
+      "id": "highstreet-calamity",
+      "order": 0,
+      "featured": true,
+      "published": true,
+      "name": "HighStreet Clamity VR",
+      "icon": "🦆",
+      "shortDesc": "Highstreet: Calamity - VR Roguelike Arena Combat in a Manic Metaverse. Protect the FOMO DUCKS! Highstreet: Calamity is a fast-paced, class-based VR roguelike brawler set in Solera, a chaotic world where talking ducks run businesses, pelicans have strong opinions, and monster portals are \"just an average Tuesday.\"",
+      "desc": "Highstreet: Calamity is a fast-paced, class-based VR roguelike brawler set in Solera, a chaotic world where talking ducks run businesses, pelicans have strong opinions, and monster portals are \"just an average Tuesday.\" Players choose from unique classes with distinct abilities to battle waves of unpredictable enemies and bosses. Progression includes gear upgrades and branching skill paths. The game supports solo or co-op multiplayer with dynamic server allocation using GameLift. Social features include a lobby to connect with friends and enjoy the mayhem together.",
+      "media": [
+        {
+          "src": "src/Assets/Images/highstreet-calamity/1.webp",
+          "alt": "HighStreet Clamity VR screenshot 1"
+        },
+        {
+          "src": "src/Assets/Images/highstreet-calamity/2.webp",
+          "alt": "HighStreet Clamity VR screenshot 2"
+        },
+        {
+          "src": "src/Assets/Images/highstreet-calamity/3.webp",
+          "alt": "HighStreet Clamity VR screenshot 3"
+        },
+        {
+          "src": "src/Assets/Images/highstreet-calamity/4.webp",
+          "alt": "HighStreet Clamity VR screenshot 4"
+        },
+        {
+          "src": "src/Assets/Images/highstreet-calamity/5.webp",
+          "alt": "HighStreet Clamity VR screenshot 5"
+        }
+      ],
+      "tags": [
+        "unity",
+        "multiplayer",
+        "vr"
+      ],
+      "platforms": [
+        "Meta Quest"
+      ],
+      "cover": "src/Assets/Images/highstreet-calamity/0.bmp",
+      "videos": [
+        {
+          "title": "Clamity Trailer",
+          "url": "src/Assets/Videos/highstreet-calamity/Highstreet- Calamity.mp4"
+        },
+        {
+          "title": "Clamity Gameplay",
+          "url": "https://www.youtube.com/embed/5Eyulq_JXzo"
+        }
+      ],
+      "techs": [
+        "Unity",
+        "Game Architecture",
+        "Data-Driven",
+        "Server Architecture",
+        "Leadership",
+        "C#",
+        "VR",
+        "Multiplayer",
+        "DOTS",
+        "Netcode for Entities",
+        "networking",
+        "GameLift",
+        "Multiplay",
+        "Node.js",
+        "Backend Development",
+        "Python",
+        "Tools Development"
+      ],
+      "features": [
+        "Class-based combat system with unique abilities and playstyles",
+        "Procedurally generated arenas with dynamic hazards",
+        "Challenging monsters and bosses with distinct behaviors",
+        "Solo and co-op multiplayer modes with matchmaking",
+        "Progression system with gear upgrades and skill trees",
+        "Social hub for players to connect and show off achievements"
+      ],
+      "myWork": [
+        {
+          "title": "DOTS Architecture Design",
+          "description": "Led the design of a Unity DOTS-compatible architecture that cleanly separates logic between code and Unity scene component placement, enabling flexible and maintainable game development workflows across the team.",
+          "media": [
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/4.png", "alt": "DOTS architecture design 1" },
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/6.png", "alt": "DOTS architecture design 2" },
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/7.png", "alt": "DOTS architecture design 3" },
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/8.png", "alt": "DOTS architecture design 4" },
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/9.png", "alt": "DOTS architecture design 5" }
+          ]
+        },
+        {
+          "title": "Full Project Architecture Leadership",
+          "description": "Architected the entire project technical foundation including authentication flow, backend APIs, database schema, networking, server infrastructure, and all networked game core systems: spawn, health/mana/stats, combat, abilities, skills, consumables, monsters, monster AI, aggro system, AI coordinator, and interaction system - all synchronized over the network.",
+          "media": [
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/1.png", "alt": "Project architecture leadership 1" },
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/2.png", "alt": "Project architecture leadership 2" },
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/3.png", "alt": "Project architecture leadership 3" },
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/4.png", "alt": "Project architecture leadership 4" },
+            { "src": "src/Assets/Images/highstreet-calamity/architecture/5.png", "alt": "Project architecture leadership 5" }
+          ]
+        },
+        {
+          "title": "Matchmaking & Server Auto-Scalability",
+          "description": "Led the design and implementation of the matchmaking server and server auto-scalability infrastructure, initially built on Unity Multiplay then migrated to Amazon GameLift after Unity divested the service."
+        },
+        {
+          "title": "Party & Friends System",
+          "description": "Led the design and implementation of the party system and friends system, fully integrated into the matchmaking pipeline."
+        },
+        {
+          "title": "Data-Driven Game Design Pipeline",
+          "description": "Designed and implemented a data-driven pipeline exposing game data via Excel sheets to game designers, allowing them to create and tweak abilities, stats, consumables, classes, and monster AI profiles without requiring code changes.",
+          "media": [
+            { "src": "src/Assets/Images/highstreet-calamity/data-driven/1.png", "alt": "Data-driven pipeline 1" },
+            { "src": "src/Assets/Images/highstreet-calamity/data-driven/2.png", "alt": "Data-driven pipeline 2" },
+            { "src": "src/Assets/Images/highstreet-calamity/data-driven/3.png", "alt": "Data-driven pipeline 3" }
+          ]
+        },
+        {
+          "title": "Custom DOTS State Machine with Editor Interface and network support",
+          "description": "Designed and implemented a DOTS-based state machine with a full Unity Editor interface to support AI logic workflows. With no DOTS-native alternative available in Unity or the Asset Store at the time, this system became a foundational tool used extensively throughout the game's AI and general logic layers.",
+          "media": [
+            { "src": "src/Assets/Images/highstreet-calamity/dots-behaviour-tree/1.png", "alt": "DOTS state machine 1" },
+            { "src": "src/Assets/Images/highstreet-calamity/dots-behaviour-tree/2.png", "alt": "DOTS state machine 2" },
+            { "src": "src/Assets/Images/highstreet-calamity/dots-behaviour-tree/3.png", "alt": "DOTS state machine 3" },
+            { "src": "src/Assets/Images/highstreet-calamity/dots-behaviour-tree/4.png", "alt": "DOTS state machine 4" },
+            { "src": "src/Assets/Images/highstreet-calamity/dots-behaviour-tree/5.png", "alt": "DOTS state machine 5" }
+          ]
+        },
+        {
+          "title": "GameLift Fleet Management Tool [Vibe Coding]",
+          "description": "Built a Python CLI tool to streamline GameLift server and fleet deployment and management, supporting saved fleet configurations to make deployments fast and repeatable.",
+          "media": [
+            { "src": "src/Assets/Images/highstreet-calamity/gamelift-tool/1.png", "alt": "GameLift tool screenshot 1" },
+            { "src": "src/Assets/Images/highstreet-calamity/gamelift-tool/2.png", "alt": "GameLift tool screenshot 2" }
+          ]
+        },
+        {
+          "title": "Team DOTS Mentorship",
+          "description": "Onboarded and mentored the entire team on Unity DOTS from zero prior knowledge. By the end of the project, team members could independently architect and implement their own DOTS systems - requiring only review rather than hands-on design involvement as at the project's start."
+        }
+      ],
+      "link": [
+        {
+          "text": "Meta Store",
+          "url": "https://www.meta.com/en-gb/experiences/highstreet-calamity/9352017631510878/",
+          "type": "website"
+        }
+      ]
+    },
+    {
       "id": "Highstreet-World",
       "name": "Highstreet World",
       "icon": "🌐",
