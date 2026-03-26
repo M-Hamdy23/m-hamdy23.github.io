@@ -2181,7 +2181,8 @@
             margin-top: 10px
         }
 
-        .modal-video iframe {
+        .modal-video iframe,
+        .modal-video video {
             width: 100%;
             height: 100%;
             border: none
@@ -3025,6 +3026,16 @@
         }).filter(video => video.url);
     }
 
+    function isLocalVideoFile(url) {
+        if (typeof url !== 'string') return false;
+        const trimmed = url.trim();
+        if (!trimmed) return false;
+        const noQuery = trimmed.split('#')[0].split('?')[0].toLowerCase();
+        const hasVideoExt = /\.(mp4|webm|ogg|mov|m4v)$/.test(noQuery);
+        const isRemote = /^(https?:)?\/\//i.test(trimmed);
+        return hasVideoExt && !isRemote;
+    }
+
     function normalizeProjectScreenshots(project) {
         const source = Array.isArray(project.media) && project.media.length
             ? project.media
@@ -3119,13 +3130,19 @@
         document.getElementById('m-about').textContent = p.desc;
         const mediaEl = document.getElementById('m-media');
         const videos = normalizeProjectVideos(p);
-        const videoHTML = videos.map((video, idx) => `
+        const videoHTML = videos.map((video, idx) => {
+            const frameHTML = isLocalVideoFile(video.url)
+                ? `<video src="${video.url}" title="${p.name} video ${idx + 1}" controls preload="metadata" playsinline></video>`
+                : `<iframe src="${video.url}" title="${p.name} video ${idx + 1}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+
+            return `
     <div class="modal-media-block modal-video-card">
       <div class="modal-media-head">
         <div class="modal-video-title">🎥 ${video.label}</div>
       </div>
-      <div class="modal-video"><div class="modal-video-frame"><iframe src="${video.url}" title="${p.name} video ${idx + 1}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
-    </div>`).join('');
+      <div class="modal-video"><div class="modal-video-frame">${frameHTML}</div></div>
+    </div>`;
+        }).join('');
         const screenshotsHTML = screenshots.map((shot, idx) => `
     <button type="button" class="modal-media-block modal-screenshot-btn" data-src="${shot.src}" data-alt="${shot.alt}">
       <span class="modal-media-head">
