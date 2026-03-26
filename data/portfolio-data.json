@@ -1026,7 +1026,7 @@
       "cover": "img/DriverTraining-cover.png",
       "videos": [
         {
-          "title": "Trailer Video",
+          "title": "Video",
           "url": "https://player.vimeo.com/video/899866858?h=64437a6e2a&badge=0&autopause=0&player_id=0&app_id=58479"
         }
       ],
@@ -1099,37 +1099,97 @@
     {
       "id": "Autoliv-Explore-3D",
       "name": "Autoliv Explore 3D",
-      "icon": "🦺",
-      "shortDesc": "An AR sales tool that showcases automotive safety products through interactive 3D presentations.",
-      "desc": "Autoliv Explore 3D is an augmented reality product showcase built to help sales teams present complex automotive safety systems in a far more engaging and understandable way. Instead of relying on static slides or physical prototypes, users can place and inspect life-saving components in 3D, explore how they fit into vehicle environments, and walk customers through their design and purpose with interactive visual clarity. The experience is built around smooth mobile presentation flow, clear product storytelling, and dependable AR interaction, combining Unity and Vuforia to turn technical safety hardware into an accessible, hands-on demonstration tool for global sales and marketing teams.",
+      "icon": "🚗",
+      "shortDesc": "An AR-powered sales tool that showcases automotive safety systems through interactive real-time 3D presentations.",
+      "desc": "Autoliv Explore 3D is an augmented reality and real-time 3D product visualization application designed to transform how automotive safety systems are presented and understood. Built for iOS using Unity and Vuforia, the app enables sales teams to showcase complex components such as airbags and seatbelts through interactive, immersive experiences. Instead of relying on static presentations or physical prototypes, users can place and inspect products in 3D, explore how they integrate inside vehicle environments, and communicate their functionality with clarity and impact. The experience focuses on smooth presentation flow, intuitive interaction, and strong visual storytelling, turning highly technical safety hardware into accessible, engaging demonstrations for global sales, marketing, and training teams.",
       "tags": [
-        "vr",
-        "unity"
+        "mobile",
+        "ios",
+        "ar",
+        "real-time-3d",
+        "enterprise"
       ],
       "platforms": [
-        "AR",
-        "IOS"
+        "IOS",
+        "MOBILE"
       ],
       "cover": "img/Autoliv-cover.png",
       "videos": [
         {
-          "title": "Trailer Video",
+          "title": "Video",
           "url": "https://www.youtube.com/embed/OtewjIJFGIU"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/Autoliv-Explore-3D/1.png",
+          "alt": "screenshot 1"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/2.png",
+          "alt": "screenshot 2"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/3.png",
+          "alt": "screenshot 3"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/4.png",
+          "alt": "screenshot 4"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/5.png",
+          "alt": "screenshot 5"
         }
       ],
       "techs": [
         "C#",
         "Unity",
-        "AR",
-        "Vuforia"
+        "AR Development",
+        "3D Visualization"
       ],
       "features": [
-        "Interactive 3D product visualization",
-        "AR marker-based overlay",
-        "Sales presentation mode",
-        "Cross-device compatibility"
+        "Augmented reality product visualization",
+        "Interactive 3D exploration of automotive safety systems",
+        "Product placement and inspection in real-world environments",
+        "Exploded and contextual product views",
+        "Smooth guided presentation flow for sales demos",
+        "Optimized mobile performance for iPad devices"
       ],
-      "link": null
+      "myWork": [
+        {
+          "title": "AR Application Development",
+          "description": "Developed and maintained AR features using Unity and Vuforia, enabling interactive product placement and real-world visualization.",
+          "media": []
+        },
+        {
+          "title": "3D Interaction & Presentation Systems",
+          "description": "Implemented intuitive interaction systems and presentation flows to support sales storytelling and live demos.",
+          "media": []
+        },
+        {
+          "title": "Visualization Features",
+          "description": "Worked on advanced visualization techniques such as exploded views and contextual product integration inside vehicle scenes.",
+          "media": []
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Optimized 3D assets and rendering pipelines to ensure smooth performance on mobile devices, especially iPads.",
+          "media": []
+        },
+        {
+          "title": "Cross-Functional Collaboration",
+          "description": "Collaborated with designers and stakeholders to align technical implementation with sales, marketing, and training goals.",
+          "media": []
+        }
+      ],
+      "link": [
+        {
+          "text": "Case Study",
+          "url": "https://unity.com/case-study/autoliv",
+          "type": "website"
+        }
+      ]
     },
     {
       "id": "Scriptable-System",
