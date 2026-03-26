@@ -38,16 +38,6 @@
 		<section class="sidebar-card">
 			<div class="card-header">
 				<div>
-					<h2 class="card-title">Sections</h2>
-					<p class="card-subtitle">Choose the part of the JSON you want to edit.</p>
-				</div>
-			</div>
-			<nav class="section-nav" id="section-nav" aria-label="Portfolio sections"></nav>
-		</section>
-
-		<section class="sidebar-card">
-			<div class="card-header">
-				<div>
 					<h2 class="card-title">Session status</h2>
 					<p class="card-subtitle">Current working file and save state.</p>
 				</div>
@@ -59,17 +49,6 @@
 			<p class="helper-text" id="sidebar-last-save">No file saved in this session</p>
 		</section>
 
-		<section class="sidebar-card theme-toggle">
-			<div>
-				<h2 class="card-title">Theme</h2>
-				<p class="card-subtitle" id="theme-label">Dark mode</p>
-			</div>
-			<button class="toggle-button btn-ghost" type="button" data-action="toggle-theme" aria-label="Toggle theme">
-				<span class="toggle-track" id="theme-track">
-					<span class="toggle-thumb"></span>
-				</span>
-			</button>
-		</section>
 	</aside>
 
 	<main class="main-area">
@@ -84,6 +63,17 @@
 				<button class="btn-ghost" type="button" id="redo-button" data-action="redo">Redo</button>
 				<button class="btn-secondary" type="button" id="preview-toggle" data-action="toggle-preview">Show JSON Preview</button>
 				<div class="section-stats" id="status-badges"></div>
+			</div>
+			<div class="top-nav-row">
+				<nav class="section-nav top-section-nav" id="section-nav" aria-label="Portfolio sections"></nav>
+				<div class="top-theme-toggle">
+					<p class="card-subtitle" id="theme-label">Dark mode</p>
+					<button class="toggle-button btn-ghost" type="button" data-action="toggle-theme" aria-label="Toggle theme">
+						<span class="toggle-track" id="theme-track">
+							<span class="toggle-thumb"></span>
+						</span>
+					</button>
+				</div>
 			</div>
 		</header>
 
