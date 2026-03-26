@@ -726,6 +726,228 @@
       ]
     },
     {
+      "id": "zinad-training-games",
+      "featured": true,
+      "published": true,
+      "name": "Zinad Security Training Games",
+      "icon": "🛡️",
+      "platforms": [
+        "Web",
+        "VR",
+        "Kinect",
+        "Android",
+        "iOS"
+      ],
+      "cover-image": "img/zinad-training-games/cover.png",
+      "cover": "img/zinad-training-games/cover.png",
+      "screenshots": [],
+      "media": [],
+      "videos": [
+        {
+          "text": "Cyber Emoji",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/PyKICJRs4eM?si=1MMLU5XOMP3g0ZHx"
+        },
+        {
+          "text": "The Office VR Gameplay",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/iGwV84Rlqzs?si=UB6DJReXwel6hR9V&start=2"
+        },
+        {
+          "text": "Basketball",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/ycpl4R3FRQI?si=QLjj8-1iEIr-7EWI"
+        },
+        {
+          "text": "Archery ",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/BOqBdossA4g?si=_T-kgzyjO3x0YFkc"
+        },
+        {
+          "text": "Phishing Mania",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/9n7s8Xo2kWE?si=1MMLU5XOMP3g0ZHx"
+        },
+        {
+          "text": "Password Ninja",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/4h6j8qjQYpE?si=QLjj8-1iEIr-7EWI"
+        }
+      ],
+      "genre": [
+        "Training",
+        "Serious Games",
+        "Puzzle",
+        "Enterprise"
+      ],
+      "skills": [
+        "Unity",
+        "C#",
+        "WebGL",
+        "VR",
+        "Kinect",
+        "Android",
+        "iOS",
+        "Leadership",
+        "Game Design",
+        "Enterprise Solutions"
+      ],
+      "filterTags": [
+        "Unity",
+        "VR",
+        "Web",
+        "Android",
+        "iOS",
+        "Kinect"
+      ],
+      "tags": [
+        "unity",
+        "vr",
+        "mobile",
+        "web"
+      ],
+      "techs": [
+        "Unity",
+        "C#",
+        "WebGL",
+        "VR",
+        "Kinect",
+        "Android",
+        "iOS",
+        "Leadership",
+        "Game Design",
+        "Enterprise Solutions"
+      ],
+      "features": [
+        "Multi-platform deployment (Web, VR, Kinect, Android, iOS)",
+        "Enterprise-grade security and data handling",
+        "Customizable content for different organizations",
+        "Engaging gameplay mechanics for learning retention",
+        "Accessible across different skill levels",
+        "Designed for large-scale employee training programs"
+      ],
+      "shortDescription": "A suite of serious games for cybersecurity awareness training, delivered for enterprise clients across multiple platforms.",
+      "shortDesc": "A suite of serious games for cybersecurity awareness training, delivered for enterprise clients across multiple platforms.",
+      "description": "As Team Lead at Zinad, I led the development of a comprehensive suite of serious games for cybersecurity awareness training. The games translated complex security concepts into engaging, interactive learning experiences used by major enterprise clients.\n\nKey projects included:\n- Phishing Mania: An interactive game that teaches employees to identify phishing attempts\n- Who Will Be Millionaire - Security Edition: A game-show format focused on cybersecurity knowledge\n- The Office VR: An immersive VR experience for identifying clean desk policy violations\n- Password Ninja: A fast-paced action game about password security\n- Security Archery VR: A VR archery game for security question training",
+      "desc": "As Team Lead at Zinad, I led the development of a comprehensive suite of serious games for cybersecurity awareness training. The games translated complex security concepts into engaging, interactive learning experiences used by major enterprise clients.\n\nKey projects included:\n- Phishing Mania: An interactive game that teaches employees to identify phishing attempts\n- Who Will Be Millionaire - Security Edition: A game-show format focused on cybersecurity knowledge\n- The Office VR: An immersive VR experience for identifying clean desk policy violations\n- Password Ninja: A fast-paced action game about password security\n- Security Archery VR: A VR archery game for security question training",
+      "contributions": [
+        {
+          "title": "Game Team Lead",
+          "description": "Led a team of three developers and an artist in the design and development of multiple cybersecurity training games, overseeing project timelines, coordinating tasks, and ensuring the delivery of high-quality training solutions for enterprise clients.",
+          "screenshot": []
+        },
+        {
+          "title": "Collaboration with Cross-Functional Teams",
+          "description": "Worked closely with web developers, DevOps teams, and QA teams to ensure smooth deployment and maintenance, while incorporating feedback for continuous improvement.",
+          "screenshot": []
+        },
+        {
+          "title": "Refactored Legacy Games to Meet Enterprise Standards",
+          "description": "Refactored legacy codebases of existing training games to improve performance, security, and maintainability. This included optimizing game logic, enhancing data handling practices, and ensuring compliance with enterprise security standards.",
+          "screenshot": []
+        },
+        {
+          "title": "Port Games to New Platforms (WebGL, VR, Kinect, Android, iOS)",
+          "description": "Led the porting of existing training games to new platforms, including WebGL for browser-based access, VR for immersive experiences, Kinect for motion-based interaction, and mobile platforms (Android and iOS) for on-the-go training. This involved adapting controls, optimizing performance, and ensuring a consistent user experience across all platforms.",
+          "screenshot": []
+        },
+        {
+          "title": "Client Customization System",
+          "description": "Implemented a flexible content management system that allowed for easy customization of game content to fit the specific security policies and branding requirements of different enterprise clients.",
+          "screenshot": []
+        },
+        {
+          "title": "Project Template and Delivery Pipeline",
+          "description": "Created a standardized project template and development pipeline for new training games, streamlining development and ensuring consistency across the suite. This reduced delivery time for new client training content from about 6 months to 2 months.",
+          "screenshot": []
+        },
+        {
+          "title": "Web Bridge",
+          "description": "Implemented authentication and web-to-game communication using JavaScript bridge functions with callback-based JSON responses. Replaced fragile direct function-name coupling with a generic integration layer that isolated game internals from web implementation details and supported continuous profile/data updates from the website while players were connected.",
+          "screenshot": []
+        },
+        {
+          "title": "Designed and Implemented New Games",
+          "description": "Designed and developed new training games based on emerging cybersecurity threats and client feedback, ensuring that the games remained relevant and effective in educating employees about current security risks.",
+          "screenshot": []
+        },
+        {
+          "title": "ZiSoft Mobile App (iOS, Android)",
+          "description": "Led development of the ZiSoft mobile app, which provided on-the-go access to training games and resources for employees. This included designing the app architecture, implementing core features, and adapting all games to run under one app while keeping each game in its own repository.",
+          "screenshot": []
+        },
+        {
+          "title": "Interactive video player for training content",
+          "description": "Developed an interactive video player for training content, allowing users to engage with the material through quizzes, annotations, and other interactive elements, enhancing the learning experience.",
+          "screenshot": []
+        },
+        {
+          "title": "HTML Page View for Web Games",
+          "description": "Implemented a system for displaying HTML pages inside web games to support phishing-email training, enabling realistic simulation of phishing emails and websites as part of training exercises.",
+          "screenshot": []
+        }
+      ],
+      "myWork": [
+        {
+          "title": "Game Team Lead",
+          "description": "Led a team of three developers and an artist in the design and development of multiple cybersecurity training games, overseeing project timelines, coordinating tasks, and ensuring the delivery of high-quality training solutions for enterprise clients.",
+          "media": []
+        },
+        {
+          "title": "Collaboration with Cross-Functional Teams",
+          "description": "Worked closely with web developers, DevOps teams, and QA teams to ensure smooth deployment and maintenance, while incorporating feedback for continuous improvement.",
+          "media": []
+        },
+        {
+          "title": "Refactored Legacy Games to Meet Enterprise Standards",
+          "description": "Refactored legacy codebases of existing training games to improve performance, security, and maintainability. This included optimizing game logic, enhancing data handling practices, and ensuring compliance with enterprise security standards.",
+          "media": []
+        },
+        {
+          "title": "Port Games to New Platforms (WebGL, VR, Kinect, Android, iOS)",
+          "description": "Led the porting of existing training games to new platforms, including WebGL for browser-based access, VR for immersive experiences, Kinect for motion-based interaction, and mobile platforms (Android and iOS) for on-the-go training. This involved adapting controls, optimizing performance, and ensuring a consistent user experience across all platforms.",
+          "media": []
+        },
+        {
+          "title": "Client Customization System",
+          "description": "Implemented a flexible content management system that allowed for easy customization of game content to fit the specific security policies and branding requirements of different enterprise clients.",
+          "media": []
+        },
+        {
+          "title": "Project Template and Delivery Pipeline",
+          "description": "Created a standardized project template and development pipeline for new training games, streamlining development and ensuring consistency across the suite. This reduced delivery time for new client training content from about 6 months to 2 months.",
+          "media": []
+        },
+        {
+          "title": "Web Bridge",
+          "description": "Implemented authentication and web-to-game communication using JavaScript bridge functions with callback-based JSON responses. Replaced fragile direct function-name coupling with a generic integration layer that isolated game internals from web implementation details and supported continuous profile/data updates from the website while players were connected.",
+          "media": []
+        },
+        {
+          "title": "Designed and Implemented New Games",
+          "description": "Designed and developed new training games based on emerging cybersecurity threats and client feedback, ensuring that the games remained relevant and effective in educating employees about current security risks.",
+          "media": []
+        },
+        {
+          "title": "ZiSoft Mobile App (iOS, Android)",
+          "description": "Led development of the ZiSoft mobile app, which provided on-the-go access to training games and resources for employees. This included designing the app architecture, implementing core features, and adapting all games to run under one app while keeping each game in its own repository.",
+          "media": []
+        },
+        {
+          "title": "Interactive video player for training content",
+          "description": "Developed an interactive video player for training content, allowing users to engage with the material through quizzes, annotations, and other interactive elements, enhancing the learning experience.",
+          "media": []
+        },
+        {
+          "title": "HTML Page View for Web Games",
+          "description": "Implemented a system for displaying HTML pages inside web games to support phishing-email training, enabling realistic simulation of phishing emails and websites as part of training exercises.",
+          "media": []
+        }
+      ],
+      "links": [],
+      "link": []
+    },
+    {
       "id": "Nutrien-HGV-Driver-Training",
       "name": "Nutrien HGV Driver Training",
       "icon": "🚛",
