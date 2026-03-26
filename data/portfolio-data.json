@@ -1255,7 +1255,8 @@
         "C#",
         "Unity",
         "Nakama",
-        "Firebase"
+        "Firebase",
+        "Node.js"
       ],
       "features": [
         "Online multiplayer with ELO ranking",
@@ -1305,7 +1306,9 @@
       "techs": [
         "C#",
         "Unity",
-        "Multiplayer"
+        "Multiplayer",
+        "Photon Bolt",
+        "Photon Pun"
       ],
       "features": [
         "Advanced ground & aerial movement",
