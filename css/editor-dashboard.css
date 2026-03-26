@@ -123,6 +123,7 @@ video {
     position: relative;
     display: grid;
     grid-template-columns: 310px minmax(0, 1fr) 380px;
+    height: 100vh;
     min-height: 100vh;
 }
 
@@ -137,6 +138,7 @@ video {
     border-right: 1px solid var(--border);
     backdrop-filter: blur(24px) saturate(180%);
     overflow-y: auto;
+    min-height: 0;
 }
 
 .sidebar-card,
@@ -405,6 +407,7 @@ button:disabled {
 .main-area,
 .inspector {
     min-width: 0;
+    min-height: 0;
     overflow-y: auto;
     position: relative;
     z-index: 1;
@@ -982,6 +985,8 @@ button:disabled {
 
     .dashboard-shell {
         grid-template-columns: 280px minmax(0, 1fr);
+        height: auto;
+        min-height: 100vh;
     }
 
     .inspector {
@@ -997,6 +1002,7 @@ button:disabled {
 @media (max-width: 980px) {
     .dashboard-shell {
         grid-template-columns: 1fr;
+        height: auto;
     }
 
     .sidebar {
@@ -1004,11 +1010,13 @@ button:disabled {
         max-height: none;
         border-right: 0;
         border-bottom: 1px solid var(--border);
+        overflow: visible;
     }
 
     .main-area,
     .inspector {
         padding: 20px;
+        overflow: visible;
     }
 
     .topbar,
