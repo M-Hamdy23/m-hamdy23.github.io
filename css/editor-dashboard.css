@@ -761,21 +761,44 @@ button:disabled {
 
 .project-shell {
     display: grid;
-    grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.45fr);
+    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.45fr);
     gap: 20px;
+    align-items: start;
+    min-height: 0;
 }
 
 .project-library-card {
     display: grid;
     gap: 16px;
     padding: 20px;
-    min-height: 70vh;
+    align-content: start;
+    position: sticky;
+    top: 8px;
+    max-height: calc(100vh - 170px);
+    min-height: 560px;
+    overflow: hidden;
 }
 
 .project-list {
     display: grid;
     gap: 12px;
     align-content: start;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.project-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.project-list::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.35);
+}
+
+.project-list::-webkit-scrollbar-track {
+    background: rgba(148, 163, 184, 0.08);
 }
 
 .project-option {
@@ -834,6 +857,9 @@ button:disabled {
 
 .project-filter-row {
     align-items: center;
+    max-height: 88px;
+    overflow-y: auto;
+    padding-right: 2px;
 }
 
 .filter-pill {
@@ -843,6 +869,7 @@ button:disabled {
 .project-editor-panel {
     display: grid;
     gap: 20px;
+    min-width: 0;
 }
 
 .project-summary-hero {
@@ -1040,6 +1067,19 @@ button:disabled {
 
     .project-shell {
         grid-template-columns: 1fr;
+    }
+
+    .project-library-card {
+        position: static;
+        max-height: none;
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .project-list,
+    .project-filter-row {
+        max-height: none;
+        overflow: visible;
     }
 }
 
