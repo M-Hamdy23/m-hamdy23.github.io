@@ -870,24 +870,46 @@
     }
 
     function renderProjectListItem(project, index) {
-        const preview = state.mediaPreviews[`PROJECTS[${index}].cover`] || project.cover;
+        const isActive   = index === state.selectedProjectIndex;
+        const preview    = state.mediaPreviews[`PROJECTS[${index}].cover`] || project.cover;
+        const name       = project.name || 'Untitled Project';
+        const platforms  = (Array.isArray(project.platforms) ? project.platforms : []).slice(0, 2);
+        const tags       = Array.isArray(project.tags) ? project.tags : [];
+        const previewTags = tags.slice(0, 3);
+
+        const thumbHtml = preview
+            ? `<img src="${escapeAttribute(preview)}" alt="${escapeAttribute(name)} cover" loading="lazy">`
+            : `<span>${escapeHtml(project.icon || '🧩')}</span>`;
+
+        const badgesHtml = [
+            ...platforms.map(p => `<span class="project-option-badge">${escapeHtml(p)}</span>`),
+            ...previewTags.map(t => `<span class="project-option-badge is-tag">${escapeHtml(t)}</span>`)
+        ].join('') || `<span class="project-option-badge">No tags</span>`;
+
+        const allTagsHtml = tags.length
+            ? tags.map(t => `<span class="tag-chip">${escapeHtml(t)}</span>`).join('')
+            : '<span class="small-pill">No tags</span>';
+
         return `
-            <article class="project-option ${index === state.selectedProjectIndex ? 'active' : ''}" draggable="true" data-project-index="${index}">
-                <div class="project-option-head">
-                    <div>
-                        <h3 class="project-option-title">${escapeHtml(project.name || 'Untitled Project')}</h3>
-                        <p class="project-option-desc">${escapeHtml(project.shortDesc || project.desc || 'Add a short project summary.')}</p>
+            <details class="project-option ${isActive ? 'active' : ''}" ${isActive ? 'open' : ''} draggable="true" data-project-index="${index}">
+                <summary class="project-option-summary" data-action="select-project" data-index="${index}">
+                    <div class="project-option-mini-thumb">${thumbHtml}</div>
+                    <div class="project-option-info">
+                        <h3 class="project-option-title">${escapeHtml(name)}</h3>
+                        <div class="project-option-badges">${badgesHtml}</div>
                     </div>
-                    <span class="small-pill">#${index + 1}</span>
+                    <span class="project-option-index">#${index + 1}</span>
+                    <span class="project-option-chevron" aria-hidden="true">›</span>
+                </summary>
+                <div class="project-option-body">
+                    <p class="project-option-desc">${escapeHtml(project.shortDesc || project.desc || 'No summary yet.')}</p>
+                    <div class="tag-list">${allTagsHtml}</div>
+                    <div class="inline-actions">
+                        <button class="btn-ghost" type="button" data-action="duplicate-project" data-index="${index}">Duplicate</button>
+                        <button class="btn-danger" type="button" data-action="delete-project" data-index="${index}">Delete</button>
+                    </div>
                 </div>
-                <div class="project-thumb">${preview ? `<img src="${escapeAttribute(preview)}" alt="${escapeAttribute(project.name || 'Project')} cover" loading="lazy">` : escapeHtml(project.icon || '🧩')}</div>
-                <div class="tag-list">${(project.tags || []).slice(0, 4).map(tag => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join('') || '<span class="small-pill">No tags</span>'}</div>
-                <div class="inline-actions">
-                    <button class="btn-secondary" type="button" data-action="select-project" data-index="${index}">Edit</button>
-                    <button class="btn-ghost" type="button" data-action="duplicate-project" data-index="${index}">Duplicate</button>
-                    <button class="btn-danger" type="button" data-action="delete-project" data-index="${index}">Delete</button>
-                </div>
-            </article>
+            </details>
         `;
     }
 
@@ -1511,7 +1533,7 @@
         notify('Changes were reset to the last loaded version.', 'warning');
     }
 
-    function handleActionClick(button) {
+    function handleActionClick(button, event) {
         const action = button.dataset.action;
         switch (action) {
             case 'navigate-section':
@@ -1548,10 +1570,17 @@
                 if (input) input.value = '';
                 return;
             }
-            case 'select-project':
-                state.selectedProjectIndex = Number(button.dataset.index);
+            case 'select-project': {
+                const idx = Number(button.dataset.index);
+                if (state.selectedProjectIndex === idx) {
+                    // Already selected — keep the card open, swallow the native toggle
+                    if (event) event.preventDefault();
+                    return;
+                }
+                state.selectedProjectIndex = idx;
                 renderApp();
                 return;
+            }
             case 'add-project':
                 appendTemplateItem('PROJECTS', 'project');
                 return;
@@ -1599,7 +1628,7 @@
     function handleDocumentClick(event) {
         const button = event.target.closest('[data-action]');
         if (!button) return;
-        handleActionClick(button);
+        handleActionClick(button, event);
     }
 
     function handleDocumentInput(event) {
