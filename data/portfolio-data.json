@@ -562,15 +562,6 @@
         "webGl"
       ],
       "cover": "img/highstreet-campus/highstreet_campus.png",
-      "screenshots": [
-        "img/highstreet-campus/1.png",
-        "img/highstreet-campus/2.png",
-        "img/highstreet-campus/3.png",
-        "img/highstreet-campus/4.png",
-        "img/highstreet-campus/5.png",
-        "img/highstreet-campus/6.png",
-        "img/highstreet-campus/7.png"
-      ],
       "media": [
         {
           "src": "img/highstreet-campus/1.png",
@@ -613,31 +604,11 @@
           "url": "https://www.youtube.com/embed/652a-CFEBiU"
         }
       ],
-      "genre": [
-        "Metaverse",
-        "Multiplayer",
-        "social"
-      ],
-      "skills": [
-        "Unity",
-        "C#",
-        "JavaScript",
-        "WebGL",
-        "Multiplayer",
-        "Networking",
-        "Server Architecture",
-        "Mirror",
-        "Web3 Integration"
-      ],
-      "filterTags": [
-        "Unity",
-        "Multiplayer",
-        "Web"
-      ],
       "tags": [
         "unity",
         "multiplayer",
-        "web"
+        "web",
+        "pc"
       ],
       "techs": [
         "Unity",
@@ -660,9 +631,7 @@
         "Real-time synchronized interactions for shared systems like elevators and seats",
         "Dynamic environment changes based on in-game events"
       ],
-      "shortDescription": "Highstreet Campus was built as the company's metaverse entry point: a large-scale WebGL social hub with MMO-oriented networking, NFT commerce, and connected world travel into Highstreet Homes.",
       "shortDesc": "Highstreet Campus was built as the company's metaverse entry point: a large-scale WebGL social hub with MMO-oriented networking, NFT commerce, and connected world travel into Highstreet Homes.",
-      "description": "Highstreet Campus started as a social metaverse hub and strategic entry point for the company, with an early goal of building networking and infrastructure that could scale toward MMO requirements. The world combined social interaction spaces with NFT purchasing experiences, then expanded to include travel pods linking players to their homes in the previous Highstreet Homes project. The campus later introduced a VIP rooftop section with an outdoor garden, additional social activities, and a salon shop. One notable multiplayer challenge was a dynamic lab feature where players could switch lab interiors from an in-world console, requiring synchronized environment swaps while correctly handling other users already inside the affected area.",
       "desc": "Highstreet Campus started as a social metaverse hub and strategic entry point for the company, with an early goal of building networking and infrastructure that could scale toward MMO requirements. The world combined social interaction spaces with NFT purchasing experiences, then expanded to include travel pods linking players to their homes in the previous Highstreet Homes project. The campus later introduced a VIP rooftop section with an outdoor garden, additional social activities, and a salon shop. One notable multiplayer challenge was a dynamic lab feature where players could switch lab interiors from an in-world console, requiring synchronized environment swaps while correctly handling other users already inside the affected area.",
       "contributions": [
         {
@@ -786,6 +755,389 @@
       ]
     },
     {
+      "id": "Nutrien-HGV-Driver-Training",
+      "name": "Nutrien-HGV-Driver-Training",
+      "icon": "🚛",
+      "shortDesc": "Interactive PC-based HGV driver training simulations focused on safety, risk awareness, and real-world industrial scenarios.",
+      "desc": "HGV Driver Training Software Solutions is a professional-grade simulation platform designed to improve driver safety and operational awareness in high-risk industrial environments. Built as an interactive PC training experience, the system places drivers into realistic workplace scenarios where they must identify hazards, follow correct procedures, and respond to critical situations. The training emphasizes experiential learning through immersive simulations that replicate real-world conditions, helping organizations reduce accidents and reinforce best practices. The solution supports structured learning flows, performance tracking, and integration with enterprise training systems, enabling scalable deployment across teams while ensuring measurable safety outcomes.",
+      "tags": [
+        "pc",
+        "unity",
+        "simulation",
+        "serious-games",
+        "training"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "cover": "img/DriverTraining-cover.png",
+      "videos": [
+        {
+          "title": "Video",
+          "url": "https://player.vimeo.com/video/899866858?h=64437a6e2a&badge=0&autopause=0&player_id=0&app_id=58479"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/Nutrien-HGV-Driver-Training/1.webp",
+          "alt": "screenshot 1"
+        },
+        {
+          "src": "img/Nutrien-HGV-Driver-Training/2.webp",
+          "alt": "screenshot 2"
+        },
+        {
+          "src": "img/Nutrien-HGV-Driver-Training/3.webp",
+          "alt": "screenshot 3"
+        },
+        {
+          "src": "img/Nutrien-HGV-Driver-Training/4.webp",
+          "alt": "screenshot 4"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Simulation Design",
+        "LMS Integration"
+      ],
+      "features": [
+        "Realistic HGV driving and workplace safety simulations",
+        "Scenario-based hazard identification and response training",
+        "Interactive learning with guided and assessment-driven flows",
+        "Performance tracking and analytics for trainees",
+        "Enterprise-ready deployment and LMS compatibility"
+      ],
+      "myWork": [
+        {
+          "title": "Unity Simulation Development",
+          "description": "Developed interactive HGV training scenarios in Unity, focusing on realism, usability, and clear instructional flow to simulate real-world industrial risks.",
+          "media": []
+        },
+        {
+          "title": "Scenario Implementation",
+          "description": "Implemented multiple safety-critical scenarios that replicate real accident conditions, enabling trainees to practice hazard recognition and correct decision-making.",
+          "media": []
+        },
+        {
+          "title": "Training Flow & UX",
+          "description": "Designed and refined the training loop including instruction, interaction, and feedback to ensure clarity and effective learning outcomes.",
+          "media": []
+        },
+        {
+          "title": "System Integration",
+          "description": "Contributed to integration with external training systems and workflows, supporting scalable deployment and progress tracking.",
+          "media": []
+        },
+        {
+          "title": "Cross-Team Collaboration",
+          "description": "Worked closely with designers, QA, and stakeholders to iterate on scenarios, improve usability, and ensure high-quality delivery.",
+          "media": []
+        }
+      ],
+      "link": [
+        {
+          "text": "Project Details",
+          "url": "https://shiifttraining.com/projects/hgv-driver-training-software-solutions/",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": "Autoliv-Explore-3D",
+      "name": "Autoliv Explore 3D",
+      "icon": "🚗",
+      "shortDesc": "An AR-powered sales tool that showcases automotive safety systems through interactive real-time 3D presentations.",
+      "desc": "Autoliv Explore 3D is an augmented reality and real-time 3D product visualization application designed to transform how automotive safety systems are presented and understood. Built for iOS using Unity and Vuforia, the app enables sales teams to showcase complex components such as airbags and seatbelts through interactive, immersive experiences. Instead of relying on static presentations or physical prototypes, users can place and inspect products in 3D, explore how they integrate inside vehicle environments, and communicate their functionality with clarity and impact. The experience focuses on smooth presentation flow, intuitive interaction, and strong visual storytelling, turning highly technical safety hardware into accessible, engaging demonstrations for global sales, marketing, and training teams.",
+      "tags": [
+        "mobile",
+        "ios",
+        "ar",
+        "vr",
+        "real-time-3d",
+        "enterprise"
+      ],
+      "platforms": [
+        "IOS",
+        "MOBILE"
+      ],
+      "cover": "img/Autoliv-cover.png",
+      "videos": [
+        {
+          "title": "Video",
+          "url": "https://www.youtube.com/embed/OtewjIJFGIU"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/Autoliv-Explore-3D/1.png",
+          "alt": "screenshot 1"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/2.png",
+          "alt": "screenshot 2"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/3.png",
+          "alt": "screenshot 3"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/4.png",
+          "alt": "screenshot 4"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/5.png",
+          "alt": "screenshot 5"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "AR Development",
+        "3D Visualization"
+      ],
+      "features": [
+        "Augmented reality product visualization",
+        "Interactive 3D exploration of automotive safety systems",
+        "Product placement and inspection in real-world environments",
+        "Exploded and contextual product views",
+        "Smooth guided presentation flow for sales demos",
+        "Optimized mobile performance for iPad devices"
+      ],
+      "myWork": [
+        {
+          "title": "AR Application Development",
+          "description": "Developed and maintained AR features using Unity and Vuforia, enabling interactive product placement and real-world visualization.",
+          "media": []
+        },
+        {
+          "title": "3D Interaction & Presentation Systems",
+          "description": "Implemented intuitive interaction systems and presentation flows to support sales storytelling and live demos.",
+          "media": []
+        },
+        {
+          "title": "Visualization Features",
+          "description": "Worked on advanced visualization techniques such as exploded views and contextual product integration inside vehicle scenes.",
+          "media": []
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Optimized 3D assets and rendering pipelines to ensure smooth performance on mobile devices, especially iPads.",
+          "media": []
+        },
+        {
+          "title": "Cross-Functional Collaboration",
+          "description": "Collaborated with designers and stakeholders to align technical implementation with sales, marketing, and training goals.",
+          "media": []
+        }
+      ],
+      "link": [
+        {
+          "text": "Case Study",
+          "url": "https://unity.com/case-study/autoliv",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": "dots-behaviour-tree",
+      "featured": false,
+      "published": false,
+      "name": "DOTS Behaviour Tree",
+      "icon": "🌳",
+      "platforms": [
+        "Asset",
+        "ECS/DOTS",
+        "Tool"
+      ],
+      "cover-image": "img/highstreet-calamity/dots-behaviour-tree/1.png",
+      "cover": "img/highstreet-calamity/dots-behaviour-tree/1.png",
+      "media": [
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/1.png",
+          "alt": "DOTS Behaviour Tree screenshot 1"
+        },
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/2.png",
+          "alt": "DOTS Behaviour Tree screenshot 2"
+        },
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/3.png",
+          "alt": "DOTS Behaviour Tree screenshot 3"
+        },
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/4.png",
+          "alt": "DOTS Behaviour Tree screenshot 4"
+        },
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/5.png",
+          "alt": "DOTS Behaviour Tree screenshot 5"
+        }
+      ],
+      "videos": [],
+      "tags": [
+        "unity",
+        "tools"
+      ],
+      "techs": [
+        "Unity",
+        "DOTS",
+        "C#",
+        "Behaviour Tree",
+        "Visual Editor",
+        "Editor Scripting"
+      ],
+      "features": [
+        "ECS-native behaviour tree execution with nodes baked into entities",
+        "Visual node-graph editor for authoring trees in Unity",
+        "Runtime inspector to watch node status transitions live during play mode",
+        "Built-in composite nodes: Sequencer, Selector, Parallel, Random, and Repeater",
+        "Condition combinators: AND, OR, and NOT for flexible decision gating",
+        "Interrupt system for high-priority preemption and control handoff",
+        "Script templates for custom Action, Condition, Composite, and Interrupt nodes"
+      ],
+      "shortDesc": "A high-performance Behaviour Tree framework for Unity DOTS/ECS with a visual editor, runtime inspector, interrupts, and extensible custom node templates.",
+      "desc": "Dots Behaviour Tree is a Behaviour Tree framework built for Unity DOTS (Data-Oriented Technology Stack) on top of ECS architecture. It focuses on high-performance AI decision-making by baking authoring nodes into ECS entities and executing them through ECS systems. The framework includes a visual editor for graph-based authoring, a runtime inspector for live debugging, rich composite nodes, condition combinators, and interrupt support for high-priority behaviour preemption. It also provides script templates to accelerate creation of custom Action, Condition, Composite, and Interrupt nodes.\n\nRequirements from the README include Unity 6000.0.23f1+ with Entities 1.3.2+ (Burst compatible), and the demo scene runs with URP 17.0.4+.",
+      "contributions": [
+        {
+          "title": "ECS-Native Behaviour Tree Runtime",
+          "description": "Implemented a DOTS-first execution model where authored tree nodes are baked into ECS entities and updated by ECS systems for scalable runtime performance.",
+          "screenshot": []
+        },
+        {
+          "title": "Visual Authoring + Runtime Inspector Tooling",
+          "description": "Built editor tooling for graph-based tree authoring and runtime state inspection, enabling faster iteration and easier debugging of node state transitions.",
+          "screenshot": []
+        },
+        {
+          "title": "Extensible Node, Condition, and Interrupt Architecture",
+          "description": "Designed an extensible framework with templates and base classes for custom Action/Condition/Interrupt nodes, including condition combinators and interrupt preemption flows.",
+          "screenshot": []
+        }
+      ],
+      "myWork": [
+        {
+          "title": "ECS-Native Behaviour Tree Runtime",
+          "description": "Implemented a DOTS-first execution model where authored tree nodes are baked into ECS entities and updated by ECS systems for scalable runtime performance.",
+          "media": []
+        },
+        {
+          "title": "Visual Authoring + Runtime Inspector Tooling",
+          "description": "Built editor tooling for graph-based tree authoring and runtime state inspection, enabling faster iteration and easier debugging of node state transitions.",
+          "media": []
+        },
+        {
+          "title": "Extensible Node, Condition, and Interrupt Architecture",
+          "description": "Designed an extensible framework with templates and base classes for custom Action/Condition/Interrupt nodes, including condition combinators and interrupt preemption flows.",
+          "media": []
+        }
+      ],
+      "links": [
+        {
+          "text": "View on GitHub",
+          "url": "https://github.com/M-Hamdy23/DotsBehaviourTree",
+          "type": "github"
+        }
+      ],
+      "link": [
+        {
+          "text": "View on GitHub",
+          "url": "https://github.com/M-Hamdy23/DotsBehaviourTree",
+          "type": "github"
+        }
+      ]
+    },
+    {
+      "id": "Scriptable-System",
+      "name": "Scriptable System",
+      "icon": "🛠️",
+      "shortDesc": "A Unity editor extension for faster creation and management of scriptable variables and events.",
+      "desc": "Scriptable System is a productivity-focused Unity editor extension created to streamline one of the most repetitive parts of scalable game architecture: building, organizing, and reusing scriptable variables and events. Designed for developers who lean on data-driven workflows, the tool simplifies the creation pipeline, reduces boilerplate, and makes it easier to track how shared data assets are connected across a project. Its core loop is all about faster setup and safer iteration, with utilities for asset generation, listener wiring, and usage discovery that help teams move from idea to implementation with less friction, cleaner structure, and more confidence in large Unity codebases.",
+      "tags": [
+        "unity"
+      ],
+      "platforms": [
+        "ASSET",
+        "Tool"
+      ],
+      "cover": "img/ScriptableSystem-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://www.youtube.com/embed/_xeZ2ujhtYs"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Editor Extension",
+        "Editor Scripting"
+      ],
+      "features": [
+        "Create Scriptable Variable & Event classes instantly",
+        "One-click event listener setup",
+        "Quick-find where each asset is used",
+        "Configurable naming conventions"
+      ],
+      "link": [
+        {
+          "text": "View / Buy",
+          "url": "https://assetstore.unity.com/packages/slug/191378",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": "10-Tawla",
+      "name": "10 Tawla",
+      "icon": "🎲",
+      "shortDesc": "An online backgammon game with ranked multiplayer, AI opponents, and polished mobile presentation.",
+      "desc": "10 Tawla brings the classic strategy and tension of backgammon to mobile with a polished online experience built for both competitive and casual players. Players can jump into ranked real-time matches, challenge friends, or practice against adaptive AI while enjoying a presentation that captures the feel of a real board through multiple detailed themes and refined interaction. The gameplay loop centers on reading the board, making smart positional choices, and responding to momentum shifts under pressure, while the technical foundation supports matchmaking, ELO progression, social play, and live multiplayer systems that keep every session responsive, fair, and rewarding across iOS and Android.",
+      "tags": [
+        "mobile",
+        "multiplayer",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE",
+        "IOS",
+        "ANDROID"
+      ],
+      "cover": "img/10Tawla-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://www.youtube.com/embed/XcUdxVhAFaA"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Nakama",
+        "Firebase",
+        "Node.js"
+      ],
+      "features": [
+        "Online multiplayer with ELO ranking",
+        "Host/join matches with friends",
+        "Smart AI matching your skill level",
+        "7 life-like board aesthetics",
+        "Thirteen and Mahbouse game modes"
+      ],
+      "link": [
+        {
+          "text": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla",
+          "type": "website"
+        },
+        {
+          "text": "App store",
+          "url": "https://apps.apple.com/eg/app/10-tawla/id1569696163",
+          "type": "website"
+        }
+      ]
+    },
+    {
       "id": "zinad-training-games",
       "featured": true,
       "published": true,
@@ -800,7 +1152,6 @@
       ],
       "cover-image": "img/zinad-training-games/cover.png",
       "cover": "img/zinad-training-games/cover.png",
-      "screenshots": [],
       "media": [],
       "videos": [
         {
@@ -834,32 +1185,6 @@
           "url": "https://www.youtube.com/embed/4h6j8qjQYpE?si=QLjj8-1iEIr-7EWI"
         }
       ],
-      "genre": [
-        "Training",
-        "Serious Games",
-        "Puzzle",
-        "Enterprise"
-      ],
-      "skills": [
-        "Unity",
-        "C#",
-        "WebGL",
-        "VR",
-        "Kinect",
-        "Android",
-        "iOS",
-        "Leadership",
-        "Game Design",
-        "Enterprise Solutions"
-      ],
-      "filterTags": [
-        "Unity",
-        "VR",
-        "Web",
-        "Android",
-        "iOS",
-        "Kinect"
-      ],
       "tags": [
         "unity",
         "vr",
@@ -886,9 +1211,7 @@
         "Accessible across different skill levels",
         "Designed for large-scale employee training programs"
       ],
-      "shortDescription": "A suite of serious games for cybersecurity awareness training, delivered for enterprise clients across multiple platforms.",
       "shortDesc": "A suite of serious games for cybersecurity awareness training, delivered for enterprise clients across multiple platforms.",
-      "description": "As Team Lead at Zinad, I led the development of a comprehensive suite of serious games for cybersecurity awareness training. The games translated complex security concepts into engaging, interactive learning experiences used by major enterprise clients.\n\nKey projects included:\n- Phishing Mania: An interactive game that teaches employees to identify phishing attempts\n- Who Will Be Millionaire - Security Edition: A game-show format focused on cybersecurity knowledge\n- The Office VR: An immersive VR experience for identifying clean desk policy violations\n- Password Ninja: A fast-paced action game about password security\n- Security Archery VR: A VR archery game for security question training",
       "desc": "As Team Lead at Zinad, I led the development of a comprehensive suite of serious games for cybersecurity awareness training. The games translated complex security concepts into engaging, interactive learning experiences used by major enterprise clients.\n\nKey projects included:\n- Phishing Mania: An interactive game that teaches employees to identify phishing attempts\n- Who Will Be Millionaire - Security Edition: A game-show format focused on cybersecurity knowledge\n- The Office VR: An immersive VR experience for identifying clean desk policy violations\n- Password Ninja: A fast-paced action game about password security\n- Security Archery VR: A VR archery game for security question training",
       "contributions": [
         {
@@ -1006,409 +1329,6 @@
       ],
       "links": [],
       "link": []
-    },
-    {
-      "id": "Nutrien-HGV-Driver-Training",
-      "name": "Nutrien-HGV-Driver-Training",
-      "icon": "🚛",
-      "shortDesc": "Interactive PC-based HGV driver training simulations focused on safety, risk awareness, and real-world industrial scenarios.",
-      "desc": "HGV Driver Training Software Solutions is a professional-grade simulation platform designed to improve driver safety and operational awareness in high-risk industrial environments. Built as an interactive PC training experience, the system places drivers into realistic workplace scenarios where they must identify hazards, follow correct procedures, and respond to critical situations. The training emphasizes experiential learning through immersive simulations that replicate real-world conditions, helping organizations reduce accidents and reinforce best practices. The solution supports structured learning flows, performance tracking, and integration with enterprise training systems, enabling scalable deployment across teams while ensuring measurable safety outcomes.",
-      "tags": [
-        "pc",
-        "unity",
-        "simulation",
-        "serious-games",
-        "training"
-      ],
-      "platforms": [
-        "PC"
-      ],
-      "cover": "img/DriverTraining-cover.png",
-      "videos": [
-        {
-          "title": "Video",
-          "url": "https://player.vimeo.com/video/899866858?h=64437a6e2a&badge=0&autopause=0&player_id=0&app_id=58479"
-        }
-      ],
-      "media": [
-        {
-          "src": "img/Nutrien-HGV-Driver-Training/1.webp",
-          "alt": "screenshot 1"
-        },
-        {
-          "src": "img/Nutrien-HGV-Driver-Training/2.webp",
-          "alt": "screenshot 2"
-        },
-        {
-          "src": "img/Nutrien-HGV-Driver-Training/3.webp",
-          "alt": "screenshot 3"
-        },
-        {
-          "src": "img/Nutrien-HGV-Driver-Training/4.webp",
-          "alt": "screenshot 4"
-        }
-      ],
-      "techs": [
-        "C#",
-        "Unity",
-        "Simulation Design",
-        "LMS Integration"
-      ],
-      "features": [
-        "Realistic HGV driving and workplace safety simulations",
-        "Scenario-based hazard identification and response training",
-        "Interactive learning with guided and assessment-driven flows",
-        "Performance tracking and analytics for trainees",
-        "Enterprise-ready deployment and LMS compatibility"
-      ],
-      "myWork": [
-        {
-          "title": "Unity Simulation Development",
-          "description": "Developed interactive HGV training scenarios in Unity, focusing on realism, usability, and clear instructional flow to simulate real-world industrial risks.",
-          "media": []
-        },
-        {
-          "title": "Scenario Implementation",
-          "description": "Implemented multiple safety-critical scenarios that replicate real accident conditions, enabling trainees to practice hazard recognition and correct decision-making.",
-          "media": []
-        },
-        {
-          "title": "Training Flow & UX",
-          "description": "Designed and refined the training loop including instruction, interaction, and feedback to ensure clarity and effective learning outcomes.",
-          "media": []
-        },
-        {
-          "title": "System Integration",
-          "description": "Contributed to integration with external training systems and workflows, supporting scalable deployment and progress tracking.",
-          "media": []
-        },
-        {
-          "title": "Cross-Team Collaboration",
-          "description": "Worked closely with designers, QA, and stakeholders to iterate on scenarios, improve usability, and ensure high-quality delivery.",
-          "media": []
-        }
-      ],
-      "link": [
-        {
-          "text": "Project Details",
-          "url": "https://shiifttraining.com/projects/hgv-driver-training-software-solutions/",
-          "type": "website"
-        }
-      ]
-    },
-    {
-      "id": "Autoliv-Explore-3D",
-      "name": "Autoliv Explore 3D",
-      "icon": "🚗",
-      "shortDesc": "An AR-powered sales tool that showcases automotive safety systems through interactive real-time 3D presentations.",
-      "desc": "Autoliv Explore 3D is an augmented reality and real-time 3D product visualization application designed to transform how automotive safety systems are presented and understood. Built for iOS using Unity and Vuforia, the app enables sales teams to showcase complex components such as airbags and seatbelts through interactive, immersive experiences. Instead of relying on static presentations or physical prototypes, users can place and inspect products in 3D, explore how they integrate inside vehicle environments, and communicate their functionality with clarity and impact. The experience focuses on smooth presentation flow, intuitive interaction, and strong visual storytelling, turning highly technical safety hardware into accessible, engaging demonstrations for global sales, marketing, and training teams.",
-      "tags": [
-        "mobile",
-        "ios",
-        "ar",
-        "real-time-3d",
-        "enterprise"
-      ],
-      "platforms": [
-        "IOS",
-        "MOBILE"
-      ],
-      "cover": "img/Autoliv-cover.png",
-      "videos": [
-        {
-          "title": "Video",
-          "url": "https://www.youtube.com/embed/OtewjIJFGIU"
-        }
-      ],
-      "media": [
-        {
-          "src": "img/Autoliv-Explore-3D/1.png",
-          "alt": "screenshot 1"
-        },
-        {
-          "src": "img/Autoliv-Explore-3D/2.png",
-          "alt": "screenshot 2"
-        },
-        {
-          "src": "img/Autoliv-Explore-3D/3.png",
-          "alt": "screenshot 3"
-        },
-        {
-          "src": "img/Autoliv-Explore-3D/4.png",
-          "alt": "screenshot 4"
-        },
-        {
-          "src": "img/Autoliv-Explore-3D/5.png",
-          "alt": "screenshot 5"
-        }
-      ],
-      "techs": [
-        "C#",
-        "Unity",
-        "AR Development",
-        "3D Visualization"
-      ],
-      "features": [
-        "Augmented reality product visualization",
-        "Interactive 3D exploration of automotive safety systems",
-        "Product placement and inspection in real-world environments",
-        "Exploded and contextual product views",
-        "Smooth guided presentation flow for sales demos",
-        "Optimized mobile performance for iPad devices"
-      ],
-      "myWork": [
-        {
-          "title": "AR Application Development",
-          "description": "Developed and maintained AR features using Unity and Vuforia, enabling interactive product placement and real-world visualization.",
-          "media": []
-        },
-        {
-          "title": "3D Interaction & Presentation Systems",
-          "description": "Implemented intuitive interaction systems and presentation flows to support sales storytelling and live demos.",
-          "media": []
-        },
-        {
-          "title": "Visualization Features",
-          "description": "Worked on advanced visualization techniques such as exploded views and contextual product integration inside vehicle scenes.",
-          "media": []
-        },
-        {
-          "title": "Performance Optimization",
-          "description": "Optimized 3D assets and rendering pipelines to ensure smooth performance on mobile devices, especially iPads.",
-          "media": []
-        },
-        {
-          "title": "Cross-Functional Collaboration",
-          "description": "Collaborated with designers and stakeholders to align technical implementation with sales, marketing, and training goals.",
-          "media": []
-        }
-      ],
-      "link": [
-        {
-          "text": "Case Study",
-          "url": "https://unity.com/case-study/autoliv",
-          "type": "website"
-        }
-      ]
-    },
-    {
-      "id": "dots-behaviour-tree",
-      "featured": false,
-      "published": false,
-      "name": "DOTS Behaviour Tree",
-      "icon": "🌳",
-      "platforms": [
-        "Unity",
-        "ECS/DOTS"
-      ],
-      "cover-image": "img/highstreet-calamity/dots-behaviour-tree/1.png",
-      "cover": "img/highstreet-calamity/dots-behaviour-tree/1.png",
-      "screenshots": [
-        "img/highstreet-calamity/dots-behaviour-tree/1.png",
-        "img/highstreet-calamity/dots-behaviour-tree/2.png",
-        "img/highstreet-calamity/dots-behaviour-tree/3.png",
-        "img/highstreet-calamity/dots-behaviour-tree/4.png",
-        "img/highstreet-calamity/dots-behaviour-tree/5.png"
-      ],
-      "media": [
-        {
-          "src": "img/highstreet-calamity/dots-behaviour-tree/1.png",
-          "alt": "DOTS Behaviour Tree screenshot 1"
-        },
-        {
-          "src": "img/highstreet-calamity/dots-behaviour-tree/2.png",
-          "alt": "DOTS Behaviour Tree screenshot 2"
-        },
-        {
-          "src": "img/highstreet-calamity/dots-behaviour-tree/3.png",
-          "alt": "DOTS Behaviour Tree screenshot 3"
-        },
-        {
-          "src": "img/highstreet-calamity/dots-behaviour-tree/4.png",
-          "alt": "DOTS Behaviour Tree screenshot 4"
-        },
-        {
-          "src": "img/highstreet-calamity/dots-behaviour-tree/5.png",
-          "alt": "DOTS Behaviour Tree screenshot 5"
-        }
-      ],
-      "videos": [],
-      "genre": [
-        "Tools",
-        "AI",
-        "Framework",
-        "Open Source"
-      ],
-      "skills": [
-        "Unity",
-        "DOTS",
-        "C#",
-        "Behaviour Tree",
-        "Visual Editor"
-      ],
-      "filterTags": [
-        "Unity",
-        "Tools"
-      ],
-      "tags": [
-        "unity",
-        "tools"
-      ],
-      "techs": [
-        "Unity",
-        "DOTS",
-        "C#",
-        "Behaviour Tree",
-        "Visual Editor"
-      ],
-      "features": [
-        "ECS-native behaviour tree execution with nodes baked into entities",
-        "Visual node-graph editor for authoring trees in Unity",
-        "Runtime inspector to watch node status transitions live during play mode",
-        "Built-in composite nodes: Sequencer, Selector, Parallel, Random, and Repeater",
-        "Condition combinators: AND, OR, and NOT for flexible decision gating",
-        "Interrupt system for high-priority preemption and control handoff",
-        "Script templates for custom Action, Condition, Composite, and Interrupt nodes"
-      ],
-      "shortDescription": "A high-performance Behaviour Tree framework for Unity DOTS/ECS with a visual editor, runtime inspector, interrupts, and extensible custom node templates.",
-      "shortDesc": "A high-performance Behaviour Tree framework for Unity DOTS/ECS with a visual editor, runtime inspector, interrupts, and extensible custom node templates.",
-      "description": "Dots Behaviour Tree is a Behaviour Tree framework built for Unity DOTS (Data-Oriented Technology Stack) on top of ECS architecture. It focuses on high-performance AI decision-making by baking authoring nodes into ECS entities and executing them through ECS systems. The framework includes a visual editor for graph-based authoring, a runtime inspector for live debugging, rich composite nodes, condition combinators, and interrupt support for high-priority behaviour preemption. It also provides script templates to accelerate creation of custom Action, Condition, Composite, and Interrupt nodes.\n\nRequirements from the README include Unity 6000.0.23f1+ with Entities 1.3.2+ (Burst compatible), and the demo scene runs with URP 17.0.4+.",
-      "desc": "Dots Behaviour Tree is a Behaviour Tree framework built for Unity DOTS (Data-Oriented Technology Stack) on top of ECS architecture. It focuses on high-performance AI decision-making by baking authoring nodes into ECS entities and executing them through ECS systems. The framework includes a visual editor for graph-based authoring, a runtime inspector for live debugging, rich composite nodes, condition combinators, and interrupt support for high-priority behaviour preemption. It also provides script templates to accelerate creation of custom Action, Condition, Composite, and Interrupt nodes.\n\nRequirements from the README include Unity 6000.0.23f1+ with Entities 1.3.2+ (Burst compatible), and the demo scene runs with URP 17.0.4+.",
-      "contributions": [
-        {
-          "title": "ECS-Native Behaviour Tree Runtime",
-          "description": "Implemented a DOTS-first execution model where authored tree nodes are baked into ECS entities and updated by ECS systems for scalable runtime performance.",
-          "screenshot": []
-        },
-        {
-          "title": "Visual Authoring + Runtime Inspector Tooling",
-          "description": "Built editor tooling for graph-based tree authoring and runtime state inspection, enabling faster iteration and easier debugging of node state transitions.",
-          "screenshot": []
-        },
-        {
-          "title": "Extensible Node, Condition, and Interrupt Architecture",
-          "description": "Designed an extensible framework with templates and base classes for custom Action/Condition/Interrupt nodes, including condition combinators and interrupt preemption flows.",
-          "screenshot": []
-        }
-      ],
-      "myWork": [
-        {
-          "title": "ECS-Native Behaviour Tree Runtime",
-          "description": "Implemented a DOTS-first execution model where authored tree nodes are baked into ECS entities and updated by ECS systems for scalable runtime performance.",
-          "media": []
-        },
-        {
-          "title": "Visual Authoring + Runtime Inspector Tooling",
-          "description": "Built editor tooling for graph-based tree authoring and runtime state inspection, enabling faster iteration and easier debugging of node state transitions.",
-          "media": []
-        },
-        {
-          "title": "Extensible Node, Condition, and Interrupt Architecture",
-          "description": "Designed an extensible framework with templates and base classes for custom Action/Condition/Interrupt nodes, including condition combinators and interrupt preemption flows.",
-          "media": []
-        }
-      ],
-      "links": [
-        {
-          "text": "View on GitHub",
-          "url": "https://github.com/M-Hamdy23/DotsBehaviourTree",
-          "type": "github"
-        }
-      ],
-      "link": [
-        {
-          "text": "View on GitHub",
-          "url": "https://github.com/M-Hamdy23/DotsBehaviourTree",
-          "type": "github"
-        }
-      ]
-    },
-    {
-      "id": "Scriptable-System",
-      "name": "Scriptable System",
-      "icon": "🛠️",
-      "shortDesc": "A Unity editor extension for faster creation and management of scriptable variables and events.",
-      "desc": "Scriptable System is a productivity-focused Unity editor extension created to streamline one of the most repetitive parts of scalable game architecture: building, organizing, and reusing scriptable variables and events. Designed for developers who lean on data-driven workflows, the tool simplifies the creation pipeline, reduces boilerplate, and makes it easier to track how shared data assets are connected across a project. Its core loop is all about faster setup and safer iteration, with utilities for asset generation, listener wiring, and usage discovery that help teams move from idea to implementation with less friction, cleaner structure, and more confidence in large Unity codebases.",
-      "tags": [
-        "unity"
-      ],
-      "platforms": [
-        "ASSET"
-      ],
-      "cover": "img/ScriptableSystem-cover.png",
-      "videos": [
-        {
-          "title": "Trailer Video",
-          "url": "https://www.youtube.com/embed/_xeZ2ujhtYs"
-        }
-      ],
-      "techs": [
-        "C#",
-        "Unity",
-        "Editor Extension"
-      ],
-      "features": [
-        "Create Scriptable Variable & Event classes instantly",
-        "One-click event listener setup",
-        "Quick-find where each asset is used",
-        "Configurable naming conventions"
-      ],
-      "link": [
-        {
-          "text": "View / Buy",
-          "url": "https://assetstore.unity.com/packages/slug/191378",
-          "type": "website"
-        }
-      ]
-    },
-    {
-      "id": "10-Tawla",
-      "name": "10 Tawla",
-      "icon": "🎲",
-      "shortDesc": "An online backgammon game with ranked multiplayer, AI opponents, and polished mobile presentation.",
-      "desc": "10 Tawla brings the classic strategy and tension of backgammon to mobile with a polished online experience built for both competitive and casual players. Players can jump into ranked real-time matches, challenge friends, or practice against adaptive AI while enjoying a presentation that captures the feel of a real board through multiple detailed themes and refined interaction. The gameplay loop centers on reading the board, making smart positional choices, and responding to momentum shifts under pressure, while the technical foundation supports matchmaking, ELO progression, social play, and live multiplayer systems that keep every session responsive, fair, and rewarding across iOS and Android.",
-      "tags": [
-        "mobile",
-        "multiplayer",
-        "unity"
-      ],
-      "platforms": [
-        "MOBILE",
-        "IOS"
-      ],
-      "cover": "img/10Tawla-cover.png",
-      "videos": [
-        {
-          "title": "Trailer Video",
-          "url": "https://www.youtube.com/embed/XcUdxVhAFaA"
-        }
-      ],
-      "techs": [
-        "C#",
-        "Unity",
-        "Nakama",
-        "Firebase",
-        "Node.js"
-      ],
-      "features": [
-        "Online multiplayer with ELO ranking",
-        "Host/join matches with friends",
-        "Smart AI matching your skill level",
-        "7 life-like board aesthetics",
-        "Thirteen and Mahbouse game modes"
-      ],
-      "link": [
-        {
-          "text": "Google Play",
-          "url": "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla",
-          "type": "website"
-        },
-        {
-          "text": "App store",
-          "url": "https://apps.apple.com/eg/app/10-tawla/id1569696163",
-          "type": "website"
-        }
-      ]
     },
     {
       "id": "Sky-Striders",
