@@ -445,34 +445,12 @@
       ],
       "myWork": [
         {
-          "title": "DOTS Architecture Design",
-          "description": "Led the design of a Unity DOTS-compatible architecture that cleanly separates logic between code and Unity scene component placement, enabling flexible and maintainable game development workflows across the team.",
-          "media": [
-            {
-              "src": "img/highstreet-calamity/architecture/4.png",
-              "alt": "DOTS architecture design 1"
-            },
-            {
-              "src": "img/highstreet-calamity/architecture/6.png",
-              "alt": "DOTS architecture design 2"
-            },
-            {
-              "src": "img/highstreet-calamity/architecture/7.png",
-              "alt": "DOTS architecture design 3"
-            },
-            {
-              "src": "img/highstreet-calamity/architecture/8.png",
-              "alt": "DOTS architecture design 4"
-            },
-            {
-              "src": "img/highstreet-calamity/architecture/9.png",
-              "alt": "DOTS architecture design 5"
-            }
-          ]
+          "title": "DOTS Adoption & Team Enablement",
+          "description": "Initiated and led the adoption of Unity DOTS and Netcode for Entities, establishing a scalable foundation for future MMO development and successfully onboarding the team through prototypes and knowledge sharing."
         },
         {
-          "title": "Full Project Architecture Leadership",
-          "description": "Architected the entire project technical foundation including authentication flow, backend APIs, database schema, networking, server infrastructure, and all networked game core systems: spawn, health/mana/stats, combat, abilities, skills, consumables, monsters, monster AI, aggro system, AI coordinator, and interaction system - all synchronized over the network.",
+          "title": "Technical Architecture & System Design",
+          "description": "Architected the entire project technical foundation including authentication flow, backend APIs, database schema, networking, server infrastructure, and all networked game core systems: spawn, health/mana/stats, combat, abilities, skills, consumables, monsters, monster AI, aggro system, AI coordinator, and interaction system — all synchronized over the network.",
           "media": [
             {
               "src": "img/highstreet-calamity/architecture/1.png",
@@ -493,20 +471,70 @@
             {
               "src": "img/highstreet-calamity/architecture/5.png",
               "alt": "Project architecture leadership 5"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/6.png",
+              "alt": "DOTS architecture design 6"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/7.png",
+              "alt": "DOTS architecture design 7"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/8.png",
+              "alt": "DOTS architecture design 8"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/9.png",
+              "alt": "DOTS architecture design 9"
             }
           ]
         },
         {
-          "title": "Matchmaking & Server Auto-Scalability",
-          "description": "Led the design and implementation of the matchmaking server and server auto-scalability infrastructure, initially built on Unity Multiplay then migrated to Amazon GameLift after Unity divested the service."
+          "title": "Architecture Documentation Pipeline",
+          "description": "Improved development efficiency and maintainability by building a dynamic architecture documentation system using Draw.io and Lucidchart integrated with Excel, enabling automatic diagram updates and clear system visualization.",
+          "media": [
+            {
+              "src": "img/highstreet-calamity/architecture/1.png",
+              "alt": "Project architecture leadership 1"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/2.png",
+              "alt": "Project architecture leadership 2"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/3.png",
+              "alt": "Project architecture leadership 3"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/4.png",
+              "alt": "Project architecture leadership 4"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/5.png",
+              "alt": "Project architecture leadership 5"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/6.png",
+              "alt": "DOTS architecture design 6"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/7.png",
+              "alt": "DOTS architecture design 7"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/8.png",
+              "alt": "DOTS architecture design 8"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/9.png",
+              "alt": "DOTS architecture design 9"
+            }
+          ]
         },
         {
-          "title": "Party & Friends System",
-          "description": "Led the design and implementation of the party system and friends system, fully integrated into the matchmaking pipeline."
-        },
-        {
-          "title": "Data-Driven Game Design Pipeline",
-          "description": "Designed and implemented a data-driven pipeline exposing game data via Excel sheets to game designers, allowing them to create and tweak abilities, stats, consumables, classes, and monster AI profiles without requiring code changes.",
+          "title": "Data-Driven Gameplay Pipeline",
+          "description": "Accelerated design iteration by creating a fully data-driven pipeline that exposed gameplay configuration via Excel, allowing designers to modify abilities, stats, and AI without engineering dependency.",
           "media": [
             {
               "src": "img/highstreet-calamity/data-driven/1.png",
@@ -523,8 +551,12 @@
           ]
         },
         {
-          "title": "Custom DOTS State Machine with Editor Interface and network support",
-          "description": "Designed and implemented a DOTS-based state machine with a full Unity Editor interface to support AI logic workflows. With no DOTS-native alternative available in Unity or the Asset Store at the time, this system became a foundational tool used extensively throughout the game's AI and general logic layers.",
+          "title": "Multiplayer & Social Systems",
+          "description": "Delivered core multiplayer features by implementing matchmaking, party, and friends systems, enabling seamless player connectivity and social gameplay experiences across servers."
+        },
+        {
+          "title": "AI System & Behavior Tools",
+          "description": "Enabled scalable AI development by architecting and implementing a DOTS-based Behavior Tree system with custom editor tools, allowing rapid creation and extension of complex enemy behaviors.",
           "media": [
             {
               "src": "img/highstreet-calamity/dots-behaviour-tree/1.png",
@@ -549,8 +581,20 @@
           ]
         },
         {
-          "title": "GameLift Fleet Management Tool [Vibe Coding]",
-          "description": "Built a Python CLI tool to streamline GameLift server and fleet deployment and management, supporting saved fleet configurations to make deployments fast and repeatable.",
+          "title": "DOTS Gameplay Systems Implementation",
+          "description": "Built high-performance gameplay systems using Unity DOTS (ECS), implementing components, systems, and authoring workflows optimized for scalability, cache efficiency, and network synchronization. Converted the world streaming system from MonoBehaviour to DOTS, enabling chunk-based streaming of entity-rendered art across 9 zones around the player, significantly improving runtime performance."
+        },
+        {
+          "title": "MonoBehaviour Gameplay Systems",
+          "description": "Improved player onboarding and usability by implementing NPC Dialogue and Tooltip guidance systems using MonoBehaviour workflows, leveraging their flexibility for UI-driven and event-based interactions."
+        },
+        {
+          "title": "Server Infrastructure Migration",
+          "description": "Ensured long-term scalability by leading the migration from Unity Multiplay to Amazon GameLift, selecting and integrating a more robust server hosting solution."
+        },
+        {
+          "title": "Automation & Deployment Tools [GameLift Fleet Management] [Vibe Coding]",
+          "description": "Increased deployment efficiency by developing Python CLI automation tools for server build uploads and fleet creation with predefined configurations, significantly reducing manual setup time.",
           "media": [
             {
               "src": "img/highstreet-calamity/gamelift-tool/1.png",
@@ -563,8 +607,12 @@
           ]
         },
         {
-          "title": "Team DOTS Mentorship",
-          "description": "Onboarded and mentored the entire team on Unity DOTS from zero prior knowledge. By the end of the project, team members could independently architect and implement their own DOTS systems - requiring only review rather than hands-on design involvement as at the project's start."
+          "title": "Player Data Optimization",
+          "description": "Reduced backend load and improved performance by refactoring player avatar data handling and implementing synchronized local data wrappers across multiplayer systems."
+        },
+        {
+          "title": "Stability & Support",
+          "description": "Maintained project stability and delivery quality by resolving critical bugs and continuously improving systems across gameplay and backend integration."
         }
       ],
       "link": [
