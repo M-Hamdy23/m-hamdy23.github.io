@@ -582,7 +582,53 @@
         },
         {
           "title": "DOTS Gameplay Systems Implementation",
-          "description": "Built high-performance gameplay systems using Unity DOTS (ECS), implementing components, systems, and authoring workflows optimized for scalability, cache efficiency, and network synchronization. Converted the world streaming system from MonoBehaviour to DOTS, enabling chunk-based streaming of entity-rendered art across 9 zones around the player, significantly improving runtime performance."
+          "description": "Built high-performance gameplay systems using Unity DOTS (ECS), implementing components, systems, and authoring workflows optimized for scalability, cache efficiency, and network synchronization. Converted the world streaming system from MonoBehaviour to DOTS."
+        },
+        {
+          "title": "DOTS World Streaming System",
+          "description": "Converted the world streaming system from MonoBehaviour to DOTS, enabling chunk-based streaming of entity-rendered art across max 9 chunks around the player, significantly improving runtime performance and scalability for large multiplayer arenas.",
+          "media": [
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/1.png",
+              "alt": "Player Entity The Player has a LocalPlayerTagAuthoring script that bakes it into a DOTS entity. The streaming system queries this tag to track the player's position and decide which chunks to load or unload."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/2.png",
+              "alt": "Grid Layer Manager The core controller of the system. It defines a 5x5 grid of 18x18 unit chunks covering 90x90 units total. It manages buffers for all chunks, currently loaded chunks, and pending load/unload requests."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/3.png",
+              "alt": "Scene Hierarchy — Before Setup Before setup, the SubScene only contains the GridLayerManager and the Player. Nothing else exists yet."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/4.png",
+              "alt": "Hierarchy After Setup Chunks Clicking Setup Chunks auto-generates 25 child GameObjects, one per grid cell. Each is an independent SubScene that can stream in and out of memory on its own."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/5.png",
+              "alt": "Assets Attached to Chunks After running Attach Assets, world objects are placed inside the correct chunk based on their position. At runtime they appear and disappear with their parent chunk."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/6.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/7.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/8.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/9.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/10.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            }
+          ]
         },
         {
           "title": "MonoBehaviour Gameplay Systems",
