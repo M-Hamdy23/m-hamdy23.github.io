@@ -951,13 +951,21 @@
             transition: color 0.5s ease;
         }
 
-        .exp-role {
+        .exp-role,
+        .exp-projects-label {
             font-family: 'Rajdhani', sans-serif;
-            font-size: 0.9rem;
+            
             font-weight: 500;
             color: var(--accent);
             letter-spacing: 0.08em;
             text-transform: uppercase;
+        }
+        .exp-projects-label {
+            margin-top: 4px;
+            font-size: 0.7rem;
+        }
+        .exp-role {
+            font-size: 0.9rem;
             margin-top: 4px;
         }
 
@@ -1010,6 +1018,33 @@
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 14px;
+        }
+
+        .exp-projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .exp-projects-label {
+            width: 100%;
+            margin-bottom: 2px;
+        }
+
+        .tech-pill.exp-project-pill {
+            cursor: pointer;
+            color: #f5c455;
+            background: rgba(245, 196, 85, 0.08);
+            border-color: rgba(245, 196, 85, 0.28);
+        }
+
+        .tech-pill.exp-project-pill:hover,
+        .tech-pill.exp-project-pill:focus-visible {
+            background: rgba(245, 196, 85, 0.16);
+            border-color: rgba(245, 196, 85, 0.55);
+            box-shadow: 0 0 0 2px rgba(245, 196, 85, 0.18);
+            outline: none;
         }
 
         .tech-pill {
@@ -2894,10 +2929,22 @@
         if (!timelineEl) return;
 
         const items = Array.isArray(data) ? data : [];
+        const projects = Array.isArray(PORTOFOLIO_DATA?.PROJECTS) ? PORTOFOLIO_DATA.PROJECTS : [];
+        const projectsById = new Map(projects.map(project => [project.id, project]));
+
         timelineEl.innerHTML = items.map((item, index) => {
             const delayClass = index < 5 ? ` d${index + 1}` : '';
             const bullets = Array.isArray(item.bullets) ? item.bullets : [];
             const techs = Array.isArray(item.techs) ? item.techs : [];
+            const linkedProjectIds = Array.isArray(item.project_ids)
+                ? item.project_ids
+                : Array.isArray(item.projects_ids)
+                    ? item.projects_ids
+                    : [];
+            const linkedProjects = linkedProjectIds
+                .filter(id => typeof id === 'string' && id.trim())
+                .map(id => projectsById.get(id))
+                .filter(Boolean);
 
             return `<div class="timeline-item reveal${delayClass}">
                 <div class="timeline-dot"></div>
@@ -2910,8 +2957,13 @@
                 </div>
                 <ul class="exp-bullets">${bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('')}</ul>
                 <div class="exp-techs">${techs.map(t => `<span class="tech-pill">${escapeHtml(t)}</span>`).join('')}</div>
+                ${linkedProjects.length ? `<div class="exp-projects"><div class="exp-projects-label">Related Projects</div>${linkedProjects.map(project => `<button type="button" class="tech-pill exp-project-pill" data-project-id="${escapeHtml(project.id)}">${escapeHtml(project.name || project.id)}</button>`).join('')}</div>` : ''}
             </div>`;
         }).join('');
+
+        timelineEl.querySelectorAll('.exp-project-pill').forEach(button => {
+            button.addEventListener('click', () => openModal(button.dataset.projectId));
+        });
     }
 
     function renderEducation(data) {

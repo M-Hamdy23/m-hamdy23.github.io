@@ -155,6 +155,11 @@
         "Architecture",
         "Netcode",
         "Backend"
+      ],
+      "projects_ids": [
+        "highstreet-calamity",
+        "highstreet-campus",
+        "dots-behaviour-tree"
       ]
     },
     {
@@ -175,6 +180,9 @@
         "VR",
         "WebGL",
         "Mobile"
+      ],
+      "projects_ids": [
+        "zinad-training-games"
       ]
     },
     {
@@ -191,6 +199,9 @@
         "Unity",
         "PC",
         "Simulation"
+      ],
+      "projects_ids": [
+        "Nutrien-HGV-Driver-Training"
       ]
     },
     {
@@ -210,6 +221,9 @@
         "Nakama",
         "Node js",
         "Firebase"
+      ],
+      "projects_ids": [
+        "10-Tawla"
       ]
     },
     {
@@ -233,6 +247,15 @@
         "AR",
         "Mobile",
         "IOS"
+      ],
+      "projects_ids": [
+        "Autoliv-Explore-3D",
+        "Sky-Striders",
+        "That-Just-Happened",
+        "Skull-Switch",
+        "Scriptable-System",
+        "Killing-Beat",
+        "SymSam"
       ]
     },
     {
