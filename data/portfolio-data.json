@@ -798,8 +798,8 @@
           "media": []
         },
         {
-          "title": "Highstreet Homes Integration",
-          "description": "Seamlessly integrated the Highstreet Homes experience into Campus despite differing multiplayer architectures. Unified both systems using the custom channel-based networking layer, enabling full synchronization of player customization, pets, and interactions within each home instance.",
+          "title": "Highstreet Homes Networking Migration",
+          "description": "Replaced Photon networking in the already integrated Highstreet Homes system with the custom networking solution after introducing channel-based architecture. Unified both Campus and Homes under a single networking stack, enabling consistent synchronization of player customization,home customization, pets, and interactions while simplifying cross-system communication and reducing technical overhead.",
           "media": []
         },
         {
@@ -881,29 +881,52 @@
       ],
       "myWork": [
         {
-          "title": "Unity Simulation Development",
-          "description": "Developed interactive HGV training scenarios in Unity, focusing on realism, usability, and clear instructional flow to simulate real-world industrial risks.",
-          "media": []
+          "title": "Core Gameplay Systems Development",
+          "description": "Led the development of multiple core gameplay systems from scratch including AI traffic, player recovery, camera systems, vehicle switching, and training logic, forming the backbone of a large-scale HGV training simulation."
         },
         {
-          "title": "Scenario Implementation",
-          "description": "Implemented multiple safety-critical scenarios that replicate real accident conditions, enabling trainees to practice hazard recognition and correct decision-making.",
-          "media": []
+          "title": "AI Traffic & World Vehicle System",
+          "description": "Designed and implemented a dynamic AI traffic system with waypoint-based navigation, obstacle detection, intersection handling, and object pooling, ensuring realistic traffic behavior and optimized runtime performance."
         },
         {
-          "title": "Training Flow & UX",
-          "description": "Designed and refined the training loop including instruction, interaction, and feedback to ensure clarity and effective learning outcomes.",
-          "media": []
+          "title": "Training Simulation & Scenario Systems",
+          "description": "Built interactive training modules with guided and free-drive flows, implementing task systems, validation logic, hint systems, and failure conditions to support structured learning and real-world safety scenarios."
         },
         {
-          "title": "System Integration",
-          "description": "Contributed to integration with external training systems and workflows, supporting scalable deployment and progress tracking.",
-          "media": []
+          "title": "Track-Based Level & Transition System",
+          "description": "Developed a modular track system enabling dynamic level composition with seamless transitions for vehicles, weather, time-of-day, and camera states using ScriptableObjects and event-driven triggers."
         },
         {
-          "title": "Cross-Team Collaboration",
-          "description": "Worked closely with designers, QA, and stakeholders to iterate on scenarios, improve usability, and ensure high-quality delivery.",
-          "media": []
+          "title": "Player Recovery & Fail-Safe Mechanics",
+          "description": "Implemented a robust recovery system to handle edge cases such as off-road states, physics instability, and stuck scenarios, restoring player position and velocity to maintain uninterrupted training flow."
+        },
+        {
+          "title": "Advanced Vehicle Systems",
+          "description": "Built comprehensive vehicle systems including multi-vehicle switching, full lighting system (headlights, signals, hazards), engine audio, and on-rails driving mode for guided experiences."
+        },
+        {
+          "title": "Inventory & Interactive Object Placement",
+          "description": "Developed an inventory and object placement system used in training scenarios, enabling players to deploy safety equipment with validation logic and contextual UI feedback."
+        },
+        {
+          "title": "Camera System & Player Experience",
+          "description": "Implemented a multi-mode camera system using Cinemachine with smooth transitions, player-controlled look mechanics, and context-based camera switching for improved usability and immersion."
+        },
+        {
+          "title": "Weather & Day-Night Systems",
+          "description": "Integrated dynamic weather and day-night cycle systems using Azure Sky, including smooth environmental transitions and automatic vehicle light adaptation based on lighting conditions."
+        },
+        {
+          "title": "UI Systems & Player Interaction",
+          "description": "Developed and refined UI systems including HUD, settings, onboarding flows, and interactive feedback systems, improving usability and overall training experience."
+        },
+        {
+          "title": "Pause System Architecture",
+          "description": "Designed a scalable pause system using interface-based architecture and runtime object discovery, ensuring all gameplay systems respond consistently to pause and resume states."
+        },
+        {
+          "title": "Performance Optimization & Stability",
+          "description": "Improved performance and stability through object pooling, optimized spawning systems, bug fixing, and resolving critical gameplay issues affecting AI behavior, physics, UI flow, and player progression."
         }
       ],
       "link": [
