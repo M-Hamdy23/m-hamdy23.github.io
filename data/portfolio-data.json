@@ -996,29 +996,116 @@
       ],
       "myWork": [
         {
-          "title": "AR Application Development",
-          "description": "Developed and maintained AR features using Unity and Vuforia, enabling interactive product placement and real-world visualization.",
-          "media": []
+          "title": "ScriptableObject CMS Pipeline",
+          "description": "Designed and built a data-driven content management pipeline using ScriptableObjects to manage all per-product data — including 3D callout labels, pulse markers, placement indicators, viewport models, and tooltip content. This system allowed the team to configure any product's presentation entirely from the Unity Inspector without touching code.",
+          "media": [
+            {
+            "src": "img/Autoliv-Explore-3D/CMSData/0.png",
+            "alt": "ProductData ScriptableObject showing structured data for product presentation configuration"
+          },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/1.png",
+                "alt": "product Data ScriptableObject showing structured data for product presentation configuration, including references to other ScriptableObjects for callouts, pulse markers, placement indicators, viewport models, and tooltips"
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/2.png",
+                "alt": "PulseMarkerData ScriptableObject defining data for pulse marker configuration"
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/3.png",
+                "alt": "PlacementIndicatorData ScriptableObject defining data for placement indicators"
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/4.png",
+                "alt": "callout label Data ScriptableObject defining data for 3D callout labels, including text content and positioning"
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/5.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/6.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/7.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/8.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/9.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/10.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/11.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/12.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/13.png",
+                "alt": ""
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CMSData/14.png",
+                "alt": ""
+            }
+          ]
         },
         {
-          "title": "3D Interaction & Presentation Systems",
-          "description": "Implemented intuitive interaction systems and presentation flows to support sales storytelling and live demos.",
-          "media": []
+          "title": "Custom Unity Timeline Track Suite",
+          "description": "Engineered 11 custom Unity Timeline tracks from scratch, giving the team full keyframe control over systems not natively supported by Timeline. Tracks covered: GameEvents, standard and fade materials, Cinemachine camera settings, MeshRenderer visibility, TextMeshPro, screen transitions, highlight and outline effects (MagicOutline, RIMHighlight), dissolve effects (BeautifulDissolves, AdvancedDissolve), gradient backgrounds, realistic VFX, and real-time cross-section cuts. These tracks were used to build all cinematic product presentation sequences in the app.",
+          "media": [
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/1.png",
+              "alt": "Custom Timeline Tracks in Unity Editor showing various track types such as GameEventTrack, MaterialTrack, CinemachineTrack, MeshRendererTrack, TextMeshProTrack, ScreenTransitionTrack, HighlightTrack, DissolveTrack, GradientBackgroundTrack, VFXTrack, and CrossSectionCutTrack"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/2.png",
+              "alt": "Timeline Window"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/3.png",
+              "alt": "TextMeshPro Track"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/4.png",
+              "alt": "RIMHighlight Track"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/5.png",
+              "alt": "FadeMaterial Track"
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CutomTimeline/6.png",
+                "alt": "GameEvent Track (ScriptableObject Event)"
+            },
+            {
+                "src": "img/Autoliv-Explore-3D/CutomTimeline/7.png",
+                "alt": "CrossSection Track"
+            }
+          ]
         },
         {
-          "title": "Visualization Features",
-          "description": "Worked on advanced visualization techniques such as exploded views and contextual product integration inside vehicle scenes.",
-          "media": []
+          "title": "Car Interaction System",
+          "description": "Built  interaction system for the vehicle model, enabling users to tap on specific car parts — doors, trunk, front hood, lights, and airbag — to trigger contextual animations and reactions. Implemented animation state gating to prevent conflicting interactions during active sequences."
         },
         {
-          "title": "Performance Optimization",
-          "description": "Optimized 3D assets and rendering pipelines to ensure smooth performance on mobile devices, especially iPads.",
-          "media": []
+          "title": "3D Product Visualization Features",
+          "description": "Implemented the full set of product visualization features: a swipe-driven navigation system for browsing products, an overhead camera mode with pulse markers for spatial product overview, dynamic depth-of-field control to focus attention on selected products, and 3D callout labels that persist correctly inside the close-up inspection viewport."
         },
         {
-          "title": "Cross-Functional Collaboration",
-          "description": "Collaborated with designers and stakeholders to align technical implementation with sales, marketing, and training goals.",
-          "media": []
+          "title": "Timeline Duplicate Editor Tool",
+          "description": "Built a custom Unity Editor script to duplicate Timeline assets along with all their track bindings — a productivity tool that significantly reduced setup time when creating per-product presentation sequences."
         }
       ],
       "link": [
