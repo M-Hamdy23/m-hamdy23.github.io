@@ -1000,64 +1000,64 @@
           "description": "Designed and built a data-driven content management pipeline using ScriptableObjects to manage all per-product data — including 3D callout labels, pulse markers, placement indicators, viewport models, and tooltip content. This system allowed the team to configure any product's presentation entirely from the Unity Inspector without touching code.",
           "media": [
             {
-            "src": "img/Autoliv-Explore-3D/CMSData/0.png",
-            "alt": "ProductData ScriptableObject showing structured data for product presentation configuration"
-          },
-            {
-                "src": "img/Autoliv-Explore-3D/CMSData/1.png",
-                "alt": "product Data ScriptableObject showing structured data for product presentation configuration, including references to other ScriptableObjects for callouts, pulse markers, placement indicators, viewport models, and tooltips"
+              "src": "img/Autoliv-Explore-3D/CMSData/0.png",
+              "alt": "ProductData ScriptableObject showing structured data for product presentation configuration"
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/2.png",
-                "alt": "PulseMarkerData ScriptableObject defining data for pulse marker configuration"
+              "src": "img/Autoliv-Explore-3D/CMSData/1.png",
+              "alt": "product Data ScriptableObject showing structured data for product presentation configuration, including references to other ScriptableObjects for callouts, pulse markers, placement indicators, viewport models, and tooltips"
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/3.png",
-                "alt": "PlacementIndicatorData ScriptableObject defining data for placement indicators"
+              "src": "img/Autoliv-Explore-3D/CMSData/2.png",
+              "alt": "PulseMarkerData ScriptableObject defining data for pulse marker configuration"
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/4.png",
-                "alt": "callout label Data ScriptableObject defining data for 3D callout labels, including text content and positioning"
+              "src": "img/Autoliv-Explore-3D/CMSData/3.png",
+              "alt": "PlacementIndicatorData ScriptableObject defining data for placement indicators"
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/5.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/4.png",
+              "alt": "callout label Data ScriptableObject defining data for 3D callout labels, including text content and positioning"
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/6.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/5.png",
+              "alt": ""
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/7.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/6.png",
+              "alt": ""
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/8.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/7.png",
+              "alt": ""
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/9.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/8.png",
+              "alt": ""
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/10.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/9.png",
+              "alt": ""
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/11.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/10.png",
+              "alt": ""
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/12.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/11.png",
+              "alt": ""
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/13.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/12.png",
+              "alt": ""
             },
             {
-                "src": "img/Autoliv-Explore-3D/CMSData/14.png",
-                "alt": ""
+              "src": "img/Autoliv-Explore-3D/CMSData/13.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/14.png",
+              "alt": ""
             }
           ]
         },
@@ -1086,12 +1086,12 @@
               "alt": "FadeMaterial Track"
             },
             {
-                "src": "img/Autoliv-Explore-3D/CutomTimeline/6.png",
-                "alt": "GameEvent Track (ScriptableObject Event)"
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/6.png",
+              "alt": "GameEvent Track (ScriptableObject Event)"
             },
             {
-                "src": "img/Autoliv-Explore-3D/CutomTimeline/7.png",
-                "alt": "CrossSection Track"
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/7.png",
+              "alt": "CrossSection Track"
             }
           ]
         },
@@ -1175,23 +1175,6 @@
       ],
       "shortDesc": "A high-performance Behaviour Tree framework for Unity DOTS/ECS with a visual editor, runtime inspector, interrupts, and extensible custom node templates.",
       "desc": "Dots Behaviour Tree is a Behaviour Tree framework built for Unity DOTS (Data-Oriented Technology Stack) on top of ECS architecture. It focuses on high-performance AI decision-making by baking authoring nodes into ECS entities and executing them through ECS systems. The framework includes a visual editor for graph-based authoring, a runtime inspector for live debugging, rich composite nodes, condition combinators, and interrupt support for high-priority behaviour preemption. It also provides script templates to accelerate creation of custom Action, Condition, Composite, and Interrupt nodes.\n\nRequirements from the README include Unity 6000.0.23f1+ with Entities 1.3.2+ (Burst compatible), and the demo scene runs with URP 17.0.4+.",
-      "contributions": [
-        {
-          "title": "ECS-Native Behaviour Tree Runtime",
-          "description": "Implemented a DOTS-first execution model where authored tree nodes are baked into ECS entities and updated by ECS systems for scalable runtime performance.",
-          "screenshot": []
-        },
-        {
-          "title": "Visual Authoring + Runtime Inspector Tooling",
-          "description": "Built editor tooling for graph-based tree authoring and runtime state inspection, enabling faster iteration and easier debugging of node state transitions.",
-          "screenshot": []
-        },
-        {
-          "title": "Extensible Node, Condition, and Interrupt Architecture",
-          "description": "Designed an extensible framework with templates and base classes for custom Action/Condition/Interrupt nodes, including condition combinators and interrupt preemption flows.",
-          "screenshot": []
-        }
-      ],
       "myWork": [
         {
           "title": "ECS-Native Behaviour Tree Runtime",
@@ -1221,10 +1204,13 @@
       "id": "Scriptable-System",
       "name": "Scriptable System",
       "icon": "🛠️",
-      "shortDesc": "A Unity editor extension for faster creation and management of scriptable variables and events.",
-      "desc": "Scriptable System is a productivity-focused Unity editor extension created to streamline one of the most repetitive parts of scalable game architecture: building, organizing, and reusing scriptable variables and events. Designed for developers who lean on data-driven workflows, the tool simplifies the creation pipeline, reduces boilerplate, and makes it easier to track how shared data assets are connected across a project. Its core loop is all about faster setup and safer iteration, with utilities for asset generation, listener wiring, and usage discovery that help teams move from idea to implementation with less friction, cleaner structure, and more confidence in large Unity codebases.",
+      "shortDesc": "A Unity editor extension for building decoupled, event-driven gameplay with ScriptableObject variables and events — including code generation, auto-wiring, and diagnostics.",
+      "desc": "Scriptable System is a Unity workflow package for building event-driven gameplay with ScriptableObjects. It provides reusable Scriptable Variables (SV_*) for shared game state and Scriptable Events (SE_*) for decoupled system communication, replacing hard scene-object references with asset-based messaging. The package ships with editor wizards that generate typed event and variable scripts on demand, context-menu tools that auto-wire listener components and write method stubs directly into your scripts, and custom inspectors that surface every script referencing an event or variable across the entire project. The result is a significantly faster workflow for gameplay programmers and technical designers, with lower coupling, safer refactoring, and stronger inspector visibility in large Unity codebases.",
       "tags": [
-        "unity"
+        "unity",
+        "tool",
+        "editor-extension",
+        "open-source"
       ],
       "platforms": [
         "ASSET",
@@ -1237,17 +1223,125 @@
           "url": "https://www.youtube.com/embed/_xeZ2ujhtYs"
         }
       ],
+      "media": [
+        {
+          "src": "img/ScriptableSystem/1.png",
+          "alt": "Scriptable System screenshot 1"
+        },
+        {
+          "src": "img/ScriptableSystem/2.png",
+          "alt": "Scriptable System screenshot 2"
+        },
+        {
+          "src": "img/ScriptableSystem/3.png",
+          "alt": "Scriptable System screenshot 3"
+        },
+        {
+          "src": "img/ScriptableSystem/4.png",
+          "alt": "Scriptable System screenshot 4"
+        },
+        {
+          "src": "img/ScriptableSystem/5.png",
+          "alt": "Scriptable System screenshot 5"
+        },
+        {
+          "src": "img/ScriptableSystem/6.png",
+          "alt": "Scriptable System screenshot 6"
+        },
+        {
+          "src": "img/ScriptableSystem/7.png",
+          "alt": "Scriptable System screenshot 7"
+        }
+      ],
       "techs": [
         "C#",
         "Unity",
-        "Editor Extension",
-        "Editor Scripting"
+        "Editor Scripting",
+        "ScriptableObjects",
+        "Code Generation",
+        "Reflection"
       ],
       "features": [
-        "Create Scriptable Variable & Event classes instantly",
-        "One-click event listener setup",
-        "Quick-find where each asset is used",
-        "Configurable naming conventions"
+        "Typed Scriptable Events (SE_*) with no-arg and parameterized payloads (int, float, Vector3, custom types)",
+        "Shared Scriptable Variables (SV_*) for cross-scene state with built-in primitives and custom type support",
+        "3-phase event lifecycle — PreResponse, Response, PostResponse — for ordered side-effect control",
+        "Event Wizard: generates SE_* and SE_*Listener scripts with up to 4 typed payload parameters",
+        "Variable Wizard: generates SV_* scripts with custom fields and collection wrappers (List, Stack, Queue)",
+        "Central manager window (Tools/Raskulls/Scriptables System) for events, variables, and settings",
+        "Context-menu listener auto-wiring: attaches listener components and binds matching methods by naming convention",
+        "Method stub generation: writes callback stubs into target scripts when no compatible handler exists",
+        "Auto Create/Load Assets: scans MonoBehaviour fields and assigns or creates missing ScriptableObject assets",
+        "Reference and listener diagnostics: shows every script referencing an event or variable, with broken-binding detection and one-click fix/remove",
+        "Play Mode Raise button on event inspectors for quick runtime testing without debug scripts",
+        "Configurable naming prefixes and output paths via persistent settings"
+      ],
+      "myWork": [
+        {
+          "title": "Core Event & Variable Architecture",
+          "description": "Established and evolved the entire runtime foundation — abstract base types (GameEventBase, GameEventListenerBase, ScriptableVariableBase), the register/unregister API, and the typed event ecosystem covering bool, float, int, string, Vector2, Vector3, Transform, GameObject, and custom types."
+        },
+        {
+          "title": "3-Phase Event Lifecycle",
+          "description": "Designed and implemented the Pre/Response/Post listener phase model, where each event raise invokes listeners in three ordered stages via a coroutine runner (GameEventCoroutineStarter). Added an optional OnEventComplete callback for post-raise hooks. This gives teams precise control over ordering — validation before action, cleanup after — without coupling systems together.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/5.png",
+              "alt": ""
+            }
+          ]
+        },
+        {
+          "title": "Event & Variable Wizard (Code Generation)",
+          "description": "Built the Event Wizard and Variable Wizard inside the central manager window (Tools/Raskulls/Scriptables System). The Event Wizard generates a typed SE_* script and its matching SE_*Listener from a name and up to 4 payload parameters. The Variable Wizard generates SV_* scripts with custom fields and optional collection wrappers (List, Stack, Queue). Both validate naming conventions and write files to configurable output paths.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/1.png",
+              "alt": "Event Wizard Window"
+            },
+            {
+              "src": "img/ScriptableSystem/2.png",
+              "alt": "Variable Wizard Window"
+            }
+          ]
+        },
+        {
+          "title": "Listener Auto-Wiring & Method Stub Generation",
+          "description": "Implemented context-menu tooling on MonoBehaviour components that creates and attaches the correct SE_*Listener, then attempts to bind a handler method automatically by naming convention (On<EventName>, OnPre<EventName>, OnPost<EventName>). When no compatible method exists, the tool writes a ready-to-use stub directly into the target script — eliminating the most repetitive part of connecting systems.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/5.png",
+              "alt": "Auto wring context menu showing options to add listeners for compatible events, with a warning when no compatible method is found and an option to generate a method stub in the target script"
+            }
+          ]
+        },
+        {
+          "title": "Reference & Listener Diagnostics",
+          "description": "Built custom inspectors for events and variables that list every script and object referencing the selected asset across the entire project, broken down by listener phase. Added detection for missing or deleted listener methods, with a Fix button that rewires the binding and a Remove button to cleanly delete stale listeners — making large refactors significantly safer.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/6.png",
+              "alt": "Event inspector showing lists of referencing scripts and objects"
+            },
+            {
+              "src": "img/ScriptableSystem/7.png",
+              "alt": "Show warnings for broken listener bindings and options to fix or remove them"
+            }
+          ]
+        },
+        {
+          "title": "Auto Create/Load Scriptable Assets",
+          "description": "Implemented a context-menu workflow on MonoBehaviour components that scans serialized ScriptableObject fields, finds or creates matching assets on disk, and assigns them automatically in the inspector — removing repetitive manual asset setup across large projects.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/4.png",
+              "alt": "Auto Create/Load context menu showing options to scan the target script for ScriptableObject fields and automatically assign matching assets from disk, with warnings for missing assets and options to create them"
+            }
+          ]
+        },
+        {
+          "title": "Reliability Fixes & Edge Cases",
+          "description": "Delivered a sustained series of correctness fixes over the project lifetime: multi-raise deduplication in the same frame, null reference guards in raise and inspector flows, listener method name matching for underscore conventions, abstract class support in asset creation tools, list variable initialization in generated code, and OnEnable double-fire prevention on compile/play cycles."
+        }
       ],
       "link": [
         {
