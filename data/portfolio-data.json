@@ -1638,7 +1638,6 @@
           "media": []
         }
       ],
-      "links": [],
       "link": []
     },
     {
@@ -1678,6 +1677,12 @@
         "Multiple character classes",
         "Online multiplayer game modes",
         "Dynamic ability-driven gameplay"
+      ],
+      "myWork": [
+        {
+          "title": "Multiplayer Networking & Synchronization (Photon Bolt)",
+          "description": "Designed and implemented the complete multiplayer networking layer using Photon Bolt, covering player lifecycle, match flow, and real-time communication. Built robust synchronization systems for player movement, abilities, and hook mechanics, ensuring smooth and responsive gameplay. Handled state replication for game modes and all relevant environment objects requiring synchronization. Addressed multiplayer challenges such as state consistency, latency handling, and edge cases including disconnections and reconnections, delivering a stable and competitive online experience."
+        }
       ],
       "link": [
         {
