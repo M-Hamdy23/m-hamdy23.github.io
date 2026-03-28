@@ -403,7 +403,8 @@
         "vr"
       ],
       "platforms": [
-        "Meta Quest"
+        "Meta Quest",
+        "Done"
       ],
       "cover": "img/highstreet-calamity/0.bmp",
       "videos": [
@@ -676,7 +677,8 @@
       "name": "Highstreet Campus",
       "icon": "🌐",
       "platforms": [
-        "webGl"
+        "webGl",
+        "Done"
       ],
       "cover": "img/highstreet-campus/highstreet_campus.png",
       "media": [
@@ -839,7 +841,8 @@
         "training"
       ],
       "platforms": [
-        "PC"
+        "PC",
+        "Done"
       ],
       "cover": "img/DriverTraining-cover.png",
       "videos": [
@@ -949,7 +952,8 @@
       ],
       "platforms": [
         "IOS",
-        "MOBILE"
+        "MOBILE",
+        "Done"
       ],
       "cover": "img/Autoliv-cover.png",
       "videos": [
@@ -1125,7 +1129,8 @@
       "platforms": [
         "Asset",
         "ECS/DOTS",
-        "Tool"
+        "Tool",
+        "Done"
       ],
       "cover-image": "img/highstreet-calamity/dots-behaviour-tree/1.png",
       "cover": "img/highstreet-calamity/dots-behaviour-tree/1.png",
@@ -1214,7 +1219,8 @@
       ],
       "platforms": [
         "ASSET",
-        "Tool"
+        "Tool",
+        "Done"
       ],
       "cover": "img/ScriptableSystem-cover.png",
       "videos": [
@@ -1365,7 +1371,8 @@
       "platforms": [
         "MOBILE",
         "IOS",
-        "ANDROID"
+        "ANDROID",
+        "Done"
       ],
       "cover": "img/10Tawla-cover.png",
       "videos": [
@@ -1652,7 +1659,8 @@
         "unity"
       ],
       "platforms": [
-        "PC"
+        "PC",
+        "Done"
       ],
       "cover": "img/SkyStrider-cover.png",
       "videos": [
@@ -1663,6 +1671,20 @@
         {
           "title": "Multiplayer Video",
           "url": "https://www.youtube.com/embed/0Nb84N4M3ps"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/SkyStrider/1.gif",
+          "alt": "gif 1"
+        },
+        {
+          "src": "img/SkyStrider/2.gif",
+          "alt": "gif 2"
+        },
+        {
+          "src": "img/SkyStrider/3.gif",
+          "alt": "gif 3"
         }
       ],
       "techs": [
@@ -1704,7 +1726,8 @@
       ],
       "platforms": [
         "VR",
-        "PC"
+        "PC",
+        "Done"
       ],
       "cover": "img/ThatJustHappend-cover.png",
       "videos": [
@@ -1722,6 +1745,12 @@
         "Real-world accident recreation",
         "Interactive safety equipment mechanics",
         "Educational training framework"
+      ],
+      "myWork": [
+        {
+          "title": "Endless Mode & AI-Driven Safety Simulation",
+          "description": "Designed and implemented an Endless Mode to extend gameplay and reinforce training through repeated dynamic scenarios. Developed worker AI systems that spawn characters with missing safety equipment, including logic for randomization and scenario variation. Built a visual guidance system that displays required safety gear above each worker, enabling players to quickly identify risks and intervene. Focused on creating clear feedback loops and readable interactions to ensure players can prevent accidents effectively, enhancing both gameplay engagement and educational impact."
+        }
       ],
       "link": null
     },
