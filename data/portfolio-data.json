@@ -885,12 +885,8 @@
           "description": "Led the development of multiple core gameplay systems from scratch including AI traffic, player recovery, camera systems, vehicle switching, and training logic, forming the backbone of a large-scale HGV training simulation."
         },
         {
-          "title": "AI Traffic & World Vehicle System",
-          "description": "Designed and implemented a dynamic AI traffic system with waypoint-based navigation, obstacle detection, intersection handling, and object pooling, ensuring realistic traffic behavior and optimized runtime performance."
-        },
-        {
           "title": "Training Simulation & Scenario Systems",
-          "description": "Built interactive training modules with guided and free-drive flows, implementing task systems, validation logic, hint systems, and failure conditions to support structured learning and real-world safety scenarios."
+          "description": "Built interactive training modules with guided and free-drive flows, implementing Custom Activity , validation logic, hint systems, and failure conditions to support structured learning and real-world safety scenarios."
         },
         {
           "title": "Track-Based Level & Transition System",
