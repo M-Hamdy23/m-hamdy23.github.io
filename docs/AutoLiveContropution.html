@@ -1,0 +1,281 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+  .header { padding: 1.5rem 0 1rem; border-bottom: 0.5px solid var(--color-border-tertiary); margin-bottom: 1.5rem; }
+  .header h1 { font-size: 18px; font-weight: 500; color: var(--color-text-primary); }
+  .header p { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; }
+  .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+  .filter-btn { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+  .filter-btn:hover { background: var(--color-background-secondary); }
+  .filter-btn.active { background: var(--color-background-info); color: var(--color-text-info); border-color: var(--color-border-info); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+  .card-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+  .card-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; }
+  .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-top: 3px; font-weight: 400; }
+  .card-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 10px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag { font-size: 11px; padding: 2px 8px; border-radius: 6px; background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); }
+  .hidden { display: none; }
+
+  .cat-cms .icon { background: #EEF; }
+  .cat-timeline .icon { background: #FFF3E0; }
+  .cat-ui .icon { background: #E8F5E9; }
+  .cat-car .icon { background: #FFEBEE; }
+  .cat-tools .icon { background: #F3E5F5; }
+
+  .badge-cms { background: #E8EAF6; color: #3949AB; }
+  .badge-timeline { background: #FFF8E1; color: #F57F17; }
+  .badge-ui { background: #E8F5E9; color: #2E7D32; }
+  .badge-car { background: #FFEBEE; color: #C62828; }
+  .badge-tools { background: #F3E5F5; color: #6A1B9A; }
+</style>
+
+<div class="header">
+  <h1>Autoliv Explore — My contributions</h1>
+  <p>Autoliv Explore · Unity 2021.3 · Interactive Automotive Showroom & AR App</p>
+</div>
+
+<div class="filter-row">
+  <button class="filter-btn active" onclick="filter('all', this)">All</button>
+  <button class="filter-btn" onclick="filter('cms', this)">CMS / Data</button>
+  <button class="filter-btn" onclick="filter('timeline', this)">Custom Timeline</button>
+  <button class="filter-btn" onclick="filter('ui', this)">UI Systems</button>
+  <button class="filter-btn" onclick="filter('car', this)">Car Interaction</button>
+  <button class="filter-btn" onclick="filter('tools', this)">Tools & Other</button>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<script>
+const items = [
+  {
+    cat: "cms",
+    icon: "📦",
+    title: "CMS — Callout Generator",
+    badge: "CMS / Data",
+    badgeClass: "badge-cms",
+    desc: "Designed and built a data-driven callout system that reads product data from ScriptableObjects and generates 3D billboard labels at runtime. Supports multilingual text and responds to product-change events.",
+    tags: ["CalloutData", "CalloutGenerator", "ScriptableObjects", "Localization"]
+  },
+  {
+    cat: "cms",
+    icon: "📍",
+    title: "CMS — Pulse Generator",
+    badge: "CMS / Data",
+    badgeClass: "badge-cms",
+    desc: "Implemented an interactive pulse-point system that spawns contextual markers per product in 3D space. Each pulse opens an info card and can switch the active product, enabling spatial product discovery.",
+    tags: ["PulseData", "PulseGenerator", "PulseHandler", "Event-driven"]
+  },
+  {
+    cat: "cms",
+    icon: "📌",
+    title: "CMS — Placement Generator",
+    badge: "CMS / Data",
+    badgeClass: "badge-cms",
+    desc: "Built a placement marker system to visually indicate where products are located inside a vehicle interior. Markers are data-driven per product and toggle on/off through UI events.",
+    tags: ["PlacementData", "PlacementGenerator", "Placement markers"]
+  },
+  {
+    cat: "cms",
+    icon: "🔍",
+    title: "CMS — Viewport Model",
+    badge: "CMS / Data",
+    badgeClass: "badge-cms",
+    desc: "Developed the product inspection viewport that loads per-product 3D prefabs for close-up viewing. Integrated explode and cross-section controls, enabling users to inspect internal product anatomy.",
+    tags: ["ViewportData", "ViewportHandlerNew", "3D Inspect", "Cross-section"]
+  },
+  {
+    cat: "cms",
+    icon: "💬",
+    title: "CMS — Tooltip System",
+    badge: "CMS / Data",
+    badgeClass: "badge-cms",
+    desc: "Architected a flexible tooltip/hint system with ScriptableObject-driven content, conditional display logic, and per-item configurations. Supports multiple tooltip types and states across scenes.",
+    tags: ["ToolTipCMS", "ToolTipData", "ToolTipCondition", "ToolTipItem (SO)"]
+  },
+  {
+    cat: "timeline",
+    icon: "🎞️",
+    title: "Custom Timeline — GameEvent track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Created a custom Unity Timeline track that raises ScriptableObject GameEvents at precise keyframe moments, enabling decoupled scene-wide reactions to be driven from animation sequences.",
+    tags: ["GameEventControlTrack", "GameEventControlClip", "GameEventControlBehavior"]
+  },
+  {
+    cat: "timeline",
+    icon: "🎨",
+    title: "Custom Timeline — Material track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Built a Timeline track for animating standard material parameters over time with blending support, enabling smooth material transitions (color, emission, etc.) fully synchronized with sequences.",
+    tags: ["MaterialControlTrack", "MaterialControlMixerBehaviour", "Shader parameters"]
+  },
+  {
+    cat: "timeline",
+    icon: "🌫️",
+    title: "Custom Timeline — Fade Material track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Developed a fade material track with an integrated FadeManager, allowing objects to smoothly fade in/out during Timeline playback — used for reveal and dissolve moments in product presentations.",
+    tags: ["FadeMaterialControlTrack", "FadeManager", "Fade", "Opacity animation"]
+  },
+  {
+    cat: "timeline",
+    icon: "📷",
+    title: "Custom Timeline — Camera Setting track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Engineered a Cinemachine camera control track for Timeline, allowing camera properties and rig settings to be animated and keyframed as part of product presentation sequences.",
+    tags: ["CameraControlTrack", "CameraControlBehavior", "Cinemachine", "Camera animation"]
+  },
+  {
+    cat: "timeline",
+    icon: "🕸️",
+    title: "Custom Timeline — MeshRenderer track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Created a Timeline track to control MeshRenderer properties (visibility, material slots) with mixer support, enabling parts of a 3D product to appear and disappear on cue.",
+    tags: ["MeshRendererControlTrack", "MeshRendererControlMixer", "Visibility control"]
+  },
+  {
+    cat: "timeline",
+    icon: "🎬",
+    title: "Custom Timeline — Screen Transitions track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Integrated the ScreenTransitions third-party package into Unity Timeline as a custom track, enabling sequenced scene wipes and transition effects to be keyframed alongside animations.",
+    tags: ["ScreenTransitionsControlTrack", "ExposedReferenceHolder", "Screen effects"]
+  },
+  {
+    cat: "timeline",
+    icon: "📝",
+    title: "Custom Timeline — TextMeshPro track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Built a Timeline track to animate TextMeshPro UI properties (text content, color, alpha) from Timeline clips, enabling synchronized animated text during product presentations.",
+    tags: ["TextMeshProControlTrack", "TextMeshProControlBehavior", "UI animation"]
+  },
+  {
+    cat: "timeline",
+    icon: "✨",
+    title: "Custom Timeline — Highlight & Outline track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Developed a combined highlight and outline Timeline track supporting multiple third-party renderers. Enables parts of the product model to glow or be outlined at specific moments in a sequence.",
+    tags: ["HighlightControlTrack", "OutlineHandler", "HighlightHandler", "Highlighter"]
+  },
+  {
+    cat: "timeline",
+    icon: "🔷",
+    title: "Custom Timeline — Magic Outline / RIM / Dissolve / Effects tracks",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Wrapped multiple third-party VFX packages (MagicOutline, RIMHighlight, BeautifulDissolves, AdvancedDissolve, RealisticEffects, GradientBackground) into custom Timeline tracks, giving full keyframe control over each from a single Timeline.",
+    tags: ["MagicOutlineControlTrack", "RIMHighlightControlTrack", "BDissolveControlTrack", "GradientBackgroundControlTrack"]
+  },
+  {
+    cat: "timeline",
+    icon: "✂️",
+    title: "Custom Timeline — Cross-section track",
+    badge: "Custom Timeline",
+    badgeClass: "badge-timeline",
+    desc: "Built a cross-section Timeline track that drives real-time cross-section cuts through 3D product models at keyframed moments, allowing presentations to reveal internal product structures cinematically.",
+    tags: ["CrossSectionControlTrack", "CrossSectionView", "CrossSectionViewer", "3D cutaway"]
+  },
+  {
+    cat: "ui",
+    icon: "🖱️",
+    title: "Swipe Detection & Navigation",
+    badge: "UI Systems",
+    badgeClass: "badge-ui",
+    desc: "Implemented a SwipeManager for detecting swipe direction from touch and mouse input. Integrated swipe to drive the navigation bar product carousel and ternary UI state changes.",
+    tags: ["SwipeManager", "Swipe detection", "Touch input", "NavBar integration"]
+  },
+  {
+    cat: "car",
+    icon: "🚗",
+    title: "Car Interaction Manager",
+    badge: "Car Interaction",
+    badgeClass: "badge-car",
+    desc: "Built the full car interaction system using raycasting against named colliders (doors, trunk, front, lights, airbag). Each interaction triggers specific reactions: opening doors, activating lights, deploying airbags. Implemented animation state control to block interactions during active animations.",
+    tags: ["CarInteractionManager", "AirBagReaction", "CarLight", "RotationReaction", "Raycast"]
+  },
+  {
+    cat: "ui",
+    icon: "🔄",
+    title: "Timeline Playback Controls",
+    badge: "UI Systems",
+    badgeClass: "badge-ui",
+    desc: "Developed the runtime Timeline control interface — play, pause, stop buttons connected to PlayableDirector. Handles AR vs. Showroom track muting and raises completion events for system-wide state updates.",
+    tags: ["TimelineManager", "TimelineControllsHandler", "PlayableDirector", "AR/Showroom modes"]
+  },
+  {
+    cat: "tools",
+    icon: "🛠️",
+    title: "Duplicate Timeline Editor Tool",
+    badge: "Tools",
+    badgeClass: "badge-tools",
+    desc: "Created a custom Unity Editor script to duplicate Timelines along with all their bindings — a productivity tool that saved significant setup time when creating per-product presentation sequences.",
+    tags: ["DuplicateTimeline (Editor)", "Unity Editor scripting", "Timeline bindings"]
+  },
+  {
+    cat: "ui",
+    icon: "📸",
+    title: "Overhead Camera & Pulse Integration",
+    badge: "UI Systems",
+    badgeClass: "badge-ui",
+    desc: "Set up an overhead camera mode showing all product positions marked with pulse indicators, giving users a bird's-eye overview for navigating between products in the showroom space.",
+    tags: ["CameraManager", "PulseGenerator", "Overhead view", "Product navigation"]
+  },
+  {
+    cat: "ui",
+    icon: "🌀",
+    title: "Callouts in 3D Viewport",
+    badge: "UI Systems",
+    badgeClass: "badge-ui",
+    desc: "Extended the callout system to work inside the 3D inspect viewport, so product labels remain visible and correctly positioned when the user rotates and inspects a product model up close.",
+    tags: ["CalloutGenerator", "ViewportHandler", "3D labels", "Billboard"]
+  },
+  {
+    cat: "ui",
+    icon: "💡",
+    title: "Camera Depth of Field (out of focus)",
+    badge: "UI Systems",
+    badgeClass: "badge-ui",
+    desc: "Implemented dynamic camera depth-of-field control that blurs background elements when a product is in focus, enhancing visual clarity and guiding user attention during product interactions.",
+    tags: ["CameraManager", "Post-processing", "DOF", "Focus system"]
+  }
+];
+
+function filter(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c => {
+    if (cat === 'all' || c.dataset.cat === cat) c.classList.remove('hidden');
+    else c.classList.add('hidden');
+  });
+}
+
+const grid = document.getElementById('grid');
+items.forEach(item => {
+  const card = document.createElement('div');
+  card.className = `card cat-${item.cat}`;
+  card.dataset.cat = item.cat;
+  card.innerHTML = `
+    <div class="card-header">
+      <div class="icon">${item.icon}</div>
+      <div>
+        <div class="card-title">${item.title}</div>
+        <span class="badge ${item.badgeClass}">${item.badge}</span>
+      </div>
+    </div>
+    <p class="card-desc">${item.desc}</p>
+    <div class="tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+  `;
+  grid.appendChild(card);
+});
+</script>
