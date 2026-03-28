@@ -1374,6 +1374,28 @@
           "url": "https://www.youtube.com/embed/XcUdxVhAFaA"
         }
       ],
+      "media": [
+        {
+          "src": "img/Tawla/1.webp",
+          "alt": "screenshot 1"
+        },
+        {
+          "src": "img/Tawla/2.webp",
+          "alt": "screenshot 2"
+        },
+        {
+          "src": "img/Tawla/3.webp",
+          "alt": "screenshot 3"
+        },
+        {
+          "src": "img/Tawla/4.webp",
+          "alt": "screenshot 4"
+        },
+        {
+          "src": "img/Tawla/5.webp",
+          "alt": "screenshot 5"
+        }
+      ],
       "techs": [
         "C#",
         "Unity",
@@ -1382,11 +1404,36 @@
         "Node.js"
       ],
       "features": [
-        "Online multiplayer with ELO ranking",
-        "Host/join matches with friends",
-        "Smart AI matching your skill level",
-        "7 life-like board aesthetics",
-        "Thirteen and Mahbouse game modes"
+        "Two unique game modes: Ma7bosa and Thirteen",
+        "Online multiplayer with matchmaking",
+        "Multiple visual themes and boards",
+        "Tournament and ranked play modes",
+        "Advanced AI with multiple difficulty levels",
+        "Extensive character customization system",
+        "Social features and friend challenges",
+        "Cross-platform progression"
+      ],
+      "myWork": [
+        {
+          "title": "UI/UX Systems & Interface Development",
+          "description": "Designed, built, and continuously refined all major UI flows including in-game HUD, main menu, waiting room, profile, settings, game-end, and social systems. Led large-scale prefab and panel restructuring, improving maintainability and scalability. Implemented localization support (Arabic, French, Turkish) and enhanced interaction quality through better feedback systems, timers, invitations, and responsive layout variants."
+        },
+        {
+          "title": "Multiplayer & Backend Integration",
+          "description": "Developed and maintained real-time multiplayer features using Nakama, including authentication, matchmaking, invitations, and socket-based communication. Improved online stability by handling disconnect/reconnect flows and fixing edge cases in match lifecycle. Implemented deep link and version-check systems, and enhanced notification and social presence behavior."
+        },
+        {
+          "title": "Core Gameplay Systems",
+          "description": "Worked on gameplay logic for Tawla and 31 modes, improving turn flow, round handling, and overall game state reliability. Fixed critical edge cases such as forced moves, rematch logic, and input timing issues. Enhanced AI and autoplay systems to ensure consistent and fair gameplay across both online and offline experiences."
+        },
+        {
+          "title": "Monetization & Ads Systems",
+          "description": "Integrated and expanded monetization systems using AdMob, Unity Ads, and LevelPlay mediation. Implemented and optimized banners, interstitials, and rewarded ads across gameplay and UI flows, ensuring smooth user experience. Managed SDK integrations and platform-specific configurations for Android and iOS."
+        },
+        {
+          "title": "Performance Optimization & Stability",
+          "description": "Improved game performance and reliability through optimization passes and bug fixing, including rendering adjustments (MSAA/anti-aliasing), reduced crashes, and smoother loading behavior. Contributed to analytics integration, data refactoring, and overall system maintainability."
+        }
       ],
       "link": [
         {
