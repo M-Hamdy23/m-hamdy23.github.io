@@ -397,8 +397,7 @@
         "vr"
       ],
       "platforms": [
-        "Meta Quest",
-        "Done"
+        "Meta Quest"
       ],
       "cover": "img/highstreet-calamity/0.bmp",
       "videos": [
@@ -671,8 +670,7 @@
       "name": "Highstreet Campus",
       "icon": "🌐",
       "platforms": [
-        "webGl",
-        "Done"
+        "webGl"
       ],
       "cover": "img/highstreet-campus/highstreet_campus.png",
       "media": [
@@ -746,47 +744,6 @@
       ],
       "shortDesc": "Highstreet Campus was built as the company's metaverse entry point: a large-scale WebGL social hub with MMO-oriented networking, NFT commerce, and connected world travel into Highstreet Homes.",
       "desc": "Highstreet Campus started as a social metaverse hub and strategic entry point for the company, with an early goal of building networking and infrastructure that could scale toward MMO requirements. The world combined social interaction spaces with NFT purchasing experiences, then expanded to include travel pods linking players to their homes in the previous Highstreet Homes project. The campus later introduced a VIP rooftop section with an outdoor garden, additional social activities, and a salon shop. One notable multiplayer challenge was a dynamic lab feature where players could switch lab interiors from an in-world console, requiring synchronized environment swaps while correctly handling other users already inside the affected area.",
-      "contributions": [
-        {
-          "title": "Custom MMO-Oriented Networking Layer",
-          "description": "Implemented a custom network system on top of Mirror transport after evaluating available options and identifying limitations in Unity's default networking for MMO-scale goals. The architecture supported different object variants per context (server, local client, and remote client) instead of forcing a single prefab model, enabling much greater flexibility, including cross-platform representation needs. I also implemented chunk-based data sharing so the server synchronized state primarily between players in the same region.",
-          "screenshot": []
-        },
-        {
-          "title": "Distributed Server Hierarchy Design",
-          "description": "Designed and implemented a server hierarchy where the main server focused on authoritative synchronization, while specialized 'server-client' workers handled domain logic for entities such as elevators and AI-driven actors. The longer-term architecture targeted distributed authority so regional services could handle local combat/AI and write back required player-impact data, reducing core server load and enabling cost-efficient scaling by spinning regional services up only when needed.",
-          "screenshot": []
-        },
-        {
-          "title": "Highstreet Homes Integration",
-          "description": "Integrated the previous Highstreet Homes experience into Campus despite both projects originally using different multiplayer structures. Delivered stable cross-project travel flow through travel pods and unified player transitions between systems.",
-          "screenshot": []
-        },
-        {
-          "title": "Unified Multi-Source Inventory System",
-          "description": "Built a layered inventory system combining NFTs, backend/unlockable items, location-specific local items, and additional Web3-related internal APIs. Implemented adapters for each data source and a unified inventory abstraction on top, making future source additions straightforward. The system drove player clothing, access rules, and location eligibility across the experience.",
-          "screenshot": []
-        },
-        {
-          "title": "Web Container Authentication Bridge",
-          "description": "Implemented authentication and web-to-game communication using JavaScript bridge functions with callback-based JSON responses. Replaced fragile direct function-name coupling with a generic integration layer that isolated game internals from web implementation details and supported continuous profile/data updates from the website while players were connected.",
-          "screenshot": []
-        },
-        {
-          "title": "Interaction Sync, UI, and Delivery Support",
-          "description": "Owned synchronization of campus interactions (elevators, seats, player clothes, emotes, and other shared actions), and contributed across bug fixing, UI implementation, and multiple feature deliveries required to keep releases stable.",
-          "screenshot": [
-            "img/highstreet-campus/interaction-sync/1.png",
-            "img/highstreet-campus/interaction-sync/2.png",
-            "img/highstreet-campus/interaction-sync/3.png",
-            "img/highstreet-campus/interaction-sync/4.png",
-            "img/highstreet-campus/ui/1.png",
-            "img/highstreet-campus/ui/2.png",
-            "img/highstreet-campus/ui/3.png",
-            "img/highstreet-campus/ui/4.png"
-          ]
-        }
-      ],
       "myWork": [
         {
           "title": "Network System Enhancement & Channel Architecture",
@@ -835,8 +792,7 @@
         "training"
       ],
       "platforms": [
-        "PC",
-        "Done"
+        "PC"
       ],
       "cover": "img/DriverTraining-cover.png",
       "videos": [
@@ -948,8 +904,7 @@
       ],
       "platforms": [
         "IOS",
-        "MOBILE",
-        "Done"
+        "MOBILE"
       ],
       "cover": "img/Autoliv-cover.png",
       "videos": [
@@ -1127,8 +1082,7 @@
       "platforms": [
         "Asset",
         "ECS/DOTS",
-        "Tool",
-        "Done"
+        "Tool"
       ],
       "cover-image": "img/highstreet-calamity/dots-behaviour-tree/1.png",
       "cover": "img/highstreet-calamity/dots-behaviour-tree/1.png",
@@ -1217,8 +1171,7 @@
       ],
       "platforms": [
         "ASSET",
-        "Tool",
-        "Done"
+        "Tool"
       ],
       "cover": "img/ScriptableSystem-cover.png",
       "videos": [
@@ -1371,8 +1324,7 @@
       "platforms": [
         "MOBILE",
         "IOS",
-        "ANDROID",
-        "Done"
+        "ANDROID"
       ],
       "cover": "img/10Tawla-cover.png",
       "videos": [
@@ -1574,8 +1526,7 @@
         "unity"
       ],
       "platforms": [
-        "PC",
-        "Done"
+        "PC"
       ],
       "cover": "img/SkyStrider-cover.png",
       "videos": [
@@ -1643,8 +1594,7 @@
       ],
       "platforms": [
         "VR",
-        "PC",
-        "Done"
+        "PC"
       ],
       "cover": "img/ThatJustHappend-cover.png",
       "videos": [
