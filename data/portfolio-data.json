@@ -397,7 +397,8 @@
         "vr"
       ],
       "platforms": [
-        "Meta Quest"
+        "Meta Quest",
+        "VR"
       ],
       "cover": "img/highstreet-calamity/0.bmp",
       "videos": [
@@ -664,15 +665,35 @@
       ]
     },
     {
-      "id": "highstreet-campus",
       "featured": true,
       "published": true,
+      "id": "highstreet-campus",
       "name": "Highstreet Campus",
       "icon": "🌐",
+      "shortDesc": "Highstreet Campus was built as the company's metaverse entry point: a large-scale WebGL social hub with MMO-oriented networking, NFT commerce, and connected world travel into Highstreet Homes.",
+      "desc": "Highstreet Campus started as a social metaverse hub and strategic entry point for the company, with an early goal of building networking and infrastructure that could scale toward MMO requirements. The world combined social interaction spaces with NFT purchasing experiences, then expanded to include travel pods linking players to their homes in the previous Highstreet Homes project. The campus later introduced a VIP rooftop section with an outdoor garden, additional social activities, and a salon shop. One notable multiplayer challenge was a dynamic lab feature where players could switch lab interiors from an in-world console, requiring synchronized environment swaps while correctly handling other users already inside the affected area.",
+      "tags": [
+        "unity",
+        "multiplayer",
+        "web",
+        "pc"
+      ],
       "platforms": [
         "webGl"
       ],
       "cover": "img/highstreet-campus/highstreet_campus.png",
+      "videos": [
+        {
+          "text": "Trailer",
+          "type": "local",
+          "url": "img/highstreet-campus/trailer.mp4"
+        },
+        {
+          "text": "Campus Gameplay",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/652a-CFEBiU"
+        }
+      ],
       "media": [
         {
           "src": "img/highstreet-campus/1.png",
@@ -703,24 +724,6 @@
           "alt": "Highstreet Campus screenshot 7"
         }
       ],
-      "videos": [
-        {
-          "text": "Trailer",
-          "type": "local",
-          "url": "img/highstreet-campus/trailer.mp4"
-        },
-        {
-          "text": "Campus Gameplay",
-          "type": "youtube",
-          "url": "https://www.youtube.com/embed/652a-CFEBiU"
-        }
-      ],
-      "tags": [
-        "unity",
-        "multiplayer",
-        "web",
-        "pc"
-      ],
       "techs": [
         "Unity",
         "C#",
@@ -742,8 +745,6 @@
         "Real-time synchronized interactions for shared systems like elevators and seats",
         "Dynamic environment changes based on in-game events"
       ],
-      "shortDesc": "Highstreet Campus was built as the company's metaverse entry point: a large-scale WebGL social hub with MMO-oriented networking, NFT commerce, and connected world travel into Highstreet Homes.",
-      "desc": "Highstreet Campus started as a social metaverse hub and strategic entry point for the company, with an early goal of building networking and infrastructure that could scale toward MMO requirements. The world combined social interaction spaces with NFT purchasing experiences, then expanded to include travel pods linking players to their homes in the previous Highstreet Homes project. The campus later introduced a VIP rooftop section with an outdoor garden, additional social activities, and a salon shop. One notable multiplayer challenge was a dynamic lab feature where players could switch lab interiors from an in-world console, requiring synchronized environment swaps while correctly handling other users already inside the affected area.",
       "myWork": [
         {
           "title": "Network System Enhancement & Channel Architecture",
@@ -779,6 +780,8 @@
       ]
     },
     {
+      "featured": true,
+      "published": true,
       "id": "Nutrien-HGV-Driver-Training",
       "name": "Nutrien-HGV-Driver-Training",
       "icon": "🚛",
@@ -884,11 +887,11 @@
           "url": "https://shiifttraining.com/projects/hgv-driver-training-software-solutions/",
           "type": "website"
         }
-      ],
-      "featured": true,
-      "published": true
+      ]
     },
     {
+      "featured": true,
+      "published": true,
       "id": "Autoliv-Explore-3D",
       "name": "Autoliv Explore 3D",
       "icon": "🚗",
@@ -1069,23 +1072,27 @@
           "url": "https://unity.com/case-study/autoliv",
           "type": "website"
         }
-      ],
-      "featured": true,
-      "published": true
+      ]
     },
     {
-      "id": "dots-behaviour-tree",
       "featured": false,
       "published": true,
+      "id": "dots-behaviour-tree",
       "name": "DOTS Behaviour Tree",
       "icon": "🌳",
+      "shortDesc": "A high-performance Behaviour Tree framework for Unity DOTS/ECS with a visual editor, runtime inspector, interrupts, and extensible custom node templates.",
+      "desc": "Dots Behaviour Tree is a Behaviour Tree framework built for Unity DOTS (Data-Oriented Technology Stack) on top of ECS architecture. It focuses on high-performance AI decision-making by baking authoring nodes into ECS entities and executing them through ECS systems. The framework includes a visual editor for graph-based authoring, a runtime inspector for live debugging, rich composite nodes, condition combinators, and interrupt support for high-priority behaviour preemption. It also provides script templates to accelerate creation of custom Action, Condition, Composite, and Interrupt nodes.\n\nRequirements from the README include Unity 6000.0.23f1+ with Entities 1.3.2+ (Burst compatible), and the demo scene runs with URP 17.0.4+.",
+      "tags": [
+        "unity",
+        "tools"
+      ],
       "platforms": [
         "Asset",
         "ECS/DOTS",
         "Tool"
       ],
-      "cover-image": "img/highstreet-calamity/dots-behaviour-tree/1.png",
       "cover": "img/highstreet-calamity/dots-behaviour-tree/1.png",
+      "videos": [],
       "media": [
         {
           "src": "img/highstreet-calamity/dots-behaviour-tree/1.png",
@@ -1108,11 +1115,6 @@
           "alt": "DOTS Behaviour Tree screenshot 5"
         }
       ],
-      "videos": [],
-      "tags": [
-        "unity",
-        "tools"
-      ],
       "techs": [
         "Unity",
         "DOTS",
@@ -1130,8 +1132,6 @@
         "Interrupt system for high-priority preemption and control handoff",
         "Script templates for custom Action, Condition, Composite, and Interrupt nodes"
       ],
-      "shortDesc": "A high-performance Behaviour Tree framework for Unity DOTS/ECS with a visual editor, runtime inspector, interrupts, and extensible custom node templates.",
-      "desc": "Dots Behaviour Tree is a Behaviour Tree framework built for Unity DOTS (Data-Oriented Technology Stack) on top of ECS architecture. It focuses on high-performance AI decision-making by baking authoring nodes into ECS entities and executing them through ECS systems. The framework includes a visual editor for graph-based authoring, a runtime inspector for live debugging, rich composite nodes, condition combinators, and interrupt support for high-priority behaviour preemption. It also provides script templates to accelerate creation of custom Action, Condition, Composite, and Interrupt nodes.\n\nRequirements from the README include Unity 6000.0.23f1+ with Entities 1.3.2+ (Burst compatible), and the demo scene runs with URP 17.0.4+.",
       "myWork": [
         {
           "title": "ECS-Native Behaviour Tree Runtime",
@@ -1158,6 +1158,8 @@
       ]
     },
     {
+      "featured": true,
+      "published": true,
       "id": "Scriptable-System",
       "name": "Scriptable System",
       "icon": "🛠️",
@@ -1306,11 +1308,11 @@
           "url": "https://assetstore.unity.com/packages/slug/191378",
           "type": "website"
         }
-      ],
-      "featured": true,
-      "published": true
+      ]
     },
     {
+      "featured": true,
+      "published": true,
       "id": "10-Tawla",
       "name": "10 Tawla",
       "icon": "🎲",
@@ -1405,26 +1407,27 @@
           "url": "https://apps.apple.com/eg/app/10-tawla/id1569696163",
           "type": "website"
         }
-      ],
-      "featured": true,
-      "published": true
+      ]
     },
     {
-      "id": "zinad-training-games",
       "featured": true,
       "published": true,
+      "id": "zinad-training-games",
       "name": "Zinad Security Training Games",
       "icon": "🛡️",
+      "shortDesc": "A suite of serious games for cybersecurity awareness training, delivered for enterprise clients across multiple platforms.",
+      "desc": "At Zinad, I worked as a Senior Game Developer on a range of serious games designed to make cybersecurity training more engaging and effective for enterprise users.\n\nMy role focused on customizing and evolving existing games to fit different client needs, while also contributing to the development of new features and systems. I worked hands-on across multiple projects—improving stability, refining gameplay, and translating complex security concepts into clear, interactive experiences.\n\nIn addition to working on established titles, I played a key role in developing the Emoji Game, where I built several core gameplay systems and features that supported the overall experience.\n\nThe projects I contributed to include:\n- Phishing Mania – Training players to detect and respond to phishing attacks\n- Who Will Be Millionaire – Security Edition – A quiz-based experience for reinforcing cybersecurity knowledge\n- The Office VR – An immersive VR simulation focused on workplace security practices\n- Password Ninja – A fast-paced game teaching password security fundamentals\n- Security Archery VR – A VR experience designed around security awareness and decision-making\n\nOverall, my work at Zinad centered on turning cybersecurity training into something interactive, scalable, and genuinely engaging for users.",
+      "tags": [
+        "unity",
+        "vr",
+        "web"
+      ],
       "platforms": [
         "Web",
         "VR",
-        "Kinect",
-        "Android",
-        "iOS"
+        "Kinect"
       ],
-      "cover-image": "img/zinad-training-games/cover.png",
       "cover": "img/zinad-training-games/cover.png",
-      "media": [],
       "videos": [
         {
           "text": "Cyber Emoji",
@@ -1457,20 +1460,13 @@
           "url": "https://www.youtube.com/embed/4h6j8qjQYpE?si=QLjj8-1iEIr-7EWI"
         }
       ],
-      "tags": [
-        "unity",
-        "vr",
-        "mobile",
-        "web"
-      ],
+      "media": [],
       "techs": [
         "Unity",
         "C#",
         "WebGL",
         "VR",
         "Kinect",
-        "Android",
-        "iOS",
         "Leadership",
         "Game Design",
         "Enterprise Solutions"
@@ -1483,8 +1479,6 @@
         "Accessible across different skill levels",
         "Designed for large-scale employee training programs"
       ],
-      "shortDesc": "A suite of serious games for cybersecurity awareness training, delivered for enterprise clients across multiple platforms.",
-      "desc": "At Zinad, I worked as a Senior Game Developer on a range of serious games designed to make cybersecurity training more engaging and effective for enterprise users.\n\nMy role focused on customizing and evolving existing games to fit different client needs, while also contributing to the development of new features and systems. I worked hands-on across multiple projects—improving stability, refining gameplay, and translating complex security concepts into clear, interactive experiences.\n\nIn addition to working on established titles, I played a key role in developing the Emoji Game, where I built several core gameplay systems and features that supported the overall experience.\n\nThe projects I contributed to include:\n- Phishing Mania – Training players to detect and respond to phishing attacks\n- Who Will Be Millionaire – Security Edition – A quiz-based experience for reinforcing cybersecurity knowledge\n- The Office VR – An immersive VR simulation focused on workplace security practices\n- Password Ninja – A fast-paced game teaching password security fundamentals\n- Security Archery VR – A VR experience designed around security awareness and decision-making\n\nOverall, my work at Zinad centered on turning cybersecurity training into something interactive, scalable, and genuinely engaging for users.",
       "myWork": [
         {
           "title": "Gameplay Systems Development (Emoji Game)",
@@ -1515,6 +1509,8 @@
       "link": []
     },
     {
+      "featured": true,
+      "published": true,
       "id": "Sky-Striders",
       "name": "Sky Striders",
       "icon": "🦅",
@@ -1578,11 +1574,11 @@
           "url": "https://raskulls.itch.io/sky-striders",
           "type": "website"
         }
-      ],
-      "featured": true,
-      "published": true
+      ]
     },
     {
+      "featured": true,
+      "published": true,
       "id": "That-Just-Happened",
       "name": "That Just Happened",
       "icon": "⚠️",
@@ -1619,11 +1615,11 @@
           "description": "Designed and implemented an Endless Mode to extend gameplay and reinforce training through repeated dynamic scenarios. Developed worker AI systems that spawn characters with missing safety equipment, including logic for randomization and scenario variation. Built a visual guidance system that displays required safety gear above each worker, enabling players to quickly identify risks and intervene. Focused on creating clear feedback loops and readable interactions to ensure players can prevent accidents effectively, enhancing both gameplay engagement and educational impact."
         }
       ],
-      "link": null,
-      "featured": true,
-      "published": true
+      "link": null
     },
     {
+      "featured": false,
+      "published": true,
       "id": "Skull-Switch",
       "name": "Skull Switch",
       "icon": "💀",
@@ -1696,11 +1692,11 @@
           "description": "Enhanced result screens, reward presentation, and progression reliability, including save persistence, star tracking, and coin/loot feedback loops."
         }
       ],
-      "link": null,
-      "featured": false,
-      "published": true
+      "link": null
     },
     {
+      "featured": false,
+      "published": true,
       "id": "prototypes-and-demos",
       "name": "Prototypes & Demos",
       "icon": "🧪",
@@ -1750,9 +1746,7 @@
         "Testing ground for new ideas and technologies",
         "Not all projects intended for commercial release"
       ],
-      "link": null,
-      "featured": false,
-      "published": true
+      "link": null
     }
   ]
 }
