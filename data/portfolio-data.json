@@ -189,9 +189,8 @@
       "role": "Senior Game Developer · Contract",
       "period": "6-MONTH CONTRACT · HOUSTON, TX",
       "bullets": [
-        "Developed a PC HGV driver training simulator for Nutrien, featuring 7 custom accident scenarios",
-        "Implemented Train, Practice, and Assessment modes with full LMS integration for enterprise training",
-        "Delivered a realistic, interactive simulation that enhanced driver safety and learning outcomes"
+        "Delivered core gameplay systems for a large-scale HGV training simulator, including AI traffic, vehicle systems, camera architecture, and training logic.",
+        "Designed and implemented structured training scenarios with validation, failure conditions, and LMS-integrated performance tracking for enterprise deployment."
       ],
       "techs": [
         "C#",
@@ -885,11 +884,11 @@
         },
         {
           "title": "Training Simulation & Scenario Systems",
-          "description": "Built interactive training modules with guided and free-drive flows, implementing Custom Activity , validation logic, hint systems, and failure conditions to support structured learning and real-world safety scenarios."
+          "description": "Built interactive training module with guided and free-drive flows, implementing Custom Activity , validation logic, hint systems, and failure conditions to support structured learning and real-world safety scenarios."
         },
         {
           "title": "Track-Based Level & Transition System",
-          "description": "Developed a modular track system enabling dynamic level composition with seamless transitions for vehicles, weather, time-of-day, and camera states using ScriptableObjects and event-driven triggers."
+          "description": "Developed custom tracks for vehicles, weather, time-of-day, and camera states using ScriptableObjects and event-driven triggers."
         },
         {
           "title": "Player Recovery & Fail-Safe Mechanics",
