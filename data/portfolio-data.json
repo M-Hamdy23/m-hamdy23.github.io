@@ -166,10 +166,9 @@
       "role": "Senior Game Developer · Team Lead",
       "period": "NOV 2021 — NOV 2023",
       "bullets": [
-        "Led a game development team delivering serious games for cybersecurity awareness and enterprise training",
-        "Architected and developed multi-platform Unity solutions across Web, VR, and Mobile",
-        "Mentored junior developers, improving code quality and team performance",
-        "Delivered enterprise training products for major clients"
+        "Led development and customization of serious games for cybersecurity training, adapting gameplay systems and content for multiple enterprise clients.",
+        "Architected and delivered multi-platform Unity solutions across WebGL, VR, Kinect, and mobile, ensuring consistent performance and user experience.",
+        "Built core gameplay systems (JSON-driven content, game flow, validation logic) while mentoring junior developers and improving code quality and team productivity."
       ],
       "techs": [
         "C#",
@@ -1533,61 +1532,31 @@
         "Designed for large-scale employee training programs"
       ],
       "shortDesc": "A suite of serious games for cybersecurity awareness training, delivered for enterprise clients across multiple platforms.",
-      "desc": "As Team Lead at Zinad, I led the development of a comprehensive suite of serious games for cybersecurity awareness training. The games translated complex security concepts into engaging, interactive learning experiences used by major enterprise clients.\n\nKey projects included:\n- Phishing Mania: An interactive game that teaches employees to identify phishing attempts\n- Who Will Be Millionaire - Security Edition: A game-show format focused on cybersecurity knowledge\n- The Office VR: An immersive VR experience for identifying clean desk policy violations\n- Password Ninja: A fast-paced action game about password security\n- Security Archery VR: A VR archery game for security question training",
+      "desc": "At Zinad, I worked as a Senior Game Developer on a range of serious games designed to make cybersecurity training more engaging and effective for enterprise users.\n\nMy role focused on customizing and evolving existing games to fit different client needs, while also contributing to the development of new features and systems. I worked hands-on across multiple projects—improving stability, refining gameplay, and translating complex security concepts into clear, interactive experiences.\n\nIn addition to working on established titles, I played a key role in developing the Emoji Game, where I built several core gameplay systems and features that supported the overall experience.\n\nThe projects I contributed to include:\n- Phishing Mania – Training players to detect and respond to phishing attacks\n- Who Will Be Millionaire – Security Edition – A quiz-based experience for reinforcing cybersecurity knowledge\n- The Office VR – An immersive VR simulation focused on workplace security practices\n- Password Ninja – A fast-paced game teaching password security fundamentals\n- Security Archery VR – A VR experience designed around security awareness and decision-making\n\nOverall, my work at Zinad centered on turning cybersecurity training into something interactive, scalable, and genuinely engaging for users.",
       "myWork": [
         {
-          "title": "Game Team Lead",
-          "description": "Led a team of three developers and an artist in the design and development of multiple cybersecurity training games, overseeing project timelines, coordinating tasks, and ensuring the delivery of high-quality training solutions for enterprise clients.",
+          "title": "Gameplay Systems Development (Emoji Game)",
+          "description": "Played a key role in developing core gameplay systems for the Emoji Game. Designed and implemented a JSON-driven question system, including data structuring and runtime loading to support flexible content updates.\n\nBuilt and integrated an audio system to manage sound effects and feedback across gameplay. Developed multiple gameplay components including an Emoji Display system triggered by question events, and a Description Panel for dynamic question previews.\n\nImplemented the Slot Board system, which dynamically generates letter slots based on each answer, allowing players to construct words interactively. Added validation logic to evaluate player input, provide real-time feedback, and handle submission flows.\n\nAlso developed the main Game Manager responsible for question flow, game state control, and overall gameplay orchestration.",
           "media": []
         },
         {
-          "title": "Collaboration with Cross-Functional Teams",
-          "description": "Coordinated with web, DevOps, and QA teams across all releases — aligning deployment windows, resolving integration issues, and incorporating feedback to maintain consistent delivery quality.",
+          "title": "Game Customization & Client Adaptation",
+          "description": "Customized and extended existing serious games to meet specific enterprise client requirements. Adapted gameplay logic, content, and user flows to align with different cybersecurity policies and training objectives, ensuring each deployment was relevant and effective.",
           "media": []
         },
         {
-          "title": "Refactored Legacy Games to Meet Enterprise Standards",
-          "description": "Refactored legacy codebases of existing training games to improve performance, security, and maintainability. This included optimizing game logic, enhancing data handling practices, and ensuring compliance with enterprise security standards.",
+          "title": "Maintenance, Optimization & Stability",
+          "description": "Maintained and improved existing projects by fixing bugs, optimizing performance, and ensuring smooth user experiences across platforms including WebGL, mobile, VR, and Kinect. Helped keep projects production-ready for enterprise deployment.",
           "media": []
         },
         {
-          "title": "Port Games to New Platforms (WebGL, VR, Kinect, Android, iOS)",
-          "description": "Led the porting of existing training games to new platforms, including WebGL for browser-based access, VR for immersive experiences, Kinect for motion-based interaction, and mobile platforms (Android and iOS) for on-the-go training. This involved adapting controls, optimizing performance, and ensuring a consistent user experience across all platforms.",
+          "title": "Cross-Platform Development",
+          "description": "Worked across multiple platforms including Web, VR, Kinect, Android, and iOS. Ensured consistent functionality and performance while adapting input systems and user experience to suit each platform.",
           "media": []
         },
         {
-          "title": "Client Customization System",
-          "description": "Shipped a flexible CMS that let enterprise clients configure game content — security policies, branding, scenario text — without engineering involvement, reducing customization turnaround from days to hours.",
-          "media": []
-        },
-        {
-          "title": "Project Template and Delivery Pipeline",
-          "description": "Cut new client delivery time from 6 months to 2 months by building a standardized project template and development pipeline shared across all training games in the suite.",
-          "media": []
-        },
-        {
-          "title": "Web Bridge",
-          "description": "Isolated game internals from web implementation details by replacing direct function-name coupling with a generic JavaScript bridge layer — supporting continuous profile and data updates from the website while players were connected.",
-          "media": []
-        },
-        {
-          "title": "Designed and Implemented New Games",
-          "description": "Shipped multiple new training games in response to emerging threats and client feedback — expanding the suite while keeping each game relevant and educationally effective.",
-          "media": []
-        },
-        {
-          "title": "ZiSoft Mobile App (iOS, Android)",
-          "description": "Led development of the ZiSoft mobile app, which provided on-the-go access to training games and resources for employees. This included designing the app architecture, implementing core features, and adapting all games to run under one app while keeping each game in its own repository.",
-          "media": []
-        },
-        {
-          "title": "Interactive video player for training content",
-          "description": "Extended training depth by building an interactive video player with embedded quizzes, annotations, and branching interactions — increasing engagement and knowledge retention compared to passive video.",
-          "media": []
-        },
-        {
-          "title": "HTML Page View for Web Games",
-          "description": "Enabled realistic phishing-email simulation by implementing in-game HTML page rendering inside WebGL training scenarios, giving employees hands-on practice identifying real-looking phishing pages.",
+          "title": "Collaboration & Mentorship",
+          "description": "Collaborated closely with designers, artists, and other developers, while also supporting and guiding junior developers in their day-to-day tasks. Helped improve code quality and maintain development standards across the team.",
           "media": []
         }
       ],
