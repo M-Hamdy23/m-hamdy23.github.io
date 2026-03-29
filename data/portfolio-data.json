@@ -35,12 +35,12 @@
         "label": "Years Exp."
       },
       {
-        "value": "",
+        "value": "12",
         "suffix": "+",
         "label": "Projects"
       },
       {
-        "value": "",
+        "value": "5",
         "suffix": " ",
         "label": "Companies"
       }
@@ -147,13 +147,16 @@
       "techs": [
         "C#",
         "Unity",
-        "Unity DOTS",
+        "Unity DOTS / ECS",
+        "Meta Quest",
         "VR",
         "WebGL",
         "Multiplayer",
-        "Architecture",
-        "Netcode",
-        "Backend"
+        "Netcode for Entities",
+        "AWS GameLift",
+        "Node.js",
+        "Python",
+        "Architecture"
       ],
       "projects_ids": [
         "highstreet-calamity",
@@ -166,7 +169,7 @@
       "role": "Senior Game Developer · Team Lead",
       "period": "NOV 2021 — NOV 2023",
       "bullets": [
-        "Led development and customization of serious games for cybersecurity training, adapting gameplay systems and content for multiple enterprise clients.",
+        "Contributed to the development and customization of 6+ serious games for cybersecurity training, adapting gameplay systems and content for multiple enterprise clients.",
         "Architected and delivered multi-platform Unity solutions across WebGL, VR, Kinect, and mobile, ensuring consistent performance and user experience.",
         "Built core gameplay systems (JSON-driven content, game flow, validation logic) while mentoring junior developers and improving code quality and team productivity."
       ],
@@ -226,9 +229,9 @@
       "role": "Game Developer · Co-Founder",
       "period": "JULY 2018 — DEC 2020",
       "bullets": [
-        "Co-founded the studio and led technical development across PC, Mobile, and VR titles over 2.5 years",
-        "Architected networked multiplayer for Sky Striders (PC) using Photon Bolt — movement sync, abilities, and match state",
-        "Developed That Just Happened (VR, Unreal Engine) and Autoliv Explore 3D (iOS AR)"
+        "Co-founded the studio and led all technical development across projects spanning PC, Mobile, and VR over 2.5 years",
+        "Architected networked multiplayer for Sky Striders (PC) using Photon Bolt — owning movement sync, abilities, match state, and disconnect handling end-to-end",
+        "Shipped Autoliv Explore 3D (iOS AR) — Unity Case Study featured on unity.com — and That Just Happened (VR, Unreal Engine)"
       ],
       "techs": [
         "C#",
@@ -257,7 +260,7 @@
       "role": "Software Developer · Co-Founder",
       "period": "JAN 2014 — JULY 2017",
       "bullets": [
-        "Co-founded and led development of desktop business solutions for Egyptian clients including a restaurant management system",
+        "Co-founded and led development of desktop business management solutions for Egyptian clients, including a restaurant management system built in Java / SQL",
         "Built AR menu visualization app using Unity and Vuforia, enabling customers to preview menu items in 3D"
       ],
       "techs": [
@@ -783,7 +786,7 @@
       "featured": true,
       "published": true,
       "id": "Nutrien-HGV-Driver-Training",
-      "name": "Nutrien HGV Driver Training",
+      "name": "HGV Driver Training Simulator",
       "icon": "🚛",
       "shortDesc": "Interactive PC-based HGV driver training simulations focused on safety, risk awareness, and real-world industrial scenarios.",
       "desc": "HGV Driver Training Software Solutions is a professional-grade simulation platform designed to improve driver safety and operational awareness in high-risk industrial environments. Built as an interactive PC training experience, the system places drivers into realistic workplace scenarios where they must identify hazards, follow correct procedures, and respond to critical situations. The training emphasizes experiential learning through immersive simulations that replicate real-world conditions, helping organizations reduce accidents and reinforce best practices. The solution supports structured learning flows, performance tracking, and integration with enterprise training systems, enabling scalable deployment across teams while ensuring measurable safety outcomes.",
