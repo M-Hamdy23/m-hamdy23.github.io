@@ -15,7 +15,7 @@
       "Mobile Games",
       "Game Architecture"
     ],
-    "description": "A technically sharp game developer building immersive, feature-rich games across PC, Mobile, VR, and Web — passionate about elegant systems and real-time multiplayer architecture.",
+    "description": "A technically sharp game developer building immersive, feature-rich games across PC, Mobile, VR, and Web. Targeting Senior / Lead Unity Developer roles in multiplayer, VR, or systems architecture. Passionate about elegant systems, real-time multiplayer, and shipping polished products.",
     "actions": [
       {
         "text": "View Projects →",
@@ -140,10 +140,9 @@
       "role": "Senior Game Developer · Architect",
       "period": "JULY 2023 — PRESENT",
       "bullets": [
-        "Acted as System Architect for a commerce-driven metaverse, defining scalable and modular architecture",
-        "Designed and developed cross-platform Web and VR experiences for a large-scale multiverse MMO",
-        "Architected high-performance Unity DOTS systems for large-scale multiplayer gameplay",
-        "Built scalable networking and backend systems, including matchmaking, lobbies, and real-time multiplayer"
+        "Architected the full technical foundation of a VR MMO shipped on Meta Quest — networking, backend APIs, AI, and 15+ synchronized gameplay systems",
+        "Led Unity DOTS adoption across the team; converted world streaming and AI systems to ECS for scalable multiplayer performance",
+        "Designed and implemented matchmaking, party, and friends systems powering solo and co-op multiplayer across WebGL and VR"
       ],
       "techs": [
         "C#",
@@ -209,10 +208,8 @@
       "role": "Senior Game Developer",
       "period": "DEC 2020 — NOV 2021",
       "bullets": [
-        "Developed 10 Tawla, a mobile backgammon game with real-time multiplayer, ELO ranking, friend system, taunting system, quick chat, and adaptive AI",
-        "Built Base for Domino Game, a real-time multiplayer mobile game with custom matchmaking, friend system, and taunting features",
-        "Implemented matchmaking, friend invites, and backend systems using Nakama Server",
-        "Shipped Tawla game on iOS and Android and maintained post-launch, adding features and improving performance"
+        "Developed 10 Tawla (iOS/Android backgammon) — built ELO ranking, matchmaking, friend system, and adaptive AI using Nakama Server",
+        "Shipped and maintained the game post-launch on iOS and Android, iterating on features and performance based on player feedback"
       ],
       "techs": [
         "C#",
@@ -231,10 +228,9 @@
       "role": "Game Developer · Co-Founder",
       "period": "JULY 2018 — DEC 2020",
       "bullets": [
-        "Co-founded the studio and led technical development across PC, Mobile, and VR projects",
-        "Designed and implemented networked multiplayer architecture and synchronized gameplay systems for Sky Striders, a competitive PC game focused on movement and aerial combat",
-        "Developed That Just Happened, a VR safety training game recreating real workplace accidents",
-        "Delivered a freelance 3D / AR mobile project for Autoliv, creating a 3D product showcase to support automotive safety sales demonstrations"
+        "Co-founded the studio and led technical development across PC, Mobile, and VR titles over 2.5 years",
+        "Architected networked multiplayer for Sky Striders (PC) using Photon Bolt — movement sync, abilities, and match state",
+        "Developed That Just Happened (VR, Unreal Engine) and Autoliv Explore 3D (iOS AR)"
       ],
       "techs": [
         "C#",
@@ -263,8 +259,8 @@
       "role": "Software Developer · Co-Founder",
       "period": "JAN 2014 — JULY 2017",
       "bullets": [
-        "Developed desktop solutions for clients in Egypt, including a restaurant management system",
-        "Designed and implemented AR applications for restaurant menus using Unity and Vuforia, enabling customers to visualize menu items in 3D"
+        "Co-founded and led development of desktop business solutions for Egyptian clients including a restaurant management system",
+        "Built AR menu visualization app using Unity and Vuforia, enabling customers to preview menu items in 3D"
       ],
       "techs": [
         "Java",
@@ -315,7 +311,7 @@
   "CONTACT_DATA": {
     "headline": "Open to New",
     "headlineEmphasis": "Opportunities",
-    "description": "Available for full-time roles and contracts. Whether you're building the next multiplayer game, a VR experience, or a mobile title — let's create something great together.",
+    "description": "Primarily targeting Senior / Lead Unity Developer roles in multiplayer,PC,Mobile, VR, or systems architecture — open to full-time and contract engagements. Whether you're building a multiplayer game, a VR experience, or a mobile title, let's create something great together.",
     "links": [
       {
         "icon": "✉️",
@@ -360,7 +356,7 @@
       "subtitle": "Mohamed Hamdy"
     },
     "copy": {
-      "year": "2024",
+      "year": "2025",
       "role": "Game Developer",
       "location": "Cairo, Egypt"
     }
@@ -583,7 +579,7 @@
         },
         {
           "title": "DOTS Gameplay Systems Implementation",
-          "description": "Built high-performance gameplay systems using Unity DOTS (ECS), implementing components, systems, and authoring workflows optimized for scalability, cache efficiency, and network synchronization. Converted the world streaming system from MonoBehaviour to DOTS."
+          "description": "Delivered high-performance ECS gameplay systems using Unity DOTS — authoring, components, systems, and network sync workflows — all optimized for cache efficiency and scalable entity counts across live multiplayer sessions."
         },
         {
           "title": "DOTS World Streaming System",
@@ -885,7 +881,7 @@
       "myWork": [
         {
           "title": "Core Gameplay Systems Development",
-          "description": "Led the development of multiple core gameplay systems from scratch including AI traffic, player recovery, camera systems, vehicle switching, and training logic, forming the backbone of a large-scale HGV training simulation."
+          "description": "Delivered multiple core gameplay systems from scratch including AI traffic, player recovery, camera systems, vehicle switching, and training logic, forming the backbone of a large-scale HGV training simulation."
         },
         {
           "title": "Training Simulation & Scenario Systems",
@@ -917,11 +913,11 @@
         },
         {
           "title": "UI Systems & Player Interaction",
-          "description": "Developed and refined UI systems including HUD, settings, onboarding flows, and interactive feedback systems, improving usability and overall training experience."
+          "description": "Shipped HUD, settings, onboarding, and interactive feedback systems that improved trainer usability and overall training experience across all assessment and practice modes."
         },
         {
           "title": "Pause System Architecture",
-          "description": "Designed a scalable pause system using interface-based architecture and runtime object discovery, ensuring all gameplay systems respond consistently to pause and resume states."
+          "description": "Eliminated pause-state bugs across all systems by designing an interface-based pause architecture with runtime object discovery, ensuring every gameplay system responds consistently to pause and resume."
         },
         {
           "title": "Performance Optimization & Stability",
@@ -934,7 +930,9 @@
           "url": "https://shiifttraining.com/projects/hgv-driver-training-software-solutions/",
           "type": "website"
         }
-      ]
+      ],
+      "featured": true,
+      "published": true
     },
     {
       "id": "Autoliv-Explore-3D",
@@ -1001,7 +999,7 @@
       "myWork": [
         {
           "title": "ScriptableObject CMS Pipeline",
-          "description": "Designed and built a data-driven content management pipeline using ScriptableObjects to manage all per-product data — including 3D callout labels, pulse markers, placement indicators, viewport models, and tooltip content. This system allowed the team to configure any product's presentation entirely from the Unity Inspector without touching code.",
+          "description": "Eliminated engineering dependency for content updates by building a ScriptableObject CMS pipeline — all per-product data (callout labels, pulse markers, placement indicators, viewport models, tooltips) configurable entirely from the Unity Inspector.",
           "media": [
             {
               "src": "img/Autoliv-Explore-3D/CMSData/0.png",
@@ -1101,15 +1099,15 @@
         },
         {
           "title": "Car Interaction System",
-          "description": "Built  interaction system for the vehicle model, enabling users to tap on specific car parts — doors, trunk, front hood, lights, and airbag — to trigger contextual animations and reactions. Implemented animation state gating to prevent conflicting interactions during active sequences."
+          "description": "Delivered intuitive vehicle exploration by building a tap-to-interact system for doors, trunk, hood, lights, and airbag — with animation state gating to prevent conflicting interactions during active sequences."
         },
         {
           "title": "3D Product Visualization Features",
-          "description": "Implemented the full set of product visualization features: a swipe-driven navigation system for browsing products, an overhead camera mode with pulse markers for spatial product overview, dynamic depth-of-field control to focus attention on selected products, and 3D callout labels that persist correctly inside the close-up inspection viewport."
+          "description": "Shipped the complete product visualization feature set: swipe-driven navigation, overhead camera with pulse markers, depth-of-field focus control, and 3D callout labels that persist correctly inside the close-up inspection viewport."
         },
         {
           "title": "Timeline Duplicate Editor Tool",
-          "description": "Built a custom Unity Editor script to duplicate Timeline assets along with all their track bindings — a productivity tool that significantly reduced setup time when creating per-product presentation sequences."
+          "description": "Cut per-product presentation setup time significantly by building a custom Editor tool that duplicates Timeline assets along with all their track bindings — eliminating the most repetitive part of creating new product sequences."
         }
       ],
       "link": [
@@ -1118,12 +1116,14 @@
           "url": "https://unity.com/case-study/autoliv",
           "type": "website"
         }
-      ]
+      ],
+      "featured": true,
+      "published": true
     },
     {
       "id": "dots-behaviour-tree",
       "featured": false,
-      "published": false,
+      "published": true,
       "name": "DOTS Behaviour Tree",
       "icon": "🌳",
       "platforms": [
@@ -1209,7 +1209,7 @@
       "id": "Scriptable-System",
       "name": "Scriptable System",
       "icon": "🛠️",
-      "shortDesc": "A Unity editor extension for building decoupled, event-driven gameplay with ScriptableObject variables and events — including code generation, auto-wiring, and diagnostics.",
+      "shortDesc": "[Unity Asset Store] A workflow package for event-driven gameplay with ScriptableObjects — includes code generation wizards, auto-wiring, and project-wide diagnostics.",
       "desc": "Scriptable System is a Unity workflow package for building event-driven gameplay with ScriptableObjects. It provides reusable Scriptable Variables (SV_*) for shared game state and Scriptable Events (SE_*) for decoupled system communication, replacing hard scene-object references with asset-based messaging. The package ships with editor wizards that generate typed event and variable scripts on demand, context-menu tools that auto-wire listener components and write method stubs directly into your scripts, and custom inspectors that surface every script referencing an event or variable across the entire project. The result is a significantly faster workflow for gameplay programmers and technical designers, with lower coupling, safer refactoring, and stronger inspector visibility in large Unity codebases.",
       "tags": [
         "unity",
@@ -1288,7 +1288,7 @@
         },
         {
           "title": "3-Phase Event Lifecycle",
-          "description": "Designed and implemented the Pre/Response/Post listener phase model, where each event raise invokes listeners in three ordered stages via a coroutine runner (GameEventCoroutineStarter). Added an optional OnEventComplete callback for post-raise hooks. This gives teams precise control over ordering — validation before action, cleanup after — without coupling systems together.",
+          "description": "Gave teams precise ordering control by designing a Pre/Response/Post listener phase model — validation before action, cleanup after — without coupling systems together. Coroutine-backed with an optional OnEventComplete hook.",
           "media": [
             {
               "src": "img/ScriptableSystem/5.png",
@@ -1298,7 +1298,7 @@
         },
         {
           "title": "Event & Variable Wizard (Code Generation)",
-          "description": "Built the Event Wizard and Variable Wizard inside the central manager window (Tools/Raskulls/Scriptables System). The Event Wizard generates a typed SE_* script and its matching SE_*Listener from a name and up to 4 payload parameters. The Variable Wizard generates SV_* scripts with custom fields and optional collection wrappers (List, Stack, Queue). Both validate naming conventions and write files to configurable output paths.",
+          "description": "Eliminated boilerplate by building the Event Wizard and Variable Wizard — generating typed SE_* scripts with up to 4 payload parameters and SV_* scripts with collection wrappers, both validating naming and writing to configurable paths.",
           "media": [
             {
               "src": "img/ScriptableSystem/1.png",
@@ -1312,7 +1312,7 @@
         },
         {
           "title": "Listener Auto-Wiring & Method Stub Generation",
-          "description": "Implemented context-menu tooling on MonoBehaviour components that creates and attaches the correct SE_*Listener, then attempts to bind a handler method automatically by naming convention (On<EventName>, OnPre<EventName>, OnPost<EventName>). When no compatible method exists, the tool writes a ready-to-use stub directly into the target script — eliminating the most repetitive part of connecting systems.",
+          "description": "Eliminated the most repetitive part of system connection: context-menu tooling that attaches the correct listener component, binds handler methods by naming convention, and writes ready-to-use stubs directly into the target script when none exist.",
           "media": [
             {
               "src": "img/ScriptableSystem/5.png",
@@ -1322,7 +1322,7 @@
         },
         {
           "title": "Reference & Listener Diagnostics",
-          "description": "Built custom inspectors for events and variables that list every script and object referencing the selected asset across the entire project, broken down by listener phase. Added detection for missing or deleted listener methods, with a Fix button that rewires the binding and a Remove button to cleanly delete stale listeners — making large refactors significantly safer.",
+          "description": "Made large refactors significantly safer by building custom inspectors that surface every script and object referencing an event or variable, detect broken bindings, and offer one-click Fix and Remove actions.",
           "media": [
             {
               "src": "img/ScriptableSystem/6.png",
@@ -1336,7 +1336,7 @@
         },
         {
           "title": "Auto Create/Load Scriptable Assets",
-          "description": "Implemented a context-menu workflow on MonoBehaviour components that scans serialized ScriptableObject fields, finds or creates matching assets on disk, and assigns them automatically in the inspector — removing repetitive manual asset setup across large projects.",
+          "description": "Removed repetitive manual asset setup by implementing a context-menu workflow that scans MonoBehaviour fields, finds or creates matching ScriptableObject assets on disk, and assigns them automatically in the inspector.",
           "media": [
             {
               "src": "img/ScriptableSystem/4.png",
@@ -1355,7 +1355,9 @@
           "url": "https://assetstore.unity.com/packages/slug/191378",
           "type": "website"
         }
-      ]
+      ],
+      "featured": true,
+      "published": true
     },
     {
       "id": "10-Tawla",
@@ -1423,15 +1425,15 @@
       "myWork": [
         {
           "title": "UI/UX Systems & Interface Development",
-          "description": "Designed, built, and continuously refined all major UI flows including in-game HUD, main menu, waiting room, profile, settings, game-end, and social systems. Led large-scale prefab and panel restructuring, improving maintainability and scalability. Implemented localization support (Arabic, French, Turkish) and enhanced interaction quality through better feedback systems, timers, invitations, and responsive layout variants."
+          "description": "Owned all major UI flows — in-game HUD, main menu, waiting room, profile, settings, game-end, and social panels — including a large-scale prefab restructuring that improved maintainability and added localization for Arabic, French, and Turkish."
         },
         {
           "title": "Multiplayer & Backend Integration",
-          "description": "Developed and maintained real-time multiplayer features using Nakama, including authentication, matchmaking, invitations, and socket-based communication. Improved online stability by handling disconnect/reconnect flows and fixing edge cases in match lifecycle. Implemented deep link and version-check systems, and enhanced notification and social presence behavior."
+          "description": "Maintained real-time multiplayer stability using Nakama — improving disconnect/reconnect handling, matchmaking edge cases, deep link support, and version-check systems, reducing live connection issues post-launch."
         },
         {
           "title": "Core Gameplay Systems",
-          "description": "Worked on gameplay logic for Tawla and 31 modes, improving turn flow, round handling, and overall game state reliability. Fixed critical edge cases such as forced moves, rematch logic, and input timing issues. Enhanced AI and autoplay systems to ensure consistent and fair gameplay across both online and offline experiences."
+          "description": "Hardened gameplay reliability for Tawla and 31 modes by fixing turn flow edge cases, forced moves, rematch logic, and input timing issues — ensuring consistent and fair play across online and offline sessions."
         },
         {
           "title": "Monetization & Ads Systems",
@@ -1453,7 +1455,9 @@
           "url": "https://apps.apple.com/eg/app/10-tawla/id1569696163",
           "type": "website"
         }
-      ]
+      ],
+      "featured": true,
+      "published": true
     },
     {
       "id": "zinad-training-games",
@@ -1596,7 +1600,7 @@
         },
         {
           "title": "Collaboration with Cross-Functional Teams",
-          "description": "Worked closely with web developers, DevOps teams, and QA teams to ensure smooth deployment and maintenance, while incorporating feedback for continuous improvement.",
+          "description": "Coordinated with web, DevOps, and QA teams across all releases — aligning deployment windows, resolving integration issues, and incorporating feedback to maintain consistent delivery quality.",
           "media": []
         },
         {
@@ -1611,22 +1615,22 @@
         },
         {
           "title": "Client Customization System",
-          "description": "Implemented a flexible content management system that allowed for easy customization of game content to fit the specific security policies and branding requirements of different enterprise clients.",
+          "description": "Shipped a flexible CMS that let enterprise clients configure game content — security policies, branding, scenario text — without engineering involvement, reducing customization turnaround from days to hours.",
           "media": []
         },
         {
           "title": "Project Template and Delivery Pipeline",
-          "description": "Created a standardized project template and development pipeline for new training games, streamlining development and ensuring consistency across the suite. This reduced delivery time for new client training content from about 6 months to 2 months.",
+          "description": "Cut new client delivery time from 6 months to 2 months by building a standardized project template and development pipeline shared across all training games in the suite.",
           "media": []
         },
         {
           "title": "Web Bridge",
-          "description": "Implemented authentication and web-to-game communication using JavaScript bridge functions with callback-based JSON responses. Replaced fragile direct function-name coupling with a generic integration layer that isolated game internals from web implementation details and supported continuous profile/data updates from the website while players were connected.",
+          "description": "Isolated game internals from web implementation details by replacing direct function-name coupling with a generic JavaScript bridge layer — supporting continuous profile and data updates from the website while players were connected.",
           "media": []
         },
         {
           "title": "Designed and Implemented New Games",
-          "description": "Designed and developed new training games based on emerging cybersecurity threats and client feedback, ensuring that the games remained relevant and effective in educating employees about current security risks.",
+          "description": "Shipped multiple new training games in response to emerging threats and client feedback — expanding the suite while keeping each game relevant and educationally effective.",
           "media": []
         },
         {
@@ -1636,12 +1640,12 @@
         },
         {
           "title": "Interactive video player for training content",
-          "description": "Developed an interactive video player for training content, allowing users to engage with the material through quizzes, annotations, and other interactive elements, enhancing the learning experience.",
+          "description": "Extended training depth by building an interactive video player with embedded quizzes, annotations, and branching interactions — increasing engagement and knowledge retention compared to passive video.",
           "media": []
         },
         {
           "title": "HTML Page View for Web Games",
-          "description": "Implemented a system for displaying HTML pages inside web games to support phishing-email training, enabling realistic simulation of phishing emails and websites as part of training exercises.",
+          "description": "Enabled realistic phishing-email simulation by implementing in-game HTML page rendering inside WebGL training scenarios, giving employees hands-on practice identifying real-looking phishing pages.",
           "media": []
         }
       ],
@@ -1703,7 +1707,7 @@
       "myWork": [
         {
           "title": "Multiplayer Networking & Synchronization (Photon Bolt)",
-          "description": "Designed and implemented the complete multiplayer networking layer using Photon Bolt, covering player lifecycle, match flow, and real-time communication. Built robust synchronization systems for player movement, abilities, and hook mechanics, ensuring smooth and responsive gameplay. Handled state replication for game modes and all relevant environment objects requiring synchronization. Addressed multiplayer challenges such as state consistency, latency handling, and edge cases including disconnections and reconnections, delivering a stable and competitive online experience."
+          "description": "Owned the complete Photon Bolt networking layer — player lifecycle, match flow, real-time movement and ability sync, hook mechanics, and game mode state replication — delivering a stable, low-latency competitive experience with robust disconnect handling."
         }
       ],
       "link": [
@@ -1712,7 +1716,9 @@
           "url": "https://raskulls.itch.io/sky-striders",
           "type": "website"
         }
-      ]
+      ],
+      "featured": true,
+      "published": true
     },
     {
       "id": "That-Just-Happened",
@@ -1752,13 +1758,15 @@
           "description": "Designed and implemented an Endless Mode to extend gameplay and reinforce training through repeated dynamic scenarios. Developed worker AI systems that spawn characters with missing safety equipment, including logic for randomization and scenario variation. Built a visual guidance system that displays required safety gear above each worker, enabling players to quickly identify risks and intervene. Focused on creating clear feedback loops and readable interactions to ensure players can prevent accidents effectively, enhancing both gameplay engagement and educational impact."
         }
       ],
-      "link": null
+      "link": null,
+      "featured": true,
+      "published": true
     },
     {
       "id": "Steam-Blast",
       "name": "Steam Blast",
       "icon": "🥊",
-      "shortDesc": "A competitive multiplayer VR fighting game built around flight, combat, and objective control.",
+      "shortDesc": "[ITI Graduation Project] A competitive multiplayer VR brawler built around flight, aerial combat, and objective control — developed as a graduation project using Unreal Engine.",
       "desc": "Steam Blast is a futuristic VR multiplayer brawler where players soar through the air, clash in close-range combat, and compete to seize control of key devices spread across the city. The setting combines high-speed vertical movement with an arena-like objective structure, creating a gameplay loop that constantly shifts between flight, pursuit, combat, and territorial control. Designed as an ITI graduation project, the experience highlights the challenge of translating fast competitive action into VR, pairing immersive movement mechanics with multiplayer game rules and objective-driven pacing to create a match flow that feels physical, intense, and strategically dynamic.",
       "tags": [
         "pc",
@@ -1787,7 +1795,9 @@
         "Device-capture objective gameplay",
         "Physics-based combat"
       ],
-      "link": null
+      "link": null,
+      "featured": false,
+      "published": true
     },
     {
       "id": "Killing-Beat",
@@ -1818,7 +1828,9 @@
         "Progressive difficulty",
         "Hyper-casual loop design"
       ],
-      "link": null
+      "link": null,
+      "featured": false,
+      "published": true
     },
     {
       "id": "SymSam",
@@ -1849,7 +1861,9 @@
         "Shape symmetry detection",
         "Progressive puzzle design"
       ],
-      "link": null
+      "link": null,
+      "featured": false,
+      "published": true
     },
     {
       "id": "Bomb-Party",
@@ -1888,7 +1902,9 @@
           "url": "https://globalgamejam.org/2018/games/bombparty",
           "type": "website"
         }
-      ]
+      ],
+      "featured": false,
+      "published": true
     },
     {
       "id": "Skull-Switch",
@@ -1919,7 +1935,9 @@
         "Escalating obstacle patterns",
         "Hyper-casual design"
       ],
-      "link": null
+      "link": null,
+      "featured": false,
+      "published": true
     }
   ]
 }
