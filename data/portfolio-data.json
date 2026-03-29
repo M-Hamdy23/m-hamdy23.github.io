@@ -1674,150 +1674,6 @@
       "published": true
     },
     {
-      "id": "Steam-Blast",
-      "name": "Steam Blast",
-      "icon": "🥊",
-      "shortDesc": "[ITI Graduation Project] A competitive multiplayer VR brawler built around flight, aerial combat, and objective control — developed as a graduation project using Unreal Engine.",
-      "desc": "Steam Blast is a futuristic VR multiplayer brawler where players soar through the air, clash in close-range combat, and compete to seize control of key devices spread across the city. The setting combines high-speed vertical movement with an arena-like objective structure, creating a gameplay loop that constantly shifts between flight, pursuit, combat, and territorial control. Designed as an ITI graduation project, the experience highlights the challenge of translating fast competitive action into VR, pairing immersive movement mechanics with multiplayer game rules and objective-driven pacing to create a match flow that feels physical, intense, and strategically dynamic.",
-      "tags": [
-        "pc",
-        "vr",
-        "multiplayer"
-      ],
-      "platforms": [
-        "VR",
-        "PC"
-      ],
-      "cover": "img/SteamBlast-cover.png",
-      "videos": [
-        {
-          "title": "GamePlay Video",
-          "url": "https://www.youtube.com/embed/lT1YQY3lizY"
-        }
-      ],
-      "techs": [
-        "Unreal Engine",
-        "VR",
-        "Multiplayer"
-      ],
-      "features": [
-        "Full 3D flight mechanics in VR",
-        "Real-time competitive multiplayer",
-        "Device-capture objective gameplay",
-        "Physics-based combat"
-      ],
-      "link": null,
-      "featured": false,
-      "published": true
-    },
-    {
-      "id": "Killing-Beat",
-      "name": "Killing Beat",
-      "icon": "🎵",
-      "shortDesc": "A rhythm-driven mobile game where players dodge obstacles in sync with the music.",
-      "desc": "Killing Beat is a music-driven mobile experience built around timing, reflexes, and the satisfaction of moving perfectly with the soundtrack. Players weave through incoming obstacles in a continuous rhythm-based loop where every dodge is tied to tempo, turning survival into a performance of timing and flow. The setting is abstract and energetic, letting the audio-visual feedback take center stage while the core mechanics focus on readable challenge, escalating pace, and musical synchronization. The result is a compact but expressive gameplay experience where strong beat mapping and responsive controls make every run feel like a playable song.",
-      "tags": [
-        "mobile",
-        "unity"
-      ],
-      "platforms": [
-        "MOBILE"
-      ],
-      "cover": "img/KillingBeat-cover.png",
-      "videos": [
-        {
-          "title": "GamePlay Video",
-          "url": "https://www.youtube.com/embed/Z08ugcA71dU?end=134"
-        }
-      ],
-      "techs": [
-        "C#",
-        "Unity"
-      ],
-      "features": [
-        "Music-synchronized obstacles",
-        "Progressive difficulty",
-        "Hyper-casual loop design"
-      ],
-      "link": null,
-      "featured": false,
-      "published": true
-    },
-    {
-      "id": "SymSam",
-      "name": "SymSam",
-      "icon": "⚔️",
-      "shortDesc": "A hyper-casual mobile game about slicing shapes into perfectly balanced halves.",
-      "desc": "SymSam is a hyper-casual precision game that turns the simple act of cutting shapes into a clean, satisfying test of timing and control. Framed around a samurai-inspired theme of balance and mastery, players slice incoming forms into symmetrical halves, chasing perfect cuts through a quick gameplay loop that is easy to understand but increasingly difficult to execute well. The core appeal comes from immediate tactile feedback, escalating geometric challenge, and the constant pursuit of accuracy, creating a polished mobile experience that feels approachable at first touch while still rewarding focus, consistency, and finesse.",
-      "tags": [
-        "mobile",
-        "unity"
-      ],
-      "platforms": [
-        "MOBILE"
-      ],
-      "cover": "img/SymSam-cover.png",
-      "videos": [
-        {
-          "title": "GamePlay Video",
-          "url": "https://www.youtube.com/embed/Z08ugcA71dU?start=134&end=168"
-        }
-      ],
-      "techs": [
-        "C#",
-        "Unity"
-      ],
-      "features": [
-        "Precision cutting mechanics",
-        "Shape symmetry detection",
-        "Progressive puzzle design"
-      ],
-      "link": null,
-      "featured": false,
-      "published": true
-    },
-    {
-      "id": "Bomb-Party",
-      "name": "Bomb Party",
-      "icon": "💣",
-      "shortDesc": "A local multiplayer PC party game built around bombs, portals, and fast PVP rounds.",
-      "desc": "Bomb Party is a chaotic local multiplayer party game where up to four players battle in compact arenas using bombs, movement, and clever portal plays to outlast one another. Built for Global Game Jam 2018, the game leans into immediate readability and fast round-based action, letting players quickly understand the rules while discovering the deeper fun of ricochets, traps, and unpredictable counterplays. The gameplay loop is simple but explosive: dodge danger, create openings, use the environment creatively, and turn every bomb toss into either a direct attack or a surprising portal-powered setup that keeps matches loud, funny, and intensely competitive.",
-      "tags": [
-        "pc",
-        "multiplayer",
-        "unity"
-      ],
-      "platforms": [
-        "PC"
-      ],
-      "cover": "img/BoombPart-cover.png",
-      "videos": [
-        {
-          "title": "GamePlay Video",
-          "url": "https://www.youtube.com/embed/clx0vbIevjU"
-        }
-      ],
-      "techs": [
-        "C#",
-        "Unity",
-        "Local Multiplayer"
-      ],
-      "features": [
-        "4-player local PVP",
-        "Portal-based bomb physics",
-        "Global Game Jam 2018 entry"
-      ],
-      "link": [
-        {
-          "text": "View / Download",
-          "url": "https://globalgamejam.org/2018/games/bombparty",
-          "type": "website"
-        }
-      ],
-      "featured": false,
-      "published": true
-    },
-    {
       "id": "Skull-Switch",
       "name": "Skull Switch",
       "icon": "💀",
@@ -1837,6 +1693,32 @@
           "url": "https://www.youtube.com/embed/9B_GFFyyyNY"
         }
       ],
+      "media": [
+        {
+          "src": "img/SkullSwitch/0.png",
+          "alt": "gif 1"
+        },
+        {
+          "src": "img/SkullSwitch/1.png",
+          "alt": "gif 2"
+        },
+        {
+          "src": "img/SkullSwitch/2.png",
+          "alt": "gif 3"
+        },
+        {
+          "src": "img/SkullSwitch/3.png",
+          "alt": "gif 4"
+        },
+        {
+          "src": "img/SkullSwitch/4.png",
+          "alt": "gif 5"
+        },
+        {
+          "src": "img/SkullSwitch/5.png",
+          "alt": "gif 6"
+        }
+      ],
       "techs": [
         "C#",
         "Unity"
@@ -1845,6 +1727,78 @@
         "Reflex-based lane switching",
         "Escalating obstacle patterns",
         "Hyper-casual design"
+      ],
+      "myWork": [
+        {
+          "title": "Shop & Economy Systems",
+          "description": "Built and stabilized the core shop loop, including loot-box mechanics, skull unlocks, gold/dust economy, and persistent save/load functionality."
+        },
+        {
+          "title": "UI & Gameplay Flow",
+          "description": "Managed UI states and transitions across title, level select, in-game, and result screens, ensuring smooth interactions and clear player feedback."
+        },
+        {
+          "title": "Level Selection & Generation",
+          "description": "Designed normal mode level selector UX and developed editor tooling for procedural level generation, with category-based assignment and optimized content pipelines."
+        },
+        {
+          "title": "Progression & Rewards",
+          "description": "Enhanced result screens, reward presentation, and progression reliability, including save persistence, star tracking, and coin/loot feedback loops."
+        }
+      ],
+      "link": null,
+      "featured": false,
+      "published": true
+    },
+    {
+      "id": "prototypes-and-demos",
+      "name": "Prototypes & Demos",
+      "icon": "🧪",
+      "shortDesc": "A collection of prototypes and small projects exploring various gameplay concepts, mechanics, and technologies.",
+      "desc": "This collection showcases a variety of prototypes and small projects that I developed to explore different gameplay concepts, mechanics, and technologies. Each project served as a testing ground for new ideas, allowing me to experiment with different genres, platforms, and design approaches. From competitive VR multiplayer games to rhythm-based mobile experiences, these prototypes reflect my passion for innovation and my commitment to learning through hands-on development. While not all of these projects were intended for commercial release, they represent important steps in my growth as a game developer and my ongoing exploration of what games can be.",
+      "tags": [
+        "pc",
+        "vr",
+        "multiplayer",
+        "mobile",
+        "unity",
+        "unreal"
+      ],
+      "platforms": [
+        "Prototypes"
+      ],
+      "cover": "img/Prototypes-cover.png",
+      "videos": [
+        {
+          "title": "Steam Blast Video",
+          "url": "https://www.youtube.com/embed/lT1YQY3lizY"
+        },
+        {
+          "title": "Killing Beat Video",
+          "url": "https://www.youtube.com/embed/uYl_Dcd-LVo"
+        },
+        {
+          "title": "SymSam Video",
+          "url": "https://www.youtube.com/embed/e3DqG_5hAAI"
+        },
+        {
+          "title": "Bomb Party Video",
+          "url": "https://www.youtube.com/embed/LuZmLz56iNY"
+        }
+      ],
+      "techs": [
+        "Unreal Engine",
+        "VR",
+        "Multiplayer",
+        "C#",
+        "Unity",
+        "Local Multiplayer"
+      ],
+      "features": [
+        "Varied gameplay concepts across multiple prototypes",
+        "Exploration of different genres and mechanics",
+        "Testing ground for new ideas and technologies",
+        "Not all projects intended for commercial release"
       ],
       "link": null,
       "featured": false,
