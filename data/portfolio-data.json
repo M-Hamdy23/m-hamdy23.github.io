@@ -1,0 +1,1755 @@
+{
+  "HERO_DATA": {
+    "eyebrow": "Senior Game Developer · Cairo, Egypt",
+    "name": {
+      "first": "Mohamed",
+      "last": "Hamdy"
+    },
+    "typewriterPrefix": "Expert in",
+    "typewriterWords": [
+      "Unity3D",
+      "VR / XR",
+      "Multiplayer",
+      "C#",
+      "Unreal Engine",
+      "Mobile Games",
+      "Game Architecture"
+    ],
+    "description": "A technically sharp game developer building immersive, feature-rich games across PC, Mobile, VR, and Web. Targeting Senior / Lead Unity Developer roles in multiplayer, VR, or systems architecture. Passionate about elegant systems, real-time multiplayer, and shipping polished products.",
+    "actions": [
+      {
+        "text": "View Projects →",
+        "href": "#projects",
+        "variant": "primary"
+      },
+      {
+        "text": "Get In Touch",
+        "href": "#contact",
+        "variant": "secondary"
+      }
+    ],
+    "stats": [
+      {
+        "value": "10",
+        "suffix": "+",
+        "label": "Years Exp."
+      },
+      {
+        "value": "12",
+        "suffix": "+",
+        "label": "Projects"
+      },
+      {
+        "value": "5",
+        "suffix": " ",
+        "label": "Companies"
+      }
+    ]
+  },
+  "SKILLS_DATA": {
+    "categories": [
+      {
+        "icon": "⚙️",
+        "name": "Game Engines",
+        "tags": [
+          "Unity3D",
+          "Unity DOTS",
+          "Unreal Engine"
+        ]
+      },
+      {
+        "icon": "💻",
+        "name": "Languages",
+        "tags": [
+          "C#",
+          "C++",
+          "Java",
+          "JavaScript",
+          "Lua"
+        ]
+      },
+      {
+        "icon": "🌐",
+        "name": "Networking",
+        "tags": [
+          "Unity Netcode",
+          "Multiplayer Architecture",
+          "Matchmaking Systems",
+          "Nakama Server",
+          "Photon PUN",
+          "Photon Bolt",
+          "Mirror",
+          "Firebase"
+        ]
+      },
+      {
+        "icon": "🥽",
+        "name": "XR Development",
+        "tags": [
+          "Virtual Reality",
+          "Augmented Reality",
+          "Mixed Reality",
+          "Vuforia"
+        ]
+      },
+      {
+        "icon": "🏗️",
+        "name": "Software Design",
+        "tags": [
+          "OOP",
+          "Design Patterns",
+          "Data Structures",
+          "Algorithms"
+        ]
+      }
+    ],
+    "bars": [
+      {
+        "name": "Unity / C#",
+        "pct": 96
+      },
+      {
+        "name": "Multiplayer / Networking",
+        "pct": 90
+      },
+      {
+        "name": "VR / XR Development",
+        "pct": 88
+      },
+      {
+        "name": "Game Architecture",
+        "pct": 92
+      },
+      {
+        "name": "Unreal Engine",
+        "pct": 72
+      },
+      {
+        "name": "Tools / Editor Extensions",
+        "pct": 85
+      },
+      {
+        "name": "Mobile (iOS / Android)",
+        "pct": 82
+      }
+    ]
+  },
+  "EXPERIENCE_DATA": [
+    {
+      "company": "Highstreet",
+      "role": "Senior Game Developer · Architect",
+      "period": "JULY 2023 — PRESENT",
+      "bullets": [
+        "Architected the full technical foundation of a VR MMO shipped on Meta Quest — networking, backend APIs, AI, and 15+ synchronized gameplay systems",
+        "Led Unity DOTS adoption across the team; converted world streaming and AI systems to ECS for scalable multiplayer performance",
+        "Designed and implemented matchmaking, party, and friends systems powering solo and co-op multiplayer across WebGL and VR"
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Unity DOTS / ECS",
+        "Meta Quest",
+        "VR",
+        "WebGL",
+        "Multiplayer",
+        "Netcode for Entities",
+        "AWS GameLift",
+        "Node.js",
+        "Python",
+        "Architecture"
+      ],
+      "projects_ids": [
+        "highstreet-calamity",
+        "highstreet-campus",
+        "dots-behaviour-tree"
+      ]
+    },
+    {
+      "company": "ZINAD IT",
+      "role": "Senior Game Developer · Team Lead",
+      "period": "NOV 2021 — NOV 2023",
+      "bullets": [
+        "Contributed to the development and customization of 6+ serious games for cybersecurity training, adapting gameplay systems and content for multiple enterprise clients.",
+        "Architected and delivered multi-platform Unity solutions across WebGL, VR, Kinect, and mobile, ensuring consistent performance and user experience.",
+        "Built core gameplay systems (JSON-driven content, game flow, validation logic) while mentoring junior developers and improving code quality and team productivity."
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "JavaScript",
+        "Firebase",
+        "VR",
+        "WebGL",
+        "Mobile"
+      ],
+      "projects_ids": [
+        "zinad-training-games"
+      ]
+    },
+    {
+      "company": "Myriad Global Media",
+      "role": "Senior Game Developer · Contract",
+      "period": "6-MONTH CONTRACT · HOUSTON, TX",
+      "bullets": [
+        "Delivered core gameplay systems for a large-scale HGV training simulator, including AI traffic, vehicle systems, camera architecture, and training logic.",
+        "Designed and implemented structured training scenarios with validation, failure conditions, and LMS-integrated performance tracking for enterprise deployment."
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "PC",
+        "Simulation"
+      ],
+      "projects_ids": [
+        "Nutrien-HGV-Driver-Training"
+      ]
+    },
+    {
+      "company": "Egypt Games 2022",
+      "role": "Senior Game Developer",
+      "period": "DEC 2020 — NOV 2021",
+      "bullets": [
+        "Developed 10 Tawla (iOS/Android backgammon) — built ELO ranking, matchmaking, friend system, and adaptive AI using Nakama Server",
+        "Shipped and maintained the game post-launch on iOS and Android, iterating on features and performance based on player feedback"
+      ],
+      "techs": [
+        "C#",
+        "Lua",
+        "Unity",
+        "Nakama",
+        "Node js",
+        "Firebase"
+      ],
+      "projects_ids": [
+        "10-Tawla"
+      ]
+    },
+    {
+      "company": "Raskulls Game Studio",
+      "role": "Game Developer · Co-Founder",
+      "period": "JULY 2018 — DEC 2020",
+      "bullets": [
+        "Co-founded the studio and led all technical development across projects spanning PC, Mobile, and VR over 2.5 years",
+        "Architected networked multiplayer for Sky Striders (PC) using Photon Bolt — owning movement sync, abilities, match state, and disconnect handling end-to-end",
+        "Shipped Autoliv Explore 3D (iOS AR) — Unity Case Study featured on unity.com — and That Just Happened (VR, Unreal Engine)"
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Unreal",
+        "Photon PUN",
+        "Photon Bolt",
+        "Mirror",
+        "VR",
+        "AR",
+        "Mobile",
+        "IOS"
+      ],
+      "projects_ids": [
+        "Autoliv-Explore-3D",
+        "Sky-Striders",
+        "That-Just-Happened",
+        "Skull-Switch",
+        "Scriptable-System",
+        "Killing-Beat",
+        "SymSam"
+      ]
+    },
+    {
+      "company": "D-INNOVA",
+      "role": "Software Developer · Co-Founder",
+      "period": "JAN 2014 — JULY 2017",
+      "bullets": [
+        "Co-founded and led development of desktop business management solutions for Egyptian clients, including a restaurant management system built in Java / SQL",
+        "Built AR menu visualization app using Unity and Vuforia, enabling customers to preview menu items in 3D"
+      ],
+      "techs": [
+        "Java",
+        "SQL",
+        "Unity",
+        "Vuforia"
+      ]
+    }
+  ],
+  "EDUCATION_DATA": {
+    "degrees": [
+      {
+        "id": 1,
+        "icon": "🎮",
+        "degree": "9-Month Game Dev Diploma",
+        "school": "Information Technology Institute (ITI)",
+        "period": "2017 — 2018",
+        "detail": "9-month intensive game development program with focus on game programming, VR development, Unity3D, design patterns, and game optimization."
+      },
+      {
+        "id": 2,
+        "icon": "🎓",
+        "degree": "BSc Computer Science",
+        "school": "Benha University",
+        "period": "2013 — 2017",
+        "detail": "Grade: Very Good.Graduation Project: Land of Puzzle — an interactive puzzle experience."
+      }
+    ],
+    "certifications": [
+      {
+        "icon": "🏆",
+        "text": "Won GIZ Virtual Reality Hackathon"
+      },
+      {
+        "icon": "🥽",
+        "text": "GIZ Training — Virtual Reality"
+      },
+      {
+        "icon": "☁️",
+        "text": "Dell EMC² — Cloud Infrastructure & Services"
+      },
+      {
+        "icon": "💾",
+        "text": "Dell EMC² — Information Storage & Management"
+      }
+    ]
+  },
+  "CONTACT_DATA": {
+    "headline": "Open to New",
+    "headlineEmphasis": "Opportunities",
+    "description": "Primarily targeting Senior / Lead Unity Developer roles in multiplayer,PC,Mobile, VR, or systems architecture — open to full-time and contract engagements. Whether you're building a multiplayer game, a VR experience, or a mobile title, let's create something great together.",
+    "links": [
+      {
+        "icon": "✉️",
+        "label": "Email",
+        "value": "mohamedhamdy231995@gmail.com",
+        "href": "mailto:mohamedhamdy231995@gmail.com",
+        "target": ""
+      },
+      {
+        "icon": "⌨️",
+        "label": "GitHub",
+        "value": "github.com/M-Hamdy23",
+        "href": "https://github.com/M-Hamdy23",
+        "target": "_blank"
+      },
+      {
+        "icon": "💼",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/mo-hamdy",
+        "href": "https://www.linkedin.com/in/mo-hamdy",
+        "target": "_blank"
+      },
+      {
+        "icon": "📱",
+        "label": "Phone",
+        "value": "+20 106 619 1846",
+        "href": "tel:+201066191846",
+        "target": ""
+      }
+    ],
+    "resume": {
+      "title": "Download Resume",
+      "description": "Full work history, skills, and certificates in one document.",
+      "buttonText": "Download PDF ↓",
+      "href": "docs/resume.pdf"
+    }
+  },
+  "FOOTER_DATA": {
+    "brand": {
+      "name": "MH",
+      "accent": ".dev",
+      "subtitle": "Mohamed Hamdy"
+    },
+    "copy": {
+      "year": "2025",
+      "role": "Game Developer",
+      "location": "Cairo, Egypt"
+    }
+  },
+  "PROJECTS": [
+    {
+      "id": "highstreet-calamity",
+      "order": 0,
+      "featured": true,
+      "published": true,
+      "name": "HighStreet Calamity VR",
+      "icon": "🦆",
+      "shortDesc": "Highstreet: Calamity - VR Roguelike Arena Combat in a Manic Metaverse. Protect the FOMO DUCKS! Highstreet: Calamity is a fast-paced, class-based VR roguelike brawler set in Solera, a chaotic world where talking ducks run businesses, pelicans have strong opinions, and monster portals are \"just an average Tuesday.\"",
+      "desc": "Highstreet: Calamity is a fast-paced, class-based VR roguelike brawler set in Solera, a chaotic world where talking ducks run businesses, pelicans have strong opinions, and monster portals are \"just an average Tuesday.\" Players choose from unique classes with distinct abilities to battle waves of unpredictable enemies and bosses. Progression includes gear upgrades and branching skill paths. The game supports solo or co-op multiplayer with dynamic server allocation using GameLift. Social features include a lobby to connect with friends and enjoy the mayhem together.",
+      "media": [
+        {
+          "src": "img/highstreet-calamity/1.webp",
+          "alt": "HighStreet Clamity VR screenshot 1"
+        },
+        {
+          "src": "img/highstreet-calamity/2.webp",
+          "alt": "HighStreet Clamity VR screenshot 2"
+        },
+        {
+          "src": "img/highstreet-calamity/3.webp",
+          "alt": "HighStreet Clamity VR screenshot 3"
+        },
+        {
+          "src": "img/highstreet-calamity/4.webp",
+          "alt": "HighStreet Clamity VR screenshot 4"
+        },
+        {
+          "src": "img/highstreet-calamity/5.webp",
+          "alt": "HighStreet Clamity VR screenshot 5"
+        }
+      ],
+      "tags": [
+        "unity",
+        "multiplayer",
+        "vr"
+      ],
+      "platforms": [
+        "Meta Quest",
+        "VR"
+      ],
+      "cover": "img/highstreet-calamity/0.bmp",
+      "videos": [
+        {
+          "title": "Clamity Trailer",
+          "url": "img/highstreet-calamity/Highstreet- Calamity.mp4"
+        },
+        {
+          "title": "Clamity Gameplay",
+          "url": "https://www.youtube.com/embed/5Eyulq_JXzo"
+        }
+      ],
+      "techs": [
+        "Unity",
+        "Game Architecture",
+        "Data-Driven",
+        "Server Architecture",
+        "Leadership",
+        "C#",
+        "VR",
+        "Multiplayer",
+        "DOTS",
+        "Netcode for Entities",
+        "networking",
+        "GameLift",
+        "Multiplay",
+        "Node.js",
+        "Backend Development",
+        "Python",
+        "Tools Development"
+      ],
+      "features": [
+        "Class-based combat system with unique abilities and playstyles",
+        "Procedurally generated arenas with dynamic hazards",
+        "Challenging monsters and bosses with distinct behaviors",
+        "Solo and co-op multiplayer modes with matchmaking",
+        "Progression system with gear upgrades and skill trees",
+        "Social hub for players to connect and show off achievements"
+      ],
+      "myWork": [
+        {
+          "title": "DOTS Adoption & Team Enablement",
+          "description": "Initiated and led the adoption of Unity DOTS and Netcode for Entities, establishing a scalable foundation for future MMO development and successfully onboarding the team through prototypes and knowledge sharing."
+        },
+        {
+          "title": "Technical Architecture & System Design",
+          "description": "Architected the entire project technical foundation including authentication flow, backend APIs, database schema, networking, server infrastructure, and all networked game core systems: spawn, health/mana/stats, combat, abilities, skills, consumables, monsters, monster AI, aggro system, AI coordinator, and interaction system — all synchronized over the network.",
+          "media": [
+            {
+              "src": "img/highstreet-calamity/architecture/1.png",
+              "alt": "Project architecture leadership 1"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/2.png",
+              "alt": "Project architecture leadership 2"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/3.png",
+              "alt": "Project architecture leadership 3"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/4.png",
+              "alt": "Project architecture leadership 4"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/5.png",
+              "alt": "Project architecture leadership 5"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/6.png",
+              "alt": "DOTS architecture design 6"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/7.png",
+              "alt": "DOTS architecture design 7"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/8.png",
+              "alt": "DOTS architecture design 8"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/9.png",
+              "alt": "DOTS architecture design 9"
+            }
+          ]
+        },
+        {
+          "title": "Architecture Documentation Pipeline",
+          "description": "Improved development efficiency and maintainability by building a dynamic architecture documentation system using Draw.io and Lucidchart integrated with Excel, enabling automatic diagram updates and clear system visualization.",
+          "media": [
+            {
+              "src": "img/highstreet-calamity/architecture/1.png",
+              "alt": "Project architecture leadership 1"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/2.png",
+              "alt": "Project architecture leadership 2"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/3.png",
+              "alt": "Project architecture leadership 3"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/4.png",
+              "alt": "Project architecture leadership 4"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/5.png",
+              "alt": "Project architecture leadership 5"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/6.png",
+              "alt": "DOTS architecture design 6"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/7.png",
+              "alt": "DOTS architecture design 7"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/8.png",
+              "alt": "DOTS architecture design 8"
+            },
+            {
+              "src": "img/highstreet-calamity/architecture/9.png",
+              "alt": "DOTS architecture design 9"
+            }
+          ]
+        },
+        {
+          "title": "Data-Driven Gameplay Pipeline",
+          "description": "Accelerated design iteration by creating a fully data-driven pipeline that exposed gameplay configuration via Excel, allowing designers to modify abilities, stats, and AI without engineering dependency.",
+          "media": [
+            {
+              "src": "img/highstreet-calamity/data-driven/1.png",
+              "alt": "Data-driven pipeline 1"
+            },
+            {
+              "src": "img/highstreet-calamity/data-driven/2.png",
+              "alt": "Data-driven pipeline 2"
+            },
+            {
+              "src": "img/highstreet-calamity/data-driven/3.png",
+              "alt": "Data-driven pipeline 3"
+            }
+          ]
+        },
+        {
+          "title": "Multiplayer & Social Systems",
+          "description": "Delivered core multiplayer features by implementing matchmaking, party, and friends systems, enabling seamless player connectivity and social gameplay experiences across servers."
+        },
+        {
+          "title": "AI System & Behavior Tools",
+          "description": "Enabled scalable AI development by architecting and implementing a DOTS-based Behavior Tree system with custom editor tools, allowing rapid creation and extension of complex enemy behaviors.",
+          "media": [
+            {
+              "src": "img/highstreet-calamity/dots-behaviour-tree/1.png",
+              "alt": "DOTS state machine 1"
+            },
+            {
+              "src": "img/highstreet-calamity/dots-behaviour-tree/2.png",
+              "alt": "DOTS state machine 2"
+            },
+            {
+              "src": "img/highstreet-calamity/dots-behaviour-tree/3.png",
+              "alt": "DOTS state machine 3"
+            },
+            {
+              "src": "img/highstreet-calamity/dots-behaviour-tree/4.png",
+              "alt": "DOTS state machine 4"
+            },
+            {
+              "src": "img/highstreet-calamity/dots-behaviour-tree/5.png",
+              "alt": "DOTS state machine 5"
+            }
+          ]
+        },
+        {
+          "title": "DOTS Gameplay Systems Implementation",
+          "description": "Delivered high-performance ECS gameplay systems using Unity DOTS — authoring, components, systems, and network sync workflows — all optimized for cache efficiency and scalable entity counts across live multiplayer sessions."
+        },
+        {
+          "title": "DOTS World Streaming System",
+          "description": "Converted the world streaming system from MonoBehaviour to DOTS, enabling chunk-based streaming of entity-rendered art across max 9 chunks around the player, significantly improving runtime performance and scalability for large multiplayer arenas.",
+          "media": [
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/1.png",
+              "alt": "Player Entity The Player has a LocalPlayerTagAuthoring script that bakes it into a DOTS entity. The streaming system queries this tag to track the player's position and decide which chunks to load or unload."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/2.png",
+              "alt": "Grid Layer Manager The core controller of the system. It defines a 5x5 grid of 18x18 unit chunks covering 90x90 units total. It manages buffers for all chunks, currently loaded chunks, and pending load/unload requests."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/3.png",
+              "alt": "Scene Hierarchy — Before Setup Before setup, the SubScene only contains the GridLayerManager and the Player. Nothing else exists yet."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/4.png",
+              "alt": "Hierarchy After Setup Chunks Clicking Setup Chunks auto-generates 25 child GameObjects, one per grid cell. Each is an independent SubScene that can stream in and out of memory on its own."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/5.png",
+              "alt": "Assets Attached to Chunks After running Attach Assets, world objects are placed inside the correct chunk based on their position. At runtime they appear and disappear with their parent chunk."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/6.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/7.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/8.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/9.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            },
+            {
+              "src": "img/highstreet-calamity/dots-world-streaming/10.png",
+              "alt": "Runtime — As Player move chunks near the player are loaded. The rest of the world is completely unloaded and empty."
+            }
+          ]
+        },
+        {
+          "title": "MonoBehaviour Gameplay Systems",
+          "description": "Improved player onboarding and usability by implementing NPC Dialogue and Tooltip guidance systems using MonoBehaviour workflows, leveraging their flexibility for UI-driven and event-based interactions."
+        },
+        {
+          "title": "Server Infrastructure Migration",
+          "description": "Ensured long-term scalability by leading the migration from Unity Multiplay to Amazon GameLift, selecting and integrating a more robust server hosting solution."
+        },
+        {
+          "title": "Automation & Deployment Tools [GameLift Fleet Management] [Vibe Coding]",
+          "description": "Increased deployment efficiency by developing Python CLI automation tools for server build uploads and fleet creation with predefined configurations, significantly reducing manual setup time.",
+          "media": [
+            {
+              "src": "img/highstreet-calamity/gamelift-tool/1.png",
+              "alt": "GameLift tool screenshot 1"
+            },
+            {
+              "src": "img/highstreet-calamity/gamelift-tool/2.png",
+              "alt": "GameLift tool screenshot 2"
+            }
+          ]
+        },
+        {
+          "title": "Player Data Optimization",
+          "description": "Reduced backend load and improved performance by refactoring player avatar data handling and implementing synchronized local data wrappers across multiplayer systems."
+        },
+        {
+          "title": "Stability & Support",
+          "description": "Maintained project stability and delivery quality by resolving critical bugs and continuously improving systems across gameplay and backend integration."
+        }
+      ],
+      "link": [
+        {
+          "text": "Meta Store",
+          "url": "https://www.meta.com/en-gb/experiences/highstreet-calamity/9352017631510878/",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "highstreet-campus",
+      "name": "Highstreet Campus",
+      "icon": "🌐",
+      "shortDesc": "Highstreet Campus was built as the company's metaverse entry point: a large-scale WebGL social hub with MMO-oriented networking, NFT commerce, and connected world travel into Highstreet Homes.",
+      "desc": "Highstreet Campus started as a social metaverse hub and strategic entry point for the company, with an early goal of building networking and infrastructure that could scale toward MMO requirements. The world combined social interaction spaces with NFT purchasing experiences, then expanded to include travel pods linking players to their homes in the previous Highstreet Homes project. The campus later introduced a VIP rooftop section with an outdoor garden, additional social activities, and a salon shop. One notable multiplayer challenge was a dynamic lab feature where players could switch lab interiors from an in-world console, requiring synchronized environment swaps while correctly handling other users already inside the affected area.",
+      "tags": [
+        "unity",
+        "multiplayer",
+        "web",
+        "pc"
+      ],
+      "platforms": [
+        "webGl"
+      ],
+      "cover": "img/highstreet-campus/highstreet_campus.png",
+      "videos": [
+        {
+          "text": "Trailer",
+          "type": "local",
+          "url": "img/highstreet-campus/trailer.mp4"
+        },
+        {
+          "text": "Campus Gameplay",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/652a-CFEBiU"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/highstreet-campus/1.png",
+          "alt": "Highstreet Campus screenshot 1"
+        },
+        {
+          "src": "img/highstreet-campus/2.png",
+          "alt": "Highstreet Campus screenshot 2"
+        },
+        {
+          "src": "img/highstreet-campus/3.png",
+          "alt": "Highstreet Campus screenshot 3"
+        },
+        {
+          "src": "img/highstreet-campus/4.png",
+          "alt": "Highstreet Campus screenshot 4"
+        },
+        {
+          "src": "img/highstreet-campus/5.png",
+          "alt": "Highstreet Campus screenshot 5"
+        },
+        {
+          "src": "img/highstreet-campus/6.png",
+          "alt": "Highstreet Campus screenshot 6"
+        },
+        {
+          "src": "img/highstreet-campus/7.png",
+          "alt": "Highstreet Campus screenshot 7"
+        }
+      ],
+      "techs": [
+        "Unity",
+        "C#",
+        "JavaScript",
+        "WebGL",
+        "Multiplayer",
+        "Networking",
+        "Server Architecture",
+        "Mirror",
+        "Web3 Integration"
+      ],
+      "features": [
+        "Metaverse entry point designed as a scalable social MMO hub",
+        "NFT shopping and social activity spaces across the campus",
+        "Travel pods connecting users from Campus to Highstreet Homes",
+        "VIP rooftop area with outdoor garden and social spaces",
+        "Salon shop and interactive interior spaces inside the campus",
+        "Dynamic lab system where players can swap lab interiors from an in-world console",
+        "Real-time synchronized interactions for shared systems like elevators and seats",
+        "Dynamic environment changes based on in-game events"
+      ],
+      "myWork": [
+        {
+          "title": "Network System Enhancement & Channel Architecture",
+          "description": "Improved the existing custom networking system by designing and implementing channel-based communication, enabling segmented data synchronization. This allowed players within the same area (e.g., campus, homes, external zones) to sync efficiently while reducing unnecessary network traffic.",
+          "media": []
+        },
+        {
+          "title": "Highstreet Homes Networking Migration",
+          "description": "Replaced Photon networking in the already integrated Highstreet Homes system with the custom networking solution after introducing channel-based architecture. Unified both Campus and Homes under a single networking stack, enabling consistent synchronization of player customization,home customization, pets, and interactions while simplifying cross-system communication and reducing technical overhead.",
+          "media": []
+        },
+        {
+          "title": "Pet System Synchronization & UI Improvements",
+          "description": "Enhanced pet systems by fixing synchronization across clients, improving spawning logic, and refining pet customization and UI to ensure consistent multiplayer behavior.",
+          "media": []
+        },
+        {
+          "title": "Dependency Injection Architecture",
+          "description": "Improved codebase maintainability and modularity by introducing dependency injection using VContainer, managing core data such as player data and home data across systems.",
+          "media": []
+        },
+        {
+          "title": "Stability, Bug Fixing",
+          "description": "Improved overall game stability and multiplayer reliability by resolving critical issues including crashes caused by null remote avatars, game freezes during loading, and RV-related crashes. Fixed synchronization inconsistencies in network behaviours, addressed totem and token data issues, corrected local name tag display, and reduced runtime warnings to ensure a smoother and more stable player experience."
+        }
+      ],
+      "link": [
+        {
+          "text": "Play Now",
+          "url": "https://www.highstreet.market/metaverse",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "Nutrien-HGV-Driver-Training",
+      "name": "HGV Driver Training Simulator",
+      "icon": "🚛",
+      "shortDesc": "Interactive PC-based HGV driver training simulations focused on safety, risk awareness, and real-world industrial scenarios.",
+      "desc": "HGV Driver Training Software Solutions is a professional-grade simulation platform designed to improve driver safety and operational awareness in high-risk industrial environments. Built as an interactive PC training experience, the system places drivers into realistic workplace scenarios where they must identify hazards, follow correct procedures, and respond to critical situations. The training emphasizes experiential learning through immersive simulations that replicate real-world conditions, helping organizations reduce accidents and reinforce best practices. The solution supports structured learning flows, performance tracking, and integration with enterprise training systems, enabling scalable deployment across teams while ensuring measurable safety outcomes.",
+      "tags": [
+        "pc",
+        "unity",
+        "simulation",
+        "serious-games",
+        "training"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "cover": "img/DriverTraining-cover.png",
+      "videos": [
+        {
+          "title": "Video",
+          "url": "https://player.vimeo.com/video/899866858?h=64437a6e2a&badge=0&autopause=0&player_id=0&app_id=58479"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/Nutrien-HGV-Driver-Training/1.webp",
+          "alt": "screenshot 1"
+        },
+        {
+          "src": "img/Nutrien-HGV-Driver-Training/2.webp",
+          "alt": "screenshot 2"
+        },
+        {
+          "src": "img/Nutrien-HGV-Driver-Training/3.webp",
+          "alt": "screenshot 3"
+        },
+        {
+          "src": "img/Nutrien-HGV-Driver-Training/4.webp",
+          "alt": "screenshot 4"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Simulation Design",
+        "LMS Integration"
+      ],
+      "features": [
+        "Realistic HGV driving and workplace safety simulations",
+        "Scenario-based hazard identification and response training",
+        "Interactive learning with guided and assessment-driven flows",
+        "Performance tracking and analytics for trainees",
+        "Enterprise-ready deployment and LMS compatibility"
+      ],
+      "myWork": [
+        {
+          "title": "Core Gameplay Systems Development",
+          "description": "Delivered multiple core gameplay systems from scratch including AI traffic, player recovery, camera systems, vehicle switching, and training logic, forming the backbone of a large-scale HGV training simulation."
+        },
+        {
+          "title": "Training Simulation & Scenario Systems",
+          "description": "Built interactive training module with guided and free-drive flows, implementing Custom Activity , validation logic, hint systems, and failure conditions to support structured learning and real-world safety scenarios."
+        },
+        {
+          "title": "Track-Based Level & Transition System",
+          "description": "Developed custom tracks for vehicles, weather, time-of-day, and camera states using ScriptableObjects and event-driven triggers."
+        },
+        {
+          "title": "Player Recovery & Fail-Safe Mechanics",
+          "description": "Implemented a robust recovery system to handle edge cases such as off-road states, physics instability, and stuck scenarios, restoring player position and velocity to maintain uninterrupted training flow."
+        },
+        {
+          "title": "Advanced Vehicle Systems",
+          "description": "Built comprehensive vehicle systems including multi-vehicle switching, full lighting system (headlights, signals, hazards), engine audio, and on-rails driving mode for guided experiences."
+        },
+        {
+          "title": "Inventory & Interactive Object Placement",
+          "description": "Developed an inventory and object placement system used in training scenarios, enabling players to deploy safety equipment with validation logic and contextual UI feedback."
+        },
+        {
+          "title": "Camera System & Player Experience",
+          "description": "Implemented a multi-mode camera system using Cinemachine with smooth transitions, player-controlled look mechanics, and context-based camera switching for improved usability and immersion."
+        },
+        {
+          "title": "Weather & Day-Night Systems",
+          "description": "Integrated dynamic weather and day-night cycle systems using Azure Sky, including smooth environmental transitions and automatic vehicle light adaptation based on lighting conditions."
+        },
+        {
+          "title": "UI Systems & Player Interaction",
+          "description": "Shipped HUD, settings, onboarding, and interactive feedback systems that improved trainer usability and overall training experience across all assessment and practice modes."
+        },
+        {
+          "title": "Pause System Architecture",
+          "description": "Eliminated pause-state bugs across all systems by designing an interface-based pause architecture with runtime object discovery, ensuring every gameplay system responds consistently to pause and resume."
+        },
+        {
+          "title": "Performance Optimization & Stability",
+          "description": "Improved performance and stability through object pooling, optimized spawning systems, bug fixing, and resolving critical gameplay issues affecting AI behavior, physics, UI flow, and player progression."
+        }
+      ],
+      "link": [
+        {
+          "text": "Project Details",
+          "url": "https://shiifttraining.com/projects/hgv-driver-training-software-solutions/",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "Autoliv-Explore-3D",
+      "name": "Autoliv Explore 3D",
+      "icon": "🚗",
+      "shortDesc": "An AR-powered sales tool that showcases automotive safety systems through interactive real-time 3D presentations.",
+      "desc": "Autoliv Explore 3D is an augmented reality and real-time 3D product visualization application designed to transform how automotive safety systems are presented and understood. Built for iOS using Unity and Vuforia, the app enables sales teams to showcase complex components such as airbags and seatbelts through interactive, immersive experiences. Instead of relying on static presentations or physical prototypes, users can place and inspect products in 3D, explore how they integrate inside vehicle environments, and communicate their functionality with clarity and impact. The experience focuses on smooth presentation flow, intuitive interaction, and strong visual storytelling, turning highly technical safety hardware into accessible, engaging demonstrations for global sales, marketing, and training teams.",
+      "tags": [
+        "mobile",
+        "ios",
+        "ar",
+        "vr",
+        "real-time-3d",
+        "enterprise"
+      ],
+      "platforms": [
+        "IOS",
+        "MOBILE"
+      ],
+      "cover": "img/Autoliv-cover.png",
+      "videos": [
+        {
+          "title": "Video",
+          "url": "https://www.youtube.com/embed/OtewjIJFGIU"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/Autoliv-Explore-3D/1.png",
+          "alt": "screenshot 1"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/2.png",
+          "alt": "screenshot 2"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/3.png",
+          "alt": "screenshot 3"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/4.png",
+          "alt": "screenshot 4"
+        },
+        {
+          "src": "img/Autoliv-Explore-3D/5.png",
+          "alt": "screenshot 5"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "AR Development",
+        "3D Visualization"
+      ],
+      "features": [
+        "Augmented reality product visualization",
+        "Interactive 3D exploration of automotive safety systems",
+        "Product placement and inspection in real-world environments",
+        "Exploded and contextual product views",
+        "Smooth guided presentation flow for sales demos",
+        "Optimized mobile performance for iPad devices"
+      ],
+      "myWork": [
+        {
+          "title": "ScriptableObject CMS Pipeline",
+          "description": "Eliminated engineering dependency for content updates by building a ScriptableObject CMS pipeline — all per-product data (callout labels, pulse markers, placement indicators, viewport models, tooltips) configurable entirely from the Unity Inspector.",
+          "media": [
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/0.png",
+              "alt": "ProductData ScriptableObject showing structured data for product presentation configuration"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/1.png",
+              "alt": "product Data ScriptableObject showing structured data for product presentation configuration, including references to other ScriptableObjects for callouts, pulse markers, placement indicators, viewport models, and tooltips"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/2.png",
+              "alt": "PulseMarkerData ScriptableObject defining data for pulse marker configuration"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/3.png",
+              "alt": "PlacementIndicatorData ScriptableObject defining data for placement indicators"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/4.png",
+              "alt": "callout label Data ScriptableObject defining data for 3D callout labels, including text content and positioning"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/5.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/6.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/7.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/8.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/9.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/10.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/11.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/12.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/13.png",
+              "alt": ""
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CMSData/14.png",
+              "alt": ""
+            }
+          ]
+        },
+        {
+          "title": "Custom Unity Timeline Track Suite",
+          "description": "Engineered 11 custom Unity Timeline tracks from scratch, giving the team full keyframe control over systems not natively supported by Timeline. Tracks covered: GameEvents, standard and fade materials, Cinemachine camera settings, MeshRenderer visibility, TextMeshPro, screen transitions, highlight and outline effects (MagicOutline, RIMHighlight), dissolve effects (BeautifulDissolves, AdvancedDissolve), gradient backgrounds, realistic VFX, and real-time cross-section cuts. These tracks were used to build all cinematic product presentation sequences in the app.",
+          "media": [
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/1.png",
+              "alt": "Custom Timeline Tracks in Unity Editor showing various track types such as GameEventTrack, MaterialTrack, CinemachineTrack, MeshRendererTrack, TextMeshProTrack, ScreenTransitionTrack, HighlightTrack, DissolveTrack, GradientBackgroundTrack, VFXTrack, and CrossSectionCutTrack"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/2.png",
+              "alt": "Timeline Window"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/3.png",
+              "alt": "TextMeshPro Track"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/4.png",
+              "alt": "RIMHighlight Track"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/5.png",
+              "alt": "FadeMaterial Track"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/6.png",
+              "alt": "GameEvent Track (ScriptableObject Event)"
+            },
+            {
+              "src": "img/Autoliv-Explore-3D/CutomTimeline/7.png",
+              "alt": "CrossSection Track"
+            }
+          ]
+        },
+        {
+          "title": "Car Interaction System",
+          "description": "Delivered intuitive vehicle exploration by building a tap-to-interact system for doors, trunk, hood, lights, and airbag — with animation state gating to prevent conflicting interactions during active sequences."
+        },
+        {
+          "title": "3D Product Visualization Features",
+          "description": "Shipped the complete product visualization feature set: swipe-driven navigation, overhead camera with pulse markers, depth-of-field focus control, and 3D callout labels that persist correctly inside the close-up inspection viewport."
+        },
+        {
+          "title": "Timeline Duplicate Editor Tool",
+          "description": "Cut per-product presentation setup time significantly by building a custom Editor tool that duplicates Timeline assets along with all their track bindings — eliminating the most repetitive part of creating new product sequences."
+        }
+      ],
+      "link": [
+        {
+          "text": "Case Study",
+          "url": "https://unity.com/case-study/autoliv",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "featured": false,
+      "published": true,
+      "id": "dots-behaviour-tree",
+      "name": "DOTS Behaviour Tree",
+      "icon": "🌳",
+      "shortDesc": "A high-performance Behaviour Tree framework for Unity DOTS/ECS with a visual editor, runtime inspector, interrupts, and extensible custom node templates.",
+      "desc": "Dots Behaviour Tree is a Behaviour Tree framework built for Unity DOTS (Data-Oriented Technology Stack) on top of ECS architecture. It focuses on high-performance AI decision-making by baking authoring nodes into ECS entities and executing them through ECS systems. The framework includes a visual editor for graph-based authoring, a runtime inspector for live debugging, rich composite nodes, condition combinators, and interrupt support for high-priority behaviour preemption. It also provides script templates to accelerate creation of custom Action, Condition, Composite, and Interrupt nodes.\n\nRequirements from the README include Unity 6000.0.23f1+ with Entities 1.3.2+ (Burst compatible), and the demo scene runs with URP 17.0.4+.",
+      "tags": [
+        "unity",
+        "tools"
+      ],
+      "platforms": [
+        "Asset",
+        "ECS/DOTS",
+        "Tool"
+      ],
+      "cover": "img/highstreet-calamity/dots-behaviour-tree/1.png",
+      "videos": [],
+      "media": [
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/1.png",
+          "alt": "DOTS Behaviour Tree screenshot 1"
+        },
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/2.png",
+          "alt": "DOTS Behaviour Tree screenshot 2"
+        },
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/3.png",
+          "alt": "DOTS Behaviour Tree screenshot 3"
+        },
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/4.png",
+          "alt": "DOTS Behaviour Tree screenshot 4"
+        },
+        {
+          "src": "img/highstreet-calamity/dots-behaviour-tree/5.png",
+          "alt": "DOTS Behaviour Tree screenshot 5"
+        }
+      ],
+      "techs": [
+        "Unity",
+        "DOTS",
+        "C#",
+        "Behaviour Tree",
+        "Visual Editor",
+        "Editor Scripting"
+      ],
+      "features": [
+        "ECS-native behaviour tree execution with nodes baked into entities",
+        "Visual node-graph editor for authoring trees in Unity",
+        "Runtime inspector to watch node status transitions live during play mode",
+        "Built-in composite nodes: Sequencer, Selector, Parallel, Random, and Repeater",
+        "Condition combinators: AND, OR, and NOT for flexible decision gating",
+        "Interrupt system for high-priority preemption and control handoff",
+        "Script templates for custom Action, Condition, Composite, and Interrupt nodes"
+      ],
+      "myWork": [
+        {
+          "title": "ECS-Native Behaviour Tree Runtime",
+          "description": "Implemented a DOTS-first execution model where authored tree nodes are baked into ECS entities and updated by ECS systems for scalable runtime performance.",
+          "media": []
+        },
+        {
+          "title": "Visual Authoring + Runtime Inspector Tooling",
+          "description": "Built editor tooling for graph-based tree authoring and runtime state inspection, enabling faster iteration and easier debugging of node state transitions.",
+          "media": []
+        },
+        {
+          "title": "Extensible Node, Condition, and Interrupt Architecture",
+          "description": "Designed an extensible framework with templates and base classes for custom Action/Condition/Interrupt nodes, including condition combinators and interrupt preemption flows.",
+          "media": []
+        }
+      ],
+      "link": [
+        {
+          "text": "View on GitHub",
+          "url": "https://github.com/M-Hamdy23/DotsBehaviourTree",
+          "type": "github"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "Scriptable-System",
+      "name": "Scriptable System",
+      "icon": "🛠️",
+      "shortDesc": "[Unity Asset Store] A workflow package for event-driven gameplay with ScriptableObjects — includes code generation wizards, auto-wiring, and project-wide diagnostics.",
+      "desc": "Scriptable System is a Unity workflow package for building event-driven gameplay with ScriptableObjects. It provides reusable Scriptable Variables (SV_*) for shared game state and Scriptable Events (SE_*) for decoupled system communication, replacing hard scene-object references with asset-based messaging. The package ships with editor wizards that generate typed event and variable scripts on demand, context-menu tools that auto-wire listener components and write method stubs directly into your scripts, and custom inspectors that surface every script referencing an event or variable across the entire project. The result is a significantly faster workflow for gameplay programmers and technical designers, with lower coupling, safer refactoring, and stronger inspector visibility in large Unity codebases.",
+      "tags": [
+        "unity",
+        "tool",
+        "editor-extension",
+        "open-source"
+      ],
+      "platforms": [
+        "ASSET",
+        "Tool"
+      ],
+      "cover": "img/ScriptableSystem-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://www.youtube.com/embed/_xeZ2ujhtYs"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/ScriptableSystem/1.png",
+          "alt": "Scriptable System screenshot 1"
+        },
+        {
+          "src": "img/ScriptableSystem/2.png",
+          "alt": "Scriptable System screenshot 2"
+        },
+        {
+          "src": "img/ScriptableSystem/3.png",
+          "alt": "Scriptable System screenshot 3"
+        },
+        {
+          "src": "img/ScriptableSystem/4.png",
+          "alt": "Scriptable System screenshot 4"
+        },
+        {
+          "src": "img/ScriptableSystem/5.png",
+          "alt": "Scriptable System screenshot 5"
+        },
+        {
+          "src": "img/ScriptableSystem/6.png",
+          "alt": "Scriptable System screenshot 6"
+        },
+        {
+          "src": "img/ScriptableSystem/7.png",
+          "alt": "Scriptable System screenshot 7"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Editor Scripting",
+        "ScriptableObjects",
+        "Code Generation",
+        "Reflection"
+      ],
+      "features": [
+        "Typed Scriptable Events (SE_*) with no-arg and parameterized payloads (int, float, Vector3, custom types)",
+        "Shared Scriptable Variables (SV_*) for cross-scene state with built-in primitives and custom type support",
+        "3-phase event lifecycle — PreResponse, Response, PostResponse — for ordered side-effect control",
+        "Event Wizard: generates SE_* and SE_*Listener scripts with up to 4 typed payload parameters",
+        "Variable Wizard: generates SV_* scripts with custom fields and collection wrappers (List, Stack, Queue)",
+        "Central manager window (Tools/Raskulls/Scriptables System) for events, variables, and settings",
+        "Context-menu listener auto-wiring: attaches listener components and binds matching methods by naming convention",
+        "Method stub generation: writes callback stubs into target scripts when no compatible handler exists",
+        "Auto Create/Load Assets: scans MonoBehaviour fields and assigns or creates missing ScriptableObject assets",
+        "Reference and listener diagnostics: shows every script referencing an event or variable, with broken-binding detection and one-click fix/remove",
+        "Play Mode Raise button on event inspectors for quick runtime testing without debug scripts",
+        "Configurable naming prefixes and output paths via persistent settings"
+      ],
+      "myWork": [
+        {
+          "title": "Core Event & Variable Architecture",
+          "description": "Established and evolved the entire runtime foundation — abstract base types (GameEventBase, GameEventListenerBase, ScriptableVariableBase), the register/unregister API, and the typed event ecosystem covering bool, float, int, string, Vector2, Vector3, Transform, GameObject, and custom types."
+        },
+        {
+          "title": "3-Phase Event Lifecycle",
+          "description": "Gave teams precise ordering control by designing a Pre/Response/Post listener phase model — validation before action, cleanup after — without coupling systems together. Coroutine-backed with an optional OnEventComplete hook.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/5.png",
+              "alt": ""
+            }
+          ]
+        },
+        {
+          "title": "Event & Variable Wizard (Code Generation)",
+          "description": "Eliminated boilerplate by building the Event Wizard and Variable Wizard — generating typed SE_* scripts with up to 4 payload parameters and SV_* scripts with collection wrappers, both validating naming and writing to configurable paths.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/1.png",
+              "alt": "Event Wizard Window"
+            },
+            {
+              "src": "img/ScriptableSystem/2.png",
+              "alt": "Variable Wizard Window"
+            }
+          ]
+        },
+        {
+          "title": "Listener Auto-Wiring & Method Stub Generation",
+          "description": "Eliminated the most repetitive part of system connection: context-menu tooling that attaches the correct listener component, binds handler methods by naming convention, and writes ready-to-use stubs directly into the target script when none exist.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/5.png",
+              "alt": "Auto wring context menu showing options to add listeners for compatible events, with a warning when no compatible method is found and an option to generate a method stub in the target script"
+            }
+          ]
+        },
+        {
+          "title": "Reference & Listener Diagnostics",
+          "description": "Made large refactors significantly safer by building custom inspectors that surface every script and object referencing an event or variable, detect broken bindings, and offer one-click Fix and Remove actions.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/6.png",
+              "alt": "Event inspector showing lists of referencing scripts and objects"
+            },
+            {
+              "src": "img/ScriptableSystem/7.png",
+              "alt": "Show warnings for broken listener bindings and options to fix or remove them"
+            }
+          ]
+        },
+        {
+          "title": "Auto Create/Load Scriptable Assets",
+          "description": "Removed repetitive manual asset setup by implementing a context-menu workflow that scans MonoBehaviour fields, finds or creates matching ScriptableObject assets on disk, and assigns them automatically in the inspector.",
+          "media": [
+            {
+              "src": "img/ScriptableSystem/4.png",
+              "alt": "Auto Create/Load context menu showing options to scan the target script for ScriptableObject fields and automatically assign matching assets from disk, with warnings for missing assets and options to create them"
+            }
+          ]
+        },
+        {
+          "title": "Reliability Fixes & Edge Cases",
+          "description": "Delivered a sustained series of correctness fixes over the project lifetime: multi-raise deduplication in the same frame, null reference guards in raise and inspector flows, listener method name matching for underscore conventions, abstract class support in asset creation tools, list variable initialization in generated code, and OnEnable double-fire prevention on compile/play cycles."
+        }
+      ],
+      "link": [
+        {
+          "text": "View / Buy",
+          "url": "https://assetstore.unity.com/packages/slug/191378",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "10-Tawla",
+      "name": "10 Tawla",
+      "icon": "🎲",
+      "shortDesc": "An online backgammon game with ranked multiplayer, AI opponents, and polished mobile presentation.",
+      "desc": "10 Tawla brings the classic strategy and tension of backgammon to mobile with a polished online experience built for both competitive and casual players. Players can jump into ranked real-time matches, challenge friends, or practice against adaptive AI while enjoying a presentation that captures the feel of a real board through multiple detailed themes and refined interaction. The gameplay loop centers on reading the board, making smart positional choices, and responding to momentum shifts under pressure, while the technical foundation supports matchmaking, ELO progression, social play, and live multiplayer systems that keep every session responsive, fair, and rewarding across iOS and Android.",
+      "tags": [
+        "mobile",
+        "multiplayer",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE",
+        "IOS",
+        "ANDROID"
+      ],
+      "cover": "img/10Tawla-cover.png",
+      "videos": [
+        {
+          "title": "Trailer Video",
+          "url": "https://www.youtube.com/embed/XcUdxVhAFaA"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/Tawla/1.webp",
+          "alt": "screenshot 1"
+        },
+        {
+          "src": "img/Tawla/2.webp",
+          "alt": "screenshot 2"
+        },
+        {
+          "src": "img/Tawla/3.webp",
+          "alt": "screenshot 3"
+        },
+        {
+          "src": "img/Tawla/4.webp",
+          "alt": "screenshot 4"
+        },
+        {
+          "src": "img/Tawla/5.webp",
+          "alt": "screenshot 5"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Nakama",
+        "Firebase",
+        "Node.js"
+      ],
+      "features": [
+        "Two unique game modes: Ma7bosa and Thirteen",
+        "Online multiplayer with matchmaking",
+        "Multiple visual themes and boards",
+        "Tournament and ranked play modes",
+        "Advanced AI with multiple difficulty levels",
+        "Extensive character customization system",
+        "Social features and friend challenges",
+        "Cross-platform progression"
+      ],
+      "myWork": [
+        {
+          "title": "UI/UX Systems & Interface Development",
+          "description": "Owned all major UI flows — in-game HUD, main menu, waiting room, profile, settings, game-end, and social panels — including a large-scale prefab restructuring that improved maintainability and added localization for Arabic, French, and Turkish."
+        },
+        {
+          "title": "Multiplayer & Backend Integration",
+          "description": "Maintained real-time multiplayer stability using Nakama — improving disconnect/reconnect handling, matchmaking edge cases, deep link support, and version-check systems, reducing live connection issues post-launch."
+        },
+        {
+          "title": "Core Gameplay Systems",
+          "description": "Hardened gameplay reliability for Tawla and 31 modes by fixing turn flow edge cases, forced moves, rematch logic, and input timing issues — ensuring consistent and fair play across online and offline sessions."
+        },
+        {
+          "title": "Monetization & Ads Systems",
+          "description": "Integrated and expanded monetization systems using AdMob, Unity Ads, and LevelPlay mediation. Implemented and optimized banners, interstitials, and rewarded ads across gameplay and UI flows, ensuring smooth user experience. Managed SDK integrations and platform-specific configurations for Android and iOS."
+        },
+        {
+          "title": "Performance Optimization & Stability",
+          "description": "Improved game performance and reliability through optimization passes and bug fixing, including rendering adjustments (MSAA/anti-aliasing), reduced crashes, and smoother loading behavior. Contributed to analytics integration, data refactoring, and overall system maintainability."
+        }
+      ],
+      "link": [
+        {
+          "text": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla",
+          "type": "website"
+        },
+        {
+          "text": "App store",
+          "url": "https://apps.apple.com/eg/app/10-tawla/id1569696163",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "zinad-training-games",
+      "name": "Zinad Security Training Games",
+      "icon": "🛡️",
+      "shortDesc": "A suite of serious games for cybersecurity awareness training, delivered for enterprise clients across multiple platforms.",
+      "desc": "At Zinad, I worked as a Senior Game Developer on a range of serious games designed to make cybersecurity training more engaging and effective for enterprise users.\n\nMy role focused on customizing and evolving existing games to fit different client needs, while also contributing to the development of new features and systems. I worked hands-on across multiple projects—improving stability, refining gameplay, and translating complex security concepts into clear, interactive experiences.\n\nIn addition to working on established titles, I played a key role in developing the Emoji Game, where I built several core gameplay systems and features that supported the overall experience.\n\nThe projects I contributed to include:\n- Phishing Mania – Training players to detect and respond to phishing attacks\n- Who Will Be Millionaire – Security Edition – A quiz-based experience for reinforcing cybersecurity knowledge\n- The Office VR – An immersive VR simulation focused on workplace security practices\n- Password Ninja – A fast-paced game teaching password security fundamentals\n- Security Archery VR – A VR experience designed around security awareness and decision-making\n\nOverall, my work at Zinad centered on turning cybersecurity training into something interactive, scalable, and genuinely engaging for users.",
+      "tags": [
+        "unity",
+        "vr",
+        "web"
+      ],
+      "platforms": [
+        "Web",
+        "VR",
+        "Kinect"
+      ],
+      "cover": "img/zinad-training-games/cover.png",
+      "videos": [
+        {
+          "text": "Cyber Emoji",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/_Qt2vt7ZjMU"
+        },
+        {
+          "text": "The Office VR Gameplay",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/du8WGA42iFk"
+        },
+        {
+          "text": "Basketball",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/YB-jTsYTndU"
+        },
+        {
+          "text": "Archery ",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/NQXT3qUmVEU"
+        },
+        {
+          "text": "Phishing Mania",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/9n7s8Xo2kWE?si=1MMLU5XOMP3g0ZHx"
+        },
+        {
+          "text": "Password Ninja",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/4h6j8qjQYpE?si=QLjj8-1iEIr-7EWI"
+        }
+      ],
+      "media": [],
+      "techs": [
+        "Unity",
+        "C#",
+        "WebGL",
+        "VR",
+        "Kinect",
+        "Leadership",
+        "Game Design",
+        "Enterprise Solutions"
+      ],
+      "features": [
+        "Multi-platform deployment (Web, VR, Kinect, Android, iOS)",
+        "Enterprise-grade security and data handling",
+        "Customizable content for different organizations",
+        "Engaging gameplay mechanics for learning retention",
+        "Accessible across different skill levels",
+        "Designed for large-scale employee training programs"
+      ],
+      "myWork": [
+        {
+          "title": "Gameplay Systems Development (Emoji Game)",
+          "description": "Played a key role in developing core gameplay systems for the Emoji Game. Designed and implemented a JSON-driven question system, including data structuring and runtime loading to support flexible content updates.\n\nBuilt and integrated an audio system to manage sound effects and feedback across gameplay. Developed multiple gameplay components including an Emoji Display system triggered by question events, and a Description Panel for dynamic question previews.\n\nImplemented the Slot Board system, which dynamically generates letter slots based on each answer, allowing players to construct words interactively. Added validation logic to evaluate player input, provide real-time feedback, and handle submission flows.\n\nAlso developed the main Game Manager responsible for question flow, game state control, and overall gameplay orchestration.",
+          "media": []
+        },
+        {
+          "title": "Game Customization & Client Adaptation",
+          "description": "Customized and extended existing serious games to meet specific enterprise client requirements. Adapted gameplay logic, content, and user flows to align with different cybersecurity policies and training objectives, ensuring each deployment was relevant and effective.",
+          "media": []
+        },
+        {
+          "title": "Maintenance, Optimization & Stability",
+          "description": "Maintained and improved existing projects by fixing bugs, optimizing performance, and ensuring smooth user experiences across platforms including WebGL, mobile, VR, and Kinect. Helped keep projects production-ready for enterprise deployment.",
+          "media": []
+        },
+        {
+          "title": "Cross-Platform Development",
+          "description": "Worked across multiple platforms including Web, VR, Kinect, Android, and iOS. Ensured consistent functionality and performance while adapting input systems and user experience to suit each platform.",
+          "media": []
+        },
+        {
+          "title": "Collaboration & Mentorship",
+          "description": "Collaborated closely with designers, artists, and other developers, while also supporting and guiding junior developers in their day-to-day tasks. Helped improve code quality and maintain development standards across the team.",
+          "media": []
+        }
+      ],
+      "link": []
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "Sky-Striders",
+      "name": "Sky Striders",
+      "icon": "🦅",
+      "shortDesc": "A fast-paced multiplayer PC game focused on fluid movement, aerial control, and competitive modes.",
+      "desc": "Sky Striders is a competitive multiplayer action game built around the thrill of movement mastery, letting players chain together grounded momentum, aerial mobility, and character abilities in fast-paced online matches. Set in a stylized combat arena space where mobility is just as important as attack timing, the experience encourages players to learn traversal, outmaneuver opponents, and exploit verticality to control the flow of each encounter. At its core, the gameplay loop rewards skillful motion, quick decision-making, and coordinated ability use, while the underlying multiplayer architecture and movement systems work together to deliver responsive combat, varied modes, and a strong sense of speed and freedom.",
+      "tags": [
+        "pc",
+        "multiplayer",
+        "unity"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "cover": "img/SkyStrider-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/Kqmn4qk3hSE"
+        },
+        {
+          "title": "Multiplayer Video",
+          "url": "https://www.youtube.com/embed/0Nb84N4M3ps"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/SkyStrider/1.gif",
+          "alt": "gif 1"
+        },
+        {
+          "src": "img/SkyStrider/2.gif",
+          "alt": "gif 2"
+        },
+        {
+          "src": "img/SkyStrider/3.gif",
+          "alt": "gif 3"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Multiplayer",
+        "Photon Bolt",
+        "Photon Pun"
+      ],
+      "features": [
+        "Advanced ground & aerial movement",
+        "Multiple character classes",
+        "Online multiplayer game modes",
+        "Dynamic ability-driven gameplay"
+      ],
+      "myWork": [
+        {
+          "title": "Multiplayer Networking & Synchronization (Photon Bolt)",
+          "description": "Owned the complete Photon Bolt networking layer — player lifecycle, match flow, real-time movement and ability sync, hook mechanics, and game mode state replication — delivering a stable, low-latency competitive experience with robust disconnect handling."
+        }
+      ],
+      "link": [
+        {
+          "text": "View / Download",
+          "url": "https://raskulls.itch.io/sky-striders",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "That-Just-Happened",
+      "name": "That Just Happened",
+      "icon": "⚠️",
+      "shortDesc": "A VR safety training game where players prevent workplace accidents using the right equipment.",
+      "desc": "That Just Happened is an immersive VR safety experience that places players inside hazardous blue-collar work scenarios where fast thinking and proper preparation can mean the difference between a near miss and a fatal accident. Set in realistic industrial environments, the game asks players to assess unfolding danger, identify what equipment or response is needed, and intervene before co-workers are harmed. The moment-to-moment gameplay is built around presence, urgency, and physical interaction, using VR to make workplace safety lessons more memorable, emotional, and practical while Unreal Engine powers the atmosphere, interaction fidelity, and embodied learning that define the experience.",
+      "tags": [
+        "pc",
+        "vr"
+      ],
+      "platforms": [
+        "VR",
+        "PC"
+      ],
+      "cover": "img/ThatJustHappend-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/w0o9qF5tkCM"
+        }
+      ],
+      "techs": [
+        "Unreal Engine",
+        "VR"
+      ],
+      "features": [
+        "Immersive VR safety simulation",
+        "Real-world accident recreation",
+        "Interactive safety equipment mechanics",
+        "Educational training framework"
+      ],
+      "myWork": [
+        {
+          "title": "Endless Mode & AI-Driven Safety Simulation",
+          "description": "Designed and implemented an Endless Mode to extend gameplay and reinforce training through repeated dynamic scenarios. Developed worker AI systems that spawn characters with missing safety equipment, including logic for randomization and scenario variation. Built a visual guidance system that displays required safety gear above each worker, enabling players to quickly identify risks and intervene. Focused on creating clear feedback loops and readable interactions to ensure players can prevent accidents effectively, enhancing both gameplay engagement and educational impact."
+        }
+      ],
+      "link": null
+    },
+    {
+      "featured": false,
+      "published": true,
+      "id": "Skull-Switch",
+      "name": "Skull Switch",
+      "icon": "💀",
+      "shortDesc": "A quick-reflex mobile game about switching lanes to keep skulls safe from incoming threats.",
+      "desc": "Skull Switch is a fast-reaction hyper-casual game built around quick reads, lane switching, and constant pressure. Players must protect vulnerable skulls from incoming threats by changing visibility or position at exactly the right moment, creating a tight loop of anticipation, reaction, and recovery that ramps up as patterns become faster and more demanding. The game is designed for mobile-friendly immediacy, with simple controls, sharp visual communication, and a challenge curve focused on reflex mastery. Its appeal comes from how quickly players can understand the mechanic and how hard it becomes to maintain perfect control once the pace intensifies.",
+      "tags": [
+        "mobile",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE"
+      ],
+      "cover": "img/SkullSwitch-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/9B_GFFyyyNY"
+        }
+      ],
+      "media": [
+        {
+          "src": "img/SkullSwitch/0.png",
+          "alt": "gif 1"
+        },
+        {
+          "src": "img/SkullSwitch/1.png",
+          "alt": "gif 2"
+        },
+        {
+          "src": "img/SkullSwitch/2.png",
+          "alt": "gif 3"
+        },
+        {
+          "src": "img/SkullSwitch/3.png",
+          "alt": "gif 4"
+        },
+        {
+          "src": "img/SkullSwitch/4.png",
+          "alt": "gif 5"
+        },
+        {
+          "src": "img/SkullSwitch/5.png",
+          "alt": "gif 6"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity"
+      ],
+      "features": [
+        "Reflex-based lane switching",
+        "Escalating obstacle patterns",
+        "Hyper-casual design"
+      ],
+      "myWork": [
+        {
+          "title": "Shop & Economy Systems",
+          "description": "Built and stabilized the core shop loop, including loot-box mechanics, skull unlocks, gold/dust economy, and persistent save/load functionality."
+        },
+        {
+          "title": "UI & Gameplay Flow",
+          "description": "Managed UI states and transitions across title, level select, in-game, and result screens, ensuring smooth interactions and clear player feedback."
+        },
+        {
+          "title": "Level Selection & Generation",
+          "description": "Designed normal mode level selector UX and developed editor tooling for procedural level generation, with category-based assignment and optimized content pipelines."
+        },
+        {
+          "title": "Progression & Rewards",
+          "description": "Enhanced result screens, reward presentation, and progression reliability, including save persistence, star tracking, and coin/loot feedback loops."
+        }
+      ],
+      "link": null
+    },
+    {
+      "featured": false,
+      "published": true,
+      "id": "prototypes-and-demos",
+      "name": "Prototypes & Demos",
+      "icon": "🧪",
+      "shortDesc": "A collection of prototypes and small projects exploring various gameplay concepts, mechanics, and technologies.",
+      "desc": "This collection showcases a variety of prototypes and small projects that I developed to explore different gameplay concepts, mechanics, and technologies. Each project served as a testing ground for new ideas, allowing me to experiment with different genres, platforms, and design approaches. From competitive VR multiplayer games to rhythm-based mobile experiences, these prototypes reflect my passion for innovation and my commitment to learning through hands-on development. While not all of these projects were intended for commercial release, they represent important steps in my growth as a game developer and my ongoing exploration of what games can be.",
+      "tags": [
+        "pc",
+        "vr",
+        "multiplayer",
+        "mobile",
+        "unity",
+        "unreal"
+      ],
+      "platforms": [
+        "Prototypes"
+      ],
+      "cover": "img/Prototypes-cover.png",
+      "videos": [
+        {
+          "title": "Steam Blast Video",
+          "url": "https://www.youtube.com/embed/lT1YQY3lizY"
+        },
+        {
+          "title": "Killing Beat Video",
+          "url": "https://www.youtube.com/embed/uYl_Dcd-LVo"
+        },
+        {
+          "title": "SymSam Video",
+          "url": "https://www.youtube.com/embed/e3DqG_5hAAI"
+        },
+        {
+          "title": "Bomb Party Video",
+          "url": "https://www.youtube.com/embed/LuZmLz56iNY"
+        }
+      ],
+      "techs": [
+        "Unreal Engine",
+        "VR",
+        "Multiplayer",
+        "C#",
+        "Unity",
+        "Local Multiplayer"
+      ],
+      "features": [
+        "Varied gameplay concepts across multiple prototypes",
+        "Exploration of different genres and mechanics",
+        "Testing ground for new ideas and technologies",
+        "Not all projects intended for commercial release"
+      ],
+      "link": null
+    }
+  ]
+}

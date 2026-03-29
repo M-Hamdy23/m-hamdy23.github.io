@@ -1,1214 +1,3466 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-    <title>M-Hamdy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/main.bundle.css">
-    <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Hamdy — Game Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Barlow:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+    <style>
+        /* ─── THEME TOKENS ──────────────────────────────────── */
+        [data-theme="dark"] {
+            --bg: #030508;
+            --bg2: #080a10;
+            --bg3: #0d1018;
+            --accent: #00e5b8;
+            --accent2: #8b5cf6;
+            --accent3: #f43f5e;
+            --text: #f0f4f8;
+            --muted: #94a3b8;
+            --border: rgba(0, 229, 184, 0.12);
+            --card: rgba(13, 16, 24, 0.85);
+            --nav-bg: rgba(3, 5, 8, 0.92);
+            --skill-track: rgba(255, 255, 255, 0.04);
+            --shadow: rgba(0, 0, 0, 0.6);
+            --scanline: rgba(0, 0, 0, 0.02);
+            --grid-line: rgba(0, 229, 184, 0.03);
+            --glow: rgba(0, 229, 184, 0.15);
+        }
+
+        [data-theme="light"] {
+            --bg: #fafbfc;
+            --bg2: #f1f5f9;
+            --bg3: #e2e8f0;
+            --accent: #059669;
+            --accent2: #7c3aed;
+            --accent3: #dc2626;
+            --text: #0f172a;
+            --muted: #64748b;
+            --border: rgba(5, 150, 105, 0.15);
+            --card: rgba(255, 255, 255, 0.92);
+            --nav-bg: rgba(250, 251, 252, 0.92);
+            --skill-track: rgba(0, 0, 0, 0.05);
+            --shadow: rgba(0, 0, 0, 0.08);
+            --scanline: transparent;
+            --grid-line: rgba(5, 150, 105, 0.04);
+            --glow: rgba(5, 150, 105, 0.1);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+
+        /* ─── SCANLINE ─────────────────────────────────────── */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                var(--scanline) 3px,
+                var(--scanline) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.6;
+        }
+
+        /* ─── NAV ──────────────────────────────────────────── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background: var(--nav-bg);
+            backdrop-filter: blur(24px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.5s ease;
+        }
+
+        .nav-logo {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.15rem;
+            color: var(--accent);
+            letter-spacing: 0.12em;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-logo span {
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent)
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        /* THEME TOGGLE */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--skill-track);
+        }
+
+        .toggle-track {
+            width: 46px;
+            height: 24px;
+            background: var(--skill-track);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.4s ease;
+            flex-shrink: 0;
+        }
+
+        .toggle-track.lit {
+            background: rgba(5, 150, 105, 0.2);
+            border-color: var(--accent);
+        }
+
+        .toggle-thumb {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--muted);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .toggle-track.lit .toggle-thumb {
+            left: 25px;
+            background: var(--accent);
+            box-shadow: 0 0 12px var(--accent);
+        }
+
+        .toggle-icon {
+            font-size: 0.9rem;
+            line-height: 1;
+            user-select: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .theme-toggle:hover .toggle-icon {
+            opacity: 1;
+        }
+
+        .nav-cta {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--bg);
+            background: var(--accent);
+            padding: 10px 22px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .nav-cta:hover::before {
+            transform: translateX(100%);
+        }
+
+        .nav-cta:hover {
+            box-shadow: 0 0 30px var(--glow);
+            transform: translateY(-1px);
+        }
+
+        /* ─── HERO ─────────────────────────────────────────── */
+        #hero {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 56px 100px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 70%);
+            animation: gridPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.2s forwards;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--accent);
+            opacity: 0.6;
+        }
+
+        .hero-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 700;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            opacity: 0;
+            animation: fadeUp 0.8s 0.35s forwards;
+            transition: color 0.5s ease;
+        }
+
+        .hero-name span {
+            display: block;
+            color: transparent;
+            -webkit-text-stroke: 1.5px var(--accent);
+            opacity: 0.8;
+        }
+
+        /* TYPEWRITER LINE */
+        .hero-tw {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            font-weight: 500;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 20px;
+            min-height: 2.2rem;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.5s forwards;
+            transition: color 0.5s ease;
+        }
+
+        .tw-word {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .tw-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.1em;
+            background: var(--accent);
+            margin-left: 4px;
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1
+            }
+            50% {
+                opacity: 0
+            }
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--muted);
+            line-height: 1.75;
+            max-width: 520px;
+            margin-top: 28px;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.65s forwards;
+            transition: color 0.5s ease;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.8s forwards;
+        }
+
+        .btn-primary {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--bg);
+            background: var(--accent);
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .btn-primary:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 8px 30px var(--glow);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary.btn-rect {
+            border-radius: 6px;
+        }
+
+        .btn-secondary {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: transparent;
+            border: 1.5px solid var(--border);
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 229, 184, 0.06);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 52px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            opacity: 0;
+            animation: fadeUp 0.8s 0.95s forwards;
+            transition: border-color 0.5s ease;
+        }
+
+        .stat-value {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .stat-value sub {
+            font-size: 1rem;
+            color: var(--accent2);
+            margin-left: 2px;
+            font-weight: 600;
+        }
+
+        .stat-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeIn 1.2s 0.5s forwards;
+        }
+
+        .hex-frame {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hex-frame::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: conic-gradient(
+                from 0deg,
+                var(--accent),
+                var(--accent2),
+                var(--accent3),
+                var(--accent2),
+                var(--accent)
+            );
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            animation: spin 12s linear infinite;
+            opacity: 0.6;
+            filter: blur(2px);
+        }
+
+        .hex-frame::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: var(--bg);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transition: background 0.5s ease;
+        }
+
+        .hex-inner {
+            position: relative;
+            z-index: 2;
+            width: 270px;
+            height: 270px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg3), var(--bg2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            transition: background 0.5s ease;
+            text-shadow: 0 0 40px var(--glow);
+        }
+
+        .orbit-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid;
+            animation: orbit 10s linear infinite;
+        }
+
+        .orbit-1 {
+            width: 400px;
+            height: 400px;
+            border-color: rgba(0, 229, 184, 0.08);
+            animation-duration: 15s;
+        }
+
+        .orbit-2 {
+            width: 480px;
+            height: 480px;
+            border-color: rgba(139, 92, 246, 0.05);
+            animation-duration: 22s;
+            animation-direction: reverse;
+        }
+
+        .orbit-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 16px var(--accent);
+        }
+
+        .tech-badge {
+            position: absolute;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.62rem;
+            color: var(--accent);
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            letter-spacing: 0.12em;
+            border-radius: 4px;
+            animation: float 4s ease-in-out infinite;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .tech-badge:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 20px var(--glow);
+        }
+
+        .tech-badge:nth-child(1) { top: 8%; right: -10px; animation-delay: 0s; }
+        .tech-badge:nth-child(2) { bottom: 25%; right: -20px; animation-delay: 1s; }
+        .tech-badge:nth-child(3) { bottom: 8%; left: -5px; animation-delay: 2s; }
+
+        /* ─── SECTION COMMONS ──────────────────────────────── */
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 120px 56px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 72px;
+        }
+
+        .section-num {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            opacity: 0.7;
+            padding: 6px 12px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .section-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            transition: color 0.5s ease;
+        }
+
+        .section-title em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--accent) 0%, transparent 80%);
+            opacity: 0.25;
+        }
+
+        /* ─── SCROLL REVEAL ────────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .d1 { transition-delay: 0.1s; }
+        .d2 { transition-delay: 0.2s; }
+        .d3 { transition-delay: 0.3s; }
+        .d4 { transition-delay: 0.4s; }
+        .d5 { transition-delay: 0.5s; }
+
+        /* ─── SKILLS ───────────────────────────────────────── */
+        #skills {
+            background: var(--bg2);
+            transition: background 0.5s ease;
+        }
+
+        .skills-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .skill-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .skill-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 24px 28px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: default;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent), var(--accent2));
+            transform: scaleY(0);
+            transition: transform 0.4s ease;
+            transform-origin: top;
+        }
+
+        .skill-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .skill-card:hover {
+            border-color: rgba(0, 229, 184, 0.3);
+            transform: translateX(8px);
+            box-shadow: 0 10px 40px var(--shadow);
+        }
+
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 8px var(--glow));
+        }
+
+        .skill-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: var(--text);
+            transition: color 0.5s ease;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--muted);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 5px 12px;
+            letter-spacing: 0.06em;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="light"] .tag {
+            background: rgba(0, 0, 0, 0.03);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .tag:hover {
+            color: var(--accent);
+            border-color: rgba(0, 229, 184, 0.25);
+            background: rgba(0, 229, 184, 0.06);
+        }
+
+        /* Skill Bars */
+        .skill-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+        }
+
+        .skill-bar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .skill-bar-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: 0.03em;
+            transition: color 0.5s ease;
+        }
+
+        .skill-bar-pct {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+        }
+
+        .skill-bar-track {
+            height: 6px;
+            background: var(--skill-track);
+            position: relative;
+            overflow: hidden;
+            border-radius: 3px;
+            transition: background 0.5s ease;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent2), var(--accent));
+            border-radius: 3px;
+            transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .skill-bar-fill::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #fff;
+            opacity: 0.5;
+            box-shadow: 0 0 10px var(--accent);
+            border-radius: 2px;
+        }
+
+        /* ═══ EXPERIENCE SECTION ═════════════════════════════ */
+        .timeline {
+            position: relative;
+            padding-left: 44px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 50%, transparent 100%);
+            opacity: 0.4;
+            border-radius: 1px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 56px 48px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -50px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(0, 229, 184, 0.15), 0 0 20px var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.2);
+        }
+
+        .exp-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .exp-company {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: 0.03em;
+            transition: color 0.5s ease;
+        }
+
+        .exp-role,
+        .exp-projects-label {
+            font-family: 'Rajdhani', sans-serif;
+            
+            font-weight: 500;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .exp-projects-label {
+            margin-top: 4px;
+            font-size: 0.7rem;
+        }
+        .exp-role {
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .exp-period {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            white-space: nowrap;
+            flex-shrink: 0;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .exp-period {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .exp-bullets {
+            list-style: none;
+            margin: 14px 0 18px;
+        }
+
+        .exp-bullets li {
+            font-size: 0.92rem;
+            color: var(--muted);
+            padding: 5px 0 5px 20px;
+            position: relative;
+            line-height: 1.65;
+            transition: color 0.5s ease;
+        }
+
+        .exp-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        .exp-techs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .exp-projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .exp-projects-label {
+            width: 100%;
+            margin-bottom: 2px;
+        }
+
+        .tech-pill.exp-project-pill {
+            cursor: pointer;
+
+        }
+
+        .tech-pill.exp-project-pill:hover,
+        .tech-pill.exp-project-pill:focus-visible {
+
+            outline: none;
+        }
+
+        .tech-pill {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--accent);
+            background: rgba(0, 229, 184, 0.08);
+            border: 1px solid rgba(0, 229, 184, 0.18);
+            padding: 5px 12px;
+            letter-spacing: 0.06em;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-pill:hover {
+            background: rgba(0, 229, 184, 0.15);
+            border-color: var(--accent);
+        }
+
+        /* ═══ PROJECTS SECTION ═══════════════════════════════ */
+        #projects {
+            background: var(--bg2);
+            transition: background 0.5s ease;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 52px;
+        }
+
+        .filter-btn {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            background: transparent;
+            border: 1.5px solid var(--border);
+            padding: 10px 22px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            color: var(--bg);
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-card:hover {
+            border-color: rgba(0, 229, 184, 0.35);
+            transform: translateY(-8px);
+            box-shadow: 0 32px 64px var(--shadow), 0 0 60px var(--glow);
+        }
+
+        .project-thumb {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--bg3), #0a0d16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="light"] .project-thumb {
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+        }
+
+        .project-thumb-media {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .project-card:hover .project-thumb-media {
+            transform: scale(1.08);
+            filter: saturate(1.15);
+        }
+
+        .project-thumb-icon {
+            font-size: 4rem;
+            opacity: 0.25;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-card:hover .project-thumb-icon {
+            opacity: 0.5;
+            transform: scale(1.15);
+        }
+
+        .project-thumb-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(13,16,24,0.85) 100%);
+            transition: background 0.5s ease;
+            z-index: 2;
+        }
+
+        [data-theme="light"] .project-thumb-overlay {
+            background: linear-gradient(180deg, transparent 40%, rgba(226,232,240,0.8) 100%);
+        }
+
+        .project-thumb-mark {
+            position: absolute;
+            left: 14px;
+            bottom: 14px;
+            z-index: 3;
+            font-size: 1.3rem;
+            opacity: 0.9;
+            background: rgba(3,5,8,0.7);
+            border: 1px solid rgba(0,229,184,0.25);
+            padding: 6px 10px;
+            line-height: 1;
+            border-radius: 6px;
+            backdrop-filter: blur(8px);
+        }
+
+        .proj-hover-overlay {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(3,5,8,0.5);
+            backdrop-filter: blur(4px);
+        }
+
+        .project-card:hover .proj-hover-overlay {
+            opacity: 1;
+        }
+
+        .play-ring {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(0,229,184,0.15);
+            border: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--accent);
+            transform: scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project-card:hover .play-ring {
+            transform: scale(1);
+            box-shadow: 0 0 40px var(--glow);
+        }
+
+        .project-platform-badges {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            z-index: 3;
+        }
+
+        .platform-badge {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: #000;
+            background: var(--accent);
+            padding: 4px 10px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .platform-badge.vr {
+            background: var(--accent2);
+            color: #fff;
+        }
+
+        .platform-badge.mobile {
+            background: var(--accent3);
+            color: #fff;
+        }
+
+        .platform-badge.pc {
+            background: #3b82f6;
+            color: #fff;
+        }
+
+        .project-body {
+            padding: 22px 24px;
+        }
+
+        .project-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            color: var(--text);
+            margin-bottom: 8px;
+            transition: color 0.5s ease;
+        }
+
+        .project-desc {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: color 0.5s ease;
+        }
+
+        .project-footer {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: border-color 0.5s ease;
+        }
+
+        .project-techs {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .project-tech {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--text);
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            padding: 5px 10px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+            border-radius: 4px;
+        }
+
+        .project-tech:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(0,229,184,0.08);
+        }
+
+        .project-tech-more {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+        }
+
+        .project-arrow {
+            font-size: 1.2rem;
+            color: var(--accent);
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ═══ EDUCATION SECTION ══════════════════════════════ */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .edu-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 32px;
+            transition: all 0.4s ease;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .edu-card:hover {
+            border-color: rgba(0,229,184,0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        .edu-icon {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+            display: block;
+            filter: drop-shadow(0 0 12px var(--glow));
+        }
+
+        .edu-degree {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+            transition: color 0.5s ease;
+        }
+
+        .edu-school {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin: 8px 0;
+        }
+
+        .edu-period {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            margin-bottom: 14px;
+        }
+
+        .edu-detail {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.65;
+            transition: color 0.5s ease;
+        }
+
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .cert-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: all 0.35s ease;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cert-item:hover {
+            border-color: rgba(0,229,184,0.3);
+            background: rgba(0,229,184,0.04);
+            transform: translateX(8px);
+        }
+
+        .cert-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .cert-text {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.5;
+            transition: color 0.5s ease;
+        }
+
+        /* ═══ CONTACT SECTION ════════════════════════════════ */
+        #contact {
+            background: var(--bg);
+            transition: background 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 400px;
+            background: radial-gradient(ellipse, var(--glow) 0%, transparent 70%);
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: start;
+        }
+
+        .contact-headline {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--text);
+            margin-bottom: 20px;
+            transition: color 0.5s ease;
+        }
+
+        .contact-headline em {
+            font-style: normal;
+            color: var(--accent);
+            display: block;
+        }
+
+        .contact-desc {
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.75;
+            margin-bottom: 40px;
+            transition: color 0.5s ease;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            padding: 16px 20px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            transition: all 0.35s ease;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-link:hover {
+            border-color: rgba(0,229,184,0.4);
+            background: rgba(0,229,184,0.05);
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .contact-link-icon {
+            font-size: 1.4rem;
+            width: 32px;
+            text-align: center;
+        }
+
+        .cl-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.62rem;
+            color: var(--muted);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .cl-value {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: var(--text);
+            transition: color 0.5s ease;
+        }
+
+        .cl-arrow {
+            color: var(--accent);
+            opacity: 0;
+            transition: all 0.3s ease;
+            margin-left: auto;
+            font-size: 1.1rem;
+        }
+
+        .contact-link:hover .cl-arrow {
+            opacity: 1;
+        }
+
+        .resume-cta {
+            margin-top: 40px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .resume-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .resume-cta:hover {
+            border-color: rgba(0,229,184,0.3);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        .resume-cta-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+            transition: color 0.5s ease;
+        }
+
+        .resume-cta-desc {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+            transition: color 0.5s ease;
+        }
+
+        /* ═══ FOOTER ═════════════════════════════════════════ */
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 32px 56px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            background: var(--bg);
+            transition: all 0.5s ease;
+        }
+
+        .footer-brand {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-brand span {
+            color: var(--accent);
+        }
+
+        .footer-copy {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            opacity: 0.6;
+        }
+
+        /* ═══ MODAL ══════════════════════════════════════════ */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            backdrop-filter: blur(16px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            max-width: 80%;
+            width: 100%;
+            max-height: 94vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(30px) scale(0.98);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            border-radius: 16px;
+        }
+
+        .modal-overlay.open .modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-header {
+            padding: 28px 28px 22px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--bg2);
+            z-index: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            transition: all 0.5s ease;
+        }
+
+        .modal-header-copy {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: 1.5px solid var(--border);
+            color: var(--muted);
+            cursor: pointer;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            border-radius: 8px;
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(0,229,184,0.06);
+        }
+
+        .modal-body {
+            padding: 0;
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden
+        }
+
+        /* Modal Nav */
+        .modal-nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 14px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--nav-bg);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.5s ease;
+            flex-shrink: 0;
+        }
+
+        .modal-nav-inner {
+            padding: 24px 28px 32px;
+            flex: 1;
+            min-height: 0;
+            display: grid;
+        }
+
+        .modal-layout {
+            display: grid;
+            grid-template-columns: 320px minmax(0, 1fr);
+            gap: 24px;
+            align-items: stretch;
+            min-height: 0;
+        }
+
+        .modal-sidebar {
+            position: relative;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            padding: 16px;
+            overflow-y: auto;
+            min-height: 0;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0,229,184,0.5) rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+
+        .modal-sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-sidebar::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.03);
+            border-radius: 4px;
+        }
+
+        .modal-sidebar::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--accent2), var(--accent));
+            border-radius: 4px;
+        }
+
+        .modal-side-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .modal-side-meta + .modal-side-meta {
+            margin-top: 16px;
+        }
+
+        .modal-side-cta {
+            margin: 10px 0 12px;
+        }
+
+        .modal-side-cta.modal-actions {
+            margin: 10px 0 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .modal-side-cta .btn-primary {
+            display: inline-flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .modal-side-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .modal-side-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .modal-side-link {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            color: var(--muted);
+            text-align: left;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 10px 14px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            border-radius: 6px;
+        }
+
+        .modal-side-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(0,229,184,0.06);
+            transform: translateX(4px);
+        }
+
+        .modal-main {
+            min-width: 0;
+            min-height: 0;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0,229,184,0.5) rgba(255,255,255,0.05);
+        }
+
+        .modal-main::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-main::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.03);
+            border-radius: 4px;
+        }
+
+        .modal-main::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--accent2), var(--accent));
+            border-radius: 4px;
+        }
+
+        .modal-main > div + div {
+            margin-top: 24px;
+        }
+
+        .modal-side-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .modal-side-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .modal-side-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .modal-sidebar .exp-techs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .modal-sidebar .tech-pill {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--text);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            padding: 5px 10px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+            border-radius: 4px;
+        }
+
+        .modal-sidebar .tech-pill:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(0,229,184,0.08);
+        }
+
+        .modal-sidebar .exp-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .modal-sidebar .exp-bullets li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--muted);
+            letter-spacing: 0.04em;
+            line-height: 1.5;
+            padding-left: 14px;
+            position: relative;
+            transition: color 0.25s ease;
+        }
+
+        .modal-sidebar .exp-bullets li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 5px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .modal-sidebar .exp-bullets li:hover {
+            color: var(--text);
+        }
+
+        .modal-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text);
+            transition: color 0.5s ease;
+        }
+
+        .modal-work-item {
+            display: flex;
+            gap: 18px;
+            padding: 18px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            margin-bottom: 12px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .modal-work-item:hover {
+            border-color: rgba(0,229,184,0.2);
+            background: rgba(0,229,184,0.03);
+        }
+
+        .modal-work-index {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            min-width: 32px;
+            text-align: center;
+            padding: 6px;
+            background: rgba(0,229,184,0.08);
+            border-radius: 6px;
+            height: fit-content;
+        }
+
+        .modal-work-content {
+            flex: 1;
+        }
+
+        .modal-work-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+            transition: color 0.5s ease;
+        }
+
+        .modal-work-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 12px;
+            transition: color 0.5s ease;
+        }
+
+        .modal-work-media {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .modal-work-thumb {
+            width: 70px;
+            height: 70px;
+            aspect-ratio: 1;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+
+        .modal-work-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-work-thumb:hover {
+            border-color: var(--accent);
+            transform: scale(1.08);
+            box-shadow: 0 0 20px var(--glow);
+        }
+
+        .modal-work-thumb:hover img {
+            transform: scale(1.1);
+        }
+
+        .modal-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .modal-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .modal-tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.62rem;
+            color: var(--accent);
+            background: rgba(0,229,184,0.08);
+            border: 1px solid rgba(0,229,184,0.18);
+            padding: 4px 10px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
+        .modal-head-desc {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-top: 14px;
+            width: 100%;
+            max-width: none;
+            transition: color 0.5s ease;
+        }
+
+        .modal-about {
+            margin-bottom: 24px;
+        }
+
+        .modal-about-desc {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.75;
+            transition: color 0.5s ease;
+        }
+
+        .modal-media-section {
+            margin-bottom: 24px;
+        }
+
+        .modal-media-stack {
+            display: flex;
+            gap: 18px;
+            align-items: stretch;
+            overflow-x: auto;
+            padding: 4px 4px 16px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0,229,184,0.4) rgba(255,255,255,0.05);
+            scroll-snap-type: x proximity;
+        }
+
+        .modal-media-stack::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .modal-media-stack::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.04);
+            border-radius: 4px;
+        }
+
+        .modal-media-stack::-webkit-scrollbar-thumb {
+            background: rgba(0,229,184,0.35);
+            border-radius: 4px;
+        }
+
+        .modal-media-block {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            padding: 14px;
+            min-width: min(380px, 72vw);
+            width: min(380px, 72vw);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+        }
+
+        .modal-media-block:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px var(--glow);
+        }
+
+        .modal-media-head {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .modal-media-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--accent);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        .modal-video-card .modal-video {
+            background: transparent;
+            border: none;
+            padding: 0
+        }
+
+        .modal-video-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            margin-bottom: 10px;
+            transition: color 0.5s ease;
+        }
+
+        .modal-stitle {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .modal-video {
+            width: 100%;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            position: relative;
+            padding: 10px
+        }
+
+        .modal-video-frame {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: rgba(0, 0, 0, .22);
+            overflow: hidden
+        }
+
+        .modal-video-frame + .modal-video-frame {
+            margin-top: 10px
+        }
+
+        .modal-video iframe,
+        .modal-video video {
+            width: 100%;
+            height: 100%;
+            border: none
+        }
+
+        .modal-video-ph {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--muted);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: .72rem;
+            letter-spacing: .1em;
+            aspect-ratio: 16/9
+        }
+
+        .modal-video-ph .vi {
+            font-size: 2.8rem;
+            opacity: .25
+        }
+
+        .modal-screenshot-btn {
+            appearance: none;
+            text-align: left;
+            color: inherit;
+            font: inherit;
+            cursor: pointer
+        }
+
+        .modal-screenshot-btn:hover {
+            transform: none
+        }
+
+        .modal-screenshot-frame {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: rgba(0, 0, 0, .22)
+        }
+
+        .modal-screenshot-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .35s ease
+        }
+
+        .modal-screenshot-frame:hover img {
+            transform: scale(1.04)
+        }
+
+        .modal-screenshot-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px 12px;
+            background: linear-gradient(180deg, transparent, rgba(5, 5, 8, .92));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px
+        }
+
+        .modal-screenshot-caption {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: .8rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: .04em;
+            text-align: left
+        }
+
+        .modal-screenshot-expand {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: .56rem;
+            color: var(--accent);
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            white-space: nowrap
+        }
+
+        .media-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .94);
+            z-index: 2400;
+            padding: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .25s
+        }
+
+        .media-lightbox.open {
+            opacity: 1;
+            pointer-events: all
+        }
+
+        .media-lightbox-inner {
+            max-width: min(1100px, 92vw);
+            max-height: 88vh;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center
+        }
+
+        .media-lightbox-image {
+            max-width: 100%;
+            max-height: calc(88vh - 64px);
+            display: block;
+            object-fit: contain;
+            border: 1px solid var(--border);
+            background: var(--bg3)
+        }
+
+        .media-lightbox-caption {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: .95rem;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: .04em;
+            text-align: center;
+            transition: color .5s
+        }
+
+        .media-lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all .3s
+        }
+
+        .media-lightbox-close:hover {
+            color: var(--accent);
+            border-color: var(--accent)
+        }
+
+        /* ─── CURSOR ───────────────────────────────────────── */
+        .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 8px var(--accent);
+            transition: background .3s
+        }
+
+        .cursor-ring {
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(0, 245, 196, .4);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9997;
+            transform: translate(-50%, -50%);
+            transition: all .14s ease
+        }
+
+        /* ─── SCROLL INDICATOR ─────────────────────────────── */
+        .scroll-ind {
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            opacity: 0;
+            animation: fadeIn 1s 1.8s forwards
+        }
+
+        .scroll-mouse {
+            width: 20px;
+            height: 32px;
+            border: 1px solid rgba(0, 245, 196, .3);
+            border-radius: 10px;
+            position: relative
+        }
+
+        .scroll-wheel {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 3px;
+            animation: scrollDown 2s ease-in-out infinite
+        }
+
+        .scroll-lbl {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: .57rem;
+            color: var(--muted);
+            letter-spacing: .2em;
+            text-transform: uppercase
+        }
+
+        /* ─── KEYFRAMES ────────────────────────────────────── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0)
+            }
+            50% {
+                transform: translateY(-8px)
+            }
+        }
+
+        @keyframes scrollDown {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+                opacity: .3
+            }
+        }
+
+        /* ─── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 960px) {
+            nav {
+                padding: 13px 18px
+            }
+
+            .nav-links {
+                display: none
+            }
+
+            #hero {
+                padding: 100px 18px 60px
+            }
+
+            .hero-content {
+                grid-template-columns:1fr
+            }
+
+            .hero-visual {
+                display: none
+            }
+
+            section {
+                padding: 64px 18px
+            }
+
+            .skills-layout {
+                grid-template-columns:1fr
+            }
+
+            .contact-grid {
+                grid-template-columns:1fr;
+                gap: 44px
+            }
+
+            .projects-grid {
+                grid-template-columns:1fr
+            }
+
+            footer {
+                padding: 18px;
+                flex-direction: column;
+                text-align: center
+            }
+
+            .cursor-dot, .cursor-ring {
+                display: none
+            }
+
+            .modal-head-desc {
+                max-width: none
+            }
+
+            .modal-layout {
+                grid-template-columns:1fr;
+                gap: 14px
+            }
+
+            .modal-sidebar {
+                position: static
+            }
+
+            .modal-side-nav {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 4px
+            }
+
+            .modal-side-link {
+                white-space: nowrap
+            }
+
+            .modal-media-block {
+                min-width: min(260px, 78vw);
+                width: min(260px, 78vw)
+            }
+
+            .media-lightbox {
+                padding: 16px
+            }
+
+            .media-lightbox-image {
+                max-height: calc(88vh - 72px)
+            }
+        }
+    </style>
 </head>
-
 <body>
-<!-- Header -->
-<section class="hero is-primary">
-    <div class="hero-body">
-        <div class="container">
-            <div class="level">
-                <div class="level-item has-text-centered">
-                    <figure class="image is-128x128">
-                        <img class="is-rounded" src="img/me-big.jpg">
-                    </figure>
-                </div>
+
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- ═══ NAV ══════════════════════════════════════════ -->
+<nav>
+    <a href="#hero" class="nav-logo">MH<span>.dev</span></a>
+    <ul class="nav-links">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+        <div class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark">
+            <span class="toggle-icon">🌙</span>
+            <div class="toggle-track" id="theme-track">
+                <div class="toggle-thumb"></div>
             </div>
-            <div class="columns has-text-centered">
-                <div class="column">
-                    <h1 class="title is-1">
-                        Mohamed Hamdy
-                    </h1>
-                    <h2 class="subtitle">
-                        Game Developer
-                    </h2>
-                    <p>
-                        <a href="docs/resume.pdf" class="icon has-text-light">
-                            <i class="fas fa-file-word"></i> <strong>Resume</strong>
-                        </a>
-                    </p>
-                </div>
-            </div>
+            <span class="toggle-icon">☀️</span>
         </div>
+        <a href="docs/resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
     </div>
-</section>
-<!-- About Me -->
-<section class="section">
-    <div class="container">
-        <h1 class="title">About Me</h1>
-        <hr/>
-        <p class="has-text-light">An aspiring game developer with a degree in computer science from benha university in
-            Egypt.
-            Studied game development and design at Information Technology Institute (ITI),
-            Passionate about making games and interested in trying and learning new technologies. </p>
-    </div>
-</section>
-<!-- Experience -->
-<section class="section">
-    <div class="container">
-        <h1 class="title">Experience</h1>
-        <hr/>
+</nav>
 
-        <!-- Highstreet -->
-        <div class="card">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="img/Highstreet.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">Highstreet</p>
-                        <p class="subtitle is-6">Senior Game Developer -
-                            <time datetime="2023-10">July 2023</time>
-                            -
-                            <time
-                                    datetime="2024-10">Present
-                            </time>
-                        </p>
-                    </div>
-                </div>
-                <div class="content has-text-light">
-                    <ul>
-                        <li>Acting as Architect.</li>
-                        <li>Game developer.</li>
-                        <li>Network developer.</li>
-                        <li>Tools developer.</li>
-                        <li>Working on VR, web games.</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">UnityDOTS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ZINAD IT GAME STUDIO -->
-        <div class="card card-gap">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="img/ZinadIT-logo.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">ZINAD IT</p>
-                        <p class="subtitle is-6">Senior Game Developer -
-                            <time datetime="2021-11">November 2021</time>
-                            -
-                            <time
-                                    datetime="2023-11">November 2023
-                            </time>
-                        </p>
-                    </div>
-                </div>
-                <div class="content has-text-light">
-                    <ul>
-                        <li>Acting as team lead.</li>
-                        <li>Game developer.</li>
-                        <li>Network developer.</li>
-                        <li>Tools developer.</li>
-                        <li>Working on Mobile, VR, web games.</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">c#</span>
-                        <span class="tag">Lua</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">NakamaServer</span>
-                        <span class="tag">Firebase</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Myriad Global Media - Houston, TX -->
-        <div class="card card-gap">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="img/Myriad-logo.jpg" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">Myriad Global Media - Houston, TX</p>
-                        <p class="subtitle is-6">Senior Game Developer -
-                            <time datetime="2021-11">6 Month Contract</time>
-                        </p>
-                    </div>
-                </div>
-                <div class="content has-text-light">
-                    <ul>
-                        <li>Unity developer.</li>
-                        <li>Game developer.</li>
-                        <li>Working on PC training driving simulator.</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">c#</span>
-                        <span class="tag">Unity</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- EgyptGames2021 GAME STUDIO -->
-        <div class="card card-gap">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="img/EgyptGames-logo.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">EGYPT GAMES 2022</p>
-                        <p class="subtitle is-6">Senior Game Developer -
-                            <time datetime="2020-12">December 2020</time>
-                            -
-                            <time
-                                    datetime="2021-11">November 2021
-                            </time>
-                        </p>
-                    </div>
-                </div>
-                <div class="content has-text-light">
-                    <ul>
-                        <li>Game developer.</li>
-                        <li>Network developer.</li>
-                        <li>Tools developer.</li>
-                        <li>Worked on Mobile games.</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">c#</span>
-                        <span class="tag">Lua</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">NakamaServer</span>
-                        <span class="tag">Firebase</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- RASKULLS GAME STUDIO -->
-        <div class="card card-gap">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="img/Raskulls-logo.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">RASKULLS GAME STUDIO</p>
-                        <p class="subtitle is-6">Game Developer / Co-Founder -
-                            <time datetime="2018-7">July 2018</time>
-                            -
-                            <time
-                                    datetime="2020-12">December 2020
-                            </time>
-                        </p>
-                    </div>
-                </div>
-                <div class="content has-text-light">
-                    <ul>
-                        <li>Game developer.</li>
-                        <li>Network developer.</li>
-                        <li>Tools developer.</li>
-                        <li>Worked on PC, Mobile and VR games.</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">c#</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">Unreal</span>
-                        <span class="tag">PhotonPun</span>
-                        <span class="tag">PhotonBolt</span>
-                        <span class="tag">Mirror</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- D-INNOVA -->
-        <div class="card card-gap">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="img/D-Innova-logo.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">D-INNOVA</p>
-                        <p class="subtitle is-6">Software Developer -
-                            <time datetime="2014-1">January 2014</time>
-                            -
-                            <time
-                                    datetime="2017-7">July 2017
-                            </time>
-                        </p>
-                    </div>
-                </div>
-                <div class="content has-text-light">
-                    <ul>
-                        <li>Worked on desktop solutions.</li>
-                        <li>Developed AR apps.</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">Vuforia</span>
-                        <span class="tag">PhotoShop</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Projects -->
-<section class="section">
-    <div class="container">
-        <h1 class="title">Projects</h1>
-        <hr/>
-
-        <!-- filter -->
-        <div id="filterBtnContainer" class="tile is-ancestor box">
-            <article class="tile is-child is-2">
-                <p class="subtitle">Sort By Tag :</p>
-            </article>
-            <article class="tile is-child">
-                <button class="button is-warning is-inverted is-focused">All</button>
-                <button class="button is-warning is-inverted">PC</button>
-                <button class="button is-warning is-inverted">Mobile</button>
-                <button class="button is-warning is-inverted">VR</button>
-                <button class="button is-warning is-inverted">AR</button>
-                <button class="button is-warning is-inverted">Unity</button>
-                <button class="button is-warning is-inverted">Unreal</button>
-                <button class="button is-warning is-inverted">Assets</button>
-            </article>
-        </div>
-
-        <div class="tile is-ancestor is-vertical">
-
-            <!-- Highstreet World -->
-            <div class="filterDiv PC Unity">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-11-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/Highstreet-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Highstreet World</p>
-                            <div class="tags">
-                                <span class="tag">Web</span>
-                                <span class="tag">VR</span>
-                                <span class="tag">Multiplayer</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">Highstreet is a commerce-centered metaverse integrating shopping
-                                with gaming.
-                                While products from brands bring an endless supply of cosmetics, bridging character
-                                customizations with real world fashion,
-                                an MMORPG backbone further adds utility to them, allowing players to craft unique NFTs
-                                to either profit or elevate their gameplay. </p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nutrien Interactive HGV Driver Training Courses -->
-            <div class="filterDiv Unity PC">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-10-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/DriverTraining-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Nutrien Interactive HGV Driver Training Courses</p>
-                            <div class="tags">
-                                <span class="tag">PC</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">We developed 7 bespoke scenarios to address the specific accidents
-                                identified by Nutrien.
-                                Each scenario offers an instructional training phase, a practice phase without hints,
-                                and an assessment mode that seamlessly integrates with Nutrien’s existing LMS.
-                                Users would access the different modules via 2 modes, Train and Practice mode, and a
-                                separate final assessment mode.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Autoliv App -->
-            <div class="filterDiv Mobile AR Unity">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-12-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/Autoliv-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Autoliv</p>
-                            <div class="tags">
-                                <span class="tag">IOS</span>
-                                <span class="tag">AR</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">Autoliv's Explore 3D app empowers the company's global sales and
-                                marketing teams to showcase life-saving products in an engaging, interactive format.
-                                Leveraging Unity technology, the app enhances customer understanding, improves sales
-                                presentations, and provides deeper learning opportunities for plant operators. </p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Scriptable System -->
-            <div class="filterDiv Unity Assets">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-8-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/ScriptableSystem-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Scriptable System</p>
-                            <div class="tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">Editor Extension</span>
-                            </div>
-                            <p class="has-text-light">Scriptable System was made to make managing/creating scriptable
-                                variables and
-                                events an easy organized process.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sky Striders -->
-            <div class="filterDiv PC Unity">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-1-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/SkyStrider-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Sky Striders</p>
-                            <div class="tags">
-                                <span class="tag">PC</span>
-                                <span class="tag">Multiplayer</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">Sky Striders is an online multiplayer game that focuses on
-                                movement mechanics
-                                whether on the ground or in the air. Sky Striders will have many game modes that
-                                utilizes a dynamic
-                                set of movement abilities to push and challenge our players into moving fast with
-                                precision. Sky
-                                striders will have many characters that will differ in shape, and movement stats.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 10 Tawla -->
-            <div class="filterDiv Mobile Unity">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-9-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/10Tawla-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">10 Tawla</p>
-                            <div class="tags">
-                                <span class="tag">Mobile</span>
-                                <span class="tag">Android</span>
-                                <span class="tag">IOS</span>
-                                <span class="tag">Multiplayer</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">Backgammon (10Tawla - طاولة)is a popular ancient board game. It is
-                                played with two players.
-                                Play Backgammon (10 Tawla - عشرة طاولة) online with friends and other people online with
-                                two modes (31, Mahbuse).</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- That Just Happend -->
-            <div class="filterDiv PC VR Unreal">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-2-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/ThatJustHappend-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">That Just Happend</p>
-                            <div class="tags">
-                                <span class="tag">PC</span>
-                                <span class="tag">VR</span>
-                                <span class="tag">Unreal</span>
-                            </div>
-                            <p class="has-text-light">That just happend is a serious VR game about blue collars
-                                workplace safety,
-                                the purpose of the player is to help his/her co-workers by giving them safety equipments
-                                to save their
-                                lives from deadly accidents.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skull Switch -->
-            <div class="filterDiv Mobile Unity">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-3-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/SkullSwitch-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Skull Switch</p>
-                            <div class="tags">
-                                <span class="tag">Mobile</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">Skull Switch is a Hyper-Casual game where you try to save the
-                                skulls on screen
-                                from incoming danger by clicking on the lane which contains a skull to make it invisible
-                                before
-                                obstacles can destroy it.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Steam Blast -->
-            <div class="filterDiv PC VR Unreal">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-4-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/SteamBlast-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Steam Blast</p>
-                            <div class="tags">
-                                <span class="tag">PC</span>
-                                <span class="tag">VR</span>
-                                <span class="tag">Multiplayer</span>
-                                <span class="tag">Unreal</span>
-                            </div>
-                            <p class="has-text-light">Multiplayer VR fighting game where you can fly, attack your
-                                opponent and race
-                                to capture devices to take control of the city.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bomb Party -->
-            <div class="filterDiv PC Unity">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-5-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/BoombPart-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Bomb Party</p>
-                            <div class="tags">
-                                <span class="tag">PC</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">Bomb Party is a PC game that has 4 players PVP, players throw
-                                bombs at each
-                                others directly or through portals until one players remains.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Killing Beat -->
-            <div class="filterDiv Mobile Unity">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-6-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/KillingBeat-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">Killing Beat</p>
-                            <div class="tags">
-                                <span class="tag">Mobile</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">Killing Beat is a rhythm game where the player try to avoid
-                                incoming obstacles
-                                while vibing to sick beats.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SymSam -->
-            <div class="filterDiv Mobile Unity">
-                <br>
-                <div class="tile is-12 is-vertical is-parent box">
-                    <div class="tile is-parent modal-trigger" data-target="project-7-modal">
-                        <article class="tile is-child is-4">
-                            <figure class="image">
-                                <img src="img/SymSam-cover.png">
-                            </figure>
-                        </article>
-                        <article class="box">
-                        </article>
-                        <article class="tile is-child">
-                            <p class="title is-4">SymSam</p>
-                            <div class="tags">
-                                <span class="tag">Mobile</span>
-                                <span class="tag">Unity</span>
-                            </div>
-                            <p class="has-text-light">Symsam is a hyper casual game where you play as a samurai that's
-                                on a quest
-                                for symmetry and precision. So roll your sleeves and help the samurai to cut the shapes
-                                into perfect
-                                halves</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Education -->
-<section class="section">
-    <div class="container">
-        <h1 class="title">Education</h1>
-        <hr/>
-
-        <!-- INFORMATION TECHNOLOGY INSTITUTE (ITI) -->
-        <div class="card">
-            <div class="card-content">
-                <div class="content">
-                    <p class="title is-4">INFORMATION TECHNOLOGY INSTITUTE (ITI)</p>
-                    <p class="subtitle is-6">9-Month Diploma -
-                        <time datetime="2017-1">2017</time>
-                        -
-                        <time
-                                datetime="2018-1">2018
-                        </time>
-                    </p>
-                </div>
-                <div class="content has-text-light">
-                    <ul>
-                        <li><b>Track :</b> Game Development.</li>
-                        <li><b>Project Name :</b> Steam Blast.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- COMPUTER SCIENCE, BENHA UNIVERSITY -->
-        <div class="card card-gap">
-            <div class="card-content">
-                <div class="content">
-                    <p class="title is-4">COMPUTER SCIENCE, BENHA UNIVERSITY</p>
-                    <p class="subtitle is-6">Bachelor's degree -
-                        <time datetime="2013-1">2013</time>
-                        -
-                        <time
-                                datetime="2017-1">2017
-                        </time>
-                    </p>
-                </div>
-                <div class="content has-text-light">
-                    <ul>
-                        <li><b>Grade :</b> Very Good.</li>
-                        <li><b>Project Name :</b> Land of Puzzle.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- Contact -->
-<section class="section">
-    <div class="container">
-        <h1 class="title">Contact</h1>
-        <hr/>
-        <nav class="level">
-            <div class="level-item has-text-centered">
-                <div>
-                    <a href="https://github.com/M-Hamdy23" class="icon is-large">
-                        <i class="fab fa-2x fa-github"></i>
-                    </a>
-                    <p class="heading"><a href="https://github.com/M-Hamdy23">github.com/M-Hamdy23</a></p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                    <a href="mailto:mohamedhamdy231995@gmail.com" class="icon is-large">
-                        <i class="fas fa-2x fa-envelope"></i>
-                    </a>
-                    <p class="heading"><a href="mailto:mohamedhamdy231995@gmail.com">mohamedhamdy231995@gmail.com</a>
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                    <a href="https://www.linkedin.com/in/mo-hamdy" class="icon is-large">
-                        <i class="fab fa-2x fa-linkedin-in"></i>
-                    </a>
-                    <p class="heading"><a href="https://www.linkedin.com/in/mo-hamdy">linkedin</a></p>
-                </div>
-            </div>
-        </nav>
-    </div>
-</section>
-
-<!-- Modals Sky Strider -->
-<!-- Sky Strider Modal -->
-<div id="project-1-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Sky Strider</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Sky Striders is an online multiplayer game that focuses on movement mechanics
-                whether
-                on the ground or in the air. Sky Striders will have many game modes that utilizes a dynamic set of
-                movement
-                abilities to push and challenge our players into moving fast with precision. Sky striders will have many
-                characters that will differ in shape, and movement stats.</p>
-            <br>
-            <p class="title is-5">Gameplay</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/Kqmn4qk3hSE"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-            <p class="title is-5">Multiplayer</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/0Nb84N4M3ps"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-
-        </section>
-        <footer class="modal-card-foot">
-            <a class="button is-warning" href="https://raskulls.itch.io/sky-striders" target="_blank">Download</a>
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- That Just Happend Modal -->
-<div id="project-2-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">That Just Happend</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">That just happend is a serious VR game about blue collars workplace safety, the
-                purpose of the player is to help his/her co-workers by giving them safety equipments to save their lives
-                from
-                deadly accidents.</p>
-            <br>
-            <p class="title is-5">Gameplay</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/w0o9qF5tkCM"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-
-        </section>
-        <footer class="modal-card-foot">
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- Skull Switch Modal -->
-<div id="project-3-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Skull Switch</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Skull Switch is a Hyper-Casual game where you try to save the skulls on screen
-                from
-                incoming danger by clicking on the lane which contains a skull to make it invisible before obstacles can
-                destroy it.</p>
-            <br>
-            <p class="title is-5">Gameplay</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/9B_GFFyyyNY"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-
-        </section>
-        <footer class="modal-card-foot">
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- Steam Blast Modal -->
-<div id="project-4-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Steam Blast</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Multiplayer VR fighting game where you can fly, attack your opponent and race to
-                capture devices to take control of the city.</p>
-            <br>
-            <p class="title is-5">Gameplay</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/lT1YQY3lizY"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-
-        </section>
-        <footer class="modal-card-foot">
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- Bomb Party Modal -->
-<div id="project-5-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Bomb Party</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Bomb Party is a PC game that has 4 players PVP, players throw bombs at each others
-                directly or through portals until one players remains.</p>
-            <br>
-            <p class="title is-5">Gameplay</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/clx0vbIevjU"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-
-        </section>
-        <footer class="modal-card-foot">
-            <a class="button is-warning" href="https://globalgamejam.org/2018/games/bombparty"
-               target="_blank">Download</a>
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- Killing Beat Modal -->
-<div id="project-6-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Killing Beat</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Killing Beat is a rhythm game where the player try to avoid incoming obstacles
-                while
-                vibing to sick beats.</p>
-            <br>
-            <p class="title is-5">Gameplay</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360"
-                        src="https://www.youtube.com/embed/Z08ugcA71dU?end=134"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-
-        </section>
-        <footer class="modal-card-foot">
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- SymSam Modal -->
-<div id="project-7-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">SymSam</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Symsam is a hyper casual game where you play as a samurai that's on a quest for
-                symmetry and precision. So roll your sleeves and help the samurai to cut the shapes into perfect
-                halves</p>
-            <br>
-            <p class="title is-5">Gameplay</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360"
-                        src="https://www.youtube.com/embed/Z08ugcA71dU?start=134&amp;end=168" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-            </figure>
-
-        </section>
-        <footer class="modal-card-foot">
-            <a class="button is-warning" href="https://globalgamejam.org/2018/games/bombparty"
-               target="_blank">Download</a>
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- Scriptable System Modal -->
-<div id="project-8-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Scriptable System</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Scriptable System was made to make managing/creating scriptable variables and
-                events
-                an easy organized process.</p>
-            <br>
-            <p class="title is-5">Tutorial</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/_xeZ2ujhtYs"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-            <p class="title is-5">Features</p>
-            <hr>
-            <lu class="has-text-light">
-                <li>Create Scriptable Variables Class In Seconds !</li>
-                <li>Create Scriptable Events Class In Seconds !</li>
-                <li>Events/Variables Ready For USE !</li>
-                <li>Create Scriptable Variable/Events Assets Instantly !</li>
-                <li>Listen to Events and Auto Create Functions in Scripts In One Click !</li>
-                <li>Created Events has Pre/Post Response!</li>
-                <li>Callback Function For Raised Events !</li>
-                <li>Quickly Find Where Each Asset is Used For Events and Variables !</li>
-                <li>Quick Fix For Missing Function References !</li>
-                <li>Adjust Created Assets Location / Events Naming Convention !</li>
-            </lu>
-            <br>
-        </section>
-        <footer class="modal-card-foot">
-            <a class="button is-warning" href="https://assetstore.unity.com/packages/slug/191378"
-               target="_blank">Download</a>
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-
-<!-- Sky Strider Modal -->
-<div id="project-9-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">10 Tawla</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Backgammon (10Tawla - طاولة)is a popular ancient board game. It is played with two
-                players.
-                Play Backgammon (10 Tawla - عشرة طاولة) online with friends and other people online with two modes (31,
-                Mahbuse).
-                Mahbuse - Plakoto - Tapa (بلاكوتو، محبوسة)
-                Tawla 31 (طاولة زهر, Long backgammon, Moultezim, Tavla in Turkey and Fevga in Greece).</p>
-            <br>
-            <p class="title is-5">Features</p>
-            <hr>
-            <dl class="has-text-light">
-                <dt>Movement</dt>
-                <dd>- Dragging</dd>
-                <dd>- Double click</dd>
-                <dd>- Single click</dd>
-                <dt>Online</dt>
-                <dd>- Play online with random people within your rank</dd>
-                <dd>- Host and join match with your in game friends.</dd>
-                <dd>- Rank up your ELO</dd>
-                <dt>Other features</dt>
-                <dd>- 7 life like Tables, Dices, Pieces for real life aesthetics</dd>
-                <dd>- Taunting and Emotions</dd>
-                <dd>- Smart and non cheating AI with difficulty level that match your rank.</dd>
-            </dl>
-            <br>
-            <p class="title is-5">Video</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/XcUdxVhAFaA"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-
-
-        </section>
-        <footer class="modal-card-foot">
-            <a class="button is-success fab fa-google-play"
-               href="https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla" target="_blank">Google Play</a>
-            <a class="button is-info fab fa-app-store"
-               href="https://apps.apple.com/eg/app/10-tawla/id1569696163?fbclid=IwAR1onbHkvcnNCy7_StIVAjUEe4CD8ALHdpgToM1xv2v1qpGN0Sxlk-IxM9E"
-               target="_blank">App Store</a>
-            <button class="button is-warning close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- Nutrien Interactive HGV Driver Training Courses Modal -->
-<div id="project-10-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Nutrien Interactive HGV Driver Training Courses</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Snippet from one of Nutrien’s interactive HGV driver training courses</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360"
-                        src="https://player.vimeo.com/video/899866858?h=64437a6e2a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-            <p class="title is-5">The Problem</p>
-            <hr>
-            <p class="has-text-light">Nutrien’s experienced heavy goods and hazardous materials truck drivers were
-                facing uncommon accidents which don’t have any specific existing training due to their rarity.
-                They needed an all-in-one training solution that allowed drivers to practice and master the correct
-                actions to take in these scenarios.</p>
-            <br>
-            <p class="title is-5">THE SOLUTION – 7 Interactive HGV Training courses</p>
-            <hr>
-            <p class="has-text-light">We developed 7 bespoke scenarios to address the specific accidents identified by
-                Nutrien.
-                Each scenario offers an instructional training phase, a practice phase without hints, and an assessment
-                mode that seamlessly integrates with Nutrien’s existing LMS.
-                Users would access the different modules via 2 modes, Train and Practice mode, and a separate final
-                assessment mode.</p>
-            <br>
-        </section>
-        <footer class="modal-card-foot">
-            <!--<a class="button is-warning" href="https://assetstore.unity.com/packages/slug/191378"
-               target="_blank">Download</a>-->
-            <button class="button is-success close">Close</button>
-        </footer>
-    </div>
-</div>
-
-<!-- Highstreet World Modal -->
-<div id="project-11-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Highstreet World</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Snippet from one of Nutrien’s interactive HGV driver training courses</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360"
-                        src="https://www.youtube.com/embed/652a-CFEBiU"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Highstreet is a commerce-centered metaverse integrating shopping with gaming.
-                While products from brands bring an endless supply of cosmetics, bridging character customizations with
-                real world fashion, an MMORPG backbone further adds utility to them, allowing players to craft unique
-                NFTs to either profit or elevate their gameplay.
+<!-- ═══ HERO ══════════════════════════════════════════ -->
+<section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-content" style="position:relative;z-index:1">
+        <div>
+            <div class="hero-eyebrow" id="hero-eyebrow"></div>
+            <h1 class="hero-name" id="hero-name"></h1>
+            <p class="hero-tw"><span id="hero-tw-prefix"></span>&nbsp;<span class="tw-word" id="tw-word"></span><span
+                    class="tw-cursor"></span>
             </p>
-            <br>
-            <p class="has-text-light"> As Highstreet’s phygital products continue to gain traction both online through
-                E-commerce storefronts
-                like Shopify and offline through various department stores around the world, Highstreet’s Metaverse
-                grows steadily through land sales to brand partners; accumulating new stories to be shared and
-                discovered by players around the world.</p>
-            <br>
-        </section>
-        <footer class="modal-card-foot">
-            <!--<a class="button is-warning" href="https://assetstore.unity.com/packages/slug/191378"
-               target="_blank">Download</a>-->
-            <button class="button is-success close">Close</button>
-        </footer>
+            <p class="hero-desc" id="hero-desc"></p>
+            <div class="hero-actions" id="hero-actions"></div>
+            <div class="hero-stats" id="hero-stats"></div>
+        </div>
+        <div class="hero-visual">
+            <div class="orbit-ring orbit-1">
+                <div class="orbit-dot"></div>
+            </div>
+            <div class="orbit-ring orbit-2"></div>
+            <div class="hex-frame">
+                <div class="hex-inner">MH</div>
+            </div>
+            <div class="tech-badge">C# / UNITY</div>
+            <div class="tech-badge">VR / XR</div>
+            <div class="tech-badge">MULTIPLAYER</div>
+        </div>
     </div>
-</div>
+    <div class="scroll-ind">
+        <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+        </div>
+        <div class="scroll-lbl">Scroll</div>
+    </div>
+</section>
 
-<!-- Autoliv Modal -->
-<div id="project-12-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Autoliv</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p class="title is-5">Video</p>
-            <hr>
-            <figure class="image is-16by9">
-                <iframe class="has-ratio" width="640" height="360"
-                        src="https://www.youtube.com/embed/OtewjIJFGIU"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </figure>
-            <br>
-            <p class="title is-5">Description</p>
-            <hr>
-            <p class="has-text-light">Autoliv's Explore 3D app empowers the company's global sales and
-                marketing teams to showcase life-saving products in an engaging, interactive format.
-                Leveraging Unity technology, the app enhances customer understanding, improves sales
-                presentations, and provides deeper learning opportunities for plant operators.
-            </p>
-            <br>
-        </section>
-        <footer class="modal-card-foot">
-            <!--<a class="button is-warning" href="https://assetstore.unity.com/packages/slug/191378"
-               target="_blank">Download</a>-->
-            <button class="button is-success close">Close</button>
-        </footer>
+<!-- ═══ SKILLS ════════════════════════════════════════ -->
+<section id="skills">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-num">01</span>
+            <h2 class="section-title">Technical <em>Skills</em></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-layout">
+            <div class="skill-categories" id="skills-categories"></div>
+            <div class="skill-bars reveal-right" id="skill-bars-section"></div>
+        </div>
     </div>
-</div>
+</section>
 
-<footer class="footer">
-    <div class="content has-text-centered">
-        <p>
-            <!--<a href="https://github.com/M-Hamdy23" target="_blank" class="icon has-text-primary">
-              <i class="fab fa-github"></i> <strong>devfolio</strong></a>-->
-        </p>
+<!-- ═══ EXPERIENCE ════════════════════════════════════ -->
+<section id="experience">
+    <div class="container">
+        <div class="section-header reveal"><span class="section-num">02</span>
+            <h2 class="section-title">Work <em>Experience</em></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline" id="experience-timeline"></div>
     </div>
+</section>
+
+<!-- ═══ PROJECTS ══════════════════════════════════════ -->
+<section id="projects">
+    <div class="container">
+        <div class="section-header reveal"><span class="section-num">03</span>
+            <h2 class="section-title">Featured <em>Projects</em></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="filter-bar reveal">
+            <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+            <button class="filter-btn" onclick="filterProjects('pc',this)">PC</button>
+            <button class="filter-btn" onclick="filterProjects('web',this)">Web</button>
+            <button class="filter-btn" onclick="filterProjects('mobile',this)">Mobile</button>
+            <button class="filter-btn" onclick="filterProjects('vr',this)">VR / AR</button>
+            <button class="filter-btn" onclick="filterProjects('multiplayer',this)">Multiplayer</button>
+            <button class="filter-btn" onclick="filterProjects('unity',this)">Unity</button>
+        </div>
+        <div class="projects-grid" id="projects-grid"></div>
+    </div>
+</section>
+
+<!-- ═══ EDUCATION ══════════════════════════════════════ -->
+<section id="education">
+    <div class="container">
+        <div class="section-header reveal"><span class="section-num">04</span>
+            <h2 class="section-title">Education & <em>Certs</em></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="edu-grid" id="edu-grid-container"></div>
+        <div class="cert-list" id="cert-list-container"></div>
+    </div>
+</section>
+
+<!-- ═══ CONTACT ════════════════════════════════════════ -->
+<section id="contact">
+    <div class="container">
+        <div class="section-header reveal"><span class="section-num">05</span>
+            <h2 class="section-title">Get In <em>Touch</em></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="reveal-left">
+                <h3 class="contact-headline" id="contact-headline"></h3>
+                <p class="contact-desc" id="contact-description"></p>
+                <div class="contact-links" id="contact-links-container"></div>
+            </div>
+            <div class="reveal-right" id="contact-resume-container"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-brand" id="footer-brand"></div>
+    <div class="footer-copy" id="footer-copy"></div>
 </footer>
 
-<script src="js/bundle.js"></script>
-</body>
+<!-- ═══ MODAL ═════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeOverlay(event)">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-header-copy">
+                <div class="modal-title" id="m-title"></div>
+                <div class="modal-tags" id="m-tags"></div>
+                <p class="modal-head-desc" id="m-head-desc"></p>
+                <div class="modal-badges" id="m-badges"></div>
+            </div>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <nav class="modal-nav">
+                <ul class="nav-links">
+                    <li><a href="#m-about-sec">About</a></li>
+                    <li><a href="#m-media-sec">Media</a></li>
+                    <li><a href="#m-work-sec">MY Work</a></li>
+                </ul>
+            </nav>
+            <div class="modal-nav-inner">
+                <div class="modal-layout">
+                    <aside class="modal-sidebar" id="modal-sidebar">
+                        <div class="modal-side-image" id="m-side-image-wrap"><img id="m-side-image" src=""
+                                                                                  alt="Project cover" loading="lazy">
+                        </div>
+                        <div class="modal-side-meta">
+                            <div class="modal-side-cta modal-actions" id="m-actions"></div>
+                            <div class="modal-side-title">Platforms</div>
+                            <div class="modal-side-row" id="m-side-platforms"></div>
+                        </div>
+                        <div class="modal-side-meta">
+                            <div class="modal-side-row" id="m-side-tags"></div>
+                        </div>
+                        <div class="modal-side-meta" id="m-tech-sec">
+                            <div class="modal-side-title">Tech Stack</div>
+                            <div class="exp-techs" id="m-tech"></div>
+                        </div>
+                        <div class="modal-side-meta" id="m-feat-wrap" style="display:none">
+                            <div class="modal-side-title">Key Features</div>
+                            <ul class="exp-bullets" id="m-feat"></ul>
+                        </div>
+                    </aside>
+                    <div class="modal-main" id="modal-main">
+                        <div class="modal-about" id="m-about-sec">
+                            <div class="modal-stitle">About</div>
+                            <p class="modal-about-desc" id="m-about"></p></div>
+                        <div class="modal-media-section" id="m-media-sec">
+                            <div class="modal-stitle">Media</div>
+                            <div class="modal-media-stack" id="m-media"></div>
+                        </div>
+                        <div id="m-work-sec" style="display:none">
+                            <div class="modal-stitle">My Work on This Project</div>
+                            <div id="m-work-items"></div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /modal-nav-inner -->
+        </div>
+    </div>
+</div>
 
+<div class="media-lightbox" id="media-lightbox" onclick="closeMediaLightbox(event)">
+    <button class="media-lightbox-close" onclick="closeMediaLightbox()">✕</button>
+    <div class="media-lightbox-inner">
+        <img class="media-lightbox-image" id="media-lightbox-image" src="about:blank" alt="Expanded project screenshot">
+        <div class="media-lightbox-caption" id="media-lightbox-caption"></div>
+    </div>
+</div>
+
+<!-- ═══ SCRIPTS ════════════════════════════════════════ -->
+<script>
+    /* ── PORTOFOLIO DATA ────────────────────────────────── */
+    let PORTOFOLIO_DATA = {
+        HERO_DATA: {},
+        SKILLS_DATA: {},
+        EXPERIENCE_DATA: [],
+        EDUCATION_DATA: {},
+        CONTACT_DATA: {},
+        FOOTER_DATA: {},
+        PROJECTS: []
+    };
+
+    function badgeHTML(pl) {
+        const cls = (pl === 'VR' || pl === 'AR') ? 'vr' : (pl === 'MOBILE' || pl === 'IOS') ? 'mobile' : pl === 'PC' ? 'pc' : '';
+        return `<span class="platform-badge ${cls}">${pl}</span>`;
+    }
+
+    function formatProjectTag(tag) {
+        const labels = {
+            pc: 'PC',
+            vr: 'VR / AR',
+            ar: 'AR',
+            web: 'Web',
+            mobile: 'Mobile',
+            multiplayer: 'Multiplayer',
+            unity: 'Unity'
+        };
+        return labels[tag] || tag.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function defaultVideoLabel(index, total) {
+        if (total === 1) return 'Trailer Video';
+        if (index === 0) return 'Trailer Video';
+        if (index === 1) return 'Gameplay Video';
+        return `Video ${index + 1}`;
+    }
+
+    function escapeHtml(text) {
+        return String(text || '').replace(/[&<>"']/g, function (char) {
+            return ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[char];
+        });
+    }
+
+    function renderHero(data) {
+        if (!data) return;
+        const eyebrowEl = document.getElementById('hero-eyebrow');
+        const nameEl = document.getElementById('hero-name');
+        const twPrefixEl = document.getElementById('hero-tw-prefix');
+        const descEl = document.getElementById('hero-desc');
+        const actionsEl = document.getElementById('hero-actions');
+        const statsEl = document.getElementById('hero-stats');
+
+        if (eyebrowEl) eyebrowEl.textContent = data.eyebrow || '';
+
+        const firstName = data.name && data.name.first ? data.name.first : '';
+        const lastName = data.name && data.name.last ? data.name.last : '';
+        if (nameEl) {
+            nameEl.innerHTML = `${escapeHtml(firstName)}<span>${escapeHtml(lastName)}</span>`;
+        }
+
+        if (twPrefixEl) twPrefixEl.textContent = data.typewriterPrefix || 'Expert in';
+        if (descEl) descEl.textContent = data.description || '';
+
+        if (actionsEl) {
+            const actions = Array.isArray(data.actions) ? data.actions : [];
+            actionsEl.innerHTML = actions.map(action => {
+                const variantClass = action.variant === 'secondary' ? 'btn-secondary' : 'btn-primary';
+                const target = action.target ? ` target="${escapeHtml(action.target)}"` : '';
+                const rel = action.target === '_blank' ? ' rel="noopener noreferrer"' : '';
+                return `<a href="${escapeHtml(action.href || '#')}" class="${variantClass}"${target}${rel}>${escapeHtml(action.text || '')}</a>`;
+            }).join('');
+        }
+
+        if (statsEl) {
+            const stats = Array.isArray(data.stats) ? data.stats : [];
+            statsEl.innerHTML = stats.map(stat => {
+                const value = `${escapeHtml(stat.value || '')}${stat.suffix ? `<sub>${escapeHtml(stat.suffix)}</sub>` : ''}`;
+                return `<div><div class="stat-value">${value}</div><div class="stat-label">${escapeHtml(stat.label || '')}</div></div>`;
+            }).join('');
+        }
+
+        TW = Array.isArray(data.typewriterWords) ? data.typewriterWords.filter(Boolean) : [];
+        wi = 0;
+        ci = 0;
+        del = false;
+        if (twEl) twEl.textContent = '';
+    }
+
+    function renderSkills(data) {
+        if (!data) return;
+        const categoriesEl = document.getElementById('skills-categories');
+        const barsEl = document.getElementById('skill-bars-section');
+
+        if (categoriesEl) {
+            const categories = Array.isArray(data.categories) ? data.categories : [];
+            categoriesEl.innerHTML = categories.map((item, index) => {
+                const delayClass = `d${Math.min(index + 1, 5)}`;
+                const tags = Array.isArray(item.tags) ? item.tags : [];
+                return `<div class="skill-card reveal ${delayClass}">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">${escapeHtml(item.icon || '')}</div>
+                        <div class="skill-name">${escapeHtml(item.name || '')}</div>
+                    </div>
+                    <div class="skill-tags">${tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>
+                </div>`;
+            }).join('');
+        }
+
+        if (barsEl) {
+            const bars = Array.isArray(data.bars) ? data.bars : [];
+            barsEl.innerHTML = bars.map(item => {
+                const pct = Number(item.pct);
+                const safePct = Number.isFinite(pct) ? Math.max(0, Math.min(100, pct)) : 0;
+                return `<div class="skill-bar-item">
+                    <div class="skill-bar-header"><span class="skill-bar-name">${escapeHtml(item.name || '')}</span><span class="skill-bar-pct">${safePct}%</span></div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-pct="${safePct}"></div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+    }
+
+    function renderExperience(data) {
+        const timelineEl = document.getElementById('experience-timeline');
+        if (!timelineEl) return;
+
+        const items = Array.isArray(data) ? data : [];
+        const projects = Array.isArray(PORTOFOLIO_DATA?.PROJECTS) ? PORTOFOLIO_DATA.PROJECTS : [];
+        const projectsById = new Map(projects.map(project => [project.id, project]));
+
+        timelineEl.innerHTML = items.map((item, index) => {
+            const delayClass = index < 5 ? ` d${index + 1}` : '';
+            const bullets = Array.isArray(item.bullets) ? item.bullets : [];
+            const techs = Array.isArray(item.techs) ? item.techs : [];
+            const linkedProjectIds = Array.isArray(item.project_ids)
+                ? item.project_ids
+                : Array.isArray(item.projects_ids)
+                    ? item.projects_ids
+                    : [];
+            const linkedProjects = linkedProjectIds
+                .filter(id => typeof id === 'string' && id.trim())
+                .map(id => projectsById.get(id))
+                .filter(Boolean);
+
+            return `<div class="timeline-item reveal${delayClass}">
+                <div class="timeline-dot"></div>
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-company">${escapeHtml(item.company || '')}</div>
+                        <div class="exp-role">${escapeHtml(item.role || '')}</div>
+                    </div>
+                    <div class="exp-period">${escapeHtml(item.period || '')}</div>
+                </div>
+                <ul class="exp-bullets">${bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('')}</ul>
+                <div class="exp-techs">${techs.map(t => `<span class="tech-pill">${escapeHtml(t)}</span>`).join('')}</div>
+                ${linkedProjects.length ? `<div class="exp-projects"><div class="exp-projects-label">Related Projects</div>${linkedProjects.map(project => `<button type="button" class="tech-pill exp-project-pill" data-project-id="${escapeHtml(project.id)}">${escapeHtml(project.name || project.id)}</button>`).join('')}</div>` : ''}
+            </div>`;
+        }).join('');
+
+        timelineEl.querySelectorAll('.exp-project-pill').forEach(button => {
+            button.addEventListener('click', () => openModal(button.dataset.projectId));
+        });
+    }
+
+    function renderEducation(data) {
+        if (!data) return;
+        const eduGridEl = document.getElementById('edu-grid-container');
+        const certListEl = document.getElementById('cert-list-container');
+
+        if (eduGridEl) {
+            const degrees = Array.isArray(data.degrees) ? data.degrees : [];
+            eduGridEl.innerHTML = degrees.map((item, index) => {
+                const delayClass = index < 2 ? (index === 0 ? 'd1' : 'd2') : '';
+                const side = index === 0 ? 'reveal-left' : 'reveal-right';
+                return `<div class="edu-card ${side} ${delayClass}">
+                    <span class="edu-icon">${escapeHtml(item.icon || '')}</span>
+                    <div class="edu-degree">${escapeHtml(item.degree || '')}</div>
+                    <div class="edu-school">${escapeHtml(item.school || '')}</div>
+                    <div class="edu-period">${escapeHtml(item.period || '')}</div>
+                    <div class="edu-detail">${escapeHtml(item.detail || '')}</div>
+                </div>`;
+            }).join('');
+        }
+
+        if (certListEl) {
+            const certs = Array.isArray(data.certifications) ? data.certifications : [];
+            certListEl.innerHTML = certs.map((item, index) => {
+                const delayClass = index < 4 ? `d${index + 1}` : '';
+                return `<div class="cert-item reveal ${delayClass}">
+                    <div class="cert-icon">${escapeHtml(item.icon || '')}</div>
+                    <div class="cert-text">${escapeHtml(item.text || '')}</div>
+                </div>`;
+            }).join('');
+        }
+    }
+
+    function renderContact(data) {
+        if (!data) return;
+
+        // Render headline
+        const headlineEl = document.getElementById('contact-headline');
+        if (headlineEl) {
+            headlineEl.innerHTML = `${escapeHtml(data.headline || '')}${data.headlineEmphasis ? `<em>${escapeHtml(data.headlineEmphasis)}</em>` : ''}`;
+        }
+
+        // Render description
+        const descEl = document.getElementById('contact-description');
+        if (descEl) {
+            descEl.textContent = data.description || '';
+        }
+
+        const linksEl = document.getElementById('contact-links-container');
+        if (linksEl) {
+            const links = Array.isArray(data.links) ? data.links : [];
+            linksEl.innerHTML = links.map(link => {
+                const targetAttr = link.target ? ` target="${escapeHtml(link.target)}"` : '';
+                const relAttr = link.target === '_blank' ? ' rel="noopener noreferrer"' : '';
+                return `<a href="${escapeHtml(link.href)}"${targetAttr}${relAttr} class="contact-link">
+                    <div class="contact-link-icon">${escapeHtml(link.icon || '')}</div>
+                    <div>
+                        <div class="cl-label">${escapeHtml(link.label || '')}</div>
+                        <div class="cl-value">${escapeHtml(link.value || '')}</div>
+                    </div>
+                    <div class="cl-arrow">→</div>
+                </a>`;
+            }).join('');
+        }
+
+        const resumeEl = document.getElementById('contact-resume-container');
+        if (resumeEl && data.resume) {
+            const resume = data.resume;
+            resumeEl.innerHTML = `<div class="resume-cta">
+                <div class="resume-cta-title">${escapeHtml(resume.title || '')}</div>
+                <div class="resume-cta-desc">${escapeHtml(resume.description || '')}</div>
+                <a href="${escapeHtml(resume.href || '')}" target="_blank" class="btn-primary" style="display:inline-flex">${escapeHtml(resume.buttonText || '')}</a>
+            </div>`;
+        }
+    }
+
+    function renderFooter(data) {
+        if (!data) return;
+
+        const brandEl = document.getElementById('footer-brand');
+        if (brandEl) {
+            const brand = data.brand || {};
+            const brandName = escapeHtml(brand.name || '');
+            const brandAccent = escapeHtml(brand.accent || '');
+            const subtitle = escapeHtml(brand.subtitle || '');
+            brandEl.innerHTML = `${brandName}<span>${brandAccent}</span>${subtitle ? ` — ${subtitle}` : ''}`;
+        }
+
+        const copyEl = document.getElementById('footer-copy');
+        if (copyEl) {
+            const copy = data.copy || {};
+            const parts = [copy.year ? `© ${escapeHtml(copy.year)}` : '', escapeHtml(copy.role || ''), escapeHtml(copy.location || '')]
+                .filter(Boolean);
+            copyEl.textContent = parts.join(' · ');
+        }
+    }
+
+    function normalizeProjectVideos(project) {
+        const source = Array.isArray(project.media?.videos) && project.media.videos.length
+            ? project.media.videos
+            : Array.isArray(project.videos)
+                ? project.videos.filter(Boolean)
+                : [];
+
+        return source.map((entry, index, array) => {
+            if (typeof entry === 'string') {
+                return {label: defaultVideoLabel(index, array.length), url: entry};
+            }
+            return {
+                label: entry.text || entry.label || entry.title || defaultVideoLabel(index, array.length),
+                url: entry.url
+            };
+        }).filter(video => video.url);
+    }
+
+    function isLocalVideoFile(url) {
+        if (typeof url !== 'string') return false;
+        const trimmed = url.trim();
+        if (!trimmed) return false;
+        const noQuery = trimmed.split('#')[0].split('?')[0].toLowerCase();
+        const hasVideoExt = /\.(mp4|webm|ogg|mov|m4v)$/.test(noQuery);
+        const isRemote = /^(https?:)?\/\//i.test(trimmed);
+        return hasVideoExt && !isRemote;
+    }
+
+    function normalizeProjectScreenshots(project) {
+        const source = Array.isArray(project.media) && project.media.length
+            ? project.media
+            : [];
+
+        return source.map((entry, index) => {
+            if (typeof entry === 'string') {
+                return {src: entry, alt: `${project.name} screenshot ${index + 1}`};
+            }
+            return {
+                src: entry.src,
+                alt: entry.alt || `${project.name} screenshot ${index + 1}`
+            };
+        }).filter(item => item.src);
+    }
+
+    function openMediaLightbox(src, alt) {
+        const overlay = document.getElementById('media-lightbox');
+        document.getElementById('media-lightbox-image').src = src;
+        document.getElementById('media-lightbox-image').alt = alt || 'Expanded project screenshot';
+        document.getElementById('media-lightbox-caption').textContent = alt || '';
+        overlay.classList.add('open');
+    }
+
+    function closeMediaLightbox(e) {
+        const overlay = document.getElementById('media-lightbox');
+        if (e && e.target !== overlay) return;
+        overlay.classList.remove('open');
+        document.getElementById('media-lightbox-image').src = '';
+        document.getElementById('media-lightbox-image').alt = 'Expanded project screenshot';
+        document.getElementById('media-lightbox-caption').textContent = '';
+    }
+
+    function renderProjects(filter) {
+        const grid = document.getElementById('projects-grid');
+        const list = filter === 'all' ? PORTOFOLIO_DATA.PROJECTS : PORTOFOLIO_DATA.PROJECTS.filter(p => p.tags.includes(filter));
+        grid.innerHTML = list.map(p => {
+            const coverSrc = p.cover || '';
+            const coverAlt = `${p.name} cover`;
+            return `
+    <div class="project-card reveal-scale" onclick="openModal('${p.id}')">
+      <div class="project-thumb">
+        ${coverSrc ? `<img class="project-thumb-media" src="${coverSrc}" alt="${coverAlt}" loading="lazy">` : `<div class="project-thumb-icon">${p.icon}</div>`}
+        <div class="project-thumb-overlay"></div>
+        <div class="project-thumb-mark">${p.icon}</div>
+        <div class="project-platform-badges">${p.platforms.map(badgeHTML).join('')}</div>
+        <div class="proj-hover-overlay"><div class="play-ring">▶</div></div>
+      </div>
+      <div class="project-body">
+        <div class="project-name">${p.name}</div>
+        <p class="project-desc">${p.shortDesc || p.desc}</p>
+      </div>
+      <div class="project-footer">
+        <div class="project-techs">${p.techs.slice(0, 4).map(t => `<span class="project-tech">${t}</span>`).join('')}${p.techs.length > 4 ? `<span class="project-tech-more">+${p.techs.length - 4}</span>` : ''}</div>
+        <div class="project-arrow">→</div>
+      </div>
+    </div>`;
+        }).join('');
+        grid.querySelectorAll('.reveal-scale').forEach(el => RO.observe(el));
+    }
+
+    function filterProjects(f, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProjects(f);
+    }
+
+    function openModal(id) {
+        const p = PORTOFOLIO_DATA.PROJECTS.find(x => x.id === id);
+        if (!p) return;
+        const hasFeatures = !!(p.features && p.features.length);
+        const hasLink = Array.isArray(p.link) && p.link.length > 0;
+        const screenshots = normalizeProjectScreenshots(p);
+        const coverSrc = p.cover || '';
+        const coverAlt = `${p.name} cover`;
+        const sideImageWrap = document.getElementById('m-side-image-wrap');
+        const sideImage = document.getElementById('m-side-image');
+        document.getElementById('m-title').textContent = p.name;
+        // document.getElementById('m-badges').innerHTML = p.platforms.map(badgeHTML).join('');
+        document.getElementById('m-tags').innerHTML = p.tags.map(tag => `<span class="modal-tag">${formatProjectTag(tag)}</span>`).join('');
+        document.getElementById('m-head-desc').textContent = (p.shortDesc && p.shortDesc.trim()) ? p.shortDesc : p.desc;
+        if (coverSrc) {
+            sideImageWrap.style.display = '';
+            sideImage.src = coverSrc;
+            sideImage.alt = coverAlt;
+        } else {
+            sideImageWrap.style.display = 'none';
+            sideImage.src = '';
+            sideImage.alt = 'Project screenshot';
+        }
+        document.getElementById('m-side-platforms').innerHTML = p.platforms.map(badgeHTML).join('');
+        document.getElementById('m-about').textContent = p.desc;
+        const mediaEl = document.getElementById('m-media');
+        const videos = normalizeProjectVideos(p);
+        const videoHTML = videos.map((video, idx) => {
+            const frameHTML = isLocalVideoFile(video.url)
+                ? `<video src="${video.url}" title="${p.name} video ${idx + 1}" controls preload="metadata" playsinline></video>`
+                : `<iframe src="${video.url}" title="${p.name} video ${idx + 1}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+
+            return `
+    <div class="modal-media-block modal-video-card">
+      <div class="modal-media-head">
+        <div class="modal-video-title">🎥 ${video.label}</div>
+      </div>
+      <div class="modal-video"><div class="modal-video-frame">${frameHTML}</div></div>
+    </div>`;
+        }).join('');
+        const screenshotsHTML = screenshots.map((shot, idx) => `
+    <button type="button" class="modal-media-block modal-screenshot-btn" data-src="${shot.src}" data-alt="${shot.alt}">
+      <span class="modal-media-head">
+        <span class="modal-video-title">🖼 Screenshot ${idx + 1}</span>
+      </span>
+      <span class="modal-screenshot-frame">
+        <img src="${shot.src}" alt="${shot.alt}" loading="lazy">
+        <span class="modal-screenshot-overlay">
+          <span class="modal-screenshot-caption">${shot.alt}</span>
+          <span class="modal-screenshot-expand">Click to Expand</span>
+        </span>
+      </span>
+    </button>`).join('');
+        mediaEl.innerHTML = videoHTML || screenshotsHTML
+            ? `${videoHTML}${screenshotsHTML}`
+            : `<div class="modal-media-block"><div class="modal-media-head"><div class="modal-media-label">🎞 Media</div><div class="modal-video-title">Coming Soon</div></div><div class="modal-video-ph"><div class="vi">${p.icon}</div><span>Media coming soon</span></div></div>`;
+        mediaEl.querySelectorAll('.modal-screenshot-btn').forEach(btn => {
+            btn.addEventListener('click', () => openMediaLightbox(btn.dataset.src, btn.dataset.alt));
+        });
+        const workSec = document.getElementById('m-work-sec');
+        const workEl = document.getElementById('m-work-items');
+        if (p.myWork && p.myWork.length) {
+            workSec.style.display = 'block';
+            workEl.innerHTML = p.myWork.map((item, idx) => `
+      <div class="modal-work-item">
+        <div class="modal-work-index">${String(idx + 1).padStart(2, '0')}</div>
+        <div class="modal-work-content">
+          <div class="modal-work-title">${item.title}</div>
+          <div class="modal-work-desc">${item.description}</div>
+          ${item.media && item.media.length ? `<div class="modal-work-media">
+            ${item.media.map((img, i) => `
+              <button type="button" class="modal-work-thumb" data-src="${img.src}" data-alt="${img.alt}" title="Click to expand">
+                <img src="${img.src}" alt="${img.alt}" loading="lazy">
+              </button>`).join('')}
+          </div>` : ''}
+        </div>
+      </div>`).join('');
+            workEl.querySelectorAll('.modal-work-thumb').forEach(btn => {
+                btn.addEventListener('click', () => openMediaLightbox(btn.dataset.src, btn.dataset.alt));
+            });
+        } else {
+            workSec.style.display = 'none';
+        }
+        const fw = document.getElementById('m-feat-wrap');
+        if (hasFeatures) {
+            fw.style.display = 'block';
+            document.getElementById('m-feat').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
+        } else fw.style.display = 'none';
+        document.getElementById('m-tech').innerHTML = p.techs.map(t => `<span class="tech-pill">${t}</span>`).join('');
+        document.getElementById('m-actions').innerHTML = hasLink
+            ? p.link.map(l => `<a href="${l.url}" target="_blank" class="btn-primary btn-rect">${l.text} →</a>`).join('')
+            : '';
+        document.getElementById('modal-main').scrollTop = 0;
+        document.getElementById('modal-sidebar').scrollTop = 0;
+        document.getElementById('modal-overlay').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        closeMediaLightbox();
+        document.getElementById('modal-overlay').classList.remove('open');
+        document.body.style.overflow = '';
+        document.getElementById('m-media').innerHTML = '';
+        document.getElementById('modal-main').scrollTop = 0;
+        document.getElementById('modal-sidebar').scrollTop = 0;
+    }
+
+    function closeOverlay(e) {
+        if (e.target === document.getElementById('modal-overlay')) closeModal();
+    }
+
+    document.addEventListener('keydown', e => {
+        if (e.key !== 'Escape') return;
+        if (document.getElementById('media-lightbox').classList.contains('open')) {
+            closeMediaLightbox();
+            return;
+        }
+        closeModal();
+    });
+
+    /* ── MODAL NAV SCROLL ──────────────────────────────── */
+    document.querySelector('.modal-nav').addEventListener('click', function (e) {
+        const link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const modalMain = document.getElementById('modal-main');
+        const offset = target.offsetTop - modalMain.offsetTop;
+        modalMain.scrollTo({top: offset, behavior: 'smooth'});
+    });
+
+    /* ── THEME ──────────────────────────────────────────── */
+    let dark = true;
+
+    function toggleTheme() {
+        dark = !dark;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        document.getElementById('theme-track').classList.toggle('lit', !dark);
+    }
+
+    /* ── TYPEWRITER ─────────────────────────────────────── */
+    let TW = [];
+    let wi = 0, ci = 0, del = false;
+    const twEl = document.getElementById('tw-word');
+
+    function twStep() {
+        if (!TW.length || !twEl) return;
+        const w = TW[wi];
+        if (!del) {
+            twEl.textContent = w.slice(0, ++ci);
+            if (ci === w.length) {
+                del = true;
+                setTimeout(twStep, 1600);
+                return;
+            }
+            setTimeout(twStep, 88);
+        } else {
+            twEl.textContent = w.slice(0, --ci);
+            if (ci === 0) {
+                del = false;
+                wi = (wi + 1) % TW.length;
+                setTimeout(twStep, 280);
+                return;
+            }
+            setTimeout(twStep, 46);
+        }
+    }
+
+    function syncHeroStatsFromPortfolioData(data) {
+        if (!data || !data.HERO_DATA) return;
+        const heroStats = Array.isArray(data.HERO_DATA.stats) ? data.HERO_DATA.stats : [];
+
+        const projectsCount = Array.isArray(data.PROJECTS) ? data.PROJECTS.length : 0;
+        const companiesCount = Array.isArray(data.EXPERIENCE_DATA)
+            ? new Set(
+                data.EXPERIENCE_DATA
+                    .map(item => String(item && item.company ? item.company : '').trim().toLowerCase())
+                    .filter(Boolean)
+            ).size
+            : 0;
+
+        const projectsStat = heroStats.find(item => String(item && item.label ? item.label : '').trim().toLowerCase() === 'projects');
+        const companiesStat = heroStats.find(item => String(item && item.label ? item.label : '').trim().toLowerCase() === 'companies');
+
+        if (projectsStat) projectsStat.value = String(projectsCount);
+        if (companiesStat) companiesStat.value = String(companiesCount);
+    }
+
+    const PORTFOLIO_DATA_URL = 'data/portfolio-data.json';
+    let typewriterStarted = false;
+
+    async function loadPortfolioDataFromJson() {
+        try {
+            const response = await fetch(PORTFOLIO_DATA_URL, {cache: 'no-store'});
+            if (!response.ok) {
+                throw new Error(`Failed to load ${PORTFOLIO_DATA_URL}: ${response.status}`);
+            }
+
+            const loaded = await response.json();
+            if (!loaded || typeof loaded !== 'object') {
+                throw new Error('Invalid portfolio JSON payload.');
+            }
+
+            Object.keys(PORTOFOLIO_DATA).forEach(key => delete PORTOFOLIO_DATA[key]);
+            Object.assign(PORTOFOLIO_DATA, loaded);
+            return true;
+        } catch (error) {
+            console.error('Failed to load portfolio JSON.', error);
+            return false;
+        }
+    }
+
+    function renderPortfolioSections() {
+        syncHeroStatsFromPortfolioData(PORTOFOLIO_DATA);
+        renderHero(PORTOFOLIO_DATA.HERO_DATA);
+        renderSkills(PORTOFOLIO_DATA.SKILLS_DATA);
+        renderExperience(PORTOFOLIO_DATA.EXPERIENCE_DATA);
+        renderEducation(PORTOFOLIO_DATA.EDUCATION_DATA);
+        renderContact(PORTOFOLIO_DATA.CONTACT_DATA);
+        renderFooter(PORTOFOLIO_DATA.FOOTER_DATA);
+        if (!typewriterStarted) {
+            typewriterStarted = true;
+            setTimeout(twStep, 1100);
+        }
+    }
+
+    /* ── SCROLL REVEAL ──────────────────────────────────── */
+    const RO = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                RO.unobserve(e.target);
+            }
+        });
+    }, {threshold: .12});
+    function observeRevealElements() {
+        document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el => RO.observe(el));
+    }
+
+    /* ── SKILL BARS ─────────────────────────────────────── */
+    const BO = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.querySelectorAll('.skill-bar-fill').forEach(b => {
+                    setTimeout(() => {
+                        b.style.width = b.dataset.pct + '%';
+                    }, 180);
+                });
+                BO.unobserve(e.target);
+            }
+        });
+    }, {threshold: .25});
+    function observeSkillBars() {
+        const barsEl = document.getElementById('skill-bars-section');
+        if (barsEl) BO.observe(barsEl);
+    }
+
+    /* ── CURSOR ─────────────────────────────────────────── */
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    let cmx = 0, cmy = 0, crx = 0, cry = 0;
+    document.addEventListener('mousemove', e => {
+        cmx = e.clientX;
+        cmy = e.clientY;
+        dot.style.left = cmx + 'px';
+        dot.style.top = cmy + 'px';
+    });
+    (function animR() {
+        crx += (cmx - crx) * .13;
+        cry += (cmy - cry) * .13;
+        ring.style.left = crx + 'px';
+        ring.style.top = cry + 'px';
+        requestAnimationFrame(animR);
+    })();
+    function bindCursorTargets() {
+        document.querySelectorAll('a,button,.project-card,.skill-card').forEach(el => {
+            if (el.dataset.cursorBound === '1') return;
+            el.dataset.cursorBound = '1';
+            el.addEventListener('mouseenter', () => {
+                ring.style.transform = 'translate(-50%,-50%) scale(1.7)';
+                ring.style.borderColor = 'rgba(0,245,196,.7)';
+                dot.style.transform = 'translate(-50%,-50%) scale(0)';
+            });
+            el.addEventListener('mouseleave', () => {
+                ring.style.transform = 'translate(-50%,-50%) scale(1)';
+                ring.style.borderColor = 'rgba(0,245,196,.4)';
+                dot.style.transform = 'translate(-50%,-50%) scale(1)';
+            });
+        });
+    }
+
+    /* ── INIT ───────────────────────────────────────────── */
+    (async function initPortfolioPage() {
+        const isLoaded = await loadPortfolioDataFromJson();
+        if (!isLoaded) {
+            const grid = document.getElementById('projects-grid');
+            if (grid) {
+                grid.innerHTML = '<div style="padding:14px;border:1px solid var(--border);color:var(--muted)">Unable to load <code>data/portfolio-data.json</code>. Serve the site over HTTP and check the file path.</div>';
+            }
+            return;
+        }
+        renderPortfolioSections();
+        renderProjects('all');
+        observeRevealElements();
+        observeSkillBars();
+        bindCursorTargets();
+    })();
+</script>
+</body>
 </html>

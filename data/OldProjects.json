@@ -1,0 +1,148 @@
+{
+  "projects": [
+    {
+      "id": "Steam-Blast",
+      "name": "Steam Blast",
+      "icon": "🥊",
+      "shortDesc": "[ITI Graduation Project] A competitive multiplayer VR brawler built around flight, aerial combat, and objective control — developed as a graduation project using Unreal Engine.",
+      "desc": "Steam Blast is a futuristic VR multiplayer brawler where players soar through the air, clash in close-range combat, and compete to seize control of key devices spread across the city. The setting combines high-speed vertical movement with an arena-like objective structure, creating a gameplay loop that constantly shifts between flight, pursuit, combat, and territorial control. Designed as an ITI graduation project, the experience highlights the challenge of translating fast competitive action into VR, pairing immersive movement mechanics with multiplayer game rules and objective-driven pacing to create a match flow that feels physical, intense, and strategically dynamic.",
+      "tags": [
+        "pc",
+        "vr",
+        "multiplayer"
+      ],
+      "platforms": [
+        "VR",
+        "PC"
+      ],
+      "cover": "img/SteamBlast-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/lT1YQY3lizY"
+        }
+      ],
+      "techs": [
+        "Unreal Engine",
+        "VR",
+        "Multiplayer"
+      ],
+      "features": [
+        "Full 3D flight mechanics in VR",
+        "Real-time competitive multiplayer",
+        "Device-capture objective gameplay",
+        "Physics-based combat"
+      ],
+      "link": null,
+      "featured": false,
+      "published": true
+    },
+    {
+      "id": "Killing-Beat",
+      "name": "Killing Beat",
+      "icon": "🎵",
+      "shortDesc": "A rhythm-driven mobile game where players dodge obstacles in sync with the music.",
+      "desc": "Killing Beat is a music-driven mobile experience built around timing, reflexes, and the satisfaction of moving perfectly with the soundtrack. Players weave through incoming obstacles in a continuous rhythm-based loop where every dodge is tied to tempo, turning survival into a performance of timing and flow. The setting is abstract and energetic, letting the audio-visual feedback take center stage while the core mechanics focus on readable challenge, escalating pace, and musical synchronization. The result is a compact but expressive gameplay experience where strong beat mapping and responsive controls make every run feel like a playable song.",
+      "tags": [
+        "mobile",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE"
+      ],
+      "cover": "img/KillingBeat-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/Z08ugcA71dU?end=134"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity"
+      ],
+      "features": [
+        "Music-synchronized obstacles",
+        "Progressive difficulty",
+        "Hyper-casual loop design"
+      ],
+      "link": null,
+      "featured": false,
+      "published": true
+    },
+    {
+      "id": "SymSam",
+      "name": "SymSam",
+      "icon": "⚔️",
+      "shortDesc": "A hyper-casual mobile game about slicing shapes into perfectly balanced halves.",
+      "desc": "SymSam is a hyper-casual precision game that turns the simple act of cutting shapes into a clean, satisfying test of timing and control. Framed around a samurai-inspired theme of balance and mastery, players slice incoming forms into symmetrical halves, chasing perfect cuts through a quick gameplay loop that is easy to understand but increasingly difficult to execute well. The core appeal comes from immediate tactile feedback, escalating geometric challenge, and the constant pursuit of accuracy, creating a polished mobile experience that feels approachable at first touch while still rewarding focus, consistency, and finesse.",
+      "tags": [
+        "mobile",
+        "unity"
+      ],
+      "platforms": [
+        "MOBILE"
+      ],
+      "cover": "img/SymSam-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/Z08ugcA71dU?start=134&end=168"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity"
+      ],
+      "features": [
+        "Precision cutting mechanics",
+        "Shape symmetry detection",
+        "Progressive puzzle design"
+      ],
+      "link": null,
+      "featured": false,
+      "published": true
+    },
+    {
+      "id": "Bomb-Party",
+      "name": "Bomb Party",
+      "icon": "💣",
+      "shortDesc": "A local multiplayer PC party game built around bombs, portals, and fast PVP rounds.",
+      "desc": "Bomb Party is a chaotic local multiplayer party game where up to four players battle in compact arenas using bombs, movement, and clever portal plays to outlast one another. Built for Global Game Jam 2018, the game leans into immediate readability and fast round-based action, letting players quickly understand the rules while discovering the deeper fun of ricochets, traps, and unpredictable counterplays. The gameplay loop is simple but explosive: dodge danger, create openings, use the environment creatively, and turn every bomb toss into either a direct attack or a surprising portal-powered setup that keeps matches loud, funny, and intensely competitive.",
+      "tags": [
+        "pc",
+        "multiplayer",
+        "unity"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "cover": "img/BoombPart-cover.png",
+      "videos": [
+        {
+          "title": "GamePlay Video",
+          "url": "https://www.youtube.com/embed/clx0vbIevjU"
+        }
+      ],
+      "techs": [
+        "C#",
+        "Unity",
+        "Local Multiplayer"
+      ],
+      "features": [
+        "4-player local PVP",
+        "Portal-based bomb physics",
+        "Global Game Jam 2018 entry"
+      ],
+      "link": [
+        {
+          "text": "View / Download",
+          "url": "https://globalgamejam.org/2018/games/bombparty",
+          "type": "website"
+        }
+      ],
+      "featured": false,
+      "published": true
+    }
+  ]
+}

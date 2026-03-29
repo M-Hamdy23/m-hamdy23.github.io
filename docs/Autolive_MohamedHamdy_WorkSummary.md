@@ -1,0 +1,7 @@
+Here's a summary of everything extracted from your files, organized into 5 main contribution areas:
+CMS / Data Systems (5 areas) — You owned the entire ScriptableObject data pipeline for products: callout labels, pulse markers, placement indicators, the 3D inspect viewport, and a full tooltip system. This is substantial backend architecture work in Unity.
+Custom Timeline Tracks (11 tracks) — This is your most technically impressive area. You built 11 custom Unity Timeline tracks from scratch, wrapping both native Unity systems and third-party packages (MagicOutline, RIMHighlight, BeautifulDissolves, ScreenTransitions, etc.) into reusable, keyframe-controlled tracks. This is advanced Unity editor extension work.
+UI Systems (4 areas) — Swipe detection, overhead camera integration, callouts inside the 3D viewport, and depth-of-field control.
+Car Interaction (1 area) — Full raycast-based car interaction system covering doors, trunk, lights, airbag — with animation state gating.
+Tools (1 area) — A custom Unity Editor script for duplicating Timelines with bindings, which is a solid productivity contribution.
+You can use the filter buttons at the top to browse by category. Each card is ready to be adapted as a portfolio entry with your own screenshots or GIFs added.

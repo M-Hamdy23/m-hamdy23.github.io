@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio Admin Dashboard</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/editor-dashboard.css">
+</head>
+<body>
+<div class="dashboard-shell">
+	<aside class="sidebar">
+		<section class="sidebar-card">
+			<div class="brand-mark">MH<span>.admin</span></div>
+			<h1 class="sidebar-heading">Portfolio Dashboard</h1>
+			<p class="muted-copy">A friendly editor for updating the structured portfolio JSON without touching code.</p>
+		</section>
+
+		<section class="sidebar-card">
+			<div class="card-header">
+				<div>
+					<h2 class="card-title">File workflow</h2>
+					<p class="card-subtitle">Load, edit, save, export, and reset your portfolio data.</p>
+				</div>
+			</div>
+			<div class="button-stack">
+				<button class="btn-secondary" type="button" data-action="load-default">Load Default JSON</button>
+				<button class="btn-ghost" type="button" data-action="import-json">Load JSON File</button>
+				<button class="btn-primary" type="button" data-action="save-json">Save JSON</button>
+				<button class="btn-ghost" type="button" data-action="export-json">Export Download</button>
+				<button class="btn-danger" type="button" data-action="reset-data">Reset Changes</button>
+			</div>
+			<input class="visually-hidden" id="json-import-input" type="file" accept="application/json,.json">
+		</section>
+
+		<section class="sidebar-card">
+			<div class="card-header">
+				<div>
+					<h2 class="card-title">Session status</h2>
+					<p class="card-subtitle">Current working file and save state.</p>
+				</div>
+			</div>
+			<div class="section-stats">
+				<span class="meta-pill" id="sidebar-file-name">portfolio-data.json</span>
+				<span class="status-pill" id="sidebar-file-state">No pending local edits</span>
+			</div>
+			<p class="helper-text" id="sidebar-last-save">No file saved in this session</p>
+		</section>
+
+	</aside>
+
+	<main class="main-area">
+		<header class="topbar">
+			<div>
+				<div class="section-kicker">Portfolio JSON Editor</div>
+				<h2 class="section-title" id="current-section-title">Hero</h2>
+				<p class="section-description" id="current-section-description">Intro copy, calls to action, typewriter words, and hero stats.</p>
+			</div>
+			<div class="topbar-actions">
+				<button class="btn-ghost" type="button" id="undo-button" data-action="undo">Undo</button>
+				<button class="btn-ghost" type="button" id="redo-button" data-action="redo">Redo</button>
+				<button class="btn-secondary" type="button" id="preview-toggle" data-action="toggle-preview">Show JSON Preview</button>
+				<div class="section-stats" id="status-badges"></div>
+			</div>
+			<div class="top-nav-row">
+				<nav class="section-nav top-section-nav" id="section-nav" aria-label="Portfolio sections"></nav>
+				<div class="top-theme-toggle">
+					<p class="card-subtitle" id="theme-label">Dark mode</p>
+					<button class="toggle-button btn-ghost" type="button" data-action="toggle-theme" aria-label="Toggle theme">
+						<span class="toggle-track" id="theme-track">
+							<span class="toggle-thumb"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<section id="section-content" aria-live="polite"></section>
+	</main>
+
+	<aside class="inspector" id="inspector-panel"></aside>
+</div>
+
+<div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+<script src="js/editor-dashboard.js"></script>
+</body>
+</html>
