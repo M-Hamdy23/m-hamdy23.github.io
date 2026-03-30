@@ -183,6 +183,7 @@
         "Mobile"
       ],
       "projects_ids": [
+        "AWAREA-App",
         "zinad-training-games"
       ]
     },
@@ -249,10 +250,9 @@
         "Autoliv-Explore-3D",
         "Sky-Striders",
         "That-Just-Happened",
-        "Skull-Switch",
         "Scriptable-System",
-        "Killing-Beat",
-        "SymSam"
+        "Skull-Switch",
+        "prototypes-and-demos"
       ]
     },
     {
@@ -1408,6 +1408,116 @@
         {
           "text": "App store",
           "url": "https://apps.apple.com/eg/app/10-tawla/id1569696163",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "published": true,
+      "id": "AWAREA-App",
+      "name": "AWAREA App",
+      "icon": "🛡️",
+      "shortDesc": "AWAREA Mobile application by ZINAD is a gateway to a set of interactive Cybersecurity Awareness content and features that are carefully designed to offer all your Cybersecurity awareness needs in one place from cybersecurity awareness videos, culture-tailored content, interactive cybersecurity awareness games, Cybersecurity news, and more.",
+      "desc": "AWAREA Mobile application by ZINAD is a gateway to a set of interactive Cybersecurity Awareness content and features that are carefully designed to offer all your Cybersecurity awareness needs in one place from cybersecurity awareness videos, culture-tailored content, interactive cybersecurity awareness games, Cybersecurity news, and more.\n\nAWAREA was built around ease of use, access, and conveniently for a smooth experience with fast and easy navigation between the app’s features in both Arabic and English language, delivering the right and necessary information to protect your data and privacy and stay up-to-date with global security threats, trends, and news, for a more secure and stronger organization against breaches, threats, and attacks.\n\n*Login with your ZiSoft Awareness user account where you can access all app features using your ZiSoft Username and Password or via QR Code\n\n*Different access made for Guest Users\n\nGuest Users can use AWAREA and enjoy a glimpse of our Cybersecurity Awareness videos, games, and news.\n\n*Personalize your profile by adding a profile picture\n\n*You can follow ZINAD News, and Cybersecurity News in Arabic or English, Watch Cybersecurity Awareness videos or play ZINAD’s Interactive Awareness Games.\n\n*Customized app theme based on your organization’s branding identity.",
+      "tags": [
+        "unity",
+        "mobile",
+        "android",
+        "ios"
+      ],
+      "platforms": [
+        "MOBILE",
+        "IOS",
+        "ANDROID"
+      ],
+      "cover": "img/Awarea/cover.png",
+      "videos": [],
+      "media": [
+        {
+          "src": "img/Awarea/1.webp",
+          "alt": "App screenshot 1"
+        },
+        {
+          "src": "img/Awarea/2.webp",
+          "alt": "App screenshot 2"
+        },
+        {
+          "src": "img/Awarea/3.webp",
+          "alt": "App screenshot 3"
+        },
+        {
+          "src": "img/Awarea/4.webp",
+          "alt": "App screenshot 4"
+        },
+        {
+          "src": "img/Awarea/5.webp",
+          "alt": "App screenshot 5"
+        }
+      ],
+      "techs": [
+        "Unity",
+        "C#",
+        "Android",
+        "iOS",
+        "Javascript",
+        "HTML/CSS",
+        "Firebase",
+        "Mobile Development",
+        "Enterprise Solutions"
+      ],
+      "features": [
+        "User & guest login options",
+        "Security News Hub (Arabic & English)",
+        "Games and videos for cybersecurity awareness",
+        "ZINAD News (Arabic and English)",
+        "Access to the Awareness Platform (ZiSoft)",
+        "Push Notification (Arabic & English)",
+        "Profile Personalization",
+        "QR Login",
+        "Admin Portal for content management and analytics"
+      ],
+      "myWork": [
+        {
+          "title": "Unity Mobile App Development",
+          "description": "Contributed to the development of a production Unity mobile application, delivering features across UI, networking, and platform systems. Built and refined core app flows including home, settings, profile, notifications, QR login, and game views through extensive prefab and scene iteration, improving usability and localization support.",
+          "media": []
+        },
+        {
+          "title": "Firebase Integration & Content Systems",
+          "description": "Implemented and maintained Firebase-driven systems for notifications, news, and dynamic content delivery. Developed and improved data flows, handled webview integration and URL routing, and ensured reliable content updates across Arabic and English localized experiences.",
+          "media": []
+        },
+        {
+          "title": "Web Platform & Admin Portal (Firebase)",
+          "description": "Built and enhanced a Firebase-hosted web platform including a multi-tenant admin and super-admin system with role-based separation and dedicated hosting per client. Developed dynamic content pages such as news, videos, and tips, with real-time Firebase integration and Unity app bridging.",
+          "media": []
+        },
+        {
+          "title": "Security & Data Validation",
+          "description": "Improved platform security by implementing XSS sanitization across all dynamic content (news, videos, tips) using DOMPurify and custom URL validation. Defined and maintained Firebase Realtime Database security rules to enforce proper access control for multiple data domains.",
+          "media": []
+        },
+        {
+          "title": "Build Systems & Release Support",
+          "description": "Supported Android release pipelines by configuring Addressables, project settings, and platform-specific configurations (Gradle, manifests). Automated Firebase deployment workflows using scripts for hosting, functions, and database rules, improving team efficiency and release reliability.",
+          "media": []
+        },
+        {
+          "title": "Content & Game Integration",
+          "description": "Integrated and maintained multiple interactive content modules and mini-games (such as phishing awareness, quizzes, and simulations) within the app ecosystem, while contributing to shared systems and reusable components under common modules.",
+          "media": []
+        }
+      ],
+      "link": [
+        {
+          "text": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.Zinad.ZiApp",
+          "type": "website"
+        },
+        {
+          "text": "App store",
+          "url": "https://apps.apple.com/eg/app/awarea/id1625565951",
           "type": "website"
         }
       ]
