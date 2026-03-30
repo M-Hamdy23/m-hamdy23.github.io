@@ -1491,7 +1491,36 @@
         {
           "title": "Web Platform & Admin Portal (Firebase)",
           "description": "Built and enhanced a Firebase-hosted web platform including a multi-tenant admin and super-admin system with role-based separation and dedicated hosting per client. Developed dynamic content pages such as news, videos, and tips, with real-time Firebase integration and Unity app bridging.",
-          "media": []
+          "media": [
+            {
+              "src": "img/Awarea/AdminPortal/1.png",
+              "alt": "Admin portal screenshot 1"
+            },
+            {
+              "src": "img/Awarea/AdminPortal/2.png",
+              "alt": "Admin portal screenshot 2"
+            },
+            {
+              "src": "img/Awarea/AdminPortal/3.png",
+              "alt": "Admin portal screenshot 3"
+            },
+            {
+              "src": "img/Awarea/AdminPortal/4.png",
+              "alt": "Admin portal screenshot 4"
+            },
+            {
+              "src": "img/Awarea/AdminPortal/5.png",
+              "alt": "Admin portal screenshot 5"
+            },
+            {
+              "src": "img/Awarea/AdminPortal/6.png",
+              "alt": "Admin portal screenshot 6"
+            },
+            {
+              "src": "img/Awarea/AdminPortal/7.png",
+              "alt": "Admin portal screenshot 7"
+            }
+          ]
         },
         {
           "title": "Security & Data Validation",
