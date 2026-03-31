@@ -664,6 +664,11 @@
           "text": "Meta Store",
           "url": "https://www.meta.com/en-gb/experiences/highstreet-calamity/9352017631510878/",
           "type": "website"
+        },
+        {
+          "text": "Unity Case Study",
+          "url": "https://unity.com/resources/highstreet-market-scaled-vr-mmo-with-ecs-for-unity",
+        "type": "website"
         }
       ]
     },
