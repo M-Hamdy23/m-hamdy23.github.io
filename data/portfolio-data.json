@@ -30,7 +30,7 @@
     ],
     "stats": [
       {
-        "value": "10",
+        "value": "7",
         "suffix": "+",
         "label": "Years Exp."
       },
@@ -1662,7 +1662,7 @@
       "name": "Sky Striders",
       "icon": "🦅",
       "shortDesc": "A fast-paced multiplayer PC game focused on fluid movement, aerial control, and competitive modes.",
-      "desc": "Sky Striders is a competitive multiplayer action game built around the thrill of movement mastery, letting players chain together grounded momentum, aerial mobility, and character abilities in fast-paced online matches. Set in a stylized combat arena space where mobility is just as important as attack timing, the experience encourages players to learn traversal, outmaneuver opponents, and exploit verticality to control the flow of each encounter. At its core, the gameplay loop rewards skillful motion, quick decision-making, and coordinated ability use, while the underlying multiplayer architecture and movement systems work together to deliver responsive combat, varied modes, and a strong sense of speed and freedom.",
+      "desc": "Sky Striders is a competitive multiplayer action game built around the thrill of movement mastery, focusing on fluid base movement and grappling hook mechanics in fast-paced online matches. Players chain together grounded momentum, aerial mobility, and precise hook usage to traverse dynamic arenas with speed and control.Set in a stylized combat space where positioning and mobility define success, the experience challenges players to outmaneuver opponents, master traversal routes, and leverage verticality to gain the upper hand. At its core, the gameplay loop rewards skillful movement, quick decision-making, and mechanical precision, supported by responsive controls and a networked multiplayer system that delivers smooth, high-speed encounters and a strong sense of freedom.",
       "tags": [
         "pc",
         "multiplayer",
@@ -1705,9 +1705,7 @@
       ],
       "features": [
         "Advanced ground & aerial movement",
-        "Multiple character classes",
-        "Online multiplayer game modes",
-        "Dynamic ability-driven gameplay"
+        "Online multiplayer game modes"
       ],
       "myWork": [
         {
