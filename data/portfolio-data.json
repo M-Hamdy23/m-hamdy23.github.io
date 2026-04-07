@@ -193,7 +193,7 @@
       "period": "6-MONTH CONTRACT · HOUSTON, TX",
       "bullets": [
         "Delivered core gameplay systems for a large-scale HGV training simulator, including AI traffic, vehicle systems, camera architecture, and training logic.",
-        "Designed and implemented structured training scenarios with validation, failure conditions, and LMS-integrated performance tracking for enterprise deployment."
+        "Designed and implemented structured training scenarios with validation, failure conditions."
       ],
       "techs": [
         "C#",
@@ -210,7 +210,7 @@
       "role": "Senior Game Developer",
       "period": "DEC 2020 — NOV 2021",
       "bullets": [
-        "Developed 10 Tawla (iOS/Android backgammon) — built ELO ranking, matchmaking, friend system, and adaptive AI using Nakama Server",
+        "Developed 10 Tawla (iOS/Android backgammon) — built matchmaking, friend system, and adaptive AI using Nakama Server",
         "Shipped and maintained the game post-launch on iOS and Android, iterating on features and performance based on player feedback"
       ],
       "techs": [
@@ -833,15 +833,13 @@
       "techs": [
         "C#",
         "Unity",
-        "Simulation Design",
-        "LMS Integration"
+        "Simulation Design"
       ],
       "features": [
         "Realistic HGV driving and workplace safety simulations",
         "Scenario-based hazard identification and response training",
         "Interactive learning with guided and assessment-driven flows",
-        "Performance tracking and analytics for trainees",
-        "Enterprise-ready deployment and LMS compatibility"
+        "Performance tracking and analytics for trainees"
       ],
       "myWork": [
         {
