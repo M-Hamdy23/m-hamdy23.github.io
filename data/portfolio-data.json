@@ -138,7 +138,7 @@
     {
       "company": "Highstreet",
       "role": "Senior Game Developer · Architect",
-      "period": "JULY 2023 — PRESENT",
+      "period": "JULY 2023 — March 2026",
       "bullets": [
         "Architected the full technical foundation of a VR MMO shipped on Meta Quest — networking, backend APIs, AI, and 15+ synchronized gameplay systems",
         "Led Unity DOTS adoption across the team; converted world streaming and AI systems to ECS for scalable multiplayer performance",
